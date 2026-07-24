@@ -3538,8 +3538,8 @@ function getAnswerText(card) {
       if (p) return p.textContent;
     }
   }
-  const p = card.querySelector('.answer > p');
-  return p ? p.textContent : '';
+  const paragraphs = card.querySelectorAll('.answer > p');
+  return Array.from(paragraphs).map(p => p.textContent).join(' ');
 }
 
 function toggleAll(expand) {
