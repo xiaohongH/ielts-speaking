@@ -316,6 +316,8 @@
   .theme-tag[data-theme="city"].active { background: #2980b9; }
   .theme-tag[data-theme="shopping"].active { background: #d35400; }
   .theme-tag[data-theme="environment"].active { background: #27ae60; }
+  .theme-tag[data-theme="mydaily"] { background: #e91e63; color: #fff; border-color: #e91e63; }
+  .theme-tag[data-theme="mydaily"].active { background: #e91e63; }
   body.dark .theme-tag { background: #16213e; border-color: #444; color: #ccc; }
   body.dark .theme-tag:hover { box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
   body.dark .theme-tag[data-theme="all"] { background: #6db3f8; color: #1a1a2e; border-color: #6db3f8; }
@@ -389,6 +391,7 @@
   <button class="theme-tag" data-theme="city" onclick="filterByTheme('city')">City & Transport</button>
   <button class="theme-tag" data-theme="shopping" onclick="filterByTheme('shopping')">Shopping & Economy</button>
   <button class="theme-tag" data-theme="environment" onclick="filterByTheme('environment')">Environment & Energy</button>
+  <button class="theme-tag" data-theme="mydaily" onclick="filterByTheme('mydaily')" style="background:#e91e63;color:#fff;border-color:#e91e63;">My Daily</button>
 </div>
 
 <h2>1. What Questions</h2>
@@ -1709,7 +1712,7 @@
 
 <h2>9. My Daily</h2>
 
-<div class="question-card answered" data-theme="lifestyle">
+<div class="question-card answered" data-theme="mydaily">
   <div class="question-header" onclick="toggleAnswer(this)">
     <button class="toggle-btn">&#9654;</button>
     <h3>Finding joy in hard times</h3>
@@ -1729,7 +1732,7 @@
   </div>
 </div>
 
-<div class="question-card answered" data-theme="work">
+<div class="question-card answered" data-theme="mydaily">
   <div class="question-header" onclick="toggleAnswer(this)">
     <button class="toggle-btn">&#9654;</button>
     <h3>Work pressure and mental exhaustion</h3>
@@ -1742,7 +1745,7 @@
   </div>
 </div>
 
-<div class="question-card answered" data-theme="education">
+<div class="question-card answered" data-theme="mydaily">
   <div class="question-header" onclick="toggleAnswer(this)">
     <button class="toggle-btn">&#9654;</button>
     <h3>Watching a mock IELTS Speaking test</h3>
