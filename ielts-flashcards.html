@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking Part 3 — Flashcards</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.7;
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  border-bottom: 3px solid #4a90d9;
+  padding-bottom: 0.5rem;
+}
+h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 1rem;
+  color: #4a90d9;
+}
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f0f2f5;
+  padding: 0.6rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.ctrl-btn {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.ctrl-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+.ctrl-btn.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+.card-container {
+  perspective: 1200px;
+  margin-bottom: 1.2rem;
+}
+.flashcard {
+  position: relative;
+  min-height: 200px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.flashcard.flipped { transform: rotateY(180deg); }
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.card-front {
+  background: #fff;
+  border-left: 5px solid #4a90d9;
+  z-index: 2;
+}
+.card-back {
+  background: #fff;
+  border-left: 5px solid #27ae60;
+  transform: rotateY(180deg);
+}
+.card-num {
+  display: inline-block;
+  background: #4a90d9;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+}
+.card-question {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+.card-question span { flex: 1; }
+.card-bullets {
+  list-style: none;
+  padding: 0;
+}
+.card-bullets li {
+  padding: 0.4rem 0 0.4rem 1.4rem;
+  position: relative;
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.5;
+}
+.card-bullets li::before {
+  content: '•';
+  color: #4a90d9;
+  font-weight: 700;
+  position: absolute;
+  left: 0.3rem;
+}
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+.voice-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #4a90d9;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+.voice-btn:hover { background: #357abd; transform: scale(1.1); }
+.voice-btn:active { transform: scale(0.95); }
+.voice-btn.speaking { background: #e74c3c; }
+.flip-hint {
+  font-size: 0.78rem;
+  color: #aaa;
+  margin-left: auto;
+}
+.back-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.card-answer {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.8;
+}
+.theme-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  background: #e8f0fe;
+  color: #4a90d9;
+  margin-left: 0.5rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.hidden { display: none !important; }
+
+/* Dark mode */
+body.dark { background: #1a1a2e; color: #e0e0e0; }
+body.dark .controls { background: #1a1a2e; border-bottom-color: #333; }
+body.dark .ctrl-btn { background: #2a2a4a; color: #ccc; border-color: #444; }
+body.dark .ctrl-btn:hover, body.dark .ctrl-btn.active { background: #4a90d9; color: #fff; }
+body.dark h1 { color: #e0e0e0; }
+body.dark h2 { color: #6ab0f3; }
+body.dark .card-front, body.dark .card-back { background: #16213e; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+body.dark .card-question { color: #e0e0e0; }
+body.dark .card-bullets li { color: #bbb; }
+body.dark .card-answer { color: #ccc; }
+body.dark .theme-tag { background: #2a2a4a; color: #6ab0f3; }
+body.dark .flip-hint { color: #666; }
+
+@media (max-width: 600px) {
+  body { padding: 0.8rem; }
+  h1 { font-size: 1.3rem; }
+  .card-front, .card-back { padding: 1rem; }
+  .card-question { font-size: 0.95rem; }
+}
+</style>
+</head>
+<body>
+
+<h1>IELTS Speaking Part 3 — Flashcards</h1>
+
+<div class="controls">
+  <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
+  <button class="ctrl-btn" onclick="stopSpeaking()">⏹ Stop</button>
+  <button class="ctrl-btn active" data-filter="all" onclick="filterCards('all',this)">All</button>
+  <button class="ctrl-btn" data-filter="work" onclick="filterCards('work',this)">Work</button>
+  <button class="ctrl-btn" data-filter="education" onclick="filterCards('education',this)">Education</button>
+  <button class="ctrl-btn" data-filter="technology" onclick="filterCards('technology',this)">Technology</button>
+  <button class="ctrl-btn" data-filter="society" onclick="filterCards('society',this)">Society</button>
+  <button class="ctrl-btn" data-filter="lifestyle" onclick="filterCards('lifestyle',this)">Lifestyle</button>
+  <button class="ctrl-btn" data-filter="city" onclick="filterCards('city',this)">City</button>
+  <button class="ctrl-btn" data-filter="shopping" onclick="filterCards('shopping',this)">Shopping</button>
+  <button class="ctrl-btn" data-filter="environment" onclick="filterCards('environment',this)">Environment</button>
+  <button class="ctrl-btn" data-filter="mydaily" onclick="filterCards('mydaily',this)">My Daily</button>
+</div>
+
+<div id="cards-root"></div>
+
+<script>
+const DATA=[
+{s:"What Questions",n:1,q:"What kinds of jobs do young people like to do in your country?",t:"work",b:["Young people value job security → prefer public sector (government, state-owned enterprises)","Competition is fierce → many turn to private sector (IT, digital marketing)","Career choices involve a trade-off between stability and financial rewards"],a:"In my country, I think most young people place a high value on job security, so many of them are eager to work in the public sector, including government agencies, public schools, and state-owned enterprises. These jobs are generally seen as stable because they offer a steady income, generous benefits, and a good work-life balance. However, competition for these positions is incredibly fierce, so not everyone manages to get one. As a result, many young people turn to well-paid careers in the private sector, particularly in fields like IT, digital marketing, or content creation. Although these jobs tend to be more demanding and less secure, they often offer much higher salaries and faster career progression. So, I'd say young people's career choices are usually a trade-off between stability and financial rewards. Ideally, they'd like to have both, but in reality, they often have to prioritize one over the other."},
+{s:"What Questions",n:1,q:"What qualities make a person admirable?",t:"society",b:["Integrity, empathy, resilience, humility are core qualities","All tied together by authenticity — being genuine and comfortable with oneself"],a:"I think it comes down to a combination of integrity and empathy. Someone who consistently does the right thing, even when no one is watching — that's genuinely admirable. Beyond that, I'd say resilience is a quality people really look up to — the ability to face setbacks and keep going without losing your sense of purpose. And there's also something to be said for humility, you know, people who achieve great things but don't feel the need to broadcast it. I think what ties all these qualities together is authenticity — admirable people tend to be comfortable in their own skin and don't put on a performance for others."},
+{s:"What Questions",n:1,q:"What are the benefits of playing indoor games for children?",t:"education",b:["Cognitive: critical thinking, problem-solving, strategizing","Social: turn-taking, communication, cooperation","Practical: alternative for bad weather; builds concentration and patience"],a:"There are quite a few, actually. First and foremost, indoor games like board games or puzzles really help develop critical thinking and problem-solving skills. Children learn to strategize, to plan ahead, and to deal with losing gracefully — which is an important life lesson in itself. There's also the social aspect — when kids play games together, they're learning how to take turns, how to communicate, and how to cooperate. And from a practical standpoint, indoor games are a great alternative when the weather is bad or when outdoor space is limited. I'd also argue they help improve concentration and patience, which are skills that transfer directly to academic learning."},
+{s:"What Questions",n:1,q:"Where do people get news in your country?",t:"technology",b:["Young people use smartphones/social media (not always reliable)","Older generations still watch TV news/read papers (declining)","Dramatic shift from communal evening news to individual device consumption"],a:"These days, the vast majority of people get their news from their smartphones — whether that's through social media feeds, news apps, or messaging platforms where articles get shared around. For the younger generation especially, platforms like Weibo or Douyin have become primary news sources, which is a bit of a double-edged sword because the information isn't always reliable. Older generations still tend to watch televised news bulletins or read newspapers, though even that's declining rapidly. I think the shift has been dramatic — ten years ago, the evening news was something families watched together, but now everyone's consuming information independently on their own devices."},
+{s:"What Questions",n:1,q:"What kind of people earn the highest salaries in your country?",t:"work",b:["Tech, finance, senior executives earn most traditionally","Content creators/live-streamers now earn surprisingly high amounts","Common thread: highly specialized skills or ability to create value at scale"],a:"Generally speaking, it's people in the tech industry and finance who tend to command the highest salaries — software engineers at major companies, investment bankers, that sort of thing. Senior executives in large corporations also earn enormous amounts, obviously. But interestingly, there's been a rise in high earners from less traditional paths — top-tier content creators and live-streamers, for example, can make staggering amounts of money. Medical specialists also earn very well, though arguably not enough considering the years of training involved. I think what's common among all these groups is that they either possess highly specialized skills or they've found ways to create value at scale."},
+{s:"What Questions",n:1,q:"What is good customer service?",t:"work",b:["Making people feel valued; genuine empathy over scripted responses","Proactive anticipation of needs; consistency every time","\"Customer service isn't a department, it's a philosophy\""],a:"To me, good customer service is fundamentally about making people feel valued and heard. It goes beyond just solving a problem — it's about how you make the customer feel during the process. A good customer service experience involves someone who listens attentively, responds promptly, and shows genuine empathy rather than just reading from a script. There's also the proactive element — anticipating what a customer might need before they have to ask. And I think consistency matters enormously — it's not enough to be great once; the experience should be reliable every time. The best companies understand that customer service isn't a department, it's a philosophy that runs through everything they do."},
+{s:"What Questions",n:1,q:"What are the things to consider when choosing a job?",t:"work",b:["Beyond salary: meaningful work, career progression, work-life balance","Company culture and value alignment increasingly important","Think long-term rather than chasing highest starting salary"],a:"There's a lot to weigh up, honestly. Salary is the obvious one, but I think people are increasingly realizing it shouldn't be the only factor. You've got to think about whether the work itself is meaningful to you — will you find it engaging five years from now, or will you burn out? Career progression is another big one — does the role have room for growth, or is it a dead end? Then there are practical considerations like commute time, work-life balance, and benefits. And increasingly, people are factoring in company culture — do the values align with yours? Is the management style something you can thrive under? I think the smartest approach is to think long-term rather than just chasing the highest starting salary."},
+{s:"Opinion Questions",n:2,q:"Do you think parties are important?",t:"society",b:["Parties serve a social function: unwinding, connecting, celebrating milestones","Best conversations happen when people let their guard down","Even small gatherings recharge you socially"],a:"Yes, I do, actually — though maybe not in the way people typically think. Parties serve a really important social function. They give people a chance to unwind, to connect with others in a relaxed setting, and to strengthen relationships outside of the usual routines. Think about it — some of the best conversations happen at parties because people have their guard down. They're also important for marking milestones — birthdays, graduations, promotions — and I think celebrating those moments collectively gives them more weight and meaning. That said, I don't think you need extravagant parties for them to be valuable. Even a small gathering with close friends can recharge you socially in a way that nothing else quite does."},
+{s:"Opinion Questions",n:2,q:"Do you think travelling with tour guides can improve the experience of travelling in a new place?",t:"lifestyle",b:["Good guides share insider knowledge unavailable in guidebooks","Best for places with rich historical/cultural significance","Trade-off: you lose spontaneity and independent discovery"],a:"It depends on the situation, but broadly speaking, yes, I think it can add a lot of value. A good tour guide brings a place to life in ways that reading a guidebook simply can't — they share local stories, historical context, and insider knowledge that you'd never discover on your own. They can also save you a huge amount of time by cutting through the noise and showing you what's genuinely worth seeing. That said, I think it works best for places with rich historical or cultural significance. If you're just visiting a beach resort, you probably don't need one. And there's always the trade-off — you lose some of the spontaneity and sense of discovery that comes with exploring independently."},
+{s:"Opinion Questions",n:2,q:"Do you think that governments should care for elderly people?",t:"society",b:["Elderly contributed decades to society; deserve dignity in return","Government should ensure healthcare, pensions, social services","Shared responsibility between government (safety net) and families"],a:"Absolutely, without question. I think any civilized society has a responsibility to look after its older citizens — these are people who spent decades contributing to the economy and raising families, and they deserve dignity and support in their later years. Practically speaking, governments should ensure access to affordable healthcare, adequate pensions, and social services that prevent isolation. That's not to say families don't have a role to play — of course they do — but not everyone has family who can care for them, and the financial burden of elderly care can be crushing for individuals. So I see it as a shared responsibility, with the government providing the safety net that ensures no one falls through the cracks."},
+{s:"Opinion Questions",n:2,q:"Do you think old buildings are important?",t:"society",b:["\"Physical records of history\" — irreplaceable once gone","Contribute to city character/identity; attract tourism","Balance needed — not every old building worth preserving; cities must evolve"],a:"Very much so, yes. Old buildings are essentially physical records of history — they tell us about the values, the technology, and the aesthetics of the people who built them. Once you demolish an ancient building, that connection to the past is gone forever, and you can't get it back. Beyond the historical value, old buildings often contribute enormously to a city's character and identity — think of how much Paris or Rome would lose if their historic architecture were replaced with modern towers. There's also an economic argument — heritage buildings attract tourism and can revitalize neighborhoods. That said, I do think there needs to be a balance — not every old building is worth preserving, and cities do need to evolve."},
+{s:"Opinion Questions",n:2,q:"Do you think children should learn to make things by hand?",t:"education",b:["Develops fine motor skills, spatial awareness, creative problem-solving","Builds confidence through tangible creation","More important than ever in digital world; teaches patience"],a:"Definitely. I think there's something fundamentally important about working with your hands that you just can't replicate through screens. When children make things — whether it's drawing, building with blocks, or doing simple crafts — they're developing fine motor skills, spatial awareness, and creative problem-solving all at once. There's also the satisfaction of creating something tangible, which I think builds confidence and a sense of agency. In an increasingly digital world, I'd argue it's more important than ever to give children these hands-on experiences. It teaches them patience too — you can't rush a painting or a piece of pottery — and that's a quality that serves them well throughout life."},
+{s:"Opinion Questions",n:2,q:"Do you think children should be encouraged to think independently?",t:"education",b:["Without it, children struggle to innovate or adapt as adults","Means teaching to question and evaluate evidence, not letting them do anything","Builds confidence and resilience; should be introduced age-appropriately"],a:"One hundred percent, yes. I think independent thinking is one of the most valuable skills we can nurture in children. If kids only ever learn to follow instructions and accept what they're told without questioning, they'll struggle to innovate or adapt as adults. Encouraging independent thought doesn't mean letting children do whatever they want — it means teaching them to ask why, to evaluate evidence, and to form their own opinions. It builds confidence and resilience because when you've reasoned your way to a conclusion, you can defend it. Of course, it needs to be age-appropriate — you guide them gradually — but the earlier you start, the more naturally it comes to them."},
+{s:"Opinion Questions",n:2,q:"Do you think it's important for employees to go on holiday a few times a year?",t:"work",b:["Not just important — essential; regular breaks boost productivity and creativity","Without breaks, work quality suffers; fresh perspectives emerge after rest","From employer's standpoint, discouraging time off is counterproductive"],a:"I'd say it's not just important — it's essential. There's overwhelming evidence that people who take regular breaks are more productive, more creative, and less prone to burnout than those who don't. When you're constantly grinding without a pause, the quality of your work inevitably suffers, even if you don't notice it yourself. Holidays give your brain a chance to reset and recharge, and often people come back with fresh perspectives on problems they'd been stuck on. From an employer's standpoint, it's actually counterproductive to discourage time off — you end up with exhausted, disengaged employees. So yes, a few proper breaks throughout the year should be non-negotiable."},
+{s:"Opinion Questions",n:2,q:"Do you think we can learn history from historical TV dramas?",t:"technology",b:["Dramas make history feel human and spark curiosity","Shows take enormous creative liberties (invented characters, compressed timelines)","Ideal approach: enjoy the drama, then verify facts separately"],a:"To some extent, yes, but with a big caveat. Historical dramas can be a fantastic gateway into history — they make distant events feel immediate and human in a way that textbooks often don't. Watching a well-made period drama can spark genuine curiosity about an era and motivate people to dig deeper. However, and this is crucial, these shows take enormous creative liberties. Characters are invented, timelines are compressed, and events are dramatized for entertainment. So if someone watches a historical drama and takes everything at face value, they might end up with a very distorted understanding. I think the ideal approach is to enjoy the drama for what it is and then verify the facts separately."},
+{s:"Opinion Questions",n:2,q:"Do you think it's impolite to use mobile phones in public places?",t:"technology",b:["Context-dependent: quiet use on bus is fine; loud calls in restaurants are rude","Underlying principle: awareness of others and consideration","Most bothersome in contexts demanding presence (meals, performances)"],a:"It depends entirely on the context. Using your phone quietly on a bus or in a waiting room — that's perfectly fine, in my opinion. But talking loudly on a call in a restaurant, or scrolling through your phone during a face-to-face conversation — that's where it becomes rude. I think the underlying principle is awareness of others — if your phone use is disturbing people around you or making someone you're with feel ignored, then yes, it's impolite. The phone itself isn't the issue; it's the lack of consideration. What bothers me most is when people use their phones in contexts that demand presence — like during a meal with family or at a live performance. That sends a clear signal that you'd rather be elsewhere."},
+{s:"Why Questions",n:3,q:"Why do some people like to do extreme sports?",t:"lifestyle",b:["Adrenaline rush creates total mental clarity — addictive presence","Sense of achievement from pushing limits and facing fears","Escape from predictable routine; feeling something powerful"],a:"I think it largely comes down to the adrenaline rush — that intense feeling of being fully alive in the moment. When you're skydiving or rock climbing, there's no room in your brain for everyday worries; you're completely present, and for some people, that mental clarity is addictive. There's also a sense of achievement that comes from pushing past your limits and facing your fears. It's a way of testing yourself — proving that you're capable of more than your daily routine might suggest. And honestly, for some people, ordinary life feels a bit too safe and predictable, so extreme sports offer an escape from that monotony. It's about feeling something powerful in a world that can otherwise feel quite flat."},
+{s:"Why Questions",n:3,q:"Why are parks an important part of a city?",t:"city",b:["\"Lungs of a city\" — improve air quality, reduce heat","Vital for mental health; green space for decompression","Social equalizers: free, open to all, bring diverse people together"],a:"Parks serve as the lungs of a city, both literally and figuratively. On a practical level, they improve air quality, reduce noise pollution, and help regulate temperature in urban areas that would otherwise be concrete heat traps. But beyond the environmental benefits, they're vital for people's mental health — having access to green space in a crowded city gives residents somewhere to decompress, exercise, and reconnect with nature. Parks also function as social equalizers — they're free, they're open to everyone, and they bring together people from all walks of life. A city without parks would feel suffocating, I think. They remind us that not every square meter needs to be monetized."},
+{s:"Why Questions",n:3,q:"Why do some people prefer to watch foreign films rather than locally-produced films?",t:"technology",b:["Different storytelling styles broaden worldview","Local industry may feel formulaic; people crave freshness","Quality transcends borders; films offer cultural immersion without travel"],a:"I think there are a few reasons. First, foreign films often offer a completely different storytelling style and aesthetic — watching a French art-house film or a Korean thriller exposes you to perspectives and narrative techniques you simply won't find in domestic cinema. It broadens your worldview. Second, some people feel that their local film industry has become formulaic — they've seen the same plots recycled too many times and crave something fresh. And then there's the quality factor — certain countries have incredibly strong film traditions, so people naturally gravitate towards the best work regardless of where it comes from. It's also a way of experiencing other cultures without travelling — you absorb language, customs, and values through the stories."},
+{s:"Why Questions",n:3,q:"Why do some people like doing new things?",t:"lifestyle",b:["Brain releases dopamine with novelty — wired for it biologically","Prevents stagnation; provides growth and stories","More varied experiences make you more adaptable and resourceful"],a:"I think it's deeply rooted in human nature — we're wired for novelty to some degree. When you try something new, your brain releases dopamine, which creates a sense of excitement and reward. Beyond the chemistry, trying new things keeps life from feeling stagnant — it gives you stories to tell, skills to develop, and a sense of growth. Some people also have a genuine fear of routine — the idea of doing the same thing day after day feels suffocating to them. And there's a practical benefit too: the more varied your experiences, the more adaptable and resourceful you become. Each new thing you try adds a tool to your toolkit, even if you don't stick with it long-term."},
+{s:"Why Questions",n:3,q:"Why do many people like going to concerts?",t:"lifestyle",b:["Live music creates irreplaceable collective energy","Multisensory: bass vibrating, artist present, crowd emotion","Social memory-making; each performance unique and unrepeatable"],a:"There's something irreplaceable about live music — it creates an energy that you simply cannot get from listening at home, no matter how good your speakers are. When you're in a crowd of thousands, all feeling the same music at the same moment, there's this powerful sense of collective emotion that's almost spiritual. The bass vibrates through your chest, the artist is right there in front of you — it's a multisensory experience. Beyond the music itself, concerts are social events — you go with friends, you share the experience, you create memories together. And there's the element of unpredictability — a live performance is never exactly the same twice, so each concert feels unique and special."},
+{s:"Why Questions",n:3,q:"Why do people collect things?",t:"lifestyle",b:["Thrill of the hunt; satisfaction of completion/measurable progress","Nostalgia — preserving connections to the past","Social communities form around shared passions; collecting provides order in chaos"],a:"It's fascinating, actually — I think collecting fulfills several psychological needs simultaneously. There's the thrill of the hunt — searching for that rare stamp or vintage record gives people a sense of purpose and excitement. There's also the satisfaction of completion — working towards a complete set gives you clear goals and a measurable sense of progress, which everyday life doesn't always provide. For some people, collections are tied to nostalgia — they're preserving a connection to their childhood or a particular era. And then there's the social dimension — collectors form communities, trade with each other, and bond over shared passions. At its core, I think collecting gives people a sense of order and control in a chaotic world."},
+{s:"Solution & Discussion Questions",n:4,q:"What problems may be caused by using the Internet?",t:"technology",b:["Privacy concerns (data shared/sold without understanding)","Misinformation spreads easily; cyberbullying enabled by anonymity","Digital addiction affects mental health, sleep, relationships"],a:"Quite a few, and they're becoming more apparent as time goes on. Privacy is a major concern — people share enormous amounts of personal data online, often without fully understanding how it's being used or sold. Then there's the issue of misinformation — the Internet makes it incredibly easy to spread false information, and many people lack the critical thinking skills to distinguish fact from fiction. Cyberbullying is another serious problem, particularly among young people, because the anonymity of the Internet emboldens people to say things they'd never say face to face. And on a broader level, there's the issue of digital addiction — people spending hours scrolling mindlessly, which affects mental health, sleep quality, and real-world relationships."},
+{s:"Solution & Discussion Questions",n:4,q:"How do large shopping malls affect small local businesses?",t:"shopping",b:["Malls win through bulk buying/economies of scale and foot traffic","Small businesses lose customers, close; neighborhoods lose character","Some survive through personalized service and unique offerings"],a:"The impact is pretty devastating, honestly. Large malls can offer lower prices because they buy in bulk and benefit from economies of scale — that's something a small shop simply can't compete with. They also attract foot traffic through sheer variety and convenience — why visit five different streets when one mall has everything? So gradually, small businesses lose customers and many are forced to shut down. This has a knock-on effect on local communities — when independent shops disappear, neighborhoods lose their character and identity. That said, some small businesses have found ways to survive by offering personalized service, unique products, or experiences that malls can't replicate. But it requires constant adaptation."},
+{s:"Solution & Discussion Questions",n:4,q:"How can we help to make our cities better?",t:"city",b:["Better urban planning: green spaces, pedestrian streets, public transport","Foster community through local events and shared spaces","Individual actions + affordable housing policy + engaged citizens together"],a:"I think it starts with better urban planning — prioritizing green spaces, pedestrian-friendly streets, and efficient public transport over car-centric design. But beyond infrastructure, it's about fostering community. Cities thrive when people feel connected to their neighborhoods — local events, community gardens, shared spaces where people actually interact. On an individual level, small things add up — supporting local businesses, participating in neighborhood clean-ups, being considerate of shared spaces. Governments need to invest in affordable housing too, because a city that pushes out lower-income residents loses its diversity and soul. Ultimately, better cities come from a combination of smart policy and engaged citizens who feel ownership over their environment."},
+{s:"Solution & Discussion Questions",n:4,q:"How can public transport be improved?",t:"city",b:["Increase frequency/reliability; improve comfort and cleanliness","Extend network beyond city centers; make it cheaper than driving","Goal: make public transport \"the convenient choice, not the last resort\""],a:"There are several angles to approach this from. Frequency and reliability are the biggest factors — people won't use public transport if buses only come every forty minutes and are often late. So increasing service frequency and using real-time tracking apps would make a huge difference. Comfort matters too — clean vehicles, air conditioning, and adequate seating go a long way. Then there's connectivity — the network needs to reach where people actually live and work, not just the city center. Affordability is another lever — if public transport is significantly cheaper than driving, more people will switch. And finally, safety — especially at night, people need to feel secure on platforms and vehicles. It's really about making public transport the convenient choice, not the last resort."},
+{s:"Solution & Discussion Questions",n:4,q:"What are the solutions to the increasing use of private cars?",t:"city",b:["Attractive public transport; cycling infrastructure; congestion pricing","Carpooling incentives; urban planning reducing distances","Key philosophy: make car-free living convenient rather than punishing car use"],a:"It requires a multi-pronged approach. First and foremost, you need to make alternatives genuinely attractive — reliable, affordable public transport that's cleaner and faster than sitting in traffic. Investing in cycling infrastructure — dedicated bike lanes, bike-sharing schemes — gives people another viable option. Congestion pricing, where drivers pay more to enter busy areas, has proven effective in cities like London and Singapore. Carpooling incentives can reduce the number of vehicles without requiring people to give up cars entirely. And in the long term, urban planning that puts homes, workplaces, and amenities closer together reduces the need for cars in the first place. The key is making car-free living convenient rather than punishing car use."},
+{s:"Comparison Questions",n:5,q:"Is it better to rent or to buy a place to live in?",t:"shopping",b:["Buying: security, ownership, long-term investment (if settled with stable income)","Renting: flexibility, freedom from being tied down (good for young/mobile people)","Neither inherently superior; right choice depends on life stage"],a:"There's no universal answer — it really depends on your circumstances. Buying makes sense if you're settled in one place, have stable income, and can afford the upfront costs. It gives you security, a sense of ownership, and in most cases, it's a sound long-term investment. But renting offers flexibility that buying simply can't — if your job changes or your life takes an unexpected turn, you're not tied down. For young professionals who are still figuring out their careers or who live in cities where property prices are astronomical, renting is often the more sensible choice. I think the mistake people make is treating buying as inherently superior — it's not; it's just different, and the right choice depends entirely on where you are in life."},
+{s:"Comparison Questions",n:5,q:"How have relationships between parents and children changed in your country?",t:"society",b:["Past: hierarchical, obedience without discussion","Present: more democratic, communicative; technology enables new connections","Some argue boundaries too blurred; it's a balancing act"],a:"The change has been quite dramatic, actually. Previous generations had a much more hierarchical dynamic — parents were authority figures, and children were expected to obey without much discussion. Nowadays, relationships tend to be more democratic and communicative. Parents are more likely to explain their reasoning, listen to their children's opinions, and treat them as individuals rather than just subordinates. I think social media and technology have played a role too — parents and children now text each other, share content online, and stay connected in ways that weren't possible before. On the flip side, some argue that boundaries have become too blurred — that children need structure, not just friendship, from their parents. It's a balancing act."},
+{s:"Comparison Questions",n:5,q:"How has shopping changed in recent years?",t:"shopping",b:["Online shopping transformed convenience expectations","Physical stores adapted with experiences (cafes, events)","Cash declining; sustainability consciousness growing; shopping now \"value-driven\""],a:"The transformation has been enormous. The most obvious shift is towards online shopping — people can now buy virtually anything from their sofa and have it delivered within hours. This has fundamentally changed expectations around convenience and speed. Physical stores have had to adapt by offering experiences — things like in-store cafes, events, or personalized service — to justify the trip. The way we pay has changed too — cash is becoming almost obsolete in some places, replaced by digital payments and contactless cards. And there's been a growing consciousness about sustainability — more people are asking where products come from, choosing second-hand, or supporting ethical brands. Shopping has gone from being purely transactional to something much more value-driven."},
+{s:"Comparison Questions",n:5,q:"What are the differences between men's shopping habits and women's shopping habits?",t:"shopping",b:["Men tend to be goal-oriented and brand-loyal; women browse and enjoy the process","These differences are narrowing, especially among younger generations","Online shopping has made everyone more research-oriented regardless of gender"],a:"This is a generalization, of course, but research does show some patterns. Men tend to be more goal-oriented shoppers — they know what they want, they go in, they buy it, and they leave. Women, on the other hand, are more likely to browse, compare options, and enjoy the process itself as a social activity. Men are also more likely to stick with brands they know, while women tend to be more open to trying new things. That said, these differences are narrowing — online shopping has made everyone more inclined to research and compare, regardless of gender. And younger generations in particular seem less bound by traditional gender patterns when it comes to shopping behavior. So I'd say these distinctions are becoming less relevant over time."},
+{s:"Comparison Questions",n:5,q:"Do you think men and women enjoy the same leisure activities?",t:"lifestyle",b:["Increasingly yes; traditional gender divides are outdated","Society has become less prescriptive about gender-appropriate activities","Remaining differences attributed to socialization, not innate preference; will fade"],a:"Increasingly, yes. The traditional divide — where men watch sports and women go shopping — is really outdated now. You see plenty of women in gyms doing weightlifting, and plenty of men who enjoy cooking or yoga. I think what's happened is that society has become less prescriptive about what's appropriate for each gender, which has freed people to follow their genuine interests. That said, statistically, there are still some differences — men are more likely to play video games, for instance, while women tend to dominate in activities like book clubs or craft groups. But I'd attribute a lot of that to socialization rather than innate preference. Give it another generation and I think even those remaining differences will largely disappear."},
+{s:"Comparison Questions",n:5,q:"What are the differences between supermarkets and street markets?",t:"shopping",b:["Supermarkets: convenient, consistent, efficient but impersonal","Street markets: vibrant, social, fresher produce, full sensory experience","Trade-off: markets have limited hours, weather-dependent, less comprehensive"],a:"They're quite different experiences, really. Supermarkets offer convenience, consistency, and variety under one roof — everything is packaged, labeled, and priced clearly. It's efficient but somewhat impersonal. Street markets, on the other hand, are vibrant and social — you can chat with vendors, bargain over prices, and discover things you wouldn't find in a supermarket. The produce tends to be fresher too, often sourced locally, whereas supermarket goods might have traveled thousands of miles. There's also the atmosphere — a bustling street market engages all your senses in a way that fluorescent-lit aisles simply don't. The trade-off is that street markets can be less convenient — limited hours, weather-dependent, and you can't get everything in one place."},
+{s:"Comparison Questions",n:5,q:"Who can give young people better advice, parents or friends?",t:"society",b:["Parents: life experience, long-term perspective, deep knowledge of you","Friends: understand current challenges, more relatable and immediately applicable","Best approach: draw on both for \"the full picture\""],a:"I'd say both play important but different roles. Parents bring life experience, long-term perspective, and — crucially — they know you deeply because they've watched you grow up. So for big life decisions like career choices or financial matters, parental advice tends to carry more weight. Friends, however, understand your current world — they're navigating the same challenges at the same time, so their advice feels more relatable and immediately applicable. A friend might better understand the pressures of modern dating or workplace dynamics, for instance. I think the healthiest approach is to draw on both — use parents for wisdom and perspective, and friends for empathy and practical tips. Neither source alone gives you the full picture."},
+{s:"Advantages & Disadvantages Questions",n:6,q:"What are the advantages and disadvantages of using solar energy?",t:"environment",b:["Advantages: clean, renewable, increasingly affordable; reduces fossil fuel dependence","Disadvantages: high installation cost, space requirements, intermittency (no power at night)","Technology improving rapidly; drawbacks becoming less significant"],a:"On the advantages side, solar energy is clean, renewable, and increasingly affordable. Once the panels are installed, the energy is essentially free, and you're not contributing to greenhouse gas emissions or air pollution. It also reduces dependence on fossil fuels, which is crucial for energy security. However, there are real disadvantages to consider. The initial installation cost is still high for many households. Solar panels require a lot of space and don't work well in regions with limited sunlight. And there's the intermittency problem — you can't generate solar power at night or on cloudy days, which means you need storage solutions or backup systems. The technology is improving rapidly, though, so many of these drawbacks are becoming less significant over time."},
+{s:"Advantages & Disadvantages Questions",n:6,q:"What are the advantages of parents reading books to their children?",t:"education",b:["Cognitive: vocabulary, listening skills, understanding narrative structure","Emotional: bonding, security, positive associations with reading","Most important: instills a lifelong love of reading"],a:"The benefits are really profound and wide-ranging. On a cognitive level, it builds vocabulary, improves listening skills, and develops a child's understanding of narrative structure — all of which lay the groundwork for literacy. But beyond academics, it's a powerful bonding experience — that nightly ritual of sitting together with a book creates security, closeness, and positive associations with reading. Children who are read to regularly tend to develop longer attention spans and stronger imaginations. It also introduces them to concepts and situations they haven't experienced yet, building empathy and emotional intelligence. And perhaps most importantly, it instills a love of reading from an early age, which is a gift that keeps giving throughout their entire life."},
+{s:"Advantages & Disadvantages Questions",n:6,q:"What are the disadvantages of the increasing use of private cars?",t:"city",b:["Environmental: emissions, air pollution, climate change contribution","Congestion wastes time/productivity; cities over-designed around cars","Health: sedentary lifestyle; Financial: enormous ongoing costs for individuals"],a:"The downsides are substantial and interconnected. Most obviously, there's the environmental impact — more cars mean more emissions, worse air quality, and a greater contribution to climate change. Then there's congestion — roads become clogged, commutes get longer, and productivity suffers as people waste hours sitting in traffic. There's also the urban planning dimension — the more we design cities around cars, the more space we dedicate to roads and parking lots instead of parks, housing, or public spaces. And there are health consequences — a car-dependent lifestyle discourages walking and cycling, contributing to sedentary behavior and obesity. Finally, there's the financial burden on individuals — fuel, insurance, maintenance, and parking costs add up enormously over time."},
+{s:"Future Predictions",n:7,q:"How will the Internet develop in the future?",t:"technology",b:["Internet of Things expansion; AI-driven personalization","Improved access via satellite Internet reaching remote areas","Growing tensions around privacy/regulation; counter-movement of deliberate disconnection"],a:"I think we'll see the Internet become even more seamlessly integrated into daily life — to the point where we barely notice it. The Internet of Things will expand dramatically, connecting everything from household appliances to infrastructure. Artificial intelligence will make online experiences far more personalized — your digital environment will anticipate your needs almost intuitively. Speed and access will improve too, with technologies like satellite Internet reaching the most remote areas. However, I also think we'll see growing tensions around privacy, regulation, and digital sovereignty — governments will push back against the open Internet model. And there's likely to be a counter-movement where people deliberately disconnect, as digital fatigue becomes a more recognized issue."},
+{s:"Future Predictions",n:7,q:"What do you think houses will be like in the future?",t:"city",b:["Smarter and more sustainable; self-generating energy via solar","Eco-friendly materials (recycled, 3D-printed); adaptable/transforming rooms","Trend toward energy-independent, personalized homes"],a:"I think houses will become significantly smarter and more sustainable. We're already seeing the beginnings of this — smart thermostats, voice-controlled lighting, automated security systems — but it'll go much further. Homes will likely generate their own energy through integrated solar panels and store it efficiently. The materials will be more eco-friendly — recycled, biodegradable, or even 3D-printed. Spaces will be more adaptable too — rooms that transform depending on whether you need a home office, a gym, or a bedroom. In dense cities, I think we'll see more modular and compact living solutions designed to maximize limited space. The overall trend will be towards homes that are energy-independent, environmentally responsible, and highly personalized to the occupant's lifestyle."},
+{s:"Future Predictions",n:7,q:"As home theater technology improves, do you think cinemas will disappear in the future?",t:"technology",b:["Won't disappear but must evolve; convenience gap closing","Cinemas offer communal experience, massive screen, ritual of going out","Will become more premium/experiential; fewer but better"],a:"I don't think they'll disappear entirely, but they'll definitely need to evolve. The convenience gap is closing — home screens are getting bigger, sound systems are getting better, and streaming gives you instant access to almost everything. So cinemas can no longer compete on picture and sound quality alone. What they can offer is the experience — the communal aspect of watching something with hundreds of strangers, the massive screen that fills your entire field of vision, and the ritual of going out. I think cinemas will become more premium and experiential — luxury seating, immersive formats, curated events. They'll cater to people who want the social experience, while casual viewers will stay home. So fewer cinemas, but the ones that survive will be better than ever."},
+{s:"Future Predictions",n:7,q:"Will the traditional classroom disappear in the future?",t:"education",b:["Won't disappear completely but will look very different","Content-heavy learning moves online; classroom reserved for discussion/collaboration","Teacher's role shifts from information-deliverer to facilitator"],a:"I doubt it'll disappear completely, but it will look very different. Online learning has proven that a lot of knowledge transfer can happen remotely — lectures, readings, even assessments can all be done digitally. But the classroom offers things that screens struggle to replicate — spontaneous discussion, collaborative projects, immediate feedback from a teacher who can read the room. I think we'll end up with a hybrid model — the factual, content-heavy stuff will increasingly move online, where students can learn at their own pace, while classroom time will be reserved for discussion, hands-on activities, and mentorship. The teacher's role will shift from information-deliverer to facilitator and guide. The physical classroom will survive, but its purpose will fundamentally change."},
+{s:"Future Predictions",n:7,q:"Do you think newspapers will disappear in the future?",t:"technology",b:["Printed newspapers are on their way out","Key distinction: format may die but journalism will continue digitally","Print may become niche/luxury; less about disappearing, more about evolving"],a:"Honestly, I think printed newspapers are already on their way out. I mean, most people these days get their news from their phones or social media — it's instant, it's free, and you can customize what you see. The younger generation especially has almost no habit of picking up a physical paper. That said, I don't think newspapers as a concept will vanish entirely — they'll just shift to digital formats. Some premium publications like The Economist or The New York Times have actually done quite well with online subscriptions. So it's less about newspapers disappearing and more about them evolving. The paper itself might become a niche thing, maybe even a luxury for people who enjoy that tactile reading experience, but the journalism behind it will carry on in one form or another."},
+{s:"Unconventional 'Cold' Topics",n:8,q:"Do you think children should be allowed to drive?",t:"education",b:["Driving requires maturity, split-second decisions, calm under pressure","Children still developing emotionally/mentally; not capable","Every country has minimum driving age; proper training + testing ensures safety"],a:"Absolutely not. I think driving requires a high level of maturity and responsibility. You need to make split-second decisions, stay calm under pressure, and react quickly to unexpected situations. Children simply aren't mature enough for that because they're still developing emotionally and mentally. That's why every country has a minimum driving age. In my opinion, people should only be allowed to drive after they've received proper training and passed a driving test. That way, the roads are much safer for everyone."},
+{s:"My Daily",n:9,q:"Finding joy in hard times",t:"mydaily",b:["Going through hard times is a universal experience","Human beings have always found ways to lift their spirits"],a:"We are indeed going through hard times, but we, as human beings, have always found ways to lift our spirits."},
+{s:"My Daily",n:9,q:"Work pressure and mental exhaustion",t:"mydaily",b:["Spending almost all time at work; mentally drained and physically exhausted","Under constant pressure to meet manager's expectations in regular team meetings","Constantly planning ahead; difficult to switch off even after work"],a:"I've been spending almost all of my time at work lately, and I'm mentally drained, as well as physically exhausted. The main reason is that I'm under constant pressure to meet my manager's expectations. We have regular team meetings, and if I don't make enough progress, I'm worried I'll be questioned or put under even more pressure. As a result, I constantly feel the need to plan ahead and keep my projects moving forward. After a while, it becomes difficult to switch off, even after work, because I'm always thinking about what needs to be done next."},
+{s:"My Daily",n:9,q:"Watching a mock IELTS Speaking test",t:"mydaily",b:["Watched a YouTube video of someone taking a mock test with a former examiner","Interview lasted about fifteen minutes covering a wide range of topics","Questions progressed from background/personal to increasingly challenging depth"],a:"This afternoon, I watched a YouTube video of someone taking a mock IELTS Speaking test with a former examiner. The interview lasted about fifteen minutes and covered a wide range of topics. It started with questions about the candidate's background and personal experiences before moving on to music. As the conversation progressed, the examiner explored the topic in much greater depth, asking increasingly challenging questions."},
+{s:"My Daily",n:9,q:"A tough day at work — overwhelmed, heartbroken, and drained",t:"mydaily",b:["Leading an AI-powered diagnostic data product for JD merchants","Major milestone: engineers had to finish half of coding work and demo it","Demo for the PM and QA team before pushing it live"],a:"Yesterday was an incredibly tough day. I've been leading an AI-powered diagnostic data product for JD merchants, and yesterday was a major milestone — the engineers had to finish half of the coding work and demo it to me — the product manager — and the QA team, so we could test it before pushing it live."}
+];
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function render(){
+  const root=document.getElementById('cards-root');
+  let html='',lastSection='',num=0;
+  DATA.forEach((d,i)=>{
+    if(d.s!==lastSection){
+      lastSection=d.s;
+      html+=`<h2>${d.n}. ${esc(d.s)}</h2>`;
+    }
+    num++;
+    const bullets=d.b.map(b=>`<li>${esc(b)}</li>`).join('');
+    html+=`<div class="card-container" data-theme="${d.t}">
+      <div class="flashcard" id="card-${i}" onclick="flipCard(${i})">
+        <div class="card-front">
+          <div class="card-question"><span class="card-num">${num}</span><span>${esc(d.q)}</span><span class="theme-tag">${d.t}</span></div>
+          <ul class="card-bullets">${bullets}</ul>
+          <div class="card-actions">
+            <button class="voice-btn" id="vbtn-${i}" onclick="speak(event,${i})" title="Read aloud">&#9654;</button>
+            <span class="flip-hint">tap to flip</span>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="back-label">Full Answer</div>
+          <div class="card-answer">${esc(d.a)}</div>
+          <div class="card-actions" style="margin-top:1rem;">
+            <button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer">&#9654;</button>
+            <span class="flip-hint">tap to flip back</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  });
+  root.innerHTML=html;
+  measureCards();
+}
+
+function measureCards(){
+  document.querySelectorAll('.card-container').forEach(c=>{
+    const front=c.querySelector('.card-front');
+    const back=c.querySelector('.card-back');
+    front.style.position='relative';
+    back.style.position='relative';
+    const fh=front.offsetHeight;
+    const bh=back.offsetHeight;
+    front.style.position='absolute';
+    back.style.position='absolute';
+    c.style.height=Math.max(fh,bh)+'px';
+  });
+}
+
+function flipCard(i){
+  document.getElementById('card-'+i).classList.toggle('flipped');
+}
+
+function speak(e,i){
+  e.stopPropagation();
+  speechSynthesis.cancel();
+  const d=DATA[i];
+  const text=d.q+'. '+d.b.join('. ');
+  const u=new SpeechSynthesisUtterance(text);
+  u.rate=1.05;u.pitch=1.0;u.lang='en-US';
+  const btn=document.getElementById('vbtn-'+i);
+  btn.classList.add('speaking');
+  u.onend=()=>btn.classList.remove('speaking');
+  u.onerror=()=>btn.classList.remove('speaking');
+  speechSynthesis.speak(u);
+}
+
+function speakAnswer(e,i){
+  e.stopPropagation();
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(DATA[i].a);
+  u.rate=1.05;u.pitch=1.0;u.lang='en-US';
+  const btn=document.getElementById('vbtn-back-'+i);
+  btn.classList.add('speaking');
+  u.onend=()=>btn.classList.remove('speaking');
+  u.onerror=()=>btn.classList.remove('speaking');
+  speechSynthesis.speak(u);
+}
+
+function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
+
+function toggleDark(){
+  document.body.classList.toggle('dark');
+  localStorage.setItem('fc-dark',document.body.classList.contains('dark')?'1':'0');
+}
+
+function filterCards(theme,btn){
+  document.querySelectorAll('.ctrl-btn[data-filter]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card-container').forEach(c=>{
+    c.classList.toggle('hidden',theme!=='all'&&c.dataset.theme!==theme);
+  });
+  document.querySelectorAll('h2').forEach(h=>{
+    let next=h.nextElementSibling;
+    let anyVisible=false;
+    while(next&&next.tagName!=='H2'){
+      if(next.classList.contains('card-container')&&!next.classList.contains('hidden')) anyVisible=true;
+      next=next.nextElementSibling;
+    }
+    h.classList.toggle('hidden',!anyVisible);
+  });
+}
+
+window.addEventListener('DOMContentLoaded',()=>{
+  if(localStorage.getItem('fc-dark')==='1') document.body.classList.add('dark');
+  render();
+});
+window.addEventListener('resize',measureCards);
+</script>
+</body>
+</html>
