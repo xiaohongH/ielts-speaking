@@ -62,9 +62,7 @@ h2 {
   transform-style: preserve-3d;
   cursor: pointer;
 }
-.flashcard.flipped { transform: rotateY(180deg); }
-.card-front, .card-back {
-  position: absolute;
+.flashcard.flipped { transform: rotateY(180deg); }.card-front, .card-back {
   width: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -75,12 +73,14 @@ h2 {
 .card-front {
   background: #fff;
   border-left: 5px solid #4a90d9;
-  z-index: 2;
 }
 .card-back {
   background: #fff;
   border-left: 5px solid #27ae60;
   transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .card-num {
   color: #4a90d9;
@@ -304,21 +304,6 @@ function render(){
     </div>`;
   });
   root.innerHTML=html;
-  measureCards();
-}
-
-function measureCards(){
-  document.querySelectorAll('.card-container').forEach(c=>{
-    const front=c.querySelector('.card-front');
-    const back=c.querySelector('.card-back');
-    front.style.position='relative';
-    back.style.position='relative';
-    const fh=front.offsetHeight;
-    const bh=back.offsetHeight;
-    front.style.position='absolute';
-    back.style.position='absolute';
-    c.style.height=Math.max(fh,bh)+'px';
-  });
 }
 
 function flipCard(i){
@@ -379,7 +364,6 @@ window.addEventListener('DOMContentLoaded',()=>{
   if(localStorage.getItem('fc-dark')==='1') document.body.classList.add('dark');
   render();
 });
-window.addEventListener('resize',measureCards);
 </script>
 </body>
 </html>
