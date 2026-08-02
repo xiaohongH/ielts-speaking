@@ -94,10 +94,7 @@ h2 {
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 0.6rem;
-  display: flex;
-  align-items: flex-start;
 }
-.card-question span { flex: 1; }
 .card-bullets {
   list-style: none;
   padding: 0;
@@ -280,7 +277,7 @@ function render(){
     html+=`<div class="card-container" data-theme="${d.t}">
       <div class="flashcard" id="card-${i}" onclick="flipCard(${i})">
         <div class="card-front">
-          <div class="card-question"><span class="card-num">${num}</span><span>${esc(d.q)}</span><span class="theme-tag">${d.t}</span></div>
+          <div class="card-question">${num}. ${esc(d.q)}</div>
           <ul class="card-bullets">${bullets}</ul>
           <div class="card-actions">
             <button class="voice-btn" id="vbtn-${i}" onclick="speak(event,${i})" title="Read aloud">&#9654;</button>
