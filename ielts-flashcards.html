@@ -307,7 +307,20 @@ function render(){
 }
 
 function flipCard(i){
-  document.getElementById('card-'+i).classList.toggle('flipped');
+  const card=document.getElementById('card-'+i);
+  const container=card.parentElement;
+  const front=card.querySelector('.card-front');
+  const back=card.querySelector('.card-back');
+  card.classList.toggle('flipped');
+  if(card.classList.contains('flipped')){
+    back.style.position='relative';
+    front.style.position='absolute';
+    front.style.top='0';
+    front.style.left='0';
+  } else {
+    front.style.position='';
+    back.style.position='absolute';
+  }
 }
 
 function speak(e,i){
