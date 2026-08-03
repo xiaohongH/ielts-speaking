@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Native English Sentence Patterns</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa; color: #333; line-height: 1.7;
+    padding: 2rem; max-width: 900px; margin: 0 auto;
+  }
+  h1 { font-size: 1.9rem; margin-bottom: 0.4rem; color: #1a1a1a; border-bottom: 3px solid #4a90d9; padding-bottom: 0.5rem; }
+  .subtitle { color: #888; font-size: 0.92rem; margin-bottom: 2rem; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 1rem; color: #4a90d9; display: flex; align-items: center; gap: 0.6rem; }
+  .section-num { background: #4a90d9; color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 700; flex-shrink: 0; }
+
+  .card { background: #fff; border-radius: 12px; padding: 1.5rem 1.8rem; margin-bottom: 1.4rem; box-shadow: 0 2px 10px rgba(0,0,0,0.07); border-left: 4px solid #4a90d9; }
+  .pattern-formula {
+    background: #eef6ff; border: 1px solid #b8d9f7; border-radius: 8px;
+    padding: 0.9rem 1.2rem; margin-bottom: 1rem; font-size: 1rem;
+    color: #1a1a2e; font-weight: 600; letter-spacing: 0.01em;
+  }
+  .pattern-formula .slot { color: #e91e63; font-style: italic; font-weight: 700; }
+  .pattern-formula .fixed { color: #2c3e50; }
+
+  .when-to-use {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 6px;
+    padding: 0.7rem 1rem; margin-bottom: 1rem; font-size: 0.87rem; color: #5d4037;
+  }
+  .when-to-use .label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #f57c00; margin-bottom: 0.3rem; }
+
+  .examples { margin: 0.8rem 0; }
+  .ex-item { padding: 0.5rem 0.8rem; border-left: 3px solid #4a90d9; margin-bottom: 0.6rem; background: #f9fbff; border-radius: 0 6px 6px 0; font-size: 0.92rem; }
+  .ex-item .en { color: #1a3a5c; font-weight: 500; display: block; margin-bottom: 0.2rem; }
+  .ex-item .note { color: #888; font-size: 0.8rem; font-style: italic; }
+  .ex-item .slot-highlight { color: #e91e63; font-weight: 600; }
+
+  .variations { margin-top: 0.8rem; }
+  .var-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #27ae60; margin-bottom: 0.5rem; }
+  .var-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  @media(max-width:600px) { .var-grid { grid-template-columns: 1fr; } }
+  .var-item { background: #f0fff4; border: 1px solid #a8e6b8; border-radius: 6px; padding: 0.5rem 0.8rem; font-size: 0.85rem; color: #1a5c2e; }
+
+  .your-turn { background: #fff0f6; border: 1px solid #f8bbd9; border-radius: 8px; padding: 0.9rem 1.1rem; margin-top: 1rem; }
+  .your-turn .label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #e91e63; margin-bottom: 0.5rem; }
+  .your-turn p { font-size: 0.88rem; color: #5c1a35; }
+  .your-turn .blank { display: inline-block; min-width: 120px; border-bottom: 2px solid #e91e63; color: #e91e63; font-weight: 600; font-style: italic; }
+
+  .quiz-section { margin-top: 1rem; border-top: 1px dashed #ddd; padding-top: 1rem; }
+  .qlabel { font-size: 0.75rem; font-weight: 700; color: #4a90d9; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .quiz-item { margin-bottom: 1rem; }
+  .quiz-item .qtext { font-size: 0.9rem; color: #333; margin-bottom: 0.5rem; }
+  .quiz-item .qtext em { color: #c0392b; font-style: normal; border-bottom: 1px dotted #c0392b; }
+  .options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .opt { padding: 0.4rem 0.9rem; border-radius: 20px; border: 1px solid #ddd; background: #fff; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+  .opt:hover { background: #f0f0f0; }
+  .opt.correct { background: #d4edda; border-color: #28a745; color: #155724; font-weight: 600; }
+  .opt.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+  .feedback { font-size: 0.83rem; margin-top: 0.5rem; color: #555; display: none; padding: 0.4rem 0.6rem; background: #f9f9f9; border-radius: 4px; }
+  .feedback.show { display: block; }
+
+  .controls { display: flex; gap: 0.8rem; margin-bottom: 1.5rem; position: sticky; top: 0; z-index: 900; background: #f8f9fa; padding: 1rem 0; border-bottom: 1px solid #eee; flex-wrap: wrap; }
+  .controls button { padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-size: 0.85rem; transition: background 0.2s; }
+  .controls button:hover { background: #f0f0f0; }
+  .dark-toggle { background: #333 !important; color: #fff !important; border-color: #333 !important; }
+  .dark-toggle:hover { background: #555 !important; }
+  .voice-btn { background: #4a90d9 !important; color: #fff !important; border-color: #4a90d9 !important; border-radius: 50% !important; width: 36px !important; height: 36px !important; padding: 0 !important; display: flex !important; align-items: center; justify-content: center; flex-shrink: 0; }
+  .voice-btn:hover { background: #357abd !important; }
+  .voice-btn.speaking { background: #e74c3c !important; border-color: #e74c3c !important; }
+
+  .score-bar { background: #eee; border-radius: 20px; height: 8px; margin-top: 0.3rem; overflow: hidden; }
+  .score-fill { height: 100%; background: linear-gradient(90deg, #4a90d9, #27ae60); border-radius: 20px; transition: width 0.5s; }
+  .score-text { font-size: 0.78rem; color: #888; margin-top: 0.2rem; text-align: right; }
+
+  .theme-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .theme-pill { padding: 0.35rem 0.9rem; border-radius: 20px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-size: 0.8rem; font-weight: 500; transition: all 0.2s; }
+  .theme-pill:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+  .theme-pill.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+  .theme-pill[data-cat="feelings"].active { background: #e91e63; border-color: #e91e63; }
+  .theme-pill[data-cat="opinion"].active { background: #8e44ad; border-color: #8e44ad; }
+  .theme-pill[data-cat="story"].active { background: #e67e22; border-color: #e67e22; }
+  .theme-pill[data-cat="complex"].active { background: #27ae60; border-color: #27ae60; }
+
+  /* Dark mode */
+  body.dark { background: #1a1a2e; color: #e0e0e0; }
+  body.dark h1 { color: #e0e0e0; border-bottom-color: #6db3f8; }
+  body.dark h2 { color: #6db3f8; }
+  body.dark .card { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left-color: #6db3f8; }
+  body.dark .pattern-formula { background: #1a2744; border-color: #2a4a6e; color: #e0e0e0; }
+  body.dark .when-to-use { background: #2a2010; border-color: #5a4000; color: #d4b483; }
+  body.dark .ex-item { background: #1a2030; border-left-color: #6db3f8; }
+  body.dark .ex-item .en { color: #aed6f1; }
+  body.dark .var-item { background: #1a2c1e; border-color: #2a5c3a; color: #7dcea0; }
+  body.dark .your-turn { background: #2c1a22; border-color: #7a2a4a; }
+  body.dark .your-turn p { color: #d4a0b8; }
+  body.dark .opt { background: #16213e; border-color: #444; color: #ccc; }
+  body.dark .opt:hover { background: #1a2744; }
+  body.dark .controls { background: #1a1a2e; border-bottom-color: #333; }
+  body.dark .controls button { background: #16213e; border-color: #444; color: #ccc; }
+  body.dark .controls button:hover { background: #1a2744; }
+  body.dark .score-bar { background: #333; }
+  body.dark .feedback { background: #1a2030; color: #bbb; }
+  body.dark .theme-pill { background: #16213e; border-color: #444; color: #ccc; }
+  body.dark .quiz-section { border-top-color: #333; }
+</style>
+</head>
+<body>
+
+<h1>Native English Sentence Patterns</h1>
+<p class="subtitle">10 structures native speakers use every day — with formulas, examples, and practice</p>
+
+<div class="controls">
+  <button onclick="expandAll()">Expand All Quizzes</button>
+  <button onclick="collapseAll()">Collapse All Quizzes</button>
+  <button onclick="resetQuiz()">Reset Quiz</button>
+  <button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+</div>
+
+<div id="quiz-score" style="margin-bottom:1rem; display:none;">
+  <div class="score-bar"><div class="score-fill" id="score-fill" style="width:0%"></div></div>
+  <div class="score-text" id="score-text">0 / 0 correct</div>
+</div>
+
+<div class="theme-bar">
+  <button class="theme-pill active" data-cat="all" onclick="filterCat('all')">All</button>
+  <button class="theme-pill" data-cat="story" onclick="filterCat('story')">📖 Storytelling</button>
+  <button class="theme-pill" data-cat="feelings" onclick="filterCat('feelings')">❤️ Feelings</button>
+  <button class="theme-pill" data-cat="opinion" onclick="filterCat('opinion')">💬 Opinion</button>
+  <button class="theme-pill" data-cat="complex" onclick="filterCat('complex')">🔧 Complex Structures</button>
+</div>
+
+<!-- ===== PATTERN 1 ===== -->
+<div class="card" data-cat="opinion">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">1</span> "The thing is…"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">The thing is</span> [, <span class="slot">your real point</span>.]
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    When you want to introduce the <strong>real reason, core issue, or honest truth</strong> behind something — especially after someone asks why or after you've been explaining. It signals: "let me get to the point."
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en">A: Why didn't you speak up in the meeting?<br>B: <span class="slot-highlight">The thing is</span>, I didn't feel like my opinion was valued.</span>
+      <span class="note">Getting to the real reason</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">The thing is</span>, she's more senior in title but that doesn't reflect her actual ability.</span>
+      <span class="note">Introducing a nuanced truth</span>
+    </div>
+    <div class="ex-item">
+      <span class="en">I want to help, but <span class="slot-highlight">the thing is</span>, I'm completely overwhelmed right now.</span>
+      <span class="note">Softening a refusal</span>
+    </div>
+  </div>
+  <div class="variations">
+    <div class="var-label">✦ Native variations</div>
+    <div class="var-grid">
+      <div class="var-item"><strong>Here's the thing:</strong> more emphatic, used to drop a truth</div>
+      <div class="var-item"><strong>The funny thing is…</strong> for ironic or unexpected points</div>
+      <div class="var-item"><strong>The tricky part is…</strong> when the issue is a challenge</div>
+      <div class="var-item"><strong>The honest truth is…</strong> for vulnerable admissions</div>
+    </div>
+  </div>
+  <div class="your-turn">
+    <div class="label">✏️ Your turn — complete the sentence</div>
+    <p>I'd love to take a day off, but the thing is, <span class="blank">__________</span>.</p>
+    <p style="margin-top:0.5rem; font-size:0.8rem; color:#999;">Try: "I have a presentation due on Monday" or "my team is depending on me"</p>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">A: Why did you quit? B: ___, the work environment was just too toxic.</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">Honestly speaking</button>
+        <button class="opt" onclick="answer(this,1)">The thing is</button>
+        <button class="opt" onclick="answer(this,0)">What I mean</button>
+      </div>
+      <div class="feedback">✅ "The thing is" — introducing the real reason behind a decision. Natural and direct.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 2 ===== -->
+<div class="card" data-cat="opinion">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">2</span> "It's not that… it's just that…"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">It's not that</span> [<span class="slot">what people might assume</span>], <span class="fixed">it's just that</span> [<span class="slot">the real reason</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    When you want to <strong>correct a misunderstanding</strong> or clarify your true motivation. You're denying one interpretation and offering the real one. Very common in emotional or sensitive conversations.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">It's not that</span> I don't want to work hard, <span class="slot-highlight">it's just that</span> I'm completely burned out right now.</span>
+      <span class="note">Clarifying you're not lazy — just exhausted</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">It's not that</span> she's a bad manager, <span class="slot-highlight">it's just that</span> she doesn't handle pressure well.</span>
+      <span class="note">Nuanced criticism — fair and diplomatic</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">It's not that</span> I don't care about the presentation, <span class="slot-highlight">it's just that</span> nobody told me the deadline had changed.</span>
+      <span class="note">Defending yourself without sounding defensive</span>
+    </div>
+  </div>
+  <div class="your-turn">
+    <div class="label">✏️ Your turn — about your tough day</div>
+    <p>It's not that I <span class="blank">__________</span>, it's just that <span class="blank">__________</span>.</p>
+    <p style="margin-top:0.5rem; font-size:0.8rem; color:#999;">Try: "didn't try my best on the document… the task was too complex for one person in one day"</p>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="2">
+      <div class="qtext">You want to explain you're not unfriendly, you're just shy. Which fits best?</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">I am not unfriendly. I am shy.</button>
+        <button class="opt" onclick="answer(this,0)">To be honest, I'm shy not unfriendly.</button>
+        <button class="opt" onclick="answer(this,2)">It's not that I'm unfriendly, it's just that I'm naturally quite shy.</button>
+      </div>
+      <div class="feedback">✅ The third option — it's the most fluent. It corrects the assumption gently and gives the real reason in one smooth structure.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 3 ===== -->
+<div class="card" data-cat="story">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">3</span> "I ended up + -ing"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">I ended up</span> [<span class="slot">verb-ing</span>] [when I didn't plan to / against my expectations].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    When describing an outcome that <strong>wasn't planned or was unexpected</strong> — often after a chain of events. One of the most natural storytelling phrases in English.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en">I went in just to check something quickly and <span class="slot-highlight">ended up staying</span> until midnight.</span>
+      <span class="note">Unplanned outcome after a chain of events</span>
+    </div>
+    <div class="ex-item">
+      <span class="en">I thought I had a plan for the day, but I <span class="slot-highlight">ended up doing</span> something completely different.</span>
+      <span class="note">From your own story — very natural here!</span>
+    </div>
+    <div class="ex-item">
+      <span class="en">We <span class="slot-highlight">ended up having</span> the most productive meeting of the year — completely by accident.</span>
+      <span class="note">Positive unexpected outcome</span>
+    </div>
+    <div class="ex-item">
+      <span class="en">She <span class="slot-highlight">ended up taking</span> half the day off, which left more on my plate.</span>
+      <span class="note">Consequence for others</span>
+    </div>
+  </div>
+  <div class="variations">
+    <div class="var-label">✦ Native variations</div>
+    <div class="var-grid">
+      <div class="var-item"><strong>It turned out that…</strong> similar but focuses on what was discovered</div>
+      <div class="var-item"><strong>I wound up + -ing</strong> more informal, same meaning</div>
+      <div class="var-item"><strong>One thing led to another and…</strong> emphasises the chain of events</div>
+      <div class="var-item"><strong>Before I knew it, I was…</strong> emphasises how fast it happened</div>
+    </div>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="0">
+      <div class="qtext">I only planned to work an hour on the document, but I ___ working on it all evening.</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">ended up</button>
+        <button class="opt" onclick="answer(this,1)">end up</button>
+        <button class="opt" onclick="answer(this,1)">ended</button>
+      </div>
+      <div class="feedback">✅ "ended up" — past tense, followed by the -ing form of the verb.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 4 ===== -->
+<div class="card" data-cat="feelings">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">4</span> "What gets me is…"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">What gets me is</span> [<span class="slot">the specific thing that bothers / impresses you</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    To highlight the <strong>one specific thing</strong> that triggers a strong emotional reaction — frustration, admiration, or disbelief. "Gets me" = affects me emotionally.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">What gets me is</span> that she didn't even acknowledge how much I had on my plate that day.</span>
+      <span class="note">Expressing frustration — directly relevant to your story</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">What gets me is</span> how calm she stays under pressure. I genuinely don't know how she does it.</span>
+      <span class="note">Expressing admiration</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">What gets me is</span> that we put in all that work and nobody even said thank you.</span>
+      <span class="note">Expressing disbelief / disappointment</span>
+    </div>
+  </div>
+  <div class="variations">
+    <div class="var-label">✦ Native variations</div>
+    <div class="var-grid">
+      <div class="var-item"><strong>What bothers me is…</strong> more direct about frustration</div>
+      <div class="var-item"><strong>What really strikes me is…</strong> more formal / intellectual</div>
+      <div class="var-item"><strong>What kills me is…</strong> informal, very strong frustration or irony</div>
+      <div class="var-item"><strong>What I find hard to accept is…</strong> more diplomatic</div>
+    </div>
+  </div>
+  <div class="your-turn">
+    <div class="label">✏️ Your turn — about your tough day</div>
+    <p>What gets me is that <span class="blank">__________</span>.</p>
+    <p style="margin-top:0.5rem; font-size:0.8rem; color:#999;">Try: "I gave everything I had, and she still wasn't satisfied"</p>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">You want to express: the most frustrating part is that nobody told you about the change. Which is most natural?</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">The most frustrating is nobody told me.</button>
+        <button class="opt" onclick="answer(this,1)">What gets me is that nobody even told me about the change.</button>
+        <button class="opt" onclick="answer(this,0)">I am frustrated nobody told me.</button>
+      </div>
+      <div class="feedback">✅ "What gets me is that…" — it focuses the listener's attention on exactly the thing that upset you, and flows naturally in spoken English.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 5 ===== -->
+<div class="card" data-cat="feelings">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">5</span> "I can't help but…"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">I can't help but</span> [<span class="slot">base verb</span>] / <span class="fixed">I can't help</span> [<span class="slot">verb-ing</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    When you feel or do something <strong>involuntarily</strong> — you can't control the reaction. Shows emotional honesty and self-awareness.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">I can't help but feel</span> that the whole situation was unfair.</span>
+      <span class="note">Involuntary feeling — very natural</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">I can't help thinking</span> that things would have been different if she'd just acknowledged the effort.</span>
+      <span class="note">Can't stop a thought from returning</span>
+    </div>
+    <div class="ex-item">
+      <span class="en">Even though I know it was just work pressure, <span class="slot-highlight">I can't help but take it personally</span>.</span>
+      <span class="note">Honest emotional admission</span>
+    </div>
+  </div>
+  <div class="variations">
+    <div class="var-label">✦ Native variations</div>
+    <div class="var-grid">
+      <div class="var-item"><strong>I couldn't help but…</strong> past tense version</div>
+      <div class="var-item"><strong>I find myself…</strong> softer version of the same idea</div>
+      <div class="var-item"><strong>I keep…</strong> more casual: "I keep thinking about it"</div>
+      <div class="var-item"><strong>Try as I might…</strong> more literary: "Try as I might, I couldn't stop worrying"</div>
+    </div>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="2">
+      <div class="qtext">Complete: "Even though I've moved on, I ___ wonder if I made the right decision."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">cannot stop to</button>
+        <button class="opt" onclick="answer(this,0)">can't help for</button>
+        <button class="opt" onclick="answer(this,2)">can't help but</button>
+      </div>
+      <div class="feedback">✅ "can't help but wonder" — followed by the base verb (wonder, not wondering). Very natural.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 6 ===== -->
+<div class="card" data-cat="feelings">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">6</span> "There's something about… that…"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">There's something about</span> [<span class="slot">person / situation / thing</span>] <span class="fixed">that</span> [<span class="slot">effect on you</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    When you have a <strong>strong feeling you can't fully explain</strong> — you just feel it. Sounds thoughtful and emotionally intelligent. Very common in both casual and reflective speech.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">There's something about</span> being criticised after a long hard day <span class="slot-highlight">that</span> really breaks you.</span>
+      <span class="note">From your own experience — very natural here</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">There's something about</span> her management style <span class="slot-highlight">that</span> makes everyone anxious.</span>
+      <span class="note">Describing an intangible quality</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">There's something about</span> learning a new language <span class="slot-highlight">that</span> changes the way you see the world.</span>
+      <span class="note">Reflective and philosophical</span>
+    </div>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="0">
+      <div class="qtext">___ rainy days ___ makes me want to stay in and do nothing.</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">There's something about / that</button>
+        <button class="opt" onclick="answer(this,1)">Something about / which</button>
+        <button class="opt" onclick="answer(this,1)">There is something / what</button>
+      </div>
+      <div class="feedback">✅ "There's something about rainy days that makes me…" — the full structure. "That" is the connector, not "which" or "what".</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 7 ===== -->
+<div class="card" data-cat="story">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">7</span> "It's one of those [noun] when…"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">It's one of those</span> [<span class="slot">days / moments / situations</span>] <span class="fixed">when</span> [<span class="slot">relatable description</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    To make your experience feel <strong>universal and relatable</strong>. You're saying: "you know the type — everyone has experienced this." Creates instant connection with the listener.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en">Yesterday was <span class="slot-highlight">one of those days when</span> everything seems to go wrong at once.</span>
+      <span class="note">Perfect for describing your tough day</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">It's one of those situations when</span> you do your best and it still isn't enough.</span>
+      <span class="note">Expressing a universally frustrating experience</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">It's one of those moments when</span> you realise you need to make a change.</span>
+      <span class="note">Reflective turning point</span>
+    </div>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">You want to describe a day where nothing worked out. Which is most natural?</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">It was a bad day when everything went wrong.</button>
+        <button class="opt" onclick="answer(this,1)">It was one of those days when nothing seems to go right.</button>
+        <button class="opt" onclick="answer(this,0)">Yesterday was a day that everything was wrong.</button>
+      </div>
+      <div class="feedback">✅ "One of those days when nothing seems to go right" — relatable, natural, and invites the listener to connect with your experience.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 8 ===== -->
+<div class="card" data-cat="complex">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">8</span> "The more… the more…"</h2>
+  <div class="pattern-formula">
+    <span class="fixed">The more</span> [<span class="slot">A</span>], <span class="fixed">the more</span> [<span class="slot">B</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    To show that <strong>two things increase or change together</strong>. One of the most elegant and versatile structures in English — used in casual speech, IELTS writing, and professional discussions.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">The more</span> pressure she felt, <span class="slot-highlight">the more</span> anxious she became — and that anxiety spread to the whole team.</span>
+      <span class="note">From your story — describes the cascade effect</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">The more</span> I practise English, <span class="slot-highlight">the more</span> confident I feel.</span>
+      <span class="note">Positive growth — great for IELTS Speaking</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">The harder</span> you work without recognition, <span class="slot-highlight">the more</span> demoralised you become.</span>
+      <span class="note">Variation with comparative adjective</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">The more</span> I think about it, <span class="slot-highlight">the more</span> I realise this experience is pushing me to grow.</span>
+      <span class="note">Reflective — great closing line for Part 2</span>
+    </div>
+  </div>
+  <div class="variations">
+    <div class="var-label">✦ Extensions</div>
+    <div class="var-grid">
+      <div class="var-item"><strong>The less… the less…</strong> inverse version</div>
+      <div class="var-item"><strong>The harder… the better…</strong> effort → reward</div>
+      <div class="var-item"><strong>The longer… the more…</strong> time → change</div>
+      <div class="var-item"><strong>The sooner… the better.</strong> urgency — fixed phrase</div>
+    </div>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="0">
+      <div class="qtext">___ I learn about English sentence patterns, ___ natural my speaking sounds.</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">The more / the more</button>
+        <button class="opt" onclick="answer(this,1)">More / more</button>
+        <button class="opt" onclick="answer(this,1)">The more / the most</button>
+      </div>
+      <div class="feedback">✅ "The more… the more…" — both parts need "the". "The most" doesn't work here — you need parallel comparatives.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 9 ===== -->
+<div class="card" data-cat="complex">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">9</span> "What I find… is…" (Cleft Sentence)</h2>
+  <div class="pattern-formula">
+    <span class="fixed">What I</span> [<span class="slot">find / like / miss / struggle with</span>] <span class="fixed">is</span> [<span class="slot">the specific thing</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    To put <strong>strong emphasis</strong> on a specific part of your thought. Called a "cleft sentence" — it splits the sentence to highlight one element. Examiners love this structure because it shows grammatical range.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">What I find</span> most draining is not the workload itself, but the lack of recognition.</span>
+      <span class="note">Nuanced — identifies the real problem precisely</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">What I really struggle with</span> is staying calm when I'm being criticised unfairly.</span>
+      <span class="note">Honest self-reflection</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">What surprised me</span> was how much one difficult day could motivate me to make changes.</span>
+      <span class="note">Reflective insight — great for IELTS Part 2 endings</span>
+    </div>
+    <div class="ex-item">
+      <span class="en"><span class="slot-highlight">What I've come to realise</span> is that improving your English opens doors you didn't even know existed.</span>
+      <span class="note">Deep, thoughtful statement</span>
+    </div>
+  </div>
+  <div class="your-turn">
+    <div class="label">✏️ Your turn</div>
+    <p>What I find most frustrating about my workplace is <span class="blank">__________</span>.</p>
+    <p style="margin-top:0.5rem; font-size:0.8rem; color:#999;">Try: "that stress trickles down from the top and nobody acknowledges the effort at the bottom"</p>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="2">
+      <div class="qtext">Which sentence uses a cleft structure to emphasise the important point?</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">I think the deadline is the most stressful part.</button>
+        <button class="opt" onclick="answer(this,0)">The deadline is what I find stressful the most.</button>
+        <button class="opt" onclick="answer(this,2)">What I find most stressful is the constant last-minute deadlines.</button>
+      </div>
+      <div class="feedback">✅ "What I find most stressful is…" — this cleft structure pulls the emphasis to exactly what stresses you, which is much more precise and engaging than a simple statement.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PATTERN 10 ===== -->
+<div class="card" data-cat="opinion">
+  <h2 style="margin:0 0 1rem;"><span class="section-num">10</span> "If anything…" (Unexpected Reversal)</h2>
+  <div class="pattern-formula">
+    <span class="fixed">If anything,</span> [<span class="slot">the opposite or stronger version of what was expected</span>].
+  </div>
+  <div class="when-to-use">
+    <div class="label">🕐 When to use</div>
+    To introduce a <strong>surprising twist</strong> — things turned out the opposite way, or even more extreme than expected. One of the most sophisticated connectors in spoken English.
+  </div>
+  <div class="examples">
+    <div class="ex-item">
+      <span class="en">The difficult day didn't break me. <span class="slot-highlight">If anything,</span> it made me more determined to improve.</span>
+      <span class="note">From your own story — used perfectly</span>
+    </div>
+    <div class="ex-item">
+      <span class="en">I thought the criticism would demotivate me, but <span class="slot-highlight">if anything,</span> it pushed me harder.</span>
+      <span class="note">Expectation reversed</span>
+    </div>
+    <div class="ex-item">
+      <span class="en">The rain didn't ruin the trip. <span class="slot-highlight">If anything,</span> it made the whole thing more memorable.</span>
+      <span class="note">Positive reframe</span>
+    </div>
+  </div>
+  <div class="variations">
+    <div class="var-label">✦ Native variations — same logic</div>
+    <div class="var-grid">
+      <div class="var-item"><strong>On the contrary…</strong> more formal, stronger contradiction</div>
+      <div class="var-item"><strong>Far from it…</strong> emphatic denial of an expectation</div>
+      <div class="var-item"><strong>If anything, it only made it worse/better…</strong> common patterns</div>
+      <div class="var-item"><strong>Ironically…</strong> when the twist is absurd or funny</div>
+    </div>
+  </div>
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">I expected the feedback to discourage me, but ___ it strengthened my resolve.</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">however</button>
+        <button class="opt" onclick="answer(this,1)">if anything</button>
+        <button class="opt" onclick="answer(this,0)">on the other hand</button>
+      </div>
+      <div class="feedback">✅ "If anything" — signals the result is the opposite of what was expected, and possibly even stronger. More elegant than "however" here.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Summary -->
+<div style="margin-top:3rem; padding:1.5rem; background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.07); border-left:4px solid #27ae60;">
+  <div style="font-weight:700; color:#1a7a3c; font-size:1rem; margin-bottom:0.8rem;">🗺️ Quick Reference — All 10 Patterns</div>
+  <table style="width:100%; border-collapse:collapse; font-size:0.87rem;">
+    <tr style="border-bottom:2px solid #eee;">
+      <th style="text-align:left; padding:0.4rem 0.6rem; color:#555;">#</th>
+      <th style="text-align:left; padding:0.4rem 0.6rem; color:#555;">Pattern</th>
+      <th style="text-align:left; padding:0.4rem 0.6rem; color:#555;">Use it when…</th>
+    </tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">1</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">The thing is…</td><td style="padding:0.4rem 0.6rem; color:#666;">Getting to the real point</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">2</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">It's not that… it's just that…</td><td style="padding:0.4rem 0.6rem; color:#666;">Correcting a misunderstanding gently</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">3</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">I ended up + -ing</td><td style="padding:0.4rem 0.6rem; color:#666;">Describing an unplanned outcome</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">4</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">What gets me is…</td><td style="padding:0.4rem 0.6rem; color:#666;">Highlighting the one thing that affects you</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">5</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">I can't help but…</td><td style="padding:0.4rem 0.6rem; color:#666;">Describing an involuntary feeling or reaction</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">6</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">There's something about… that…</td><td style="padding:0.4rem 0.6rem; color:#666;">Expressing a feeling you can't fully explain</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">7</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">It's one of those… when…</td><td style="padding:0.4rem 0.6rem; color:#666;">Making your experience relatable</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">8</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">The more… the more…</td><td style="padding:0.4rem 0.6rem; color:#666;">Showing two things changing together</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:0.4rem 0.6rem;">9</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">What I find… is…</td><td style="padding:0.4rem 0.6rem; color:#666;">Emphasising one specific thing (cleft sentence)</td></tr>
+    <tr><td style="padding:0.4rem 0.6rem;">10</td><td style="padding:0.4rem 0.6rem; color:#4a90d9; font-weight:600;">If anything…</td><td style="padding:0.4rem 0.6rem; color:#666;">Introducing an unexpected reversal or twist</td></tr>
+  </table>
+</div>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('spDark', document.body.classList.contains('dark'));
+  }
+  if (localStorage.getItem('spDark') === 'true') document.body.classList.add('dark');
+
+  function filterCat(cat) {
+    document.querySelectorAll('.theme-pill').forEach(p => p.classList.toggle('active', p.dataset.cat === cat));
+    document.querySelectorAll('.card[data-cat]').forEach(c => {
+      c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'block' : 'none';
+    });
+  }
+
+  function expandAll() { document.querySelectorAll('.quiz-section').forEach(s => s.style.display = 'block'); }
+  function collapseAll() { document.querySelectorAll('.quiz-section').forEach(s => s.style.display = 'none'); }
+
+  let correct = 0, total = 0;
+  function answer(btn, chosen) {
+    const item = btn.closest('.quiz-item');
+    if (item.dataset.answered) return;
+    item.dataset.answered = 'true';
+    const right = parseInt(item.dataset.answer);
+    total++;
+    const fb = item.querySelector('.feedback');
+    fb.classList.add('show');
+    if (chosen === right) { btn.classList.add('correct'); correct++; }
+    else { btn.classList.add('wrong'); item.querySelectorAll('.opt')[right].classList.add('correct'); }
+    updateScore();
+  }
+  function updateScore() {
+    document.getElementById('quiz-score').style.display = 'block';
+    document.getElementById('score-fill').style.width = (correct / total * 100) + '%';
+    document.getElementById('score-text').textContent = correct + ' / ' + total + ' correct';
+  }
+  function resetQuiz() {
+    correct = 0; total = 0;
+    document.querySelectorAll('.quiz-item').forEach(i => {
+      delete i.dataset.answered;
+      i.querySelectorAll('.opt').forEach(o => o.classList.remove('correct','wrong'));
+      i.querySelectorAll('.feedback').forEach(f => f.classList.remove('show'));
+    });
+    document.getElementById('quiz-score').style.display = 'none';
+    document.getElementById('score-fill').style.width = '0%';
+  }
+</script>
+</body>
+</html>
