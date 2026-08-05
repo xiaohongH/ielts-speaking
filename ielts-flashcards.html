@@ -52,6 +52,25 @@ h2 {
 }
 .ctrl-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
 .ctrl-btn.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+.repeat-ctrl {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 0.85rem;
+}
+.repeat-ctrl input {
+  width: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.15rem 0.3rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #333;
+}
 .card-container {
   perspective: 1200px;
   margin-bottom: 1.5rem;
@@ -179,6 +198,8 @@ body.dark { background: #1a1a2e; color: #e0e0e0; }
 body.dark .controls { background: #1a1a2e; border-bottom-color: #333; }
 body.dark .ctrl-btn { background: #2a2a4a; color: #ccc; border-color: #444; }
 body.dark .ctrl-btn:hover, body.dark .ctrl-btn.active { background: #4a90d9; color: #fff; }
+body.dark .repeat-ctrl { background: #2a2a4a; color: #ccc; border-color: #444; }
+body.dark .repeat-ctrl input { background: #16213e; color: #e0e0e0; border-color: #444; }
 body.dark h1 { color: #e0e0e0; }
 body.dark h2 { color: #6ab0f3; }
 body.dark .card-front, body.dark .card-back { background: #16213e; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
@@ -204,6 +225,10 @@ body.dark .flip-hint { color: #666; }
 <div class="controls">
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
   <button class="ctrl-btn" onclick="stopSpeaking()">⏹ Stop</button>
+  <label class="repeat-ctrl">🔁 Repeat
+    <input type="number" id="repeat-count" min="1" max="99" value="1" onchange="saveRepeat()">
+    ×
+  </label>
   <button class="ctrl-btn active" data-filter="all" onclick="filterCards('all',this)">All</button>
   <button class="ctrl-btn" data-filter="work" onclick="filterCards('work',this)">Work</button>
   <button class="ctrl-btn" data-filter="education" onclick="filterCards('education',this)">Education</button>
@@ -323,30 +348,47 @@ function flipCard(i){
   }
 }
 
+function getRepeatCount(){
+  const v=parseInt(document.getElementById('repeat-count').value,10);
+  return isNaN(v)||v<1?1:Math.min(v,99);
+}
+
+function saveRepeat(){
+  const el=document.getElementById('repeat-count');
+  let v=parseInt(el.value,10);
+  if(isNaN(v)||v<1)v=1;
+  if(v>99)v=99;
+  el.value=v;
+  localStorage.setItem('fc-repeat',v);
+}
+
+function speakRepeated(text,btn){
+  speechSynthesis.cancel();
+  const times=getRepeatCount();
+  btn.classList.add('speaking');
+  let done=0;
+  const speakOnce=()=>{
+    const u=new SpeechSynthesisUtterance(text);
+    u.rate=1.05;u.pitch=1.0;u.lang='en-US';
+    u.onend=()=>{
+      done++;
+      if(done<times) speakOnce();
+      else btn.classList.remove('speaking');
+    };
+    u.onerror=()=>btn.classList.remove('speaking');
+    speechSynthesis.speak(u);
+  };
+  speakOnce();
+}
+
 function speak(e,i){
   e.stopPropagation();
-  speechSynthesis.cancel();
-  const d=DATA[i];
-  const text=d.q;
-  const u=new SpeechSynthesisUtterance(text);
-  u.rate=1.05;u.pitch=1.0;u.lang='en-US';
-  const btn=document.getElementById('vbtn-'+i);
-  btn.classList.add('speaking');
-  u.onend=()=>btn.classList.remove('speaking');
-  u.onerror=()=>btn.classList.remove('speaking');
-  speechSynthesis.speak(u);
+  speakRepeated(DATA[i].q,document.getElementById('vbtn-'+i));
 }
 
 function speakAnswer(e,i){
   e.stopPropagation();
-  speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(DATA[i].a);
-  u.rate=1.05;u.pitch=1.0;u.lang='en-US';
-  const btn=document.getElementById('vbtn-back-'+i);
-  btn.classList.add('speaking');
-  u.onend=()=>btn.classList.remove('speaking');
-  u.onerror=()=>btn.classList.remove('speaking');
-  speechSynthesis.speak(u);
+  speakRepeated(DATA[i].a,document.getElementById('vbtn-back-'+i));
 }
 
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
@@ -375,6 +417,8 @@ function filterCards(theme,btn){
 
 window.addEventListener('DOMContentLoaded',()=>{
   if(localStorage.getItem('fc-dark')==='1') document.body.classList.add('dark');
+  const savedRepeat=localStorage.getItem('fc-repeat');
+  if(savedRepeat) document.getElementById('repeat-count').value=savedRepeat;
   render();
 });
 </script>
