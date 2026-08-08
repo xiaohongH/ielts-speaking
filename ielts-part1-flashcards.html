@@ -537,6 +537,20 @@ function navigate(dir){
   const el=cards[current];
   el.classList.add('current');
   el.scrollIntoView({behavior:'smooth',block:'center'});
+  speakCurrent();
+}
+
+function speakCurrent(){
+  const el=document.querySelector('.card-container.current');
+  if(!el) return;
+  const card=el.querySelector('.flashcard');
+  const i=parseInt(card.id.replace('card-',''),10);
+  const d=DATA[i];
+  if(d.voc){speechSynthesis.cancel();return;}
+  if(card.classList.contains('flipped'))
+    speakRepeated(d.a,document.getElementById('vbtn-back-'+i));
+  else
+    speakRepeated(d.q,document.getElementById('vbtn-'+i));
 }
 
 document.addEventListener('keydown',e=>{
