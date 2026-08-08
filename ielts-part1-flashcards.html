@@ -464,6 +464,7 @@ function saveRepeat(){
 function speakRepeated(text,btn){
   speechSynthesis.cancel();
   const times=getRepeatCount();
+  document.querySelectorAll('.voice-btn.speaking').forEach(b=>b.classList.remove('speaking'));
   btn.classList.add('speaking');
   let done=0;
   const speakOnce=()=>{
@@ -477,7 +478,8 @@ function speakRepeated(text,btn){
     u.onerror=()=>btn.classList.remove('speaking');
     speechSynthesis.speak(u);
   };
-  speakOnce();
+  // Chrome drops speak() if it fires in the same tick as cancel(); defer it.
+  setTimeout(speakOnce,80);
 }
 
 function speak(e,i){
