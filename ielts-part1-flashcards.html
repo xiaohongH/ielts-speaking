@@ -187,6 +187,8 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
 .vocab-term { font-weight: 700; color: #2c3e50; }
 .vocab-cn { color: #888; }
 .hidden { display: none !important; }
+.card-container.current .card-front,
+.card-container.current .card-back { box-shadow: 0 0 0 3px #4a90d9, 0 4px 15px rgba(0,0,0,0.12); }
 
 /* Dark mode */
 body.dark { background: #1a1a2e; color: #e0e0e0; }
@@ -237,6 +239,8 @@ body.dark .badge-neg { background: #33224a; color: #c98ee6; }
 <div class="controls">
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
   <button class="ctrl-btn" onclick="stopSpeaking()">⏹ Stop</button>
+  <button class="ctrl-btn" onclick="navigate(-1)" title="Previous question (←)">◀ Prev</button>
+  <button class="ctrl-btn" onclick="navigate(1)" title="Next question (→)">Next ▶</button>
   <label class="repeat-ctrl">🔁 Repeat
     <input type="number" id="repeat-count" min="1" max="99" value="5" onchange="saveRepeat()">
     ×
@@ -518,7 +522,28 @@ function filterCards(filter,btn){
     h.classList.toggle('hidden',!anyVisible);
   });
   updateCount();
+  current=-1;
+  document.querySelectorAll('.card-container.current').forEach(c=>c.classList.remove('current'));
 }
+
+let current=-1;
+function navigate(dir){
+  const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
+  if(!cards.length) return;
+  current+=dir;
+  if(current<0) current=cards.length-1;
+  if(current>=cards.length) current=0;
+  document.querySelectorAll('.card-container.current').forEach(c=>c.classList.remove('current'));
+  const el=cards[current];
+  el.classList.add('current');
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT') return;
+  if(e.key==='ArrowRight'){navigate(1);e.preventDefault();}
+  else if(e.key==='ArrowLeft'){navigate(-1);e.preventDefault();}
+});
 
 window.addEventListener('DOMContentLoaded',()=>{
   if(localStorage.getItem('p1-dark')==='1') document.body.classList.add('dark');
