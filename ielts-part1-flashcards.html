@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking Part 1 — Flashcards</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  border-bottom: 3px solid #4a90d9;
+  padding-bottom: 0.4rem;
+}
+.subtitle { font-size: 0.85rem; color: #777; margin-bottom: 0.6rem; }
+h2 {
+  font-size: 1.15rem;
+  margin: 2rem 0 1rem;
+  color: #4a90d9;
+}
+details.tips {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
+}
+details.tips summary { cursor: pointer; font-weight: 600; color: #4a90d9; }
+details.tips ul { margin: 0.6rem 0 0.2rem 1.1rem; }
+details.tips li { margin-bottom: 0.3rem; color: #555; }
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f0f2f5;
+  padding: 0.6rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.ctrl-btn {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.ctrl-btn:hover { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+.ctrl-btn.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
+.ctrl-btn.mine.active { background: #e6a817; border-color: #e6a817; }
+.count { font-size: 0.8rem; color: #888; margin-left: auto; }
+.repeat-ctrl {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 0.85rem;
+}
+.repeat-ctrl input {
+  width: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.15rem 0.3rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #333;
+}
+.card-container {
+  perspective: 1200px;
+  margin-bottom: 1.5rem;
+}
+.flashcard {
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.flashcard.flipped { transform: rotateY(180deg); }
+.card-front, .card-back {
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.card-front {
+  background: #fff;
+  border-left: 5px solid #4a90d9;
+}
+.card-front.mine { border-left-color: #e6a817; }
+.card-front.neg { border-left-color: #b06ad9; }
+.card-back {
+  background: #fff;
+  border-left: 5px solid #27ae60;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+.badges { margin-bottom: 0.5rem; }
+.badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+.badge-mine { background: #fdf1d6; color: #b8860b; }
+.badge-neg { background: #f2e6fb; color: #8e44ad; }
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  align-items: center;
+}
+.voice-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #4a90d9;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+.voice-btn:hover { background: #357abd; transform: scale(1.1); }
+.voice-btn:active { transform: scale(0.95); }
+.voice-btn.speaking { background: #e74c3c; }
+.flip-hint {
+  font-size: 0.78rem;
+  color: #aaa;
+  margin-left: auto;
+}
+.back-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.card-answer {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.85;
+}
+.vocab-list { list-style: none; padding: 0; }
+.vocab-list li {
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+  border-bottom: 1px dashed #e5e5e5;
+}
+.vocab-list li:last-child { border-bottom: none; }
+.vocab-term { font-weight: 700; color: #2c3e50; }
+.vocab-cn { color: #888; }
+.hidden { display: none !important; }
+
+/* Dark mode */
+body.dark { background: #1a1a2e; color: #e0e0e0; }
+body.dark .subtitle { color: #999; }
+body.dark .controls { background: #1a1a2e; border-bottom-color: #333; }
+body.dark .ctrl-btn { background: #2a2a4a; color: #ccc; border-color: #444; }
+body.dark .ctrl-btn:hover, body.dark .ctrl-btn.active { background: #4a90d9; color: #fff; }
+body.dark .ctrl-btn.mine.active { background: #e6a817; color: #1a1a2e; }
+body.dark .repeat-ctrl { background: #2a2a4a; color: #ccc; border-color: #444; }
+body.dark .repeat-ctrl input { background: #16213e; color: #e0e0e0; border-color: #444; }
+body.dark details.tips { background: #16213e; border-color: #333; }
+body.dark details.tips li { color: #bbb; }
+body.dark h1 { color: #e0e0e0; }
+body.dark h2 { color: #6ab0f3; }
+body.dark .card-front, body.dark .card-back { background: #16213e; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+body.dark .card-question { color: #e0e0e0; }
+body.dark .card-answer { color: #ccc; }
+body.dark .vocab-term { color: #e0e0e0; }
+body.dark .vocab-list li { border-bottom-color: #333; }
+body.dark .flip-hint { color: #666; }
+body.dark .badge-mine { background: #3d3212; color: #f0c860; }
+body.dark .badge-neg { background: #33224a; color: #c98ee6; }
+
+@media (max-width: 600px) {
+  body { padding: 0.8rem; }
+  h1 { font-size: 1.15rem; }
+  .card-front, .card-back { padding: 1rem; }
+  .card-question { font-size: 0.95rem; }
+  .count { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<h1>IELTS Speaking Part 1 — Flashcards</h1>
+<div class="subtitle">55 topics across 15 themes · tap a card to flip · ▶ to hear it read aloud</div>
+
+<details class="tips">
+  <summary>Quick tips to hit band 8 in Part 1</summary>
+  <ul>
+    <li><b>Answer, then extend</b> — say your answer, then a quick <i>because / but / so</i>.</li>
+    <li><b>It's fine to be negative</b> — a confident "not really, to be honest…" with a reason scores well.</li>
+    <li><b>Use contractions and fillers</b> — "I'm", "it's", "I'd say", "to be honest", "actually" — natural, and they buy thinking time.</li>
+    <li><b>Don't memorise word-for-word</b> — learn the pattern and the vocabulary, not the script.</li>
+  </ul>
+</details>
+
+<div class="controls">
+  <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
+  <button class="ctrl-btn" onclick="stopSpeaking()">⏹ Stop</button>
+  <label class="repeat-ctrl">🔁 Repeat
+    <input type="number" id="repeat-count" min="1" max="99" value="5" onchange="saveRepeat()">
+    ×
+  </label>
+  <button class="ctrl-btn active" data-filter="all" onclick="filterCards('all',this)">All</button>
+  <button class="ctrl-btn mine" data-filter="mine" onclick="filterCards('mine',this)">★ Mine</button>
+  <button class="ctrl-btn" data-filter="work" onclick="filterCards('work',this)">Work</button>
+  <button class="ctrl-btn" data-filter="hometown" onclick="filterCards('hometown',this)">Hometown</button>
+  <button class="ctrl-btn" data-filter="home" onclick="filterCards('home',this)">Home</button>
+  <button class="ctrl-btn" data-filter="freetime" onclick="filterCards('freetime',this)">Free Time</button>
+  <button class="ctrl-btn" data-filter="food" onclick="filterCards('food',this)">Food</button>
+  <button class="ctrl-btn" data-filter="weather" onclick="filterCards('weather',this)">Weather</button>
+  <button class="ctrl-btn" data-filter="music" onclick="filterCards('music',this)">Music</button>
+  <button class="ctrl-btn" data-filter="sport" onclick="filterCards('sport',this)">Sport</button>
+  <button class="ctrl-btn" data-filter="reading" onclick="filterCards('reading',this)">Reading</button>
+  <button class="ctrl-btn" data-filter="tech" onclick="filterCards('tech',this)">Tech</button>
+  <button class="ctrl-btn" data-filter="travel" onclick="filterCards('travel',this)">Travel</button>
+  <button class="ctrl-btn" data-filter="shopping" onclick="filterCards('shopping',this)">Shopping</button>
+  <button class="ctrl-btn" data-filter="people" onclick="filterCards('people',this)">People</button>
+  <button class="ctrl-btn" data-filter="nature" onclick="filterCards('nature',this)">Nature</button>
+  <button class="ctrl-btn" data-filter="learning" onclick="filterCards('learning',this)">Learning</button>
+  <span class="count" id="count"></span>
+</div>
+
+<div id="cards-root"></div>
+
+<script>
+const DATA=[
+{s:"Work, Study & Future Plans",n:1,t:"work",m:1,q:"Do you work or are you a student?",a:"I'm working at the moment. I've got a job in e-commerce, and I've been doing it for about five years now."},
+{s:"Work, Study & Future Plans",n:1,t:"work",m:1,q:"Do you like your job?",a:"Yeah, I do actually. The pay's really good and I feel like I'm doing something meaningful — the only downside is that the workload's always pretty heavy."},
+{s:"Work, Study & Future Plans",n:1,t:"work",m:1,q:"Why did you choose this job?",a:"To be honest, I've wanted to be a product manager since university. I love the idea of creating something that could actually change the world."},
+{s:"Work, Study & Future Plans",n:1,t:"work",m:1,q:"What skills do you need for your job?",a:"Communication and problem-solving, mainly. In e-commerce things move really fast, so you have to stay flexible and work well with all kinds of teams."},
+{s:"Work, Study & Future Plans",n:1,t:"work",m:1,q:"You said you enjoy your job, but you also mentioned the workload is quite heavy. Isn't that a bit contradictory?",a:"Ha, good point! But not really. I don't mind being busy — it gives me a sense of achievement. It's just about finding the right balance."},
+{s:"Work, Study & Future Plans",n:1,t:"work",m:1,q:"Would you like to change your job in the future?",a:"Maybe one day. For now I'm happy where I am, but eventually I'd like something with a better work-life balance."},
+{s:"Work, Study & Future Plans",n:1,t:"work",q:"Do you have any plans for the future?",a:"I do, actually. Right now my main goal is to improve my English and hopefully move into a more senior role at work."},
+{s:"Work, Study & Future Plans",n:1,t:"work",q:"What are you studying at the moment?",a:"I'm focusing on my English, mainly for the IELTS. It's taking up most of my free time right now."},
+{s:"Work, Study & Future Plans",n:1,t:"work",q:"Do you prefer studying alone or in a group?",a:"Alone, usually. I concentrate much better when it's quiet and there are no distractions."},
+{s:"Work, Study & Future Plans",n:1,t:"work",q:"Why are you learning English?",a:"Mainly for my career and travel. English opens up so many opportunities these days."},
+
+{s:"Hometown",n:2,t:"hometown",m:1,q:"Where are you from?",a:"I'm from a small town in the south of China. It's got beautiful scenery — lots of mountains and rivers — though it used to be quite a poor area."},
+{s:"Hometown",n:2,t:"hometown",m:1,q:"Do you like your hometown?",a:"Not really, to be honest. I love the fresh air, but in such a small town everyone knows everyone, which feels a bit suffocating. So going back always leaves me feeling drained."},
+{s:"Hometown",n:2,t:"hometown",m:1,q:"Is it a good place for young people?",a:"Not really, to be honest. There aren't many job opportunities, so a lot of young people move to bigger cities."},
+{s:"Hometown",n:2,t:"hometown",m:1,q:"How has your hometown changed in recent years?",a:"Quite a lot, actually. The roads and buildings are much better now, and people are generally far better off than they used to be."},
+{s:"Hometown",n:2,t:"hometown",m:1,q:"Would you ever move back there?",a:"Probably not. It's a lovely place to visit, but I've got used to the freedom and the opportunities you only really get in a big city."},
+
+{s:"Home & Neighbours",n:3,t:"home",m:1,q:"Do you live in a house or an apartment?",a:"I live in an apartment I rent near my company — well, I just rent one of the rooms. It's small, but it's got everything I need."},
+{s:"Home & Neighbours",n:3,t:"home",m:1,q:"What do you like about where you live?",a:"Mainly the location and the price. The rent's pretty affordable, and it's close to work — I can get there in about 30 minutes, which isn't bad at all."},
+{s:"Home & Neighbours",n:3,t:"home",m:1,q:"How long have you lived there?",a:"Only about a year. Actually, I move almost every year — once the lease is up, the agency always puts the rent up, so I usually just find somewhere new instead."},
+{s:"Home & Neighbours",n:3,t:"home",m:1,q:"Would you like to move somewhere bigger in the future?",a:"Definitely. It's fine for now, but one day I'd love to move into a proper place of my own, where I don't have to share with anyone."},
+{s:"Home & Neighbours",n:3,t:"home",q:"What would your ideal home be like?",a:"Somewhere bright and spacious, ideally a place of my own with no one to share with."},
+{s:"Home & Neighbours",n:3,t:"home",q:"Do you know your neighbours?",a:"Only a little. We say hello in the lift, but we're not particularly close."},
+{s:"Home & Neighbours",n:3,t:"home",q:"Are good neighbours important?",a:"Definitely. It's reassuring to have someone nearby you can count on in an emergency."},
+
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",m:1,q:"What do you do in your free time?",a:"I usually just relax — I watch films or go for a walk. Nothing too exciting, but it helps me switch off."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",m:1,q:"What kind of films do you enjoy?",a:"I'm really into films with a strong story — thrillers and dramas mostly. Anything that keeps me guessing till the end."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",m:1,q:"Do you prefer relaxing alone or with friends?",a:"It depends on my mood, but broadly speaking, I prefer being on my own, because I need some space to recharge."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",m:1,q:"What do you usually do at the weekend?",a:"I like to take it easy — I usually sleep in. These days, though, I mostly spend my weekends studying English."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",m:1,q:"Do you prefer weekends or weekdays?",a:"Weekends, obviously! That's when I finally get to slow down, catch up on sleep, and do things at my own pace."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",q:"Do you prefer staying in or going out?",a:"Staying in, most of the time. After a busy week, I just want to recharge at home."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",q:"Do you watch much TV?",a:"Not traditional TV, no. I mostly stream shows on my laptop whenever I've got a free evening."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",neg:1,q:"Do you like playing games?",a:"Not really, to be honest. I rarely play games — they're just not my thing, and I'd rather spend my free time reading or watching a film."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",q:"Do you collect anything?",a:"Not these days. As a kid, though, I used to collect the little cartoon cards you'd find in instant noodle packets — One Piece ones, mostly. I sort of grew out of it, but it was great fun back then."},
+{s:"Free Time, Weekends & Entertainment",n:4,t:"freetime",q:"Do you laugh a lot?",a:"Yeah, I'd say so. I'm quite an easy-going person, so it doesn't take much to make me laugh."},
+
+{s:"Food & Cooking",n:5,t:"food",m:1,q:"What's your favourite food?",a:"I don't really have one favourite, but generally I love home-style stir-fries — like sliced pork with eggplant or green peppers, ideally a bit spicy. I could eat that every day."},
+{s:"Food & Cooking",n:5,t:"food",m:1,q:"Do you like cooking?",a:"Not really, honestly — but I still cook quite often, because I like being able to control what goes into my food, like the amount of oil and salt. It's just healthier that way."},
+{s:"Food & Cooking",n:5,t:"food",m:1,q:"Do you prefer eating at home or eating out?",a:"Eating at home, definitely. It's cheaper and healthier, and I get to make things exactly the way I like them."},
+{s:"Food & Cooking",n:5,t:"food",q:"Do you eat fast food?",a:"Occasionally, when I'm in a rush. I try not to, though, because it's not exactly healthy."},
+{s:"Food & Cooking",n:5,t:"food",q:"Do you like trying foreign food?",a:"I love it, actually. Trying new cuisines is one of my favourite parts of travelling."},
+{s:"Food & Cooking",n:5,t:"food",q:"Do you like chocolate?",a:"I do, but only now and then. A little is enough to satisfy my sweet tooth."},
+
+{s:"Weather & Seasons",n:6,t:"weather",m:1,q:"What's the weather like in your country?",a:"It depends on the region. I'm in Beijing, in the north, where we get four distinct seasons — freezing winters and hot, humid summers."},
+{s:"Weather & Seasons",n:6,t:"weather",m:1,q:"Do you prefer hot or cold weather?",a:"I prefer hot weather, definitely. I just feel more energetic when it's warm and sunny — and if it gets too hot, I can always cool down with the air conditioning."},
+{s:"Weather & Seasons",n:6,t:"weather",m:1,q:"Does the weather affect how you feel?",a:"Definitely. On a bright, sunny day I feel much more motivated, whereas grey, gloomy weather tends to make me a bit lazy."},
+{s:"Weather & Seasons",n:6,t:"weather",q:"Do you like rainy days?",a:"Sometimes. It's cosy if I'm indoors, but a real nuisance when I have to commute."},
+{s:"Weather & Seasons",n:6,t:"weather",q:"Do you like summer?",a:"I do — I prefer warm weather. And if it gets too hot, I can always cool down with the air conditioning."},
+
+{s:"Music & Singing",n:7,t:"music",m:1,q:"Do you like music?",a:"I do, but only at certain times — when I've got some free time, or when I'm in a particularly good or bad mood. Other than that, I hardly ever listen to it."},
+{s:"Music & Singing",n:7,t:"music",m:1,q:"Has your taste in music changed?",a:"Not really, actually. I've always been keen on music with rich emotions and a story behind it — like Beyoncé's song \"If I Were a Boy.\""},
+{s:"Music & Singing",n:7,t:"music",m:1,q:"Do you play any musical instruments?",a:"No, unfortunately. I sort of wish I'd learned the piano as a kid, but these days I'm happy just listening rather than playing."},
+{s:"Music & Singing",n:7,t:"music",q:"Would you like to learn an instrument?",a:"Definitely — the guitar, maybe. It just seems like a relaxing thing to pick up in my free time."},
+{s:"Music & Singing",n:7,t:"music",q:"Do you like singing?",a:"I do, though only in the shower or at karaoke! I'm no good, but it's a lot of fun."},
+{s:"Music & Singing",n:7,t:"music",neg:1,q:"Do you like singing? (negative version)",a:"Not really, to be honest. I can't hold a tune, so I tend to leave the singing to other people."},
+
+{s:"Sport, Exercise & Health",n:8,t:"sport",m:1,q:"Do you do any sports?",a:"I used to go running a couple of times a week when I was at university. But since I started working, I barely do any exercise — I'm just too busy these days."},
+{s:"Sport, Exercise & Health",n:8,t:"sport",m:1,q:"Would you like to do more exercise in the future?",a:"Definitely. I know I really should, so once things calm down at work, I'd love to get back into running."},
+{s:"Sport, Exercise & Health",n:8,t:"sport",neg:1,q:"Do you enjoy watching sports?",a:"Not really — it's never been my thing. I'd rather be doing something myself than sitting and watching."},
+{s:"Sport, Exercise & Health",n:8,t:"sport",q:"What do you do to stay healthy?",a:"I try to eat home-cooked food and get enough sleep. I know I should exercise more, though."},
+{s:"Sport, Exercise & Health",n:8,t:"sport",q:"Do you walk much?",a:"Quite a bit, actually. I walk to the subway every day, and I love a relaxing stroll at weekends."},
+{s:"Sport, Exercise & Health",n:8,t:"sport",q:"How many hours do you usually sleep?",a:"Around seven, ideally. Any less and I feel groggy the whole next day."},
+
+{s:"Reading & Books",n:9,t:"reading",m:1,q:"Do you enjoy reading?",a:"I really do. I don't always get much time for it, but I try to read most nights before bed — it's a great way to unwind and switch off."},
+{s:"Reading & Books",n:9,t:"reading",m:1,q:"What kind of books do you like?",a:"All sorts of things, but mainly historical novels and philosophy books. I love diving deep into big ideas — the nature of the world, human nature, and the search for truth."},
+{s:"Reading & Books",n:9,t:"reading",m:1,q:"Do you prefer paper books or e-books?",a:"Paper books, definitely. I stare at screens all day for work, so there's something relaxing about holding a real book and turning the pages."},
+{s:"Reading & Books",n:9,t:"reading",m:1,q:"Did you read a lot as a child?",a:"Yeah, quite a bit. I mostly read fairy tales and comics back then — nothing too serious, but they really sparked my imagination."},
+{s:"Reading & Books",n:9,t:"reading",m:1,q:"How often do you read?",a:"Pretty much every day, even if it's just for twenty minutes before bed. It's become a habit I'd really miss if I skipped it."},
+{s:"Reading & Books",n:9,t:"reading",m:1,q:"Do you think reading is important for children?",a:"Absolutely. It builds their vocabulary and imagination from an early age, and I think it helps them become more thoughtful, curious people."},
+{s:"Reading & Books",n:9,t:"reading",q:"Book types — useful vocabulary",voc:[["fiction","小说类 (made-up stories) — opp. non-fiction 纪实类"],["novel","长篇小说"],["historical novel","历史小说"],["philosophy books","哲学书"],["science fiction / sci-fi","科幻"],["thriller / mystery / detective novel","惊悚 / 推理 / 侦探小说"],["biography","传记 — a real person's life story"],["autobiography","自传"],["self-help book","励志 / 自助类"],["fairy tale","童话"],["comic / graphic novel","漫画"],["poetry","诗歌"],["textbook","教科书"]]},
+
+{s:"Technology & Communication",n:10,t:"tech",m:1,q:"How often do you use your phone?",a:"Way too much, honestly! I use it for everything — messaging, shopping, even paying for things."},
+{s:"Technology & Communication",n:10,t:"tech",m:1,q:"Could you live without your phone?",a:"Honestly, it'd be really hard. I rely on it for pretty much everything — paying, getting around, staying in touch — so even a day without it would be a struggle."},
+{s:"Technology & Communication",n:10,t:"tech",q:"How do you usually communicate with people?",a:"Mostly through my phone — texting and WeChat, really. I only call people when it's something urgent."},
+{s:"Technology & Communication",n:10,t:"tech",q:"Do you prefer talking face-to-face or online?",a:"Face-to-face, definitely. You pick up on so much more from someone's expressions and tone of voice."},
+{s:"Technology & Communication",n:10,t:"tech",q:"Do you write many emails?",a:"Loads, honestly — mostly for work. I probably send dozens every single day."},
+{s:"Technology & Communication",n:10,t:"tech",q:"Is your handwriting good?",a:"Not really! Since I type everything now, my handwriting's got pretty messy over the years."},
+{s:"Technology & Communication",n:10,t:"tech",q:"How do you usually pay your bills?",a:"Everything's on my phone now — I just pay online in a few taps. So convenient."},
+
+{s:"Travel, Holidays & Transport",n:11,t:"travel",m:1,q:"Do you like travelling?",a:"I love it. Seeing new places and trying different food is my favourite way to spend a holiday."},
+{s:"Travel, Holidays & Transport",n:11,t:"travel",m:1,q:"Do you prefer travelling alone or with others?",a:"With others, usually. It's nice to share the experience — though I don't mind exploring on my own every now and then."},
+{s:"Travel, Holidays & Transport",n:11,t:"travel",q:"How do you usually travel?",a:"For short trips, the train; for longer ones, I'll fly. It just depends on the distance."},
+{s:"Travel, Holidays & Transport",n:11,t:"travel",q:"Do you plan your trips carefully?",a:"I sort out the basics, but I like leaving room for spontaneity. Some of the best moments aren't planned."},
+{s:"Travel, Holidays & Transport",n:11,t:"travel",q:"What do you usually do on holidays?",a:"I like to travel if I can, or just catch up on sleep and relax at home."},
+{s:"Travel, Holidays & Transport",n:11,t:"travel",q:"Do you enjoy travelling by plane?",a:"I do, mostly. I love the feeling of taking off, though the long waits at the airport can be tiring."},
+{s:"Travel, Holidays & Transport",n:11,t:"travel",q:"Do you often use public transport?",a:"All the time. The subway's my main way of getting around — it's cheap and beats sitting in traffic."},
+{s:"Travel, Holidays & Transport",n:11,t:"travel",q:"Do you use maps often?",a:"All the time, on my phone. I've got a terrible sense of direction, so I'd be lost without them — literally!"},
+
+{s:"Shopping, Clothes & Shoes",n:12,t:"shopping",q:"Do you enjoy shopping?",a:"It depends. I love shopping for things like books, but I find clothes shopping a bit of a chore."},
+{s:"Shopping, Clothes & Shoes",n:12,t:"shopping",q:"Do you prefer shopping online or in stores?",a:"Online, mostly. It's convenient and I can compare prices easily, though I do miss trying things on."},
+{s:"Shopping, Clothes & Shoes",n:12,t:"shopping",q:"Are clothes important to you?",a:"Fairly, yeah. I'm not obsessed with fashion, but I like to look neat and feel comfortable."},
+{s:"Shopping, Clothes & Shoes",n:12,t:"shopping",q:"Do you prefer comfortable or fashionable clothes?",a:"Comfort, every time. If something looks great but feels awful, I just won't wear it."},
+{s:"Shopping, Clothes & Shoes",n:12,t:"shopping",q:"What kind of shoes do you usually wear?",a:"Mostly trainers. They go with everything and they're comfy for getting around all day."},
+
+{s:"People & Yourself",n:13,t:"people",q:"Do you have a lot of friends?",a:"Not a lot, but a few really close ones. I'd say I value quality over quantity when it comes to friendships."},
+{s:"People & Yourself",n:13,t:"people",q:"What qualities do you value in people?",a:"Honesty and kindness, mainly. I really admire people you can genuinely trust."},
+{s:"People & Yourself",n:13,t:"people",q:"Are you a patient person?",a:"Fairly, yeah — though heavy traffic definitely tests my patience!"},
+{s:"People & Yourself",n:13,t:"people",q:"Does your name have a special meaning?",a:"It does, actually. My parents chose it hoping I'd grow up kind and hardworking."},
+{s:"People & Yourself",n:13,t:"people",q:"Do you think age matters?",a:"In some ways, but I think attitude matters more. You can be young at heart at any age."},
+{s:"People & Yourself",n:13,t:"people",q:"Do you often look in the mirror?",a:"Just quickly, in the morning before I head out. I'm not particularly vain about my appearance."},
+
+{s:"Around You: Photos, Nature & Places",n:14,t:"nature",q:"Do you like taking photos?",a:"Yeah, I do — mostly on my phone though. I love capturing little moments so I can look back on them later."},
+{s:"Around You: Photos, Nature & Places",n:14,t:"nature",q:"Do you prefer taking photos of people or places?",a:"Places, definitely. I'm a bit shy about photographing people, but I never get tired of a good landscape."},
+{s:"Around You: Photos, Nature & Places",n:14,t:"nature",q:"Do you like flowers?",a:"I do, actually. They brighten up a room instantly and always lift my mood."},
+{s:"Around You: Photos, Nature & Places",n:14,t:"nature",q:"Are there many parks where you live?",a:"Yeah, quite a few. Beijing has some lovely big parks, which is really nice in such a busy city."},
+{s:"Around You: Photos, Nature & Places",n:14,t:"nature",q:"Do you often go to parks?",a:"Not as often as I'd like. When I do, it's usually for a relaxing walk at the weekend."},
+{s:"Around You: Photos, Nature & Places",n:14,t:"nature",q:"What was your favourite toy as a child?",a:"I loved building blocks — Lego, mostly. I could spend hours just making things."},
+
+{s:"Learning & Curiosities",n:15,t:"learning",q:"Are you interested in science?",a:"Somewhat. I'm no expert, but I find documentaries about space and nature fascinating."},
+{s:"Learning & Curiosities",n:15,t:"learning",q:"Did you like maths at school?",a:"It wasn't my favourite, but I didn't mind it. I quite liked that there was always a clear right answer."},
+{s:"Learning & Curiosities",n:15,t:"learning",q:"Do you have a lucky number?",a:"I do — eight. It's considered lucky in China because it sounds like the word for wealth."},
+{s:"Learning & Curiosities",n:15,t:"learning",neg:1,q:"Are you interested in art?",a:"Not really, to be honest. I can appreciate a nice painting, but it's never been something I'm passionate about."},
+{s:"Learning & Curiosities",n:15,t:"learning",neg:1,q:"Do you like dancing?",a:"Not really, to be honest. I've got two left feet, so it's never really been my thing."},
+{s:"Learning & Curiosities",n:15,t:"learning",q:"If you could have any superpower, what would it be? (a 'strange question')",a:"Probably the ability to fly. Just imagine skipping all the traffic and the crowded subway!"}
+];
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function render(){
+  const root=document.getElementById('cards-root');
+  let html='',lastSection='',num=0;
+  DATA.forEach((d,i)=>{
+    if(d.s!==lastSection){
+      lastSection=d.s;
+      html+=`<h2>${d.n}. ${esc(d.s)}</h2>`;
+    }
+    num++;
+    const mineCls=d.m?' mine':(d.neg?' neg':'');
+    let badges='';
+    if(d.m) badges+='<span class="badge badge-mine">★ Your answer</span>';
+    if(d.neg) badges+='<span class="badge badge-neg">negative OK</span>';
+    let back='';
+    if(d.voc){
+      const items=d.voc.map(v=>`<li><span class="vocab-term">${esc(v[0])}</span> — <span class="vocab-cn">${esc(v[1])}</span></li>`).join('');
+      back=`<div class="back-label">Vocabulary</div><ul class="vocab-list">${items}</ul><div class="card-actions" style="margin-top:0.6rem;"><span class="flip-hint">tap to flip back</span></div>`;
+    } else {
+      back=`<div class="back-label">Model / Your Answer</div>
+          <div class="card-answer">${esc(d.a)}</div>
+          <div class="card-actions" style="margin-top:1rem;">
+            <button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer">&#9654;</button>
+            <span class="flip-hint">tap to flip back</span>
+          </div>`;
+    }
+    const frontSpeak=d.voc?'':`<button class="voice-btn" id="vbtn-${i}" onclick="speak(event,${i})" title="Read question">&#9654;</button>`;
+    html+=`<div class="card-container" data-theme="${d.t}" data-mine="${d.m?1:0}">
+      <div class="flashcard" id="card-${i}" onclick="flipCard(${i})">
+        <div class="card-front${mineCls}">
+          <div class="card-question">${num}. ${esc(d.q)}</div>
+          ${badges?'<div class="badges">'+badges+'</div>':''}
+          <div class="card-actions">
+            ${frontSpeak}
+            <span class="flip-hint">tap to flip</span>
+          </div>
+        </div>
+        <div class="card-back">${back}</div>
+      </div>
+    </div>`;
+  });
+  root.innerHTML=html;
+  updateCount();
+}
+
+function flipCard(i){
+  const card=document.getElementById('card-'+i);
+  const front=card.querySelector('.card-front');
+  const back=card.querySelector('.card-back');
+  card.classList.toggle('flipped');
+  if(card.classList.contains('flipped')){
+    back.style.position='relative';
+    front.style.position='absolute';
+    front.style.top='0';
+    front.style.left='0';
+  } else {
+    front.style.position='';
+    back.style.position='absolute';
+  }
+}
+
+function getRepeatCount(){
+  const v=parseInt(document.getElementById('repeat-count').value,10);
+  return isNaN(v)||v<1?1:Math.min(v,99);
+}
+
+function saveRepeat(){
+  const el=document.getElementById('repeat-count');
+  let v=parseInt(el.value,10);
+  if(isNaN(v)||v<1)v=1;
+  if(v>99)v=99;
+  el.value=v;
+  localStorage.setItem('p1-repeat',v);
+}
+
+function speakRepeated(text,btn){
+  speechSynthesis.cancel();
+  const times=getRepeatCount();
+  btn.classList.add('speaking');
+  let done=0;
+  const speakOnce=()=>{
+    const u=new SpeechSynthesisUtterance(text);
+    u.rate=1.05;u.pitch=1.0;u.lang='en-US';
+    u.onend=()=>{
+      done++;
+      if(done<times) speakOnce();
+      else btn.classList.remove('speaking');
+    };
+    u.onerror=()=>btn.classList.remove('speaking');
+    speechSynthesis.speak(u);
+  };
+  speakOnce();
+}
+
+function speak(e,i){
+  e.stopPropagation();
+  speakRepeated(DATA[i].q,document.getElementById('vbtn-'+i));
+}
+
+function speakAnswer(e,i){
+  e.stopPropagation();
+  speakRepeated(DATA[i].a,document.getElementById('vbtn-back-'+i));
+}
+
+function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
+
+function toggleDark(){
+  document.body.classList.toggle('dark');
+  localStorage.setItem('p1-dark',document.body.classList.contains('dark')?'1':'0');
+}
+
+function updateCount(){
+  const total=document.querySelectorAll('.card-container').length;
+  const shown=document.querySelectorAll('.card-container:not(.hidden)').length;
+  document.getElementById('count').textContent=shown===total?`${total} cards`:`${shown} / ${total} cards`;
+}
+
+function filterCards(filter,btn){
+  document.querySelectorAll('.ctrl-btn[data-filter]').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card-container').forEach(c=>{
+    let show=true;
+    if(filter==='mine') show=c.dataset.mine==='1';
+    else if(filter!=='all') show=c.dataset.theme===filter;
+    c.classList.toggle('hidden',!show);
+  });
+  document.querySelectorAll('h2').forEach(h=>{
+    let next=h.nextElementSibling;
+    let anyVisible=false;
+    while(next&&next.tagName!=='H2'){
+      if(next.classList.contains('card-container')&&!next.classList.contains('hidden')) anyVisible=true;
+      next=next.nextElementSibling;
+    }
+    h.classList.toggle('hidden',!anyVisible);
+  });
+  updateCount();
+}
+
+window.addEventListener('DOMContentLoaded',()=>{
+  if(localStorage.getItem('p1-dark')==='1') document.body.classList.add('dark');
+  const savedRepeat=localStorage.getItem('p1-repeat');
+  if(savedRepeat) document.getElementById('repeat-count').value=savedRepeat;
+  render();
+});
+</script>
+</body>
+</html>
