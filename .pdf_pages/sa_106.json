@@ -1,0 +1,132 @@
+[
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "Do you think it's important for children to learn maths?",
+    "a": "Yes, it's important because maths skills can help them better understand science and technology. Studying maths can also improve their problem-solving skills.",
+    "vocab": [
+      ["help them better understand…", "帮助他们更好地理解……"],
+      ["improve their problem-solving skills", "提高他们解决问题的技能"],
+      ["develop their money-management skills", "发展他们管理财务的技能"]
+    ]
+  },
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "Do you prefer to use a calculator when you do maths?",
+    "a": "It depends. I prefer to do maths in my head or on paper and not to use a calculator when I only need to do simple basic calculations. But I tend to use a calculator when I feel the calculations are tricky.",
+    "vocab": [
+      ["do maths in my head or on paper", "心算或者笔算"],
+      ["simple basic calculations", "简单的基础运算"],
+      ["tricky", "不容易解决的"],
+      ["do mental maths", "心算"],
+      ["do maths by hand", "笔算"],
+      ["exercise my brain", "锻炼大脑"]
+    ]
+  },
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "Do you have a number that is special to you?",
+    "a": "Yes, 16 is a special number to me because it's the day on which I was born. I believe it's my lucky number.",
+    "vocab": [
+      ["lucky number", "幸运数字"]
+    ]
+  },
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "Are you good at remembering numbers?",
+    "a": "No, I'm not good at it. Remembering numbers, especially long numbers, is always a challenge for me.\n\n或者：\nYes, I'm good at remembering numbers. I can easily remember phone numbers, including those I've heard only once.",
+    "vocab": []
+  },
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "What are some good ways to remember long numbers?",
+    "a": "I suppose the best way is to break long numbers into shorter parts so that they become easier to remember. Creating connections between the long numbers that you want to remember and things that you are familiar with is also a good way to remember long numbers.",
+    "vocab": [
+      ["create connections between… and…", "在……与……之间建立联系"]
+    ]
+  },
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "Do you think it's important for children to study science?",
+    "a": "Yes, it's really important because studying science can help them better understand the world around them. It can improve their problem-solving skills as well.",
+    "vocab": [
+      ["better understand…", "更好地了解……"],
+      ["the world around them", "他们身边的世界"],
+      ["improve their problem-solving skills", "增强他们解决问题的能力"]
+    ]
+  },
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "Do you like history?",
+    "a": "Yes, I do because it helps me better understand social change. It's also fun and fascinating. Sometimes I feel that reading history books is like going on a journey into the past.",
+    "vocab": [
+      ["better understand…", "更好地了解……"],
+      ["social change", "社会变革（名词短语）"],
+      ["fun and fascinating", "有趣而且非常吸引人的"],
+      ["better understand the present and the future", "更好地理解现在与将来"]
+    ]
+  },
+  {
+    "topic": "数学，数字，科学，历史",
+    "q": "Do you like watching historical TV dramas?",
+    "a": "Yes, I do. They're fun and relaxing. They also help me gain knowledge about historical events and historical figures.\n\n或者：\nNo, I don't like watching historical TV dramas because they tend to distort history. They are entertaining, but very few of them are based on historical facts.",
+    "vocab": [
+      ["fun and relaxing", "有趣而且令人放松的"],
+      ["gain knowledge about…", "获取关于……的知识"],
+      ["historical events", "历史事件"],
+      ["historical figures", "历史人物"],
+      ["distort history", "歪曲历史"],
+      ["entertaining", "有娱乐性的"],
+      ["are based on historical facts", "基于历史事实"]
+    ]
+  },
+  {
+    "topic": "注意力，记忆力，健忘",
+    "q": "Do you concentrate better in the morning or in the evening?",
+    "a": "I concentrate better in the morning because I feel refreshed after a good night's sleep. By contrast, I tend to feel sleepy and unfocused in the evening.\n\n或者：\nI concentrate better in the evening because I'm free from distractions. Everything feels quiet and peaceful in the evening.",
+    "vocab": [
+      ["feel refreshed", "感觉头脑很清醒"],
+      ["a good night's sleep", "（固定短语）一夜好觉"],
+      ["feel sleepy and unfocused", "感觉很困而且注意力不集中"],
+      ["free from distractions", "不受任何干扰"],
+      ["peaceful", "平静的"]
+    ]
+  },
+  {
+    "topic": "注意力，记忆力，健忘",
+    "q": "What are some ways to improve memory?",
+    "a": "Having a balanced diet is a good way to improve memory because it can help the brain work more efficiently. Playing outdoor sports and keeping a regular sleep schedule are also good ways to improve memory.",
+    "vocab": [
+      ["have a balanced diet", "保持均衡的饮食结构"],
+      ["help the brain work more efficiently", "帮助大脑更高效地工作"],
+      ["play outdoor sports", "从事户外运动"],
+      ["keep a regular sleep schedule", "保持有规律的作息时间"]
+    ]
+  },
+  {
+    "topic": "注意力，记忆力，健忘",
+    "q": "Why do some people forget things easily?",
+    "a": "The main reason is that they suffer from stress and anxiety. Lack of sleep is also a common reason for forgetting things easily.",
+    "vocab": [
+      ["suffer from stress and anxiety", "受到压力和焦虑的困扰"],
+      ["lack of sleep", "睡眠不足"]
+    ]
+  },
+  {
+    "topic": "注意力，记忆力，健忘",
+    "q": "Why do elderly people forget things more easily than younger people?",
+    "a": "It's a natural process. Elderly people tend to be more forgetful due to ageing of the brain.",
+    "vocab": [
+      ["a natural process", "一个自然的过程"],
+      ["tend to be", "通常是，往往是"],
+      ["due to", "由于（后面跟名词、名词短语或 the fact that… 结构）"],
+      ["forgetful", "健忘的"],
+      ["ageing of the brain / aging of the brain", "大脑的老化（英式/美式拼写）"]
+    ]
+  },
+  {
+    "topic": "睡眠，晚睡，做梦",
+    "q": "What are some good ways to improve sleep?",
+    "a": "I suppose the best way to improve sleep is to keep a regular sleep schedule. Doing…",
+    "vocab": []
+  }
+]

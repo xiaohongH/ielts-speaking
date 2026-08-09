@@ -1,0 +1,142 @@
+[
+  {
+    "topic": "志愿者服务",
+    "q": "Do you think it's important to do volunteer work?",
+    "a": "Definitely. We can give back to society by doing volunteer work. It's also a good way to socialise and make new friends.",
+    "vocab": [
+      ["do volunteer work", "做志愿者服务，做义工"],
+      ["give back to society", "回报社会"],
+      ["help to raise funding for charity", "帮助慈善事业募捐"],
+      ["socialise and make new friends", "社交并且结识新的朋友"],
+      ["improve their communication skills", "提高他们的沟通技能"],
+      ["develop a sense of responsibility", "形成一种责任感"]
+    ]
+  },
+  {
+    "topic": "乱扔垃圾，噪音，拥挤",
+    "q": "How do you feel when you see people dropping litter?",
+    "a": "Their behaviour makes me feel upset. They're selfish and don't care about the environment. Sometimes I pick up others' litter, but I don't always have the time to do that.",
+    "vocab": [
+      ["feel upset", "感到很不愉快"],
+      ["selfish", "自私的"]
+    ]
+  },
+  {
+    "topic": "乱扔垃圾，噪音，拥挤",
+    "q": "What are some common types of noise in your city?",
+    "a": "The most common types of noise in my city are traffic noise, including honking, and construction noise. Loud music is also very common in my city.",
+    "vocab": [
+      ["traffic noise", "交通噪声"],
+      ["construction noise", "建筑施工噪声"],
+      ["honking", "按喇叭"]
+    ]
+  },
+  {
+    "topic": "乱扔垃圾，噪音，拥挤",
+    "q": "How do you feel when you're in a crowded place?",
+    "a": "I'm quite sociable, so I tend to feel comfortable when I'm in a crowded place.\n\n或者：\nI tend to feel a bit nervous when I'm in a crowded place, especially when the place is crowded with people I don't know.",
+    "vocab": [
+      ["sociable", "外向的，合群的"],
+      ["tend to", "通常，往往"],
+      ["annoying and distracting", "烦人而且干扰注意力"]
+    ]
+  },
+  {
+    "topic": "朋友，家人",
+    "q": "What are important qualities for friends to have?",
+    "a": "I suppose the most important quality for friends to have is honesty because we can't trust people who tell lies. A good sense of humour is also an important quality for friends to have.",
+    "vocab": [
+      ["honesty", "诚实（相关：a sense of responsibility 责任感）"],
+      ["a good sense of humour", "幽默感"]
+    ]
+  },
+  {
+    "topic": "朋友，家人",
+    "q": "How do you usually keep in touch with friends who live far away?",
+    "a": "I often chat with them on social media. Sometimes I also share photos and videos with them.",
+    "vocab": [
+      ["chat", "聊天"],
+      ["social media", "社交媒体"],
+      ["share photos and videos", "分享照片和视频"]
+    ]
+  },
+  {
+    "topic": "朋友，家人",
+    "q": "Do you usually spend your birthday with your family or with your friends?",
+    "a": "I usually spend my birthday with my friends because my family live in another city. My friends usually throw a birthday party for me, which is nice and thoughtful.\n\n或者：\nI tend to spend my birthday with my family. We usually have my birthday dinner in a nice restaurant, and then go to the cinema.",
+    "vocab": [
+      ["throw a birthday party", "开生日派对（throw a party 和 have a party 都是\"开派对\"的意思）"],
+      ["thoughtful", "体贴的，关心别人的"],
+      ["tend to", "通常，往往"]
+    ]
+  },
+  {
+    "topic": "独处，访客",
+    "q": "Do you like to spend time alone?",
+    "a": "I'm quite sociable and I have many friends. But I try to spend at least a few minutes every day alone, so I can concentrate on my own tasks and avoid distractions.",
+    "vocab": [
+      ["quite sociable", "很合群的"],
+      ["avoid distractions", "避免干扰"],
+      ["concentrate on...", "集中精力于……"]
+    ]
+  },
+  {
+    "topic": "独处，访客",
+    "q": "Do you often have visitors?",
+    "a": "Yes, my friends often visit me at home. I enjoy catching up with them and cooking for them.",
+    "vocab": [
+      ["catch up with friends", "跟朋友们\"聊近况\"，不是指追上朋友"],
+      ["have a lot in common", "有很多共同点"],
+      ["hang out", "一起休闲放松"],
+      ["invite them for dinner", "邀请他们来吃晚饭"]
+    ]
+  },
+  {
+    "topic": "老师，青少年，名人",
+    "q": "What are the qualities that good teachers have?",
+    "a": "Good teachers know their subject well and enjoy sharing their knowledge with their students. They are also very patient and have a good sense of humour.",
+    "vocab": [
+      ["know their subject well", "很了解他们所教的科目"],
+      ["enjoy sharing their knowledge with their students", "享受和他们的学生们分享知识"],
+      ["patient", "有耐心的"],
+      ["have a good sense of humour", "很有幽默感"],
+      ["encourage their students to think independently", "鼓励学生们独立地思考"]
+    ]
+  },
+  {
+    "topic": "老师，青少年，名人",
+    "q": "Do you think it's better for students to have teachers or to teach themselves?",
+    "a": "In my opinion, students can learn more efficiently with teachers' guidance. At the same time, teachers should encourage their students to think independently.",
+    "vocab": [
+      ["learn more efficiently", "更高效地学习"],
+      ["teachers' guidance", "老师的指导"],
+      ["encourage their students to think independently", "鼓励他们的学生们独立思考"]
+    ]
+  },
+  {
+    "topic": "老师，青少年，名人",
+    "q": "What do you think is the best thing about being a teenager?",
+    "a": "The best thing about being a teenager is probably the opportunity to explore new things. They are encouraged to explore things that they are not familiar with and learn through mistakes.",
+    "vocab": [
+      ["the opportunity to explore new things", "探索新事物的机会"],
+      ["learn through mistakes", "从错误中学习"]
+    ]
+  },
+  {
+    "topic": "老师，青少年，名人",
+    "q": "Would you like to be a celebrity?",
+    "a": "Yes, I'd like to because being a celebrity would give me a strong sense of achievement. And I would be able to socialise and make friends with many other celebrities, which would be fun and exciting.\n\n或者：\nNo. Being a celebrity would mean losing my privacy and having paparazzi following me around. I don't think I would enjoy this kind of lifestyle.",
+    "vocab": [
+      ["a strong sense of achievement", "很强的成就感"],
+      ["socialise and make friends with", "和……社交并且成为朋友"],
+      ["fun and exciting", "有趣而且令人兴奋的"],
+      ["fame and wealth", "有名望和财富"],
+      ["endorse products", "代言产品"],
+      ["Internet celebrities", "网络名人，\"网红\""],
+      ["lose my privacy", "失去我的隐私"],
+      ["have paparazzi following me around", "有狗仔队到处跟着我（paparazzi 是集合名词，不能加 s）"],
+      ["a good role model for", "……的好榜样"],
+      ["a legend", "传奇人物"]
+    ]
+  }
+]

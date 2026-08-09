@@ -1,0 +1,177 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "Why is it important to be punctual?",
+    "a": "It's important because being punctual shows that we have respect for others. It also shows that we can manage our time well, and we're responsible and reliable.",
+    "vocab": [
+      ["manage our time well", "管理好我们的时间"],
+      ["responsible and reliable", "有责任感而且可靠的"]
+    ]
+  },
+  {
+    "topic": "耐心，分享",
+    "q": "Are you a patient person?",
+    "a": "Well, I suppose I am. I can usually stay calm when I have to wait for someone or when I'm in a stressful situation.",
+    "vocab": [
+      ["stay calm", "保持冷静"],
+      ["a stressful situation", "压力很大的情况"]
+    ]
+  },
+  {
+    "topic": "耐心，分享",
+    "q": "Do you think parents should encourage their children to share things with friends?",
+    "a": "Yes, I guess they should because it can help their children understand the importance of cooperation and fairness. It can also help their children develop a sense of responsibility.",
+    "vocab": [
+      ["understand the importance of cooperation and fairness", "理解合作与公平的重要性"],
+      ["I guess...", "native speakers在口语交流时也经常用I guess表示I think的意思"],
+      ["develop a sense of responsibility", "形成责任感"]
+    ]
+  },
+  {
+    "topic": "笑",
+    "q": "What kinds of things make you laugh?",
+    "a": "I laugh a lot when I watch comedies in the cinema or on TV. Funny jokes that I hear from my family members or my friends also make me laugh.",
+    "vocab": [
+      ["comedy", "喜剧"],
+      ["family member", "家庭成员"]
+    ]
+  },
+  {
+    "topic": "笑",
+    "q": "Do you like making others laugh?",
+    "a": "Yes, I enjoy making others laugh by sharing jokes or funny things that have happened to me with them. It's a good way to socialise and make new friends.",
+    "vocab": [
+      ["socialise", "社交"],
+      ["make new friends", "结交新朋友"]
+    ]
+  },
+  {
+    "topic": "笑",
+    "q": "Do you think it is important for us to laugh?",
+    "a": "Yes, it's really important because laughter can improve our health. It helps us unwind and can boost the immune system.",
+    "vocab": [
+      ["improve our health", "改善我们的健康"],
+      ["unwind", "放松（近义短语：wind down）"],
+      ["boost the immune system", "提高身体的免疫机能"],
+      ["reduce stress", "减轻压力"]
+    ]
+  },
+  {
+    "topic": "时间管理，做计划，匆忙",
+    "q": "Do you think time-management skills are important?",
+    "a": "Yes, time-management skills are very important because they help us become more organised. People who have good time-management skills can work or study more efficiently.",
+    "vocab": [
+      ["become more organised", "变得更有条理"],
+      ["work or study more efficiently", "更高效地工作或者学习"],
+      ["boost efficiency", "提高效率"],
+      ["save time", "节省时间"]
+    ]
+  },
+  {
+    "topic": "时间管理，做计划，匆忙",
+    "q": "Are you good at managing your time?",
+    "a": "Yes, I usually manage my time quite well. I make daily schedules and concentrate on one task at a time.\n\n或者：\nNo, unfortunately, I'm not good at managing my time. I like to put things off until the last minute, so I often find it difficult to complete my tasks on time.",
+    "vocab": [
+      ["make daily schedules", "做每天的日程安排"],
+      ["concentrate on one task at a time", "同时只专注于一件事"],
+      ["put things off", "把事情推迟"],
+      ["find it difficult to...", "感觉难以……"],
+      ["complete my tasks on time", "按时完成事务"],
+      ["set my priorities", "明确自己要优先完成的任务"],
+      ["use my time efficiently", "高效地使用我的时间"],
+      ["avoid distractions", "避免干扰"],
+      ["I'm a procrastinator", "我是一个拖延症患者"]
+    ]
+  },
+  {
+    "topic": "时间管理，做计划，匆忙",
+    "q": "What is the hardest thing about making a plan?",
+    "a": "I would say the hardest thing is to make it practical. Many plans sound good, but they are not practical.",
+    "vocab": [
+      ["make it practical", "让计划很实际"],
+      ["set priorities", "制定优先任务"],
+      ["make it flexible", "让计划有灵活性"]
+    ]
+  },
+  {
+    "topic": "时间管理，做计划，匆忙",
+    "q": "Do you often do things in a hurry?",
+    "a": "Well, I'm not good at making plans or managing my time, so I often do things in a hurry.\n\n或者：\nNo, I don't. I like to plan ahead of time and start early, so I usually have plenty of time to get things done.",
+    "vocab": [
+      ["make plans", "做计划"],
+      ["manage my time", "管理我的时间"],
+      ["plan ahead of time", "提前做计划"],
+      ["have plenty of time", "有足够的时间"]
+    ]
+  },
+  {
+    "topic": "日常惯例，空闲时间的活动",
+    "q": "What's your daily routine?",
+    "a": "My typical day is like this: I get up at around 7:00 a.m., have breakfast and then check my emails and my social media accounts. I go to work at 8:30 a.m. and get home in the early evening. After dinner, I watch TV, browse the Internet or listen to music. I usually go to bed at around 11 p.m.",
+    "vocab": [
+      ["typical day", "典型的一天"],
+      ["check my emails", "查邮件"],
+      ["social media account", "社交媒体账号"],
+      ["browse the Internet", "上网"],
+      ["go to lectures", "去上课"],
+      ["work on my assignments", "做作业"],
+      ["go to the library", "去图书馆"]
+    ]
+  },
+  {
+    "topic": "日常惯例，空闲时间的活动",
+    "q": "What do you like doing in your free time?",
+    "a": "I'm really into outdoor activities, such as jogging and cycling. I also enjoy hanging out with my friends in a café or going to the cinema with them.",
+    "vocab": [
+      ["I'm really into...", "我很喜欢……"],
+      ["outdoor activities", "户外活动"],
+      ["jogging", "慢跑"],
+      ["cycling", "骑自行车"],
+      ["hang out", "休闲放松"],
+      ["read novels", "看小说"],
+      ["chat with my friends on social media", "在社交媒体上和朋友们聊天"],
+      ["walk my dog", "遛狗"],
+      ["go jogging", "去慢跑"],
+      ["go to the gym", "去健身房"],
+      ["go to a concert", "去听音乐会"],
+      ["do volunteer work", "做志愿者服务，做义工"],
+      ["do the housework", "做家务"],
+      ["cook for my family", "给全家做饭"],
+      ["do the dishes / wash the dishes", "洗碗"],
+      ["do the laundry", "洗衣服"],
+      ["vacuum the floor", "用吸尘器吸地板"],
+      ["mop the floor", "擦地板"],
+      ["water the plants", "给植物浇水"],
+      ["change the sheets", "换床单"]
+    ]
+  },
+  {
+    "topic": "整洁，做家务",
+    "q": "Are you tidier at home or at work?",
+    "a": "I would say I'm tidier at work because that makes me more efficient and organised. I'm more relaxed at home than at work, so I don't always try to be tidy at home.",
+    "vocab": [
+      ["efficient and organised", "高效而且有条理的"],
+      ["quite messy", "很乱"]
+    ]
+  },
+  {
+    "topic": "整洁，做家务",
+    "q": "Do you think men and women should share the housework equally?",
+    "a": "Definitely. These days, most women work full-time just like men, so it's fair that men and women share the housework equally. And couples who share the housework equally are more likely to have a happy marriage.",
+    "vocab": [
+      ["work full-time", "全职工作"],
+      ["a happy marriage", "幸福的婚姻"],
+      ["are more likely to", "更可能会"]
+    ]
+  },
+  {
+    "topic": "整洁，做家务",
+    "q": "Do you think children should help their parents with the housework?",
+    "a": "Yes, I suppose they should because they can learn important life skills, such as cleaning and cooking, by helping their parents with the housework. It can also help children develop a sense of responsibility.",
+    "vocab": [
+      ["learn important life skills", "学会重要的生活技能"],
+      ["develop a sense of responsibility", "形成一种责任感"],
+      ["build family bonds", "增进亲情"]
+    ]
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "How do you usually get news?",
+    "a": "I usually get news from news websites because they offer the latest news and they are quite reliable. Sometimes I also get news from social media.",
+    "vocab": [
+      ["offer the latest news", "提供最及时的新闻"],
+      ["social media", "社交媒体"],
+      ["reliable", "可靠的"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "Which are you more interested in, local news or international news?",
+    "a": "I'm more interested in local news because it's important for me to stay up-to-date on local events. These are things that really have an effect on my daily life.\n\n或者：\nI'm more interested in international news because it tells me what is happening around the world. It's also a good source of knowledge about politics, science, culture and many other fields.",
+    "vocab": [
+      ["stay up-to-date on local events", "及时了解当地的事件"],
+      ["have an effect on my daily life", "对我的日常生活产生影响"],
+      ["a good source of...", "是……很好的来源"],
+      ["expand our horizons", "开阔我们的眼界"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "Do you think newspapers will disappear in the future?",
+    "a": "I suppose fewer people will read newspapers in the future. But I don't think newspapers will disappear completely because there will still be people who like reading newspapers while enjoying their coffee or tea.",
+    "vocab": []
+  },
+  {
+    "topic": "(承上)",
+    "q": "Do you like reading magazines?",
+    "a": "Yes, I do because they're a good source of information. The articles in magazines tend to have more details than the articles in newspapers or on the Internet. The colourful pictures in magazines also make them enjoyable.",
+    "vocab": [
+      ["a good source of information", "很好的信息来源"],
+      ["colourful pictures", "多彩的图片"],
+      ["enjoyable", "令人愉快的"]
+    ]
+  },
+  {
+    "topic": "阅读，笔",
+    "q": "Do you think it's important that children read regularly?",
+    "a": "Definitely. Reading regularly can expand their vocabulary and develop their language skills. It can also encourage imagination and improve concentration.",
+    "vocab": [
+      ["expand their vocabulary", "扩大他们的词汇量"],
+      ["encourage imagination", "激发想象力"],
+      ["improve concentration", "增强注意力"]
+    ]
+  },
+  {
+    "topic": "阅读，笔",
+    "q": "How often do you read?",
+    "a": "I read almost every day. I enjoy reading newspapers in the morning and reading novels and magazines at night before I go to bed.",
+    "vocab": [
+      ["novels", "小说"]
+    ]
+  },
+  {
+    "topic": "阅读，笔",
+    "q": "Do you usually read books for leisure or for work purposes?",
+    "a": "I usually read books for leisure. I enjoy reading novels, history books and biographies in my free time.\n\n或者：\nI usually read books to gather information for my research projects. The books that I read are not really fun, but I find them very helpful.",
+    "vocab": [
+      ["novels", "小说"],
+      ["biographies", "传记"],
+      ["research projects", "研究项目"],
+      ["are not really fun", "并不是很有趣"],
+      ["find them very helpful", "（宾补结构）感觉它们很有帮助"]
+    ]
+  },
+  {
+    "topic": "阅读，笔",
+    "q": "Do you prefer to buy books or borrow books from a library?",
+    "a": "I prefer to buy books so that I can keep them for as long as I want. I can also take notes in the books because I own them.\n\n或者：\nI prefer to borrow books from a library to save money. Libraries also offer a wider variety of books than bookshops.",
+    "vocab": [
+      ["take notes", "做笔记"],
+      ["save money", "省钱"],
+      ["offer a wider variety of book", "提供更丰富多样的书籍"]
+    ]
+  },
+  {
+    "topic": "阅读，笔",
+    "q": "Which do you prefer, printed books or e-books?",
+    "a": "I prefer e-books because they help to reduce the use of paper and save trees. E-books are also easier to carry around and take up less space than printed books.\n\n或者：\nI prefer printed books because reading on paper is more comfortable and enjoyable than reading on a screen. I also find it easier to concentrate while reading on paper.",
+    "vocab": [
+      ["are easier to carry around", "更方便携带"],
+      ["take up less space", "占用的空间更少"],
+      ["comfortable and enjoyable", "舒适而且令人愉快的"],
+      ["find it easier to...", "（宾补结构）感觉……更容易"],
+      ["concentrate", "集中注意力"]
+    ]
+  },
+  {
+    "topic": "阅读，笔",
+    "q": "Which do you prefer to use, pens or pencils?",
+    "a": "I prefer to use pens because things that are written with pens last longer than things that are written with pencils. And pens don't need sharpening.\n\n或者：\nI prefer to use pencils. I can easily erase it when I make a mistake.",
+    "vocab": [
+      ["last longer", "持续的时间更久"],
+      ["sharpening", "削"],
+      ["erase", "擦掉"]
+    ]
+  },
+  {
+    "topic": "字典，地图",
+    "q": "Do you prefer to use paper dictionaries or electronic dictionaries?",
+    "a": "I prefer to use electronic dictionaries because they are easier to carry around. It's also much easier to look up words with an electronic dictionary than in a paper dictionary.\n\n或者：\nI prefer to use paper dictionaries because they offer more information about words than electronic dictionaries. Looking up words in a paper dictionary is also more interesting. It feels like a process of exploration.",
+    "vocab": [
+      ["easy to carry around", "便于携带"],
+      ["look up words", "查单词"],
+      ["offer more information about...", "提供更多关于……的信息"],
+      ["a process of exploration", "探索的过程"]
+    ]
+  },
+  {
+    "topic": "字典，地图",
+    "q": "Do you prefer to use paper maps or electronic maps?",
+    "a": "I prefer to use electronic maps because they are easier to carry around. Searching for a place with an electronic map is also easier than on a paper map.",
+    "vocab": [
+      ["easy to carry around", "便于携带"],
+      ["search for a place", "搜索一个地方"],
+      ["help us find the quickest route", "帮我们找出最快的路线"]
+    ]
+  },
+  {
+    "topic": "广告",
+    "q": "Do you like watching the advertisements on TV?",
+    "a": "Yes, I do because they are creative and entertaining. They also provide useful information about new products.\n\n或者：\nNo, I don't like watching advertisements on TV because they interrupt TV programmes. And many of them promote unhealthy food, such as fast food and unhealthy snacks. Some advertisements on TV even provide misleading information about products.",
+    "vocab": [
+      ["creative and entertaining", "有创意而且有娱乐性的"],
+      ["provide useful information about new products", "提供关于新产品的有用信息"],
+      ["interrupt TV programmes", "中断电视节目"],
+      ["promote unhealthy food", "推销不健康的食品"],
+      ["provide misleading information", "提供有误导性的信息"]
+    ]
+  },
+  {
+    "topic": "广告",
+    "q": "Do you think advertisements are important?",
+    "a": "Yes, they're really important because they tell us about the choices that we have as consumers. And companies rely on advertisements to promote their products.",
+    "vocab": [
+      ["the choices that we have as consumers", "我们作为消费者拥有的选择"],
+      ["rely on...", "依赖……"],
+      ["promote their products", "推销他们的产品"],
+      ["a catchy slogan", "容易记住的广告词"]
+    ]
+  },
+  {
+    "topic": "互联网，计算机",
+    "q": "Do you think the Internet is important?",
+    "a": "Yes, the Internet plays a key role in our lives because it can help us find information quickly and easily. We can also watch videos, listen to music and socialise on the Internet.",
+    "vocab": [
+      ["play a key role in...", "在……当中起很重要的作用"],
+      ["socialise", "社交"]
+    ]
+  }
+]

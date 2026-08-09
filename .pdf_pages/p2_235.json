@@ -1,0 +1,59 @@
+[
+  {
+    "category": "建筑和设施",
+    "title": "最喜欢的房间",
+    "cue": "Describe your favourite room in your house / flat.\nYou should say:\nwhere you live\nwhich room it is\nwhat it is like\nand explain why you like this room.",
+    "a": "I live on the fifth floor of an eight-storey block of flats. My favourite room in my flat is the bedroom.\n\nActually, it's not big, just around 10 square meters. There's a single bed in the right corner of the room, not big either but quite comfortable. There's a table beside the bed, with a lamp and a vase of flowers on it. The table is brand-new. I bought it from IKEA last week.\n\nThere's a wardrobe next to the table. I keep all my favourite clothes in it. There's a desk in the left corner of the room, with a chair in front of it. My favourite part of the room is the potted plant on the desk. It is gorgeous and smells good, too.\n\nBy the way, the walls are light blue, just like the sky on a sunny day.\n\nIt's my favourite room because it's my own personal space where I can enjoy privacy and comfort. Sometimes I even spend the whole weekend daydreaming there. I like my bedroom also because I decorated it all by myself.",
+    "vocab": [
+      ["a...storey building", "一幢……层高的建筑"],
+      ["a block of flats", "公寓楼"],
+      ["square meter", "平方米"],
+      ["a vase of flowers", "一瓶花"],
+      ["brand-new", "崭新的"],
+      ["wardrobe", "衣橱"],
+      ["next to", "紧挨着"],
+      ["potted plant", "盆栽的植物"],
+      ["gorgeous", "非常漂亮的"],
+      ["my own personal space", "我自己的个人空间"],
+      ["decorate", "装饰"],
+      ["living room", "客厅"],
+      ["get together", "(家人们)聚到一起"],
+      ["watch TV", "看电视"],
+      ["entertain our guests", "招待客人"],
+      ["dining room", "餐厅"],
+      ["have family meals together", "全家人一起吃饭"],
+      ["talk about our day", "谈论当天发生的事情"],
+      ["kitchen", "厨房"],
+      ["cook meals for my family", "为家人做饭"]
+    ]
+  },
+  {
+    "category": "建筑和设施",
+    "title": "露天市场",
+    "cue": "Describe an open-air market.\nYou should say:\nwhere it is\nwhat it is like\nwhat you do there\nand explain whether you like it or not.",
+    "a": "I'd like to describe an open-air market in my hometown.\n\nIt's located near the local train station. The history of the market goes back to the 1950s and it's famous among the locals.\n\nThe market is quite large and has seven different sections, including the food section, the clothing section, the jewellery section and the furniture section. There are many stalls in each section, and most of the things sold in the market are locally-made or locally-grown.\n\nThis market is always crowded, especially at weekends. Some people go there to buy things, while others just enjoy wandering around in the market and chatting with the vendors.\n\nMy favourite part of this market is the food section where I often have breakfast or buy snacks. Another part of the market which I really like is the clothing section. It offers a wide variety of clothes and the prices are very reasonable.\n\nI like this open-air market because it's well managed. Most of the vendors there are friendly and helpful. Honestly, it's kind of noisy but I guess that's perfectly natural for an open-air market.",
+    "vocab": [
+      ["The history of ... goes back to ...", "……的历史可以追溯到……"],
+      ["the 1950s", "泛指一九五几年"],
+      ["section", "部分,(市场里的)分区"],
+      ["jewellery", "首饰"],
+      ["furniture", "家具"],
+      ["stall", "售货摊"],
+      ["locally-made or locally grown", "在当地生产或者在当地种植的"],
+      ["wander around", "闲逛"],
+      ["vendor", "小商贩"],
+      ["reasonable", "合理的"],
+      ["well managed", "管理得很好的,管理完善的"],
+      ["friendly and helpful", "友好而且很有帮助的"],
+      ["kind of noisy", "有点吵"],
+      ["that's perfectly natural for ...", "对于……是很正常的"]
+    ]
+  },
+  {
+    "category": "建筑和设施",
+    "title": "公共设施",
+    "cue": "Describe a place where there is water.\nYou should say:\nwhere the place is\nwhen people go there\nwhat people do there\nand explain how you feel about this place.",
+    "a": "I'm going to talk about our community swimming pool. It is located in our community center, which is quite close to where I live.\n\nLots of local residents go there on hot summer days. Some people just go there to hang out and cool off. Others go there to improve their swimming skills.",
+    "vocab": []
+  }
+]

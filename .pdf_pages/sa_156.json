@@ -1,0 +1,163 @@
+[
+  {
+    "topic": "服装，时尚",
+    "q": "Do you wear different clothes for different occasions?",
+    "a": "Most of the time, I wear casual clothes that make me feel comfortable and relaxed, such as jeans, a sweater or a T-shirt. But for very formal occasions, such as job interviews, I wear a business suit.",
+    "vocab": [
+      ["casual clothes", "休闲服装"],
+      ["make me feel comfortable and relaxed", "让我感觉舒服而且放松"],
+      ["jeans", "牛仔裤"],
+      ["sweater", "毛衣，在英国，人们也常把毛衣称为jumper"],
+      ["business suit", "正式的套装，“西装”"],
+      ["hoodie", "帽衫儿"],
+      ["loose-fitting", "很宽松的（反义：tight-fitting / close-fitting 紧身的）"],
+      ["denim jacket", "“牛仔”上衣"],
+      ["shorts", "短裤"],
+      ["dress code", "关于着装的规定"]
+    ]
+  },
+  {
+    "topic": "服装，时尚",
+    "q": "Are clothing fashions important to you?",
+    "a": "No, I don't follow clothing trends. I like to wear clothes that fit me well and make me comfortable. I suppose I have my own clothing style.",
+    "vocab": [
+      ["follow clothing trends", "模仿服装潮流"]
+    ]
+  },
+  {
+    "topic": "服装，时尚",
+    "q": "Do you like to buy expensive clothes?",
+    "a": "No, I'm not interested in expensive designer clothes and I don't copy what celebrities wear. I like to buy average-priced clothes that are practical and comfortable.",
+    "vocab": [
+      ["designer clothes", "这个短语是地道英文里说“名牌服装”最常用的表达，相应地英文里还有 designer shoes（名牌鞋），designer jewellery（名牌首饰）等短语"],
+      ["copy what celebrities wear", "模仿名人的穿着"],
+      ["average-priced clothes", "中等价位的服装"],
+      ["practical and comfortable", "实用而且舒适的"]
+    ]
+  },
+  {
+    "topic": "服装，时尚",
+    "q": "Do you like to buy clothes online?",
+    "a": "No, I don't. When I buy clothes, I want to know whether they fit me well or whether they are comfortable or not, but I can't try on clothes online.",
+    "vocab": [
+      ["try on clothes / try on shoes", "试穿（衣服或者鞋）"]
+    ]
+  },
+  {
+    "topic": "服装，时尚",
+    "q": "What is your favourite item of clothing?",
+    "a": "I would say my favourite item of clothing is my leather jacket. It fits me well and makes me feel comfortable and confident. My friends also like it.",
+    "vocab": []
+  },
+  {
+    "topic": "服装，时尚",
+    "q": "What's the difference between clothes that young people like to wear and clothes that elderly people like to wear?",
+    "a": "I suppose the main difference is young people like to wear clothes that make them look more attractive, while elderly people like to wear clothes that are practical and comfortable.",
+    "vocab": [
+      ["look more attractive", "看起来更有吸引力的"],
+      ["practical and comfortable", "实用而且舒适的"],
+      ["are more likely to", "更有可能会"]
+    ]
+  },
+  {
+    "topic": "服装，时尚",
+    "q": "Are jeans popular in your country?",
+    "a": "Yes, jeans are very popular in my country because they're practical and comfortable. They are also very durable.",
+    "vocab": [
+      ["practical and comfortable", "实用而且舒适的"],
+      ["durable", "（物品）耐用的，（服装）可以穿很久的，“经穿的”"]
+    ]
+  },
+  {
+    "topic": "鞋，帽",
+    "q": "Do you like to buy expensive shoes?",
+    "a": "No, I don't. When I buy shoes, I look for comfort and convenience. I like to buy average-priced shoes that fit me well and make me feel comfortable.",
+    "vocab": [
+      ["comfort and convenience", "舒适方便"],
+      ["average-priced shoes", "中等价位的鞋"]
+    ]
+  },
+  {
+    "topic": "鞋，帽",
+    "q": "Do you think people wear hats for practical reasons or as fashionable items?",
+    "a": "I suppose most people wear hats for practical reasons, such as protecting themselves from the sun or wind. On the other hand, there're some people who like to wear fashionable hats because they think fashionable hats can make them more attractive.",
+    "vocab": [
+      ["wear fashionable hats", "戴很时尚的帽子"],
+      ["make them more attractive", "让他们更有吸引力"]
+    ]
+  },
+  {
+    "topic": "首饰，手表，太阳镜，包",
+    "q": "Why do people wear jewellery?",
+    "a": "Some people wear jewellery because they think it makes them look more attractive or elegant. Others wear jewellery because the jewellery has a special meaning to them. For example, it may be a present from a family member.",
+    "vocab": [
+      ["look more attractive", "看起来更有吸引力的"],
+      ["elegant", "优雅的"]
+    ]
+  },
+  {
+    "topic": "首饰，手表，太阳镜，包",
+    "q": "How often do you wear jewellery?",
+    "a": "I always wear... It was given to me by my parents as a birthday present.\n\n或者：\nI wear jewellery, such as a ring or a bracelet, at least a few times a month. It makes me feel more confident.\n\n或者：\nOnly a few times a year. I wear it for special occasions like parties.",
+    "vocab": [
+      ["a birthday present", "生日礼物"],
+      ["feel more confident", "感觉更自信"],
+      ["special occasions", "特殊的场合"]
+    ]
+  },
+  {
+    "topic": "首饰，手表，太阳镜，包",
+    "q": "What type of jewellery do you like best?",
+    "a": "",
+    "vocab": [
+      ["earrings", "耳环"],
+      ["necklace", "比较细而且有装饰的项链，多数女士项链是necklace"],
+      ["chain", "比较粗而且不带装饰的项链，多数男式项链是chain"],
+      ["bracelet", "泛指手环、手镯或者手链"],
+      ["bangle", "特指有特色的手镯"],
+      ["wedding ring", "婚戒，订婚戒指则是engagement ring"],
+      ["graduation ring", "有些英美大学里的毕业生在毕业典礼时戴的戒指，很多人到毕业后也一直戴着"],
+      ["diamond", "钻石"],
+      ["pearl", "珍珠"],
+      ["jade", "玉"]
+    ]
+  },
+  {
+    "topic": "首饰，手表，太阳镜，包",
+    "q": "Do you like buying jewellery online?",
+    "a": "No, I don't because I can't tell whether a piece of jewellery is good or not just by looking at its photos online. I prefer buying jewellery in a jewellery shop where I can see it and try it on before I make up my mind.",
+    "vocab": [
+      ["try it on", "试戴（首饰）"],
+      ["make up my mind", "做决定"]
+    ]
+  },
+  {
+    "topic": "首饰，手表，太阳镜，包",
+    "q": "Are watches still popular in your country?",
+    "a": "I suppose watches are still popular among business people because they want to look efficient and organised. But watches are not so popular among other people these days because they use their mobile phone to check the time.",
+    "vocab": [
+      ["efficient and organised", "高效而且很有条理的"],
+      ["check the time", "看（手机、手表或时钟上的）时间"]
+    ]
+  },
+  {
+    "topic": "首饰，手表，太阳镜，包",
+    "q": "Do you like wearing sunglasses?",
+    "a": "It depends on the weather. I like wearing sunglasses on sunny and bright days because they can protect my eyes from ultraviolet rays. But I don't like wearing sunglasses on cloudy or rainy days.",
+    "vocab": [
+      ["protect my eyes from ultraviolet rays", "保护我的眼睛不受紫外线的伤害"]
+    ]
+  },
+  {
+    "topic": "首饰，手表，太阳镜，包",
+    "q": "Do you think people should have different bags for different occasions?",
+    "a": "Yes, the bag that we carry should suit the occasion and match the clothes that we wear. For example, it would look strange to carry a backpack at a formal business event.",
+    "vocab": [
+      ["suit the occasion", "适合特定的场合"],
+      ["match the clothes that we wear", "配合我们的衣着"],
+      ["backpack", "背包"],
+      ["satchel bags", "只有一根长背带的“单肩包”"],
+      ["suitcases", "手提公文包"]
+    ]
+  }
+]

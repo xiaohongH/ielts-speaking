@@ -1,0 +1,159 @@
+[
+  {
+    "topic": "天气",
+    "q": "What's your favourite type of weather?",
+    "a": "My favourite type of weather is sunny and bright weather because it makes me feel energetic. And it's perfect for outdoor activities, such as jogging, cycling and hiking.",
+    "vocab": [
+      ["outdoor activities", "户外活动"],
+      ["jogging", "慢跑"],
+      ["cycling", "骑自行车"],
+      ["hiking", "徒步旅行，远足"],
+      ["camping", "野营"]
+    ]
+  },
+  {
+    "topic": "天气",
+    "q": "Do you think the weather affects how you feel?",
+    "a": "Yes, I suppose it does. For example, sunny weather makes me feel energetic, while cloudy or rainy weather makes me feel a bit sleepy.",
+    "vocab": [
+      ["feel energetic", "感觉很有活力"]
+    ]
+  },
+  {
+    "topic": "天气",
+    "q": "Would you like to have the same type of weather all year round?",
+    "a": "No, I would prefer to have a variety of weather and four distinct seasons because they would be more interesting and enjoyable. I'd like to see the change of colours of leaves and flowers, and to do different outdoor activities in different seasons.",
+    "vocab": [
+      ["a variety of", "多种多样的"],
+      ["four distinct seasons", "分明的四季"],
+      ["interesting and enjoyable", "有趣而且令人愉快的"],
+      ["the change of colours", "色彩的变化"],
+      ["outdoor activities", "户外活动"],
+      ["Sunshine is a good source of vitamin D", "阳光是维生素D很好的来源"]
+    ]
+  },
+  {
+    "topic": "晴天，阳光，雨天",
+    "q": "Do you prefer sunny days or rainy days?",
+    "a": "I prefer sunny days because sunshine makes me feel energetic. I enjoy doing outdoor activities on sunny days, such as jogging and cycling.\n\n或者：\nI prefer rainy days. I like the sound of raindrops falling on the ground. It makes me feel calm and relaxed.",
+    "vocab": [
+      ["feel energetic", "感觉很有活力"],
+      ["outdoor activities", "户外活动"],
+      ["jogging and cycling", "慢跑和骑自行车"],
+      ["raindrops", "雨点儿"],
+      ["feel calm and relaxed", "感觉平静而且放松的（近义：feel calm and peaceful）"]
+    ]
+  },
+  {
+    "topic": "晴天，阳光，雨天",
+    "q": "Do you know any technology that uses sunshine?",
+    "a": "Yes, I would say it's very common these days. For example, solar-powered calculators and solar water heaters are quite popular. And some companies are working on solar-powered cars.",
+    "vocab": [
+      ["solar-powered calculators", "以太阳能为动力的计算器"],
+      ["solar water heaters", "太阳能热水器"],
+      ["solar-powered cars", "以太阳能为动力的汽车"]
+    ]
+  },
+  {
+    "topic": "晴天，阳光，雨天",
+    "q": "Do you like rain?",
+    "a": "I like light rain because it's relaxing. And walking in light rain is fun and pleasant. But I don't like heavy rain because it makes driving difficult or even dangerous.",
+    "vocab": [
+      ["light rain", "小雨"],
+      ["relaxing", "让人放松的"],
+      ["fun and pleasant", "有趣而且令人愉快的"],
+      ["heavy rain", "大雨"],
+      ["make driving difficult or dangerous", "让开车变得困难甚至危险"],
+      ["drizzle", "小雨"],
+      ["the sound of raindrops falling onto the ground", "雨点落在地上的声音"]
+    ]
+  },
+  {
+    "topic": "季节",
+    "q": "What's your favourite season?",
+    "a": "My favourite season is spring because everything feels fresh in spring. In my country, most flowers also bloom in spring.\n\n或者：\nMy favourite season is summer. The weather in summer is perfect for outdoor activities, such as camping and having picnics.\n\n或者：\nMy favourite season is autumn because it's the most colourful season of the year. And the weather tends to be mild and pleasant in autumn.\n\n或者：\nMy favourite season is winter because I'm really into winter sports such as skating and skiing. And the snow in winter makes everything look so pure and peaceful.",
+    "vocab": [
+      ["fresh", "新鲜的"],
+      ["bloom", "开花"],
+      ["camping", "野营"],
+      ["have a picnic", "野餐"],
+      ["colourful", "色彩丰富的"],
+      ["mild and pleasant", "（天气）温和舒适的"],
+      ["I'm really into...", "我很喜欢……"],
+      ["pure and peaceful", "纯洁而且平静的"],
+      ["snowflakes", "雪花"]
+    ]
+  },
+  {
+    "topic": "季节",
+    "q": "Do the seasons affect our behaviour?",
+    "a": "Yes, they do. For example, we tend to be less active in winter than in other seasons, and we tend to dress more casually in summer than in other seasons.",
+    "vocab": [
+      ["dress more casually", "穿着更休闲"],
+      ["mild weather all year round", "全年天气都很温和"],
+      ["hot and humid", "又热又潮湿"],
+      ["scorching", "极为炎热"],
+      ["cold and damp", "湿冷"],
+      ["windy", "风很大"]
+    ]
+  },
+  {
+    "topic": "最喜欢的运动，户外运动，室内运动",
+    "q": "What is your favourite sport?",
+    "a": "My favourite sport is football. It's fun and exciting. And it's a team sport, so it's a good way to socialise and make new friends.\n\n或者：\nMy favourite sport is swimming. It makes me feel energetic and helps me reduce stress. It also improves my balance and coordination.",
+    "vocab": [
+      ["fun and exciting", "有趣而且令人兴奋的"],
+      ["team sport", "团队运动"],
+      ["socialise and make new friends", "社交而且结交新的朋友"],
+      ["feel energetic", "感觉很有活力"],
+      ["reduce stress", "减轻压力"],
+      ["improve my balance and coordination", "增强我的平衡与协调能力"]
+    ]
+  },
+  {
+    "topic": "最喜欢的运动，户外运动，室内运动",
+    "q": "Do you like watching sports on TV?",
+    "a": "I enjoy watching team sports, like football and basketball, on TV because it's fun and exciting. But I don't like watching individual sports, such as skiing, on TV.",
+    "vocab": [
+      ["team sport", "团队运动"],
+      ["individual sport", "个人运动"],
+      ["fun and exciting", "有趣而且令人兴奋的"]
+    ]
+  },
+  {
+    "topic": "最喜欢的运动，户外运动，室内运动",
+    "q": "Do you prefer indoor sports or outdoor sports?",
+    "a": "I prefer outdoor sports, such as football and tennis. I can enjoy the sun and fresh air while playing these sports.\n\n或者：\nI prefer indoor sports, like swimming and badminton, because they are not affected by the weather. I can do indoor sports all year round.",
+    "vocab": [
+      ["enjoy the sun and fresh air", "享受阳光和新鲜的空气"],
+      ["not affected by weather conditions", "不受天气的影响"],
+      ["all year round", "全年"]
+    ]
+  },
+  {
+    "topic": "最喜欢的运动，户外运动，室内运动",
+    "q": "Do you prefer individual sports or team sports?",
+    "a": "I prefer individual sports such as running and swimming. They can improve my concentration and make me more confident.\n\n或者：\nI prefer team sports, like football (or volleyball) and basketball. Playing team sports is a good way to socialise and make new friends.",
+    "vocab": [
+      ["improve my concentration", "增强我的注意力"],
+      ["make me more confident", "让我更自信"],
+      ["socialise and make new friends", "社交并且结识新的朋友"],
+      ["improve our communication skills", "增强我们的沟通技能"],
+      ["share the joy of winning with our teammates", "和队友们一起分享胜利的喜悦"],
+      ["make us more confident", "让我们更自信"],
+      ["improve our teamwork skills", "增强团队合作能力"]
+    ]
+  },
+  {
+    "topic": "户外活动，锻炼",
+    "q": "Do you like outdoor activities?",
+    "a": "I love outdoor activities, such as jogging, cycling and hiking. They make me feel energetic. And I can enjoy the sun and fresh air while doing these activities.",
+    "vocab": [
+      ["jogging, cycling and hiking", "慢跑，骑自行车和徒步旅行"],
+      ["feel energetic", "感觉很有活力"],
+      ["enjoy the sun and fresh air", "享受阳光和新鲜的空气"],
+      ["reduce stress", "减轻压力"],
+      ["boost the immune system", "增强身体的免疫机能"]
+    ]
+  }
+]

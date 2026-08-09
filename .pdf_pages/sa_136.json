@@ -1,0 +1,127 @@
+[
+  {
+    "topic": "艺术，绘画，摄影",
+    "q": "Do you think school art lessons are important?",
+    "a": "Yes, they're important because art activities, like drawing and painting, can encourage imagination and make children more creative. School art lessons can also help children gain knowledge about art history and famous artists.\n\n或者：\nNo, not really. Art skills, such as drawing and painting skills, are not essential skills that most children will need for adult life. They can study art in their free time if they want to.",
+    "vocab": [
+      ["encourage imagination", "激发想象力"],
+      ["make children more creative", "让儿童变得更有创造力"],
+      ["gain knowledge about...", "获取关于……的知识"],
+      ["express themselves", "表达自己的感受"],
+      ["essential skills", "核心技能"],
+      ["adult life", "成年后的人生"]
+    ]
+  },
+  {
+    "topic": "艺术，绘画，摄影",
+    "q": "Do you like visiting art galleries?",
+    "a": "Yes, I do because they offer a variety of art exhibitions. They help me gain knowledge about artists and their styles. They also offer many hands-on activities that encourage imagination.\n\n或者：\nNo, I don't like visiting art galleries because I don't know much about art. I tend to feel sleepy and bored while visiting an art gallery.",
+    "vocab": [
+      ["a variety of", "多种多样的"],
+      ["art exhibition", "艺术展"],
+      ["gain knowledge about...", "获取关于……的知识"],
+      ["artists and their styles", "艺术家和他们的风格"],
+      ["hands-on activities", "参观者可以亲身参与的活动"],
+      ["encourage imagination", "激发想象力"]
+    ]
+  },
+  {
+    "topic": "艺术，绘画，摄影",
+    "q": "Do you like taking photos?",
+    "a": "Yes, I enjoy using my mobile phone camera to capture special moments in life. And it's fun to share my photos with my family and friends.",
+    "vocab": [
+      ["capture special moments in life", "捕捉生活里的特殊瞬间"],
+      ["express ourselves", "表达我们的感受"]
+    ]
+  },
+  {
+    "topic": "艺术，绘画，摄影",
+    "q": "Do you take photos with a camera or with your mobile phone?",
+    "a": "I take photos with my mobile phone because I carry it everywhere I go. And it's very easy and convenient to share the photos with my family and friends.",
+    "vocab": [
+      ["easy and convenient", "轻松方便的"],
+      ["share the photos with my family and friends", "与我的亲友们分享照片"],
+      ["bring back good memories", "带来美好的回忆"],
+      ["take selfies", "玩儿自拍"]
+    ]
+  },
+  {
+    "topic": "艺术，绘画，摄影",
+    "q": "What types of photos do you like taking?",
+    "a": "I like taking photos of anything that I find interesting. But my favourite types are photos of natural scenery and wildlife.\n\n或者：\nI enjoy taking photos of famous landmarks, interesting people and nice food.\n\n或者：\nI'm fond of taking photos of my family and friends. And I enjoy sharing the photos with them.",
+    "vocab": [
+      ["anything that I find interesting", "我感觉有趣的任何事物"],
+      ["natural scenery", "自然风景（不可数名词）"],
+      ["wildlife", "泛指野生动植物（不可数名词）"],
+      ["famous landmark", "著名的标志性建筑或景观"],
+      ["portrait photography", "人像摄影"],
+      ["landscape photography", "自然景观摄影"],
+      ["street photography", "街拍"]
+    ]
+  },
+  {
+    "topic": "艺术，绘画，摄影",
+    "q": "Where do you keep your photos?",
+    "a": "I take photos with my mobile phone, so I keep them on my mobile phone, which can save time. But if a photo is really special, I'll probably print it out and put it in a photo frame.",
+    "vocab": []
+  },
+  {
+    "topic": "艺术，绘画，摄影",
+    "q": "When you visit other places, do you take photos or buy postcards?",
+    "a": "I used to buy postcards. But these days, I prefer to take photos and share them with my friends because it's a better way to share my experience with my friends.",
+    "vocab": [
+      ["share my experience", "分享我的经历"]
+    ]
+  },
+  {
+    "topic": "颜色，手工",
+    "q": "Do you think different colours can change our moods?",
+    "a": "Yes, I suppose they can. For instance, bright colours, like red and orange, make us feel energetic, while dark colours, such as brown and dark blue, make us feel calm. And soft colours, including light green and light grey, make us feel peaceful and relaxed.",
+    "vocab": [
+      ["For instance, ... / For example, ...", "native speakers 举例时的高频句型"],
+      ["feel energetic", "感到很有活力"],
+      ["feel calm", "感到心情平静"],
+      ["feel peaceful and relaxed", "感到平静而且放松"]
+    ]
+  },
+  {
+    "topic": "颜色，手工",
+    "q": "Do you like making things by hand?",
+    "a": "Yes, I do. I enjoy making things like Valentine's Day cards and Christmas cards by hand. My friends really like the cards that I make.\n\n或者：\nNo, I don't like making things by hand. I tend to be quite clumsy with my hands.",
+    "vocab": [
+      ["Valentine's Day cards", "情人节卡片"],
+      ["Christmas cards", "圣诞贺卡"],
+      ["fun and relaxing", "有趣而且让人放松的"],
+      ["bookmarks", "书签"],
+      ["paper planes", "纸飞机"],
+      ["kites", "风筝"],
+      ["wood carvings", "木刻"],
+      ["pottery", "陶器（不可数名词）"],
+      ["simple furniture", "简单的家具（furniture 不可数）"],
+      ["tend to be", "通常是，往往是"],
+      ["clumsy", "笨拙的"]
+    ]
+  },
+  {
+    "topic": "颜色，手工",
+    "q": "Do you think children should learn to make things by hand at school?",
+    "a": "Yes, I suppose they should because it can make them more creative. It can also improve their concentration and hand-eye coordination.\n\n或者：\nNo, I don't think making things by hand is an essential skill that most children will need for adult life. They can learn this skill from their parents if they want to learn it.",
+    "vocab": [
+      ["make them more creative", "让他们变得更有创意"],
+      ["improve their concentration and hand-eye coordination", "增强他们的注意力与手眼协调能力"],
+      ["essential skill", "核心技能"],
+      ["adult life", "成年后的人生"]
+    ]
+  },
+  {
+    "topic": "报纸，新闻，杂志",
+    "q": "Do you read newspapers?",
+    "a": "These days, I tend to get news on the Internet. But I still enjoy reading the culture section and the entertainment section of some newspapers.",
+    "vocab": [
+      ["these days", "现在，目前"],
+      ["tend to", "通常，往往"],
+      ["culture section", "文化版"],
+      ["entertainment section", "娱乐版"]
+    ]
+  }
+]

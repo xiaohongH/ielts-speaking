@@ -1,0 +1,189 @@
+[
+  {
+    "topic": "船，钓鱼",
+    "q": "Do you wish to own a boat?",
+    "a": "Yes, I do because I love boating. I feel totally free when I'm out on the water. I can enjoy the sun and fresh air as well as the sound of water splashing around the boat.\n\n或者：\nNo, I don't because the maintenance of a boat would be a lot of work. I wouldn't even be able to find a place to store a boat.",
+    "vocab": [
+      ["feel totally free", "感到完全自由"],
+      ["out on the water", "（习惯短语）在水上的时候"],
+      ["enjoy the sun and fresh air", "享受阳光和新鲜的空气"],
+      ["the sound of water splashing around the boat", "水在船周围溅起的响声"],
+      ["maintenance", "维护，保养"],
+      ["store a boat", "储存一条船"],
+      ["a real stress-reliever", "很有效的减轻压力的方法"],
+      ["get away from my daily routine", "暂时离开日常生活的惯例"],
+      ["get closer to nature", "更接近大自然"]
+    ]
+  },
+  {
+    "topic": "船，钓鱼",
+    "q": "Why do people go fishing?",
+    "a": "Some people go fishing to enjoy nature and reduce stress, or maybe just to spend time with friends. Others go fishing to catch fish for a meal. And there are professional fishermen who rely on fishing to make a living.",
+    "vocab": [
+      ["enjoy nature", "享受大自然"],
+      ["reduce stress", "减轻压力"],
+      ["professional fishermen", "职业渔民"],
+      ["rely on fishing to make a living", "依靠捕鱼为生"]
+    ]
+  },
+  {
+    "topic": "公园，游乐园",
+    "q": "Do you like parks?",
+    "a": "Definitely. They help me get closer to nature. I can breathe the fresh air and hear the birds chirping when I'm in a park.",
+    "vocab": [
+      ["get closer to nature", "更加接近自然界"],
+      ["breathe the fresh air", "呼吸新鲜的空气"],
+      ["hear the birds chirping", "听见鸟类鸣叫"],
+      ["make a city more attractive and enjoyable", "更有吸引力而且令人愉快"],
+      ["like an oasis in the city", "像是城市里的一片绿洲"],
+      ["get away from the hustle and bustle of city life", "暂时离开城市生活的喧闹拥挤"]
+    ]
+  },
+  {
+    "topic": "公园，游乐园",
+    "q": "What do you do in parks?",
+    "a": "I often exercise in parks, like jogging or cycling. Sometimes I also hang out with my friends in parks.",
+    "vocab": [
+      ["jogging or cycling", "慢跑或者骑自行车"],
+      ["hang out with my friends", "和我的朋友们一起休闲放松"],
+      ["walk my dog", "遛狗"],
+      ["It's a perfect picnic spot", "它是一个特别适合野餐的地方"],
+      ["lawns", "草坪"],
+      ["paths", "公园里的小路"],
+      ["flowerbeds", "花坛"],
+      ["swings", "秋千"],
+      ["fountains", "喷泉"],
+      ["slides", "滑梯"],
+      ["benches", "长椅"],
+      ["see-saws", "跷跷板"],
+      ["sculptures", "雕塑"],
+      ["ponds", "池塘"],
+      ["gazebos", "亭子"],
+      ["lakes", "湖泊"]
+    ]
+  },
+  {
+    "topic": "公园，游乐园",
+    "q": "Why are parks an important part of a city?",
+    "a": "Parks offer a lot of green space. They are places where we can breathe fresh air, exercise and learn about nature.",
+    "vocab": [
+      ["green space", "绿化空间"],
+      ["breathe fresh air", "呼吸新鲜的空气"],
+      ["learn about nature", "了解自然界"]
+    ]
+  },
+  {
+    "topic": "公园，游乐园",
+    "q": "What do you usually do in amusement parks?",
+    "a": "I do a variety of things in amusement parks. But my favourite activities in amusement parks are riding a roller coaster and watching circus shows.",
+    "vocab": [
+      ["amusement park", "游乐场"],
+      ["ride a pirate ship", "坐海盗船"],
+      ["ride a roller coaster", "坐过山车"],
+      ["go-karting", "开卡丁车"],
+      ["watch circus shows", "看马戏表演"],
+      ["have a picnic", "野餐"],
+      ["ride a Ferris wheel", "坐摩天轮"],
+      ["a perfect picnic spot", "非常适合野餐的地方"],
+      ["an oasis in the city", "城市里的一片绿洲"],
+      ["get away from the hustle and bustle of city life", "躲开城市生活的喧闹拥挤"]
+    ]
+  },
+  {
+    "topic": "树，森林",
+    "q": "Do you think trees are important to us?",
+    "a": "Yes, they're really important. Trees produce oxygen and absorb dirty air. They also make streets and parks look more attractive and provide shade in summer.",
+    "vocab": [
+      ["produce oxygen", "制造氧气"],
+      ["look more attractive", "看起来更有吸引力"],
+      ["absorb dirty air", "吸收脏空气"],
+      ["provide shade", "提供树荫"]
+    ]
+  },
+  {
+    "topic": "树，森林",
+    "q": "Do you know how to plant a tree?",
+    "a": "",
+    "vocab": [
+      ["community park", "社区公园"],
+      ["dig a hole in the ground", "在地上挖一个坑"],
+      ["put the tree in the hole", "把树放进坑里面"],
+      ["push back the soil", "把土推回去"],
+      ["press the soil firmly", "把土压实"]
+    ]
+  },
+  {
+    "topic": "树，森林",
+    "q": "Do you think forests are important to us?",
+    "a": "Forests are the main source of wood. They help us tackle global warming.",
+    "vocab": [
+      ["the main source of wood", "是木材的主要来源"],
+      ["tackle global warming", "解决全球变暖问题"]
+    ]
+  },
+  {
+    "topic": "家中植物，花",
+    "q": "Do you have plants in your home?",
+    "a": "Yes, I have some plants in the living room. Looking after them is quite easy and enjoyable.",
+    "vocab": [
+      ["look after", "照料"],
+      ["enjoyable", "令人愉快的"],
+      ["brighten up the room", "让房间变得更有活力"],
+      ["Looking after the plants can help me reduce stress", "照料植物可以帮我减轻压力"],
+      ["water the plants regularly", "定期给植物浇水"]
+    ]
+  },
+  {
+    "topic": "家中植物，花",
+    "q": "Do any flowers have a special meaning in your country?",
+    "a": "Yes, some flowers have a special meaning in my country. For example, the peony is a symbol of wealth and prosperity, while the plum flower represents hard work and courage.",
+    "vocab": [
+      ["is a symbol of...", "是……的象征"],
+      ["wealth", "财富"],
+      ["prosperity", "繁荣"],
+      ["represent", "代表着……"],
+      ["courage", "勇气"],
+      ["symbolise", "是……的象征（The red rose symbolises romantic love.）"],
+      ["lotus", "莲花"],
+      ["purity", "纯洁"],
+      ["red rose", "红玫瑰"],
+      ["romantic love", "浪漫的爱情"]
+    ]
+  },
+  {
+    "topic": "家中植物，花",
+    "q": "Do people give flowers as presents in your country?",
+    "a": "Yes, it's very common to give flowers as presents in my country. For example, many people give flowers on special occasions, like Valentine's Day or wedding anniversaries.",
+    "vocab": [
+      ["special occasions", "特殊的场合"],
+      ["wedding anniversary", "结婚纪念日"],
+      ["Valentine's Day", "情人节"]
+    ]
+  },
+  {
+    "topic": "家中植物，花",
+    "q": "Which do you think are better, real flowers or plastic flowers?",
+    "a": "It depends on the situation. Real flowers look better and their fragrance is very attractive, so they're better for special occasions like Valentine's Day or wedding anniversaries. But when we just need some flowers to decorate our homes, plastic flowers are probably better because they are cheaper and last longer.",
+    "vocab": [
+      ["fragrance", "（花的）香味"],
+      ["attractive", "吸引人的"],
+      ["special occasions", "特殊的场合"],
+      ["Valentine's Day", "情人节"],
+      ["wedding anniversary", "结婚纪念日"],
+      ["decorate", "装饰（动词），它的名词形式是 decoration"],
+      ["last longer", "更耐用"],
+      ["express our feelings", "表达自己的感受"],
+      ["cheer up people who are ill", "帮助生病的人振作起来"]
+    ]
+  },
+  {
+    "topic": "天空，看星星",
+    "q": "Do you often look at the sky?",
+    "a": "Yes, I do because I enjoy watching the different shapes that the clouds make. And at night, looking at the moon and the stars in the sky makes me feel calm and relaxed.\n\n或者：\nNo, I don't look at the sky very often. But sometimes I look at the clouds in the sky to see if it's likely to rain.",
+    "vocab": [
+      ["the different shapes that the clouds make", "云组成的不同形状"],
+      ["feel calm and relaxed", "感觉心情平静而且放松（近义：feel calm and peaceful）"],
+      ["is likely to", "很可能会"]
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "category": "休闲和媒体",
+    "title": "广告",
+    "cue": "Describe an interesting advertisement you have seen.\nYou should say：\nwhen you first saw it\nwhere you first saw it\nwhat it was like\nand explain why it was interesting.",
+    "a": "I'm going to talk about an interesting commercial I saw on TV last weekend.\n\nThe commercial goes like this：a man rushes to the airport，hops on a plane and flies to another city for a job interview.\n\nAfter arriving at an office building，he gets into a lift and goes up to the 20th floor，looking very nervous. Then he looks down at his shoes，only to notice that they don't match each other. But he goes in for the interview anyway.\n\nThe man looks sad after the interview. But all of a sudden，his mobile phone rings — he gets the job！He's so excited that he jumps into the air. Then the narrator says calmly，“Converse can always take you there.”\n\nThis TV commercial was interesting because it was very creative，and the message was clear and powerful.",
+    "vocab": [
+      ["commercial", "在电视上或者在网络上播放的广告"],
+      ["…The commercial goes like this：…", "广告的情节是这样的（它是 native speakers 介绍广告情节时经常说的一句话）"],
+      ["hop", "跳"],
+      ["lift（英式英语）/ elevator（美式英语）", "电梯"],
+      ["narrator", "旁白"],
+      ["Converse", "匡威"],
+      ["the message", "广告要传达的信息"],
+      ["clear and powerful", "清晰而且有说服力的"],
+      ["poster", "宣传海报"],
+      ["flyer", "广告传单"],
+      ["effective", "很有效的"],
+      ["beautifully-shot", "拍摄得非常美的"],
+      ["reliable", "可靠的"],
+      ["promote new products", "推销新产品"],
+      ["attract people's attention", "吸引人们的注意力"],
+      ["a memorable slogan / a catchy slogan", "很容易记住的广告词"],
+      ["fun and enjoyable", "有趣并且令人愉快的"]
+    ]
+  },
+  {
+    "category": "休闲和媒体",
+    "title": "有趣的新闻",
+    "cue": "Describe a piece of interesting news.\nYou should say：\nwhen you heard the news\nhow you heard the news\nwho the news was about\nand explain how you felt after you heard the news.",
+    "a": "I'd like to tell you about a piece of interesting news that I heard on TV last weekend.\n\nLast Friday afternoon，a man went into a bank in New York and tried to rob it. Actually，he was probably not a bad person. He wanted to rob the bank because he had lost his job，and then he lost his house and his car. The only thing that he had was debt. So he decided to rob the bank and get some money.\n\nWhat made the news interesting was that since he didn't have a gun，this guy just took a banana and put it in his pocket. He thought that could fool the bank tellers.\n\nHe entered the bank，walked up to a teller，told her that he had a gun and asked her to give him some cash. Of course the police came. This guy got so scared that he pulled out his “gun”，I mean，his banana…\n\nThe news was quite interesting，but honestly，it was a sad story. These days，many people have lost their jobs because of the economy. I feel sorry for them.",
+    "vocab": [
+      ["rob", "抢劫"],
+      ["debt", "债务"],
+      ["fool (v.)", "愚弄"],
+      ["bank teller", "银行柜员"],
+      ["cash", "现金"],
+      ["scared", "害怕的"],
+      ["mask", "面具"],
+      ["news presenter / anchor", "新闻播音员"],
+      ["reliable", "可靠的"],
+      ["sensational", "轰动的"],
+      ["thought-provoking", "发人深思的"]
+    ]
+  },
+  {
+    "category": "休闲和媒体",
+    "title": "网站",
+    "cue": "Describe your favourite website.\nYou should say：\nwhich website it is\nhow often you visit this website\nwhether it's popular or not\nand explain why you like it.",
+    "a": "My favourite website is Yahoo.com. I'm sure you've heard a lot about it because it's one of the most popular websites in the world. I visit it every day，and I have its app on my mobile phone as well.\n\nThis website is informative and entertaining. It offers a wide variety of information，like the latest news，business updates and reports about important sports events. It also offers the latest entertainment stories，including news stories about film stars，TV celebrities and famous singers.\n\nThis website also has a Question-and-Answer （Q & A） section. It's like an online community where people ask questions and interact with each other. Many people go there to ask questions. They usually get answers quite quickly. And most of the answers are detailed and helpful.\n\nThe main reason I like this website is that its layout is clear and well-organised. It's user-friendly and easy to navigate.\n\nI like this website also because its founders，Jerry Yang and David Filo，started the website when they were just 24. Their success has inspired many young people to create new ideas and start their own businesses. So the website is not only helpful but also inspiring.",
+    "vocab": [
+      ["app", "应用程序"],
+      ["informative", "信息量很大的"],
+      ["entertaining", "娱乐性很强的"],
+      ["latest", "最新发生的"],
+      ["update", "消息的更新"],
+      ["report", "报导"],
+      ["celebrities", "名人"],
+      ["Q & A section", "问答部分"],
+      ["online community", "网络社区"],
+      ["interact", "互动"],
+      ["detailed", "详细的,具体的"],
+      ["website layout", "网站内容的布局"],
+      ["well-organised", "很有秩序的,井井有条的"],
+      ["user-friendly", "方便使用的,“用户友好的”"],
+      ["is easy to navigate", "（网站的）导航很明确,内容很便于查找"],
+      ["founder", "创建者"],
+      ["inspire", "激励(v.)"],
+      ["inspiring", "励志的(adj.)"],
+      ["create new ideas", "创造出新的想法"],
+      ["shopping website", "购物网站"],
+      ["online shopping", "网络购物"],
+      ["social networking website", "社交网站"],
+      ["video-sharing website", "视频共享网站（例如：YouTube 和抖音）"],
+      ["photo-sharing website", "图片共享网站（例如：Instagram）"],
+      ["micro-blog", "微博"],
+      ["online forum", "网络论坛"],
+      ["chatroom", "聊天室"],
+      ["share ideas and opinions", "分享想法和观点"],
+      ["make new friends", "结识新朋友"]
+    ]
+  }
+]

@@ -1,0 +1,160 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "How often do you exercise?",
+    "a": "I exercise almost every day because it helps me reduce stress. It also improves my concentration and makes me feel more energetic.",
+    "vocab": [
+      ["reduce stress", "减轻压力"],
+      ["feel more energetic", "感到更有活力"],
+      ["improve my concentration", "增强我的注意力"],
+      ["boost my endurance", "提高我的耐力"],
+      ["reduce the risk of heart disease and high blood pressure", "减少患心脏病和高血压的风险"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "Do you like walking?",
+    "a": "Yes, I do and I try to walk at least 30 minutes a day. It improves my health and it can help me reduce stress as well.",
+    "vocab": [
+      ["improve my health", "增进我的健康"],
+      ["reduce stress", "减轻压力"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "What do you think should be done to improve the experience of walking in cities?",
+    "a": "I think the pavements should be widened. And there should be more zebra crossings on the main roads in cities, which can help pedestrians cross the roads more safely.",
+    "vocab": [
+      ["pavement", "人行道"],
+      ["widen", "加宽"],
+      ["zebra crossing", "斑马线"],
+      ["main roads", "主要的道路"],
+      ["pedestrian", "行人"],
+      ["cross the roads more safely", "更安全地过马路"],
+      ["pedestrian street", "步行街"],
+      ["pedestrian zone", "步行区"],
+      ["make cities more walkable", "让城市变得更适合步行"],
+      ["make cities more pedestrian-friendly", "让城市变得更适合步行"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "Do you like running?",
+    "a": "Yes, I do because it makes me feel energetic. It's also a good way to lose weight.\n\n或者：\nNo, I don't like running because it's very tiring. I suppose walking is a better form of exercise than running.",
+    "vocab": [
+      ["feel energetic", "感觉很有活力的"],
+      ["tiring", "让人很疲劳的"],
+      ["a good form of exercise", "一种很好的锻炼方式"],
+      ["a better form of exercise", "一种更好的锻炼方式"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "Do you like cycling?",
+    "a": "Definitely. Cycling improves my balance and coordination. It's also a good way to burn calories.",
+    "vocab": [
+      ["a good form of exercise", "一种好的锻炼方式"],
+      ["improve my balance and coordination", "改善我的平衡与协调能力"],
+      ["burn calories", "燃烧卡路里"],
+      ["lose weight", "减肥"],
+      ["eco-friendly", "有益于环保的"],
+      ["reduce carbon emissions", "减少碳排放"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "What's your favourite water sport?",
+    "a": "My favourite water sport is swimming. It helps me reduce stress and makes me feel energetic. It can also improve my balance and coordination.\n\n或者：\nMy favourite water sport is rowing. It can improve my balance and coordination. It's also a good way to build up muscles.",
+    "vocab": [
+      ["reduce stress", "减轻压力"],
+      ["feel energetic", "感觉很有活力"],
+      ["improve my balance and coordination", "增强我的平衡与协调能力"],
+      ["rowing", "划船"],
+      ["build up muscles", "增长肌肉"],
+      ["boost endurance", "提升耐力"],
+      ["lose weight", "减肥"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "Where do you swim?",
+    "a": "I usually swim in our community swimming pool. It's close to my home and is well maintained.\n\n或者：\nI usually swim in our community sports center. The indoor swimming pool in the center is clean and well maintained.",
+    "vocab": [
+      ["is well maintained", "保养得很好"],
+      ["community sports center", "社区运动中心"],
+      ["is clean and well maintained", "干净而且保养得很好"],
+      ["can get closer to nature", "更接近大自然"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "Did you learn to swim when you were a child?",
+    "a": "Yes, I learnt to swim at around... At first, I felt nervous and even a bit afraid. But then after some practice, I became quite good at it.\n\n或者：\nNo, I didn't. I didn't learn to swim until the age of...",
+    "vocab": [
+      ["practice", "练习，实践"]
+    ]
+  },
+  {
+    "topic": "走路，跑步，骑车，游泳，想尝试的水上运动",
+    "q": "Are there any water sports you would like to try in the future?",
+    "a": "Yes, I'd like to try surfing, water skiing and scuba diving in the future. They look like fun and exciting sports, but I suppose they're also quite challenging and will take a lot of practice to learn.",
+    "vocab": [
+      ["surfing", "冲浪"],
+      ["water skiing", "滑水"],
+      ["scuba diving", "水肺潜水"],
+      ["fun and exciting", "有趣而且令人兴奋的"],
+      ["challenging", "有挑战的"],
+      ["take a lot of practice to learn", "需要很多练习才能学会"]
+    ]
+  },
+  {
+    "topic": "游戏，玩具",
+    "q": "What kinds of games are popular in your country nowadays?",
+    "a": "Video games are very popular these days, especially among young people. And some traditional games, such as Chinese chess, are still quite popular.",
+    "vocab": [
+      ["Chinese chess", "中国象棋"],
+      ["educational games", "益智游戏"],
+      ["maths games", "数学游戏"],
+      ["language games", "语言游戏"]
+    ]
+  },
+  {
+    "topic": "游戏，玩具",
+    "q": "Do you think it's important for children to play outdoor games?",
+    "a": "Yes, it's very important because outdoor games can help children develop an active lifestyle. Children who often play outdoor games also tend to sleep better at night.",
+    "vocab": [
+      ["develop an active lifestyle", "形成经常运动的生活方式"],
+      ["improve their concentration", "增强他们的注意力"],
+      ["boost the immune system", "提高身体的免疫机能"],
+      ["play hide-and-seek", "玩捉迷藏"],
+      ["play tag", "追人"],
+      ["have a snowball fight", "打雪仗"],
+      ["play hopscotch", "跳方格儿"],
+      ["play tug-of-war", "拔河"],
+      ["play with marbles", "玩弹子球"]
+    ]
+  },
+  {
+    "topic": "游戏，玩具",
+    "q": "Do you prefer to play indoor games or outdoor games?",
+    "a": "It depends on the weather. I usually prefer to play outdoor games because they're a good form of exercise. But I prefer to play indoor games when it rains or when it's windy outside.\n\n或者：\nI prefer to play outdoor games because playing outdoor games is a good form of exercise. And I can enjoy the sun and fresh air while playing outdoor games.\n\n或者：\nI prefer to play indoor games, like board games and card games, because they can help me improve concentration. And they are not affected by the weather.",
+    "vocab": [
+      ["a good form of exercise", "一种很好的锻炼方式"],
+      ["enjoy the sun and fresh air", "享受阳光和新鲜的空气"],
+      ["board games", "棋类游戏"],
+      ["card games", "牌类游戏"],
+      ["improve concentration", "增强注意力"],
+      ["are not affected by the weather", "不受天气的影响"],
+      ["chess", "象棋"],
+      ["Monopoly", "大富翁游戏"],
+      ["Scrabble", "拼字游戏"],
+      ["spelling skills", "拼写能力"]
+    ]
+  },
+  {
+    "topic": "游戏，玩具",
+    "q": "What was your favourite toy as a child?",
+    "a": "As a child, my favourite toy was... I spent a lot of time playing with it.",
+    "vocab": []
+  }
+]

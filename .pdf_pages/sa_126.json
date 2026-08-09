@@ -1,0 +1,110 @@
+[
+  {
+    "topic": "年龄",
+    "q": "At what age do you think people are the happiest?",
+    "a": "I think people are the happiest in their 60's. Most people who are in their 60s have retired and they are still generally healthy, so they have a lot of free time to do what they enjoy.",
+    "vocab": [["have retired", "已经退休了"]]
+  },
+  {
+    "topic": "建议，决定",
+    "q": "Who do you get advice from, your parents or your friends?",
+    "a": "It depends on the kind of advice that I need. I usually get advice from my parents about things like my diet and lifestyle. But I talk to my friends when I need advice about shopping or entertainment.",
+    "vocab": [["diet and lifestyle", "饮食结构和生活方式"]]
+  },
+  {
+    "topic": "建议，决定",
+    "q": "What are some decisions that most people in your country need to make nowadays?",
+    "a": "There are many decisions that we need to make, including career decisions, lifestyle decisions and financial decisions. For example, we often need to decide whether we should buy things that we like or save our money for the future.",
+    "vocab": [["career decisions", "关于事业的决定"], ["lifestyle decisions", "关于生活方式的决定"], ["financial decisions", "财务决定"]]
+  },
+  {
+    "topic": "谈话，观点",
+    "q": "What do you like to discuss with your friends?",
+    "a": "I like to discuss a variety of topics with my friends, such as films, music and food. Sometimes we also discuss TV programmes that we enjoy watching.",
+    "vocab": [["a variety of", "多种多样的"]]
+  },
+  {
+    "topic": "谈话，观点",
+    "q": "What did you like to talk about with your friends as a child?",
+    "a": "As a child, I liked to talk about popular toys and animations with my friends. They were things we were really into.",
+    "vocab": [["animation", "动画片"], ["really into...", "很喜欢……，对……非常感兴趣"]]
+  },
+  {
+    "topic": "谈话，观点",
+    "q": "Do you change your opinion often?",
+    "a": "I can't say I change my opinions often. But I always try to keep an open mind and I respect different opinions.\n\n或者：\nNo, I'm not a person who changes opinions easily. In fact, sometimes I can be quite stubborn.",
+    "vocab": [["keep an open mind", "保持开放的心态"], ["respect different opinions", "尊重不同的意见"], ["stubborn", "固执的"]]
+  },
+  {
+    "topic": "节日，生日",
+    "q": "Do you think festivals are important to us?",
+    "a": "Definitely. Festivals are times for celebration and they bring us joy and happiness. Many traditional festivals are also an important part of our heritage.",
+    "vocab": [["bring us joy and happiness", "给我们带来喜悦和幸福"], ["an important part of our heritage", "我们的文化传承的重要部分"], ["enrich our lives", "丰富我们的生活"]]
+  },
+  {
+    "topic": "节日，生日",
+    "q": "Do you usually spend your birthday with your parents or with your friends?",
+    "a": "I tend to spend my birthday with my friends because my parents live in another city. My friends usually throw a birthday party for me, which is really kind and thoughtful.\n\n或者：\nI tend to spend my birthday with my family. We usually have my birthday dinner in a nice restaurant and then go to the cinema.",
+    "vocab": [["throw a birthday party", "开生日派对"], ["thoughtful", "体贴的，关心别人的"]]
+  },
+  {
+    "topic": "节日，生日",
+    "q": "Do you think it's important to celebrate our birthdays?",
+    "a": "Yes, it's really important because they're landmarks in our lives. And it's fun and exciting to celebrate our birthdays with people who really care about us.",
+    "vocab": [["landmarks in our lives", "我们人生里不同阶段的标志"], ["fun and exciting", "有趣而且令人兴奋的"], ["care about us", "关心我们"]]
+  },
+  {
+    "topic": "节日，生日",
+    "q": "What's the most important birthday for people in your country?",
+    "a": "I suppose it's the 18th birthday. In my country, a child is considered to become an adult when he or she turns 18.",
+    "vocab": [["decorate their homes", "装饰家里"], ["get together", "聚到一起"], ["exchange presents", "互换礼物"], ["unwrap a thoughtful birthday present", "打开一份贴心的生日礼物"]]
+  },
+  {
+    "topic": "派对，婚礼",
+    "q": "What types of parties do people have in your country?",
+    "a": "In my country, the most common types of parties are birthday parties and New Year's parties. Graduation parties are also quite common.",
+    "vocab": [["New Year's party", "新年派对"], ["graduation party", "毕业派对"]]
+  },
+  {
+    "topic": "派对，婚礼",
+    "q": "Do you think parties are important?",
+    "a": "Yes, they're important because we have parties to celebrate special occasions in our lives, such as birthdays, New Year's Eve or weddings. We can also have fun, socialise and make new friends at parties.",
+    "vocab": [["celebrate special occasions", "庆祝特殊的场合"], ["New Year's Eve", "新年前夜"], ["socialise", "社交"], ["make new friends", "结交新朋友"]]
+  },
+  {
+    "topic": "派对，婚礼",
+    "q": "Where are weddings usually held in your country?",
+    "a": "I've not been to many weddings. But in my country, most weddings are probably held in hotels or restaurants.",
+    "vocab": [["are held in...", "是在……举行的"]]
+  },
+  {
+    "topic": "派对，婚礼",
+    "q": "What types of presents do people give at weddings in your country?",
+    "a": "Wedding guests usually give \"hong bao\", which are red envelopes with money inside. It's also quite common to give wine as a present.",
+    "vocab": [["envelope", "信封"], ["the bride and groom", "新娘新郎"], ["drink toasts", "祝酒"]]
+  },
+  {
+    "topic": "礼物，收藏，借东西",
+    "q": "Do you like looking for presents for your friends?",
+    "a": "Yes, I enjoy looking for presents for them. I try to find presents that are unique and match their interests.",
+    "vocab": [["unique", "独特的"], ["match their interests", "符合他们的兴趣"], ["It's the thought that counts", "重要的是心意"], ["a thoughtful present", "贴心的礼物"]]
+  },
+  {
+    "topic": "礼物，收藏，借东西",
+    "q": "Have you ever bought an expensive present for someone?",
+    "a": "Yes, I bought a tablet for my father as a birthday present last year. It was a nice surprise for him and he loved it.",
+    "vocab": [["tablet", "平板电脑"], ["a nice surprise", "惊喜"], ["a smartwatch", "智能手表"], ["a pair of designer sunglasses", "名牌太阳镜"], ["a concert ticket", "演唱会门票"]]
+  },
+  {
+    "topic": "礼物，收藏，借东西",
+    "q": "What kinds of things do people collect in your country?",
+    "a": "Some people collect stamps, coins or postcards. Others collect more expensive things, such as jewellery or works of art.",
+    "vocab": [["coins", "硬币"], ["postcards", "明信片"], ["jewellery", "首饰（不可数名词）"], ["works of art", "艺术品"]]
+  },
+  {
+    "topic": "礼物，收藏，借东西",
+    "q": "Why do you think people collect things?",
+    "a": "Some people collect things as a hobby that they enjoy. Others collect things as an investment. They only collect what they believe will be worth more in the future.",
+    "vocab": [["hobby", "爱好"], ["investment", "投资"]]
+  }
+]

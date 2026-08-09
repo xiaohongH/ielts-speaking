@@ -1,0 +1,127 @@
+[
+  {
+    "topic": "住处，家里的装饰",
+    "q": "Do you live in a house or a flat?",
+    "a": "I live in a two-bedroom flat with my family.\n\n或者：\nI live in a flat with my roommates.\n\n或者：\nI live in a flat, which is on the ... (5th / 6th / 7th ...) floor of a block of flats.",
+    "vocab": [
+      ["a two-bedroom flat", "两居室的公寓"],
+      ["my roommates", "室友"],
+      ["a block of flats", "公寓楼（英式英语）"]
+    ]
+  },
+  {
+    "topic": "住处，家里的装饰",
+    "q": "Which is your favourite room in your flat?",
+    "a": "My favourite room is the living room. It's spacious and bright. It's where my family and I unwind and have fun together or entertain our guests.\n\n或者：\nMy favourite room is my bedroom. It's not big, but it's cosy and quiet. I decorated it all by myself.\n\n或者：\nMy favorite room is the kitchen because it's practical and well-organised. I enjoy cooking in the kitchen for my family or guests.",
+    "vocab": [
+      ["spacious and bright", "宽敞明亮的"],
+      ["unwind", "放松（近义短语：wind down）"],
+      ["entertain our guests", "招待我们的客人"],
+      ["cosy and quiet", "（房间）舒适安静的，cosy 一般用来形容房间或家具"],
+      ["decorate", "装饰，名词形式是 decoration"],
+      ["practical and well-organised", "实用的而且整齐有序的"],
+      ["has a view of", "能看到……的景色"]
+    ]
+  },
+  {
+    "topic": "住处，家里的装饰",
+    "q": "Are there any things that you would like to change about your flat?",
+    "a": "Yes, I'd like to have a balcony and a bigger living room. Our living room is quite small, and we don't have a balcony at the moment.",
+    "vocab": [
+      ["balcony", "阳台"]
+    ]
+  },
+  {
+    "topic": "住处，家里的装饰",
+    "q": "Do you like to decorate rooms with mirrors?",
+    "a": "Yes, I do. The rooms in my flat are quite small. I like to use mirrors to decorate them so that they feel larger than they really are.",
+    "vocab": [
+      ["decorate", "装饰"],
+      ["just a short walk from ...", "它距离……只要走一小段路"],
+      ["just a short drive from ...", "它距离……只有一小段车程"],
+      ["plenty of natural light", "充足的天然光线"],
+      ["my own space", "我自己的空间"],
+      ["hardwood flooring", "硬木地板（flooring 指地板的材料）"],
+      ["an open-plan kitchen", "开放式厨房"]
+    ]
+  },
+  {
+    "topic": "所在的地区，所在的城市、乡村",
+    "q": "What do you like about the area that you live in?",
+    "a": "I like its location because the area is close to public transport, a park and a variety of shops and restaurants. I also like the strong sense of community of the area. Most of my neighbours are friendly and helpful.",
+    "vocab": [
+      ["public transport", "公共交通"],
+      ["a variety of", "多种多样的"],
+      ["a strong sense of community", "很强的社区感"],
+      ["friendly and helpful", "友好而且乐于助人的"]
+    ]
+  },
+  {
+    "topic": "所在的地区，所在的城市、乡村",
+    "q": "Are there any things that you don't like about the area?",
+    "a": "I don't like the noise level in the area. It can be quite noisy, especially in the afternoon and at weekends, which is annoying and distracting. Another thing that I don't like is there are not enough sports facilities in the area.",
+    "vocab": [
+      ["at weekends", "在周末（英式英语；美式为 on weekends）"],
+      ["annoying and distracting", "烦人的而且干扰注意力的"],
+      ["sports facilities", "运动设施，如 football pitch 足球场、basketball court 篮球场、tennis court 网球场、swimming pool 游泳池"],
+      ["leisure facilities", "休闲设施，如 parks、shopping centers 和 cinemas"]
+    ]
+  },
+  {
+    "topic": "所在的地区，所在的城市、乡村",
+    "q": "Would you prefer to live in a city or in the countryside if you could choose?",
+    "a": "I would prefer to live in a city because public transport in urban areas is more convenient and reliable. Also, cities offer a wide variety of leisure facilities, such as shopping centers, museums and sports centers, so living in a city would be more enjoyable than living in the countryside.",
+    "vocab": [
+      ["convenient and reliable", "方便可靠的"],
+      ["a wide variety of", "多种多样的"],
+      ["leisure facilities", "休闲设施"],
+      ["enjoyable", "令人愉快的"],
+      ["job opportunities", "就业机会"],
+      ["the cost of living", "生活成本"],
+      ["fast-paced lifestyles", "快节奏的生活方式"],
+      ["city dwellers", "城市居民"],
+      ["overcrowded", "过于拥挤的"],
+      ["traffic congestion", "交通堵塞"],
+      ["the pace of life", "生活节奏"],
+      ["dull and boring", "枯燥乏味的"],
+      ["tend to", "通常，往往"]
+    ]
+  },
+  {
+    "topic": "所在的地区，所在的城市、乡村",
+    "q": "What changes would you like to see in your city?",
+    "a": "I would like to see more sports facilities, including swimming pools and basketball courts, in my city. And I would like to see more green space, such as community parks.",
+    "vocab": [
+      ["sports facilities", "运动设施"],
+      ["green space", "绿化空间"],
+      ["community park", "社区公园"],
+      ["cleaner air", "更清洁的空气"],
+      ["less pollution", "更少的污染"],
+      ["eco-friendly vehicles", "环保交通工具"]
+    ]
+  },
+  {
+    "topic": "所在的地区，所在的城市、乡村",
+    "q": "Would you like to move to another city in the future?",
+    "a": "Yes. In the future, I'd like to move to a city with a milder climate, cleaner air and more reliable public transport.\n\n或者：\nNo, I'm quite happy living in... It's a clean and safe city, and it has efficient and reliable public transport. It's also where my parents and most of my friends live.",
+    "vocab": [
+      ["a milder climate", "更温和的气候，不是很冷也不是很热"],
+      ["a city with cleaner air", "空气更清洁的城市，也可说 a city with better air quality"],
+      ["more reliable", "更可靠的"],
+      ["efficient and reliable", "高效而且可靠的"],
+      ["The infrastructure is well-developed", "基础设施很发达"],
+      ["The infrastructure is under-developed", "基础设施不够发达"],
+      ["very walkable", "很适合步行"],
+      ["very pedestrian-friendly", "对行人友好，很适合步行"]
+    ]
+  },
+  {
+    "topic": "交通工具",
+    "q": "What types of public transport can be found in your city?",
+    "a": "A variety of public transport can be found in my city, such as buses, taxis and the ...",
+    "vocab": [
+      ["public transport", "公共交通"],
+      ["a variety of", "多种多样的"]
+    ]
+  }
+]

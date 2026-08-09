@@ -1,0 +1,3 @@
+# Copyrighted book page scans — do not commit (large binaries)
+.pdf_pages/*.jpg
+.DS_Store

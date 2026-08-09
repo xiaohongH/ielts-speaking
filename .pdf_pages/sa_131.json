@@ -1,0 +1,159 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "Have you ever borrowed things from others?",
+    "a": "Yes. As a child, I often borrowed books from my friends. These days, sometimes I borrow a bicycle from a friend.",
+    "vocab": [
+      ["toys", "借玩具（小时候）"],
+      ["a pen", "笔"],
+      ["clothes", "向朋友借服装"],
+      ["money", "向亲戚或者朋友借钱"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "Would you lend your friends your mobile phone?",
+    "a": "It would depend on the situation. I would if they need to make an urgent call. But I probably wouldn't if they just need a phone to play games or watch videos.",
+    "vocab": [
+      ["make an urgent call", "因为紧急的事情打电话"],
+      ["personal information", "个人信息"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "How often do you go to the cinema?",
+    "a": "I go to the cinema at least once or twice a month. It's a good way to unwind.\n\n或者：\nI go to the cinema only a few times a year. I usually watch films on TV or online.",
+    "vocab": [
+      ["unwind", "放松（近义短语：wind down）"],
+      ["online / on the Internet", "在网上"],
+      ["well-directed", "（电影或电视剧）导演得很好的"],
+      ["well-acted", "（电影或电视剧）表演得很好的"],
+      ["engaging", "引人入胜的"],
+      ["a strong cast", "强大的演员阵容"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "What types of films are popular in your country?",
+    "a": "Comedies are very popular because they make people laugh and help people reduce stress. Sci-fi films are also very popular because they encourage imagination and help people gain knowledge about science.",
+    "vocab": [
+      ["comedies", "喜剧（情感喜剧叫 romantic comedies）"],
+      ["reduce stress", "减轻压力"],
+      ["sci-fi films / science fiction films", "科幻电影"],
+      ["encourage imagination", "激发想象力"],
+      ["gain knowledge about...", "获取关于……的知识"],
+      ["gripping action scenes", "扣人心弦的动作场景"],
+      ["amazing special effects", "令人惊叹的电影特效"],
+      ["fast-paced and action-packed", "节奏很快而且有大量动作场景"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Do you prefer to watch films alone or with friends?",
+    "a": "I prefer to watch films alone so that I can concentrate on the films. Watching them with friends can be distracting.\n\n或者：\nI prefer watching films with friends. We don't talk during the films, but we enjoy discussing the films after watching them.",
+    "vocab": [
+      ["concentrate on...", "集中注意力在……上"],
+      ["distracting", "干扰注意力的"],
+      ["discuss the films", "讨论电影"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Do you prefer to watch a film in the cinema or at home?",
+    "a": "I prefer to watch a film in the cinema because a cinema screen is much larger than a TV screen and the sound quality in the cinema is better. It also feels special to share the experience of watching a film with many other viewers.\n\n或者：\nI prefer to watch a film at home because it's cheaper and more convenient. And I just don't like sitting in a crowded place with many strangers.",
+    "vocab": [
+      ["sound quality", "音质"],
+      ["share the experience with...", "与……一起分享某种经历"],
+      ["spectacular", "壮观的"],
+      ["the viewing experience", "观赏体验"],
+      ["cheaper and more convenient", "更便宜而且更方便"],
+      ["a crowded place", "一个拥挤的地方"],
+      ["strangers", "陌生人"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Would you like to be in a film?",
+    "a": "No. I'm not good at acting and I would feel nervous in front of a movie camera.",
+    "vocab": [
+      ["acting", "表演（“演技”就是 acting skills）"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Do people in your country like international film stars?",
+    "a": "Yes, many Hollywood stars and Korean film stars are quite popular in my country. Actually, some of them have appeared in Chinese films.",
+    "vocab": [
+      ["Hollywood stars", "好莱坞影星"],
+      ["Korean film stars", "韩国影星"],
+      ["appear", "出现"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "What types of TV shows are popular in your country?",
+    "a": "Talent shows are very popular these days because they're fun and exciting. TV drama series are also quite popular because they are relaxing.",
+    "vocab": [
+      ["talent show", "选秀类节目"],
+      ["fun and exciting", "有趣而且令人兴奋的"],
+      ["TV drama series", "电视系列剧"],
+      ["relaxing", "让人放松的"],
+      ["these days", "目前，现在（口语中等同 nowadays）"],
+      ["talk show", "谈话类节目，脱口秀"],
+      ["news show", "新闻节目"],
+      ["quiz show", "问答类节目"],
+      ["variety show", "综艺节目"],
+      ["reality show", "真人秀"],
+      ["cookery show", "厨艺节目"],
+      ["travel show", "旅游类节目"],
+      ["blind date show", "相亲类节目"],
+      ["animated film / animation", "动画片"],
+      ["cartoon", "卡通片"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Do you like watching cookery programmes on TV?",
+    "a": "Yes, I do because they can help me improve my cooking skills. I like watching them also because many TV chefs have a good sense of humour and they teach people to cook healthy meals.\n\n或者：\nNo, I don't like watching cookery programmes on TV because most of the advice from TV chefs is not practical. Watching their programmes is a waste of time.",
+    "vocab": [
+      ["improve my cooking skills", "提高我的厨艺"],
+      ["TV chef", "厨艺节目里的大厨（chef 发音 /ʃef/）"],
+      ["have a good sense of humour", "很有幽默感"],
+      ["cook healthy meals", "做健康的饭菜"],
+      ["make cooking look like an art form", "让做饭看起来像是一种艺术形式"],
+      ["the advice from TV chefs", "电视上的大厨们给出的建议"],
+      ["not practical", "不实用的"],
+      ["is a waste of time", "是浪费时间"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Do you like watching sports on TV?",
+    "a": "I enjoy watching team sports, like football and basketball, on TV because it's fun and exciting. But I don't like watching individual sports, such as skiing, on TV.",
+    "vocab": [
+      ["team sport", "团队运动（反义：individual sport 个人运动）"],
+      ["fun and exciting", "有趣而且令人兴奋的"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Do you prefer to watch TV alone or with your family?",
+    "a": "I prefer to watch TV with my family, especially when there is a TV programme that we all like. It feels great to share the experience as a family and unwind together.\n\n或者：\nI prefer to watch TV alone so that I can decide what to watch. Watching TV alone also helps me concentrate on the TV programme.",
+    "vocab": [
+      ["unwind", "放松（近义短语：wind down）"],
+      ["concentrate on...", "集中注意力在……上"]
+    ]
+  },
+  {
+    "topic": "电影和电视",
+    "q": "Do you think children should be encouraged to watch TV?",
+    "a": "It depends on what they watch. I suppose children should be encouraged to watch educational programmes because they can help children gain knowledge about a variety of topics. On the other hand, parents should limit the time that their children spend on entertainment programmes.",
+    "vocab": [
+      ["educational programmes", "有知识性的节目（如 National Geographic、Discovery Channel 上的 documentaries 纪录片）"],
+      ["gain knowledge", "获取知识"],
+      ["entertainment programmes", "娱乐性的节目"],
+      ["broaden their horizons", "开阔眼界"],
+      ["expand their horizons", "开阔眼界（地道常用短语）"]
+    ]
+  }
+]

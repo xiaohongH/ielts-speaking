@@ -1,0 +1,157 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "Do you take a nap after lunch?",
+    "a": "On weekdays, I'm usually too busy to take a nap after lunch. But at weekends, sometimes I take a nap after lunch because it makes me feel more energetic in the afternoon.",
+    "vocab": [
+      ["on weekdays", "在周一到周五"],
+      ["at weekends", "在周末（注意：英国人说at weekends，而美国人则说on weekends）"],
+      ["make me feel more energetic", "让我感觉更有活力"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "What do you do when you stay up late?",
+    "a": "I tend to stay up late to play video games. Sometimes I also stay up late to chat with my friends on social media.",
+    "vocab": [
+      ["study for exams", "备考"],
+      ["finish an assignment", "完成作业"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "How do you feel when you stayed up late the night before?",
+    "a": "I feel tired and sleepy. And I tend to find it difficult to concentrate.",
+    "vocab": [
+      ["find it difficult to concentrate", "感觉难以集中注意力"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "Do you remember your dreams?",
+    "a": "I usually don't. But if I wake up during a dream, I tend to remember it.",
+    "vocab": [
+      ["wake up during a dream", "在一个梦的过程当中醒来"]
+    ]
+  },
+  {
+    "topic": "中间休息，疲劳，无聊",
+    "q": "Do you prefer a long break or several short breaks?",
+    "a": "I prefer several short breaks because they make me feel more energetic and motivated. I can have a cup of coffee or go for a short walk and get some fresh air.",
+    "vocab": [
+      ["energetic and motivated", "有活力而且有动力的"]
+    ]
+  },
+  {
+    "topic": "中间休息，疲劳，无聊",
+    "q": "What do you usually do when you feel tired?",
+    "a": "I usually listen to music or have a hot shower when I feel tired. And sometimes I take a nap, which makes me feel more energetic.",
+    "vocab": [
+      ["have a hot shower（英式）/ take a hot shower（美式）", "洗个热水澡"],
+      ["take a nap", "睡一小会"],
+      ["feel more energetic", "感觉更有活力"]
+    ]
+  },
+  {
+    "topic": "中间休息，疲劳，无聊",
+    "q": "What do you usually do when you feel bored?",
+    "a": "I usually chat with my friends on social media when I feel bored. Sometimes I also play video games or go to the cinema.",
+    "vocab": [
+      ["social media", "社交媒体"],
+      ["go to the cinema", "去看电影"],
+      ["recharge our batteries", "给身心充电"]
+    ]
+  },
+  {
+    "topic": "蔬菜，水果，鱼",
+    "q": "Do you like fruit and vegetables?",
+    "a": "Yes. I'm fond of fruit and vegetables, such as pears, tomatoes, and cucumbers. They are tasty and they improve my health because they're a good source of vitamins and fiber.",
+    "vocab": [
+      ["I'm fond of...", "我喜欢……"],
+      ["pears, tomatoes and cucumbers", "梨，西红柿和黄瓜"],
+      ["tasty", "好吃的（近义：delicious）"],
+      ["improve my health", "增进我的健康"],
+      ["a good source of vitamins and fiber", "是很好的维生素和纤维的来源（=rich in vitamins and fiber 富含维生素和纤维）"],
+      ["tasty and nutritious", "好吃而且有营养的"],
+      ["boost the immune system", "增强身体的免疫机能"],
+      ["improve our eyesight", "增进我们的视力"],
+      ["very juicy", "多汁的"],
+      ["carrots", "胡萝卜"],
+      ["tomatoes", "西红柿"],
+      ["potatoes", "土豆"],
+      ["cucumbers", "黄瓜"],
+      ["cabbages", "卷心菜"],
+      ["apples", "苹果"],
+      ["pears", "梨"],
+      ["peaches", "桃子"],
+      ["oranges", "橙子"],
+      ["grapes", "葡萄"]
+    ]
+  },
+  {
+    "topic": "蔬菜，水果，鱼",
+    "q": "Do you like eating fish?",
+    "a": "Yes, I do. It's tasty and low-fat. It's also a good source of protein.\n\n或者：\nNo. I don't like the smell of fish. It makes me feel sick.",
+    "vocab": [
+      ["tasty", "好吃的"],
+      ["low-fat", "低脂肪的"],
+      ["a good source of protein", "很好的蛋白质来源"],
+      ["feel sick", "在这里不是“感觉生病了”，而是“感到身体不舒服”"],
+      ["very nutritious", "很有营养"],
+      ["are high in vitamin A", "富含维生素A"]
+    ]
+  },
+  {
+    "topic": "做饭，去餐馆",
+    "q": "How often do you eat out?",
+    "a": "I eat out only once or twice a month. Most of the time, I eat at home because it's cheaper and healthier.\n\n或者：\nI eat out at least a few times a week. I have a busy lifestyle, so I tend to eat out when I don't have time to cook. Sometimes I eat out with friends, which is also a good way to socialise.",
+    "vocab": [
+      ["have a busy lifestyle", "生活很忙碌"],
+      ["socialise", "社交"]
+    ]
+  },
+  {
+    "topic": "做饭，去餐馆",
+    "q": "Why do people eat out?",
+    "a": "Some people, like myself, eat out to save time. Others eat out because restaurants offer a variety of food choices or they like to socialise in restaurants.",
+    "vocab": [
+      ["a variety of food choices", "多种多样的食品选择"],
+      ["socialise", "社交"]
+    ]
+  },
+  {
+    "topic": "做饭，去餐馆",
+    "q": "What are the differences between restaurant food and home-cooked food?",
+    "a": "Restaurant food tends to taste better than home-cooked food, but it usually contains too much fat, salt or sugar. By contrast, home-cooked food is healthier and more nutritious, but it's not as tasty as restaurant food.",
+    "vocab": [
+      ["tend to", "通常，往往"],
+      ["contain too much fat, salt or sugar", "含有过多的脂肪、盐或者糖"],
+      ["healthier and more nutritious", "更健康而且更有营养的"],
+      ["tasty", "好吃的"],
+      ["lacks variety", "缺少变化，花样不够"]
+    ]
+  },
+  {
+    "topic": "做饭，去餐馆",
+    "q": "Do you think children should learn to cook?",
+    "a": "Yes, I suppose they should because cooking is an important life skill. It can make children more independent. Children who know how to cook are also more likely to have a healthy diet.",
+    "vocab": [
+      ["an important life skill", "一种重要的生活技能"],
+      ["make children more independent", "让他们变得更独立"],
+      ["are more likely to...", "更可能会……"],
+      ["have a healthy diet", "保持健康的饮食结构（对比：rely on fast food 依赖快餐）"]
+    ]
+  },
+  {
+    "topic": "做饭，去餐馆",
+    "q": "Do you like watching cookery programmes on TV?",
+    "a": "Yes, I do because they can help me improve my cooking skills. I like watching them also because many TV chefs have a good sense of humour and they teach people to cook healthy meals.\n\n或者：\nNo, I don't like watching cookery programmes on TV because most of the advice from",
+    "vocab": [
+      ["improve my cooking skills", "提高我的厨艺"],
+      ["TV chef", "厨艺节目里的大厨，“电视食神”，注意：chef的正确发音是/ʃef/"],
+      ["have a good sense of humour", "很有幽默感"],
+      ["cook healthy meals", "做健康的饭菜"],
+      ["make cooking look like an art form", "让做饭看起来像是一种艺术形式"]
+    ]
+  }
+]

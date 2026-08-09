@@ -1,0 +1,129 @@
+[
+  {
+    "topic": "旅行，度假",
+    "q": "Do you like travelling?",
+    "a": "Yes, I do. It can help me reduce stress and recharge my batteries. Travelling also helps me gain new knowledge and make new friends.",
+    "vocab": [
+      ["I'm fond of...", "我喜欢……"],
+      ["reduce stress", "减轻压力"],
+      ["recharge my batteries", "放松身心"],
+      ["gain new knowledge", "获得新的知识"],
+      ["make new friends", "结识新朋友"]
+    ]
+  },
+  {
+    "topic": "旅行，度假",
+    "q": "Do you prefer travelling alone or with a group of people?",
+    "a": "I prefer travelling with a group of people because it's safer and cheaper than travelling alone. It's also a good way to make new friends and share experiences with them.\n\n或者：\nI prefer travelling alone because it is more relaxing and gives me more freedom. Travelling alone also gives me more time to explore local attractions and interact with the locals.",
+    "vocab": [
+      ["make new friends", "结识新朋友"],
+      ["share experiences", "分享经历"],
+      ["more relaxing", "更让人放松的"],
+      ["give me more freedom", "给我更多的自由"],
+      ["explore local attractions", "探索当地的景点"],
+      ["interact with the locals", "和当地人交流互动"],
+      ["historical attractions", "历史景点"],
+      ["cultural attractions", "文化景点"],
+      ["natural attractions", "自然景点"]
+    ]
+  },
+  {
+    "topic": "旅行，度假",
+    "q": "What kinds of souvenirs do tourists buy in your country?",
+    "a": "They buy a variety of souvenirs, such as T-shirts, toys and jewellery. Stamps and postcards are also popular souvenirs.",
+    "vocab": [
+      ["a variety of", "多种多样的"],
+      ["stamps and postcards", "邮票和明信片"],
+      ["jewellery", "首饰，注意：它是不可数名词，不能加 s"]
+    ]
+  },
+  {
+    "topic": "旅行，度假",
+    "q": "Do you think it's important for us to go on holiday?",
+    "a": "Yes, it's important for us to go on holiday at least once or twice a year. It's a good way to reduce stress and recharge our batteries.",
+    "vocab": [
+      ["reduce stress", "减轻压力"],
+      ["recharge our batteries", "放松身心"],
+      ["get away from my daily routine", "暂时离开我的日常生活惯例"],
+      ["expand our horizons", "扩展眼界"],
+      ["build family bonds", "增进亲情"]
+    ]
+  },
+  {
+    "topic": "公共假期",
+    "q": "Do you think there should be more public holidays?",
+    "a": "Yes, that's probably a good idea. Many people travel on public holidays and they spend money on transport, accommodation and entertainment, which can contribute to the economy.\n\n或者：\nDefinitely. For example, Teachers' Day should become a public holiday. It would be a great way to honour teachers' contribution to society.",
+    "vocab": [
+      ["transport, accommodation and entertainment", "交通，住宿和娱乐"],
+      ["contribute to the economy", "为经济做贡献"],
+      ["honour teachers' contribution to society", "向教师们为社会所做的贡献表示敬意"]
+    ]
+  },
+  {
+    "topic": "风景，海，海滩，海岛",
+    "q": "When you travel, do you prefer to stay at a hotel that has a beautiful view?",
+    "a": "Honestly, that's not an important factor for me when choosing a hotel. I usually don't spend much time in the hotel room when I travel.",
+    "vocab": [
+      ["not an important factor for me", "对我来说不是一个重要的因素"]
+    ]
+  },
+  {
+    "topic": "风景，海，海滩，海岛",
+    "q": "Do you like to take photos of beautiful scenery?",
+    "a": "Definitely. I love taking pictures of beautiful scenery, like beaches, islands or mountains. And I enjoy sharing the photos with my family and friends.",
+    "vocab": [
+      ["beaches, islands or mountains", "海滩，岛屿或山"],
+      ["share the photos with...", "和……分享照片"]
+    ]
+  },
+  {
+    "topic": "风景，海，海滩，海岛",
+    "q": "Would you like to live near the sea?",
+    "a": "Yes, I'd like to. I would be able to spend a lot of my free time on the beach. The view of the sea, the sea breeze and the sound of waves would be very enjoyable and relaxing.",
+    "vocab": [
+      ["the view of...", "……的景象"],
+      ["sea breeze", "海风"],
+      ["waves", "海浪"],
+      ["enjoyable and relaxing", "令人愉快而且让人放松的"],
+      ["pebbles", "鹅卵石"],
+      ["sand dunes", "沙丘"],
+      ["build sandcastles", "在海滩上盖沙堡"],
+      ["do some sunbathing", "做日光浴"],
+      ["play beach volleyball", "玩沙滩排球"]
+    ]
+  },
+  {
+    "topic": "风景，海，海滩，海岛",
+    "q": "Would you like to live on an island?",
+    "a": "Not really. The cost of living would be quite high, and I would feel bored very soon. But I'd like to go on holiday on an island.",
+    "vocab": [
+      ["the cost of living", "生活开支，生活成本"],
+      ["feel bored", "感到无聊"],
+      ["walk barefoot on the beach", "光着脚在海滩上走"],
+      ["collect shells on the beach", "在海滩上收集贝壳"],
+      ["enjoy the sun and fresh air", "享受阳光和新鲜的空气"]
+    ]
+  },
+  {
+    "topic": "河流，湖泊",
+    "q": "Why do some people like to live near rivers, lakes or the sea?",
+    "a": "I suppose they prefer a view of water. And living near rivers, lakes or the sea means that they can have fun on the beach or go swimming whenever they want to.",
+    "vocab": [
+      ["a view of water", "水景"],
+      ["live closer to nature", "生活在更接近大自然的地方"]
+    ]
+  },
+  {
+    "topic": "河流，湖泊",
+    "q": "What are the functions of rivers and lakes nowadays?",
+    "a": "They're still popular places for a variety of leisure activities, like swimming, fishing and rowing. They are also an important source of fresh water. Some rivers are used for the transport of goods as well.",
+    "vocab": [
+      ["leisure activities", "休闲活动"],
+      ["rowing", "划船"],
+      ["the transport of goods", "运输货物"],
+      ["an important source of fresh water", "重要的淡水水源，注意：在地道英文里 fresh water 不是指新鲜的水，而是指“淡水”"],
+      ["crystal-clear", "清澈的"],
+      ["gorgeous", "非常美的（风景等）"]
+    ]
+  }
+]

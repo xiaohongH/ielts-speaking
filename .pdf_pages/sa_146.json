@@ -1,0 +1,139 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "How often do you use the Internet?",
+    "a": "I use the Internet every day. I check my emails and my social media accounts early in the morning. And I often watch videos, listen to music and chat with my friends on the Internet at night.",
+    "vocab": [
+      ["check my emails", "查邮件"],
+      ["social media account", "社交媒体账号"],
+      ["search for information", "查找信息"],
+      ["video-chat with", "和……视频通话"],
+      ["browse the Internet", "上网/浏览网页"],
+      ["surf the Internet", "上网"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "What do you use your computer for?",
+    "a": "I use my computer for a variety of things, such as doing research, watching videos, listening to music and writing emails. Sometimes I also play games on my computer.",
+    "vocab": [
+      ["write papers", "写论文"],
+      ["fill out online forms", "填写在线表格"],
+      ["edit photos", "编辑图片"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "What are some problems that using computers may cause?",
+    "a": "The main problem is people tend to develop an inactive lifestyle if they spend too much time on their computers. Another problem is our personal information may be stolen if our computers are infected with viruses.",
+    "vocab": [
+      ["develop an inactive lifestyle / develop a sedentary lifestyle", "形成缺少运动锻炼的生活方式"],
+      ["personal information", "个人信息"],
+      ["are infected with viruses", "被病毒感染"],
+      ["become addicted to", "对……上瘾"]
+    ]
+  },
+  {
+    "topic": "打字，电子邮件",
+    "q": "Do you prefer to write by hand or type on a computer?",
+    "a": "It depends on the situation. I usually prefer to type on a computer because typing is faster than writing by hand, and I can copy, paste or save what I have typed on a computer. But when I need to take notes or make a shopping list, I prefer to write them by hand.",
+    "vocab": [
+      ["copy, paste or save", "复制，粘贴或者保存"]
+    ]
+  },
+  {
+    "topic": "打字，电子邮件",
+    "q": "Which do you think are better for communicating with others, emails or hand-written letters?",
+    "a": "It depends on the situation. Emails are usually better because they arrive immediately. But I suppose hand-written letters are better when we want to express love or appreciation because hand-written letters feel more personal than emails.",
+    "vocab": [
+      ["arrive immediately", "立刻到达"],
+      ["more personal", "更个人化的"],
+      ["express love or appreciation", "表达爱或者感激"],
+      ["time-consuming", "很耗时的"]
+    ]
+  },
+  {
+    "topic": "手机",
+    "q": "Do you prefer to send a text message or make a phone call?",
+    "a": "It depends on the situation. I usually prefer to send a text message because it's faster and cheaper than making a phone call. But when I need to have a long conversation or when I need to talk about an urgent matter, I prefer to make a phone call.",
+    "vocab": [
+      ["a long conversation", "长时间的谈话"],
+      ["an urgent matter", "紧急的事情"],
+      ["public place", "公共场所"]
+    ]
+  },
+  {
+    "topic": "手机",
+    "q": "Which are more popular among mobile phone users in your country, mobile apps or websites?",
+    "a": "Mobile apps are more popular in my country. It's easier and more convenient to use mobile apps than to browse websites. Well-designed mobile apps also perform tasks faster than websites.",
+    "vocab": [
+      ["easier and more convenient", "更轻松而且更方便的"],
+      ["browse websites", "浏览网页"],
+      ["well-designed", "设计得很好的"],
+      ["perform tasks faster", "更快地执行任务"],
+      ["install apps", "安装应用程序"],
+      ["user-friendly", "方便使用的，用户友好的"],
+      ["music app", "音乐应用"],
+      ["navigation app", "导航应用"],
+      ["social media app", "社交媒体应用"],
+      ["fitness app", "健身应用"],
+      ["game app", "游戏应用"],
+      ["to-do list app", "重要事务列表应用"],
+      ["weather app", "天气预报应用"]
+    ]
+  },
+  {
+    "topic": "电子游戏",
+    "q": "What are some benefits of playing video games?",
+    "a": "I suppose the main benefit is that playing video games can improve hand-eye coordination. Some video games also help players improve their problem-solving skills and teamwork skills.",
+    "vocab": [
+      ["improve hand-eye coordination", "增强手和眼的协调能力"],
+      ["problem-solving skills", "解决问题的能力"],
+      ["teamwork skills", "团队合作的能力"],
+      ["copy what they see in video games", "模仿他们在电子游戏里看到的内容"],
+      ["contain violent images", "包含暴力的画面"]
+    ]
+  },
+  {
+    "topic": "机器人",
+    "q": "Do you like robots that can do the housework?",
+    "a": "Yes, I do because they are easy to use and easy to store. And they can help us save time and energy.",
+    "vocab": [
+      ["easy to use and easy to store", "使用和存放都很方便"],
+      ["save time and energy", "节约时间和精力"]
+    ]
+  },
+  {
+    "topic": "机器人",
+    "q": "Do you like the idea of robots driving our cars?",
+    "a": "That's a good idea because robots don't get tired like humans. I suppose driving, especially long-distance driving, would be much safer if cars were controlled by robots.",
+    "vocab": []
+  },
+  {
+    "topic": "音乐，乐器",
+    "q": "What types of music do you like?",
+    "a": "My favourite type of music is classical music because it makes me feel calm and relaxed. I'm also fond of R&B, or rhythm and blues, because listening to it helps me reduce stress.",
+    "vocab": [
+      ["I'm fond of…", "我喜欢……"],
+      ["make me feel calm and relaxed", "让我感觉心情平静而且放松"],
+      ["make me feel calm and peaceful", "（近义）让我感觉心情平静而且平和"],
+      ["reduce stress", "减轻压力"]
+    ]
+  },
+  {
+    "topic": "音乐，乐器",
+    "q": "What's the difference between the music that you like listening to nowadays and the music that you liked listening to as a child?",
+    "a": "As a child, I was fond of listening to happy and energetic music. Nowadays, I like listening to music that is calm and relaxing.",
+    "vocab": [
+      ["happy and energetic", "欢快而且有活力的"],
+      ["calm and relaxing", "平静而且让人放松的"],
+      ["calm and peaceful", "（近义）平静而且平和的"]
+    ]
+  },
+  {
+    "topic": "音乐，乐器",
+    "q": "Do you prefer to buy music CDs or download music from the Internet?",
+    "a": "I prefer to download music from the Internet so that I can have a wider variety of music to choose from. It's also more convenient than buying CDs from music shops.",
+    "vocab": []
+  }
+]

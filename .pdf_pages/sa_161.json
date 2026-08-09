@@ -1,0 +1,160 @@
+[
+  {
+    "topic": "香水，化妆品，发型",
+    "q": "Why do some people wear perfume?",
+    "a": "I suppose some people wear perfume because it makes them feel more confident in public places. They also feel that wearing perfume can make themselves more attractive.",
+    "vocab": [
+      ["feel more confident", "感觉更自信的"],
+      ["more attractive", "更有吸引力的"],
+      ["lipstick", "口红"],
+      ["foundation", "粉底"],
+      ["eye shadow", "眼影"],
+      ["mascara", "睫毛膏"],
+      ["nail polish", "指甲油"]
+    ]
+  },
+  {
+    "topic": "香水，化妆品，发型",
+    "q": "What's your favourite hairstyle?",
+    "a": "",
+    "vocab": [
+      ["crew cut", "男式短发，“平头”"],
+      ["swept-back hair", "把额头上的头发翻上去的发型，“背头”"],
+      ["spiky hair", "用发胶（hair spray）把头发竖起来的发型"],
+      ["layered hair", "碎发"],
+      ["bob", "女式短发，“鲍伯”"],
+      ["ponytail", "马尾辫"],
+      ["braid", "长辫子"],
+      ["bun", "把脑后的头发扎成球形的发型，“发髻”"],
+      ["shoulder-length hair", "披肩发"],
+      ["a fringe", "刘海（英式，一般用单数）"],
+      ["bangs", "刘海（美式，一般用复数）"]
+    ]
+  },
+  {
+    "topic": "老建筑",
+    "q": "Do you prefer old buildings or new buildings?",
+    "a": "I prefer old buildings because they look more attractive. New buildings tend to look the same or very similar. I would say many of them lack character.\n\n或者：\nI prefer new buildings because they are safer and easier to maintain. Old buildings look attractive but they're not as safe as new buildings. And they are usually expensive to maintain.",
+    "vocab": [
+      ["look more attractive", "看起来更有吸引力的"],
+      ["very similar", "很相似的"],
+      ["tend to", "通常，往往"],
+      ["lack character", "缺乏个性特色"],
+      ["safer and easier to maintain", "更安全而且更容易维护"],
+      ["look attractive", "看起来很有吸引力"],
+      ["expensive to maintain", "保养起来很昂贵"]
+    ]
+  },
+  {
+    "topic": "老建筑",
+    "q": "Do you think old buildings are important?",
+    "a": "Yes, they're really important because they show us how people lived in the past and help us better understand our history and culture. Many old buildings are also famous landmarks. They attract tourists and contribute to the economy.",
+    "vocab": [
+      ["better understand our history and culture", "更好地了解我们的历史和文化"],
+      ["famous landmarks", "著名的标志性建筑"],
+      ["attract tourists", "吸引游客"],
+      ["contribute to the economy", "为当地的经济做贡献"]
+    ]
+  },
+  {
+    "topic": "博物馆，图书馆",
+    "q": "What types of museums can be found in your country?",
+    "a": "A variety of museums can be found in my country, such as history museums, science and technology museums and art museums. Children's museums can also be found in some cities.",
+    "vocab": [
+      ["history museums", "历史博物馆"],
+      ["science and technology museums", "科技博物馆"],
+      ["children's museums", "儿童博物馆"],
+      ["fashion museum", "时尚博物馆"],
+      ["agriculture museum", "农业博物馆"],
+      ["folk art museum", "民间艺术博物馆"],
+      ["wax museum", "蜡像馆"],
+      ["natural history museum", "自然史博物馆"],
+      ["aviation and space museum", "航空与航天博物馆"]
+    ]
+  },
+  {
+    "topic": "博物馆，图书馆",
+    "q": "Do you like visiting museums?",
+    "a": "Yes, I do because their exhibitions are a good source of knowledge and information. Many museums also offer hands-on activities that are interesting and enjoyable.",
+    "vocab": [
+      ["exhibition", "展览"],
+      ["a good source of knowledge and information", "很好的知识和信息的来源（knowledge 和 information 都不能加 s）"],
+      ["offer hands-on activities", "提供让参观者们亲身参与的活动"],
+      ["interesting and enjoyable", "有趣而且令人愉快的"]
+    ]
+  },
+  {
+    "topic": "博物馆，图书馆",
+    "q": "Do you think museums are important?",
+    "a": "Yes, they're very important because they help us gain knowledge about history, culture, technology and many other aspects of life. They also offer many hands-on activities that are fun and relaxing.",
+    "vocab": [
+      ["gain knowledge about...", "获取关于……的知识"],
+      ["hands-on activities", "让参观者们亲身参与的活动"],
+      ["fun and relaxing", "有趣而且令人放松的"],
+      ["fun and educational", "既有趣又有知识性"],
+      ["good for all ages", "适合各个年龄段的人们"]
+    ]
+  },
+  {
+    "topic": "博物馆，图书馆",
+    "q": "Do you think it's a good idea for museums to sell souvenirs?",
+    "a": "Yes, I suppose it's a good idea because the souvenirs can help visitors better understand the exhibitions. And museums can use the profit from their gift shops to increase their collections.",
+    "vocab": [
+      ["help visitors better understand the exhibitions", "帮助参观者们更好地理解展览"],
+      ["the profit from...", "来自……的利润"],
+      ["gift shop", "（博物馆或者旅游景点的）礼品店"],
+      ["increase their collections", "增加它们的馆藏"],
+      ["under-funded", "经费不足"]
+    ]
+  },
+  {
+    "topic": "博物馆，图书馆",
+    "q": "Do you think libraries are important?",
+    "a": "Definitely. Libraries offer a wide variety of books, which are a good source of knowledge and information.",
+    "vocab": [
+      ["Definitely", "绝对是这样（语气很强，只适合想表达强烈肯定态度的考题）"],
+      ["a good source of knowledge and information", "很好的知识与信息的来源"],
+      ["concentrate on", "集中精力于"],
+      ["group discussions", "小组讨论"],
+      ["computer labs", "计算机房"],
+      ["free Wi-Fi", "免费的无线网络"]
+    ]
+  },
+  {
+    "topic": "旅馆",
+    "q": "How often do you stay in hotels?",
+    "a": "At least a few times a year. I usually stay in hotels when I travel.",
+    "vocab": [
+      ["luxury hotel", "豪华酒店"],
+      ["boutique hotel", "精品酒店"],
+      ["economy hotel", "经济型酒店"]
+    ]
+  },
+  {
+    "topic": "旅馆",
+    "q": "What are the advantages of staying in a hotel?",
+    "a": "The main advantage is hotels offer safe and convenient accommodation. Many hotels also offer a variety of amenities, such as restaurants and swimming pools.",
+    "vocab": [
+      ["offer safe and convenient accommodation", "提供安全方便的住宿"],
+      ["amenities", "休闲设施"]
+    ]
+  },
+  {
+    "topic": "礼貌，守时",
+    "q": "Do you think it's important to be polite to others?",
+    "a": "Yes, it's important because being polite is a virtue. It shows that we have respect for others. It also shows that we're thoughtful and responsible.",
+    "vocab": [
+      ["is a virtue", "是一种美德"],
+      ["responsible", "有责任感的"],
+      ["thoughtful", "关心别人的，替别人着想的"],
+      ["we care about their feelings", "在乎他们的感受"],
+      ["make a good impression on others", "给别人留下好印象"],
+      ["thank others for their help", "感谢别人的帮助"],
+      ["have good table manners", "有良好的餐桌礼仪"],
+      ["respect others' privacy", "尊重别人的隐私"],
+      ["arrive on time for appointments", "按提前约好的时间到达"],
+      ["avoid talking loudly in public places", "避免在公共场所大声喧哗"],
+      ["use “please” when you ask for help", "寻求帮助时使用“请”"]
+    ]
+  }
+]

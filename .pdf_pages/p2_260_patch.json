@@ -1,0 +1,24 @@
+{
+  "category": "自然和动植物",
+  "title": "动物之　狮子",
+  "cue": "Describe an animal.\nYou should say：\nwhat the animal is\nwhere it can be found\nwhat is special about it\nand explain how you feel about it.",
+  "a": "I'd like to talk about the lion. It can be found in many parts of Africa.\n\nJust like the tiger，the lion is also a member of the cat family and… in many ways lions are just big cats.\n\nHumans have been so amazed by lions' size and strength that we call them the king of beasts. And a lion's roar can be heard up to 10 kilometers away.\n\nLions live in groups. In other words，they are social animals. Adult females look after their cubs together，hunt together and defend their hunting grounds together.\n\nBut the males tend to be lazy. Actually，some of them are troublemakers. Sometimes cubs even get hurt by adult males when the adult females are away.\n\nI like lions not only because they are strong creatures but also because my girlfriend （for girls：boyfriend） is a Leo…",
+  "vocab": [
+    ["the cat family", "猫科动物"],
+    ["strength", "力量"],
+    ["the king of beasts", "兽中之王"],
+    ["roar", "吼叫"],
+    ["social animals", "群居的动物"],
+    ["look after", "照看"],
+    ["cub", "小狮子／小老虎／小熊等"],
+    ["hunt", "捕猎"],
+    ["defend", "保护"],
+    ["troublemaker", "制造麻烦者"],
+    ["strong creatures", "很强壮的动物"],
+    ["a Leo", "一个狮子座的人"],
+    ["pride", "狮群（地道英文里一群狮子经常被叫作 a pride of lions，可能跟雄狮看起来很“骄傲”有关）"],
+    ["sign", "星座"],
+    ["fierce / ferocious", "凶猛的"],
+    ["prey", "猎物（注意：它是不可数的）"]
+  ]
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "Do you like to take public transport?",
+    "a": "Yes, I do because it's safe, convenient and reliable. It's also more eco-friendly than driving.\n\n或者：\nNo, I don't because public transport in my city is inconvenient and unreliable. And it's almost always crowded and uncomfortable.",
+    "vocab": [
+      ["safe, convenient and reliable", "安全，方便而且可靠的"],
+      ["more eco-friendly", "更环保的"],
+      ["inconvenient and unreliable", "不方便也不可靠的"],
+      ["crowded and uncomfortable", "拥挤而且不舒适的"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "How often do you take a taxi?",
+    "a": "I take a taxi at least a few times a week. I usually take a taxi when I'm in a hurry to get somewhere.\n\n或者：\nI take a taxi only a few times a year. I take a taxi only when buses are not available.",
+    "vocab": []
+  },
+  {
+    "topic": "(承上)",
+    "q": "Do you prefer to take a taxi or take the underground?",
+    "a": "I prefer to take the underground because it's much cheaper than taking a taxi. It is also more eco-friendly and is a good way to avoid traffic congestion.\n\n或者：\nI prefer to take a taxi because the underground tends to be very crowded. A taxi is much more comfortable.",
+    "vocab": [
+      ["more eco-friendly", "更环保的"],
+      ["avoid traffic congestion", "躲开交通堵塞"],
+      ["tend to", "通常，往往"],
+      ["crowded", "拥挤的"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "What are the advantages of cycling to work or school?",
+    "a": "The main advantage is that cycling to work or school is eco-friendly and helps us reduce our carbon footprint. Cycling is also cheaper than driving and faster than walking.",
+    "vocab": [
+      ["cycle to work or school", "骑自行车去上班或者上学"],
+      ["eco-friendly", "有益于环保的"],
+      ["reduce our carbon footprint", "减少我们的“碳足迹”"],
+      ["reduce carbon emissions", "减少碳排放"],
+      ["enjoy the sun and fresh air", "享受阳光和新鲜的空气"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "Do you like cycling?",
+    "a": "Yes, I do because cycling can improve my balance and coordination. It's a good way to burn calories as well.",
+    "vocab": [
+      ["improve my balance and coordination", "改善我的平衡与协调能力"],
+      ["burn calories", "消耗热量，“燃烧卡路里”"],
+      ["lose weight", "减肥"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "Do you have a driving licence?",
+    "a": "Yes, I do. And I always have my driving licence with me when driving.\n\n或者：\nI don't have a driving licence yet. I'm still learning to drive and I'm not confident about my driving skills.",
+    "vocab": [
+      ["makes my life easier", "让我的生活更轻松"],
+      ["makes me feel more independent", "让我感觉更独立"],
+      ["dangerous drivers", "不负责任的司机"],
+      ["get stuck in", "被困在……当中"],
+      ["parking spot / parking space", "停车位"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "Do you like the idea of robots driving our cars?",
+    "a": "Yes, I do because robots don't get tired like humans. I suppose driving, especially long-distance driving, would be much safer if cars were controlled by robots.",
+    "vocab": [
+      ["long-distance driving", "远距离的驾驶"],
+      ["self-driving cars", "自动驾驶的汽车"],
+      ["driverless cars", "自动驾驶的汽车（英国常用）"]
+    ]
+  },
+  {
+    "topic": "学习习惯，想学的技能",
+    "q": "Do you prefer to study alone or with others?",
+    "a": "I prefer to study alone so that I can concentrate better and think more clearly. Studying with others tends to be distracting.",
+    "vocab": [
+      ["so that...", "表示目的的连接词，这样就可以……，以便……"],
+      ["distracting", "干扰注意力的"],
+      ["tend to", "通常，往往"]
+    ]
+  },
+  {
+    "topic": "学习习惯，想学的技能",
+    "q": "Do you prefer to study in the morning or in the afternoon?",
+    "a": "I prefer to study in the morning because I feel refreshed after a good night's sleep. It helps me concentrate better and think more clearly.",
+    "vocab": [
+      ["feel refreshed", "感觉头脑很清醒"],
+      ["a good night's sleep", "（固定短语）一夜好觉"],
+      ["concentrate better", "更好地集中注意力"],
+      ["think more clearly", "更清晰地思考"]
+    ]
+  },
+  {
+    "topic": "学习习惯，想学的技能",
+    "q": "Are there any skills that you want to learn?",
+    "a": "",
+    "vocab": [
+      ["driving skills", "驾驶技能"],
+      ["public speaking skills", "公共演讲的技能"],
+      ["money-management skills", "管理财务的技能"],
+      ["cooking skills", "做饭的技能"],
+      ["playing a musical instrument", "演奏乐器"]
+    ]
+  },
+  {
+    "topic": "学外语",
+    "q": "Do you think it's important to learn a foreign language?",
+    "a": "Definitely. People who have foreign language skills have a competitive edge in the job market. Learning a foreign language can also help us make more friends.",
+    "vocab": [
+      ["foreign language skills", "外语技能"],
+      ["in the job market", "在就业市场当中"],
+      ["have a competitive edge", "有竞争优势"],
+      ["makes a person more intelligent", "让人变得更聪明"]
+    ]
+  },
+  {
+    "topic": "学外语",
+    "q": "Would you like to learn another foreign language?",
+    "a": "Yes. I'd like to learn French so that I can read French novels in the original and watch French films without having to read the subtitles.",
+    "vocab": [
+      ["read... in the original", "直接阅读原文，不需要看译文"],
+      ["subtitles", "字幕"]
+    ]
+  }
+]

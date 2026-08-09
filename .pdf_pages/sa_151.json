@@ -1,0 +1,147 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "Do you think children should learn to play a musical instrument?",
+    "a": "Definitely. Playing a musical instrument, like the piano or guitar, is a great way for children to express themselves. Learning to play a musical instrument can also improve their memory and concentration.",
+    "vocab": [
+      ["express themselves", "表达他们的感受"],
+      ["memory and concentration", "记忆力和注意力"],
+      ["makes children more intelligent", "让儿童们变得更聪明"],
+      ["takes a lot of practice", "需要很多的练习"],
+      ["develop a sense of responsibility", "形成一种责任感"],
+      ["unwind", "放松"],
+      ["boost children's brain development", "促进儿童的大脑发育"]
+    ]
+  },
+  {
+    "topic": "唱歌，歌星，演唱会",
+    "q": "Do you like singing?",
+    "a": "Yes, I'm really into singing and I often go to karaoke bars with my friends. It's a great way to reduce stress.\n\n或者：\nNo, I don't like singing. I can't even carry a tune.",
+    "vocab": [
+      ["I'm really into...", "我很喜欢……"],
+      ["karaoke bar", "卡拉OK厅"],
+      ["reduce stress", "减轻压力"],
+      ["can't even carry a tune", "唱歌跑调"]
+    ]
+  },
+  {
+    "topic": "唱歌，歌星，演唱会",
+    "q": "Do you prefer to listen to pop stars' albums or go to their concerts?",
+    "a": "I prefer to go to their concerts so that I can experience their music first-hand. And I can share the experience with many others who also love their music.\n\n或者：\nI prefer to listen to their albums because concert tickets tend to be very expensive. Pop concerts are also quite noisy, which can be distracting.",
+    "vocab": [
+      ["experience their music first-hand", "直接地体验他们的音乐"],
+      ["share the experience with...", "与……一起分享经历"],
+      ["concert tickets", "演唱会门票"],
+      ["tend to be", "通常是，往往是"],
+      ["distracting", "干扰注意力的"],
+      ["a memorable experience", "很值得回忆的经历"],
+      ["see my idols in person", "亲眼见到自己的偶像"],
+      ["very catchy", "上口，容易记住"],
+      ["very inspiring", "激励人，很励志"],
+      ["singer-songwriter", "创作型歌手"],
+      ["waved glow sticks", "挥舞荧光棒"]
+    ]
+  },
+  {
+    "topic": "舞蹈",
+    "q": "Do you like dancing?",
+    "a": "Yes, I do because it can improve my balance and coordination. It's also a good way to socialise and make new friends.\n\n或者：\nNo, I don't like dancing because I don't have a good sense of rhythm. I feel awkward when I dance.",
+    "vocab": [
+      ["I'm fond of...", "我喜欢……"],
+      ["improve my balance and coordination", "提高我的平衡与协调能力"],
+      ["socialise", "社交"],
+      ["make new friends", "结识新朋友"],
+      ["It makes me feel energetic", "让我感觉很有活力"],
+      ["don't have a good sense of rhythm", "没有好的节奏感"],
+      ["feel awkward", "感觉尴尬"],
+      ["I have two left feet", "长了两只左脚（形容跳舞很笨拙）"],
+      ["very clumsy", "很笨拙"],
+      ["ballet", "芭蕾舞"],
+      ["waltz", "华尔兹"],
+      ["tango", "探戈"],
+      ["traditional folk dance", "传统的民间舞"],
+      ["street dance", "街舞"],
+      ["hip-hop dance", "嘻哈舞"]
+    ]
+  },
+  {
+    "topic": "购物，网购",
+    "q": "What kinds of shops are there in the area you live in?",
+    "a": "",
+    "vocab": [
+      ["grocer's", "食品杂货店"],
+      ["florist's", "花店"],
+      ["chemist's", "药店"],
+      ["book shop", "书店"],
+      ["clothes shop", "服装店"],
+      ["boutique", "精品店"]
+    ]
+  },
+  {
+    "topic": "购物，网购",
+    "q": "Do you often shop online?",
+    "a": "Yes, I do because shopping online helps me save time and avoid the crowds in shops. It's also easier to compare prices online.",
+    "vocab": [
+      ["help me save time", "帮我节省时间"],
+      ["avoid the crowds in shops", "躲开商店里拥挤的人群"],
+      ["compare prices", "比较价格"],
+      ["offer a wider range of products", "提供更多样的产品"],
+      ["return a product", "退货"]
+    ]
+  },
+  {
+    "topic": "购物，网购",
+    "q": "Do you like buying clothes or shoes online?",
+    "a": "No, I don't. When I buy clothes or shoes, I want to know whether they fit me well or whether they are comfortable or not, but I can't try on clothes or shoes online.",
+    "vocab": [
+      ["try on clothes / try on shoes", "试穿（衣服或者鞋）"]
+    ]
+  },
+  {
+    "topic": "购物，网购",
+    "q": "Do you like buying jewellery online?",
+    "a": "No, I don't because I can't tell whether a piece of jewellery is good or not just by looking at its photos online. I prefer buying jewellery in a jewellery shop where I can see it and try it on before I make up my mind.",
+    "vocab": [
+      ["try it on", "试戴（首饰）"],
+      ["make up my mind", "做决定"]
+    ]
+  },
+  {
+    "topic": "市场，存钱",
+    "q": "What are the differences between street markets and supermarkets?",
+    "a": "There're many stalls in street markets and we can usually bargain in street markets. By contrast, supermarkets have tall shelves and things are sold at fixed prices in supermarkets.",
+    "vocab": [
+      ["stall", "售货摊"],
+      ["bargain", "讨价还价"],
+      ["tall shelves", "很高的货架"],
+      ["are sold at fixed prices", "以固定的价格出售"],
+      ["locally made", "在当地制造"],
+      ["locally grown", "在当地种植"]
+    ]
+  },
+  {
+    "topic": "市场，存钱",
+    "q": "Do you think it's important for people to save some of their money?",
+    "a": "Yes, it's important because it can help us deal with unexpected problems in life, such as accidents or illnesses. And it's a good habit that can make us feel financially secure.",
+    "vocab": [
+      ["unexpected problems in life", "生活里无法预料的问题"],
+      ["feel financially secure", "在财务方面有安全感"]
+    ]
+  },
+  {
+    "topic": "市场，存钱",
+    "q": "Do you think parents should teach their children to save money?",
+    "a": "Yes, I suppose they should because saving money is a good habit. It can also help children develop a sense of responsibility.",
+    "vocab": [
+      ["a good habit", "好习惯"],
+      ["build a sense of responsibility", "形成责任感"],
+      ["a stress-reliever", "减压方式"],
+      ["well laid out", "布局合理"],
+      ["friendly and helpful", "友好而且很有帮助"],
+      ["rude and unhelpful", "粗鲁而且毫无帮助"],
+      ["pedestrian street", "步行街"],
+      ["spending habits", "消费习惯"],
+      ["status symbols", "身份的象征"]
+    ]
+  }
+]

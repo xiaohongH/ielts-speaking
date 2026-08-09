@@ -1,0 +1,154 @@
+[
+  {
+    "topic": "烧烤",
+    "q": "What's your favourite barbecue food?",
+    "a": "",
+    "vocab": [
+      ["barbecue ribs", "烤排骨"],
+      ["barbecue chicken drumsticks", "烤鸡腿"],
+      ["barbecue lamb", "烤羊肉"],
+      ["barbecue chicken wings", "烤鸡翅"],
+      ["barbecue sausage", "烤香肠"],
+      ["corn on the cob", "玉米棒"]
+    ]
+  },
+  {
+    "topic": "外国食品",
+    "q": "Have you ever tried any foreign food?",
+    "a": "",
+    "vocab": [
+      ["pizza", "披萨饼"],
+      ["kimchi", "韩国泡菜"],
+      ["spaghetti", "意大利面"],
+      ["chips / French fries", "炸薯条"],
+      ["cheeseburger", "奶酪汉堡"],
+      ["sushi", "寿司"],
+      ["taco", "墨西哥卷饼"]
+    ]
+  },
+  {
+    "topic": "水，咖啡",
+    "q": "Do you drink water only when you are thirsty?",
+    "a": "No, I drink water regularly during the day. I suppose it's important to stay hydrated, which can improve my health and boost my immune system.",
+    "vocab": [
+      ["drink water regularly", "经常喝水"],
+      ["during the day", "在白天"],
+      ["stay hydrated", "保持体内有充足的水分"],
+      ["improve my health", "增进我的健康"],
+      ["boost my immune system", "提高我的免疫机能"],
+      ["feel energetic", "感觉很有活力"],
+      ["drink 8 glasses of water a day", "每天喝八杯水"]
+    ]
+  },
+  {
+    "topic": "水，咖啡",
+    "q": "How often do you drink coffee?",
+    "a": "I drink coffee once in a while. Coffee makes me feel energetic, but I suppose drinking it often may make me addicted to it.",
+    "vocab": [
+      ["once in a while", "偶尔"],
+      ["feel energetic", "感觉很有活力"],
+      ["make me addicted to...", "让我对……上瘾"]
+    ]
+  },
+  {
+    "topic": "早餐，零食",
+    "q": "Do you think having breakfast is important?",
+    "a": "Yes, it's really important because having breakfast makes us feel energetic in the morning. A healthy breakfast can also improve memory and concentration.",
+    "vocab": [
+      ["feel energetic", "感觉很有活力，精力充沛"],
+      ["improve memory and concentration", "增强记忆力和注意力"]
+    ]
+  },
+  {
+    "topic": "早餐，零食",
+    "q": "When do you usually eat snacks?",
+    "a": "I usually eat snacks in the mid-afternoon, between 2 p.m. and 3 p.m. Eating snacks in the mid-afternoon makes me feel energetic. Sometimes I also eat snacks after working out.\n\n或者：\nI eat snacks when I feel hungry between meals. I also eat snacks while watching TV or watching a film.",
+    "vocab": [
+      ["make me feel energetic", "让我感觉有活力"],
+      ["work out", "健身"],
+      ["when I feel hungry between meals", "在两餐之间感觉饿了的时候"],
+      ["biscuits / cookies", "曲奇，小甜饼"],
+      ["crisps / potato chips", "薯片"],
+      ["popcorn", "爆米花"],
+      ["ice cream", "冰激凌"],
+      ["cheese sticks", "奶酪棒"],
+      ["chocolate bars", "长条形的巧克力糖"]
+    ]
+  },
+  {
+    "topic": "烘烤食品，甜食，巧克力",
+    "q": "What are some kinds of baked food that people enjoy in your country?",
+    "a": "Well, cakes are always baked and they are very popular in my country. And bread, which is also quite popular in my country, is usually baked in the oven as well.",
+    "vocab": [
+      ["oven", "烤箱"],
+      ["baked sweet potatoes", "烤红薯"]
+    ]
+  },
+  {
+    "topic": "烘烤食品，甜食，巧克力",
+    "q": "Do you like sweet food?",
+    "a": "Yes, I do because it helps me reduce stress. It's also a good source of energy.\n\n或者：\nNo, I don't because it's bad for my teeth. And I'm trying to lose weight, so I don't like food that is high in calories.",
+    "vocab": [
+      ["reduce stress", "减轻压力"],
+      ["is a good source of energy", "是很好的能量来源"],
+      ["lose weight", "减肥"],
+      ["is high in calories", "含热量很高"]
+    ]
+  },
+  {
+    "topic": "烘烤食品，甜食，巧克力",
+    "q": "Do you like chocolate?",
+    "a": "Yes, I'm fond of its taste and texture. It also makes me feel energetic. I particularly like dark chocolate because it goes well with coffee or tea.",
+    "vocab": [
+      ["I'm fond of...", "我喜欢……"],
+      ["taste and texture", "味道和质感"],
+      ["feel energetic", "感觉很有活力"],
+      ["particularly", "尤其"],
+      ["goes well with...", "和……搭配在一起很合适"],
+      ["reduce the risk of heart disease", "减少患心脏病的风险"]
+    ]
+  },
+  {
+    "topic": "邻居，邻里关系",
+    "q": "How often do you see your neighbours?",
+    "a": "I see my neighbours at least 3 or 4 times a week. I usually see them when I leave home for work in the morning. Sometimes I also see them when I get home in the evening.",
+    "vocab": [
+      ["get home", "到家"]
+    ]
+  },
+  {
+    "topic": "邻居，邻里关系",
+    "q": "How well do you know your neighbours?",
+    "a": "I know them quite well. My neighbours are friendly and helpful. They're also polite and respect my privacy.",
+    "vocab": [
+      ["friendly and helpful", "友好而且乐于助人的"],
+      ["respect my privacy", "尊重我的隐私"]
+    ]
+  },
+  {
+    "topic": "邻居，邻里关系",
+    "q": "Do you prefer older people or younger people as neighbours?",
+    "a": "I prefer older people as neighbours because they tend to be quiet and polite. They can be very helpful as well.\n\n或者：\nI prefer younger people as neighbours because they tend to be more sociable. It's easier for me to communicate with them than with older neighbours.",
+    "vocab": [
+      ["tend to be", "通常是，往往是"],
+      ["quiet and polite", "安静而且有礼貌的"],
+      ["sociable", "外向的，合群的"],
+      ["communicate with...", "与……交流"]
+    ]
+  },
+  {
+    "topic": "邻居，邻里关系",
+    "q": "How can we help our neighbours?",
+    "a": "We can accept parcels for our neighbours when they're not at home. And we can share information with new neighbours about the area that we live in, which can be very helpful to them.",
+    "vocab": [
+      ["accept parcels", "接收包裹"],
+      ["share information with...", "和……分享信息"]
+    ]
+  },
+  {
+    "topic": "邻居，邻里关系",
+    "q": "What problems do you sometimes have with your neighbours?",
+    "a": "The main problem is noise, such as loud music or TV. Another problem is that some of my neighbours drop litter, which shows that they don't care about the community.",
+    "vocab": []
+  }
+]

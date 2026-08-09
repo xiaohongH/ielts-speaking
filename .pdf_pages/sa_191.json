@@ -1,0 +1,111 @@
+[
+  {
+    "topic": "(承上)",
+    "q": "Do you think the sky looks more beautiful during the day or at night?",
+    "a": "I would say the sky looks more beautiful at night, especially when the sky is clear and it's filled with stars. It looks calm and peaceful but very lively at the same time because of the stars.",
+    "vocab": [
+      ["when the sky is filled with stars", "满天繁星的时候"],
+      ["calm and peaceful", "平静安详的"],
+      ["lively", "很有活力的"]
+    ]
+  },
+  {
+    "topic": "(承上)",
+    "q": "What are the best places for stargazing?",
+    "a": "The best places for stargazing are probably the places that are far from city lights and where the air is clean. For example, remote mountains and beaches are perfect for stargazing.",
+    "vocab": [
+      ["far from city lights", "远离城市的灯光"],
+      ["remote", "偏远的"],
+      ["The sky is bright and clear.", "天空很晴朗。"],
+      ["The night sky looks calm and peaceful.", "夜空看起来平静安详。"]
+    ]
+  },
+  {
+    "topic": "野生动物，动物园",
+    "q": "How can we protect wild animals?",
+    "a": "I think governments need to create more nature reserves. And schools should educate students about endangered species.",
+    "vocab": [
+      ["create more nature reserves", "创建更多的自然保护区"],
+      ["educate students about endangered species", "帮助学生们了解濒危物种"]
+    ]
+  },
+  {
+    "topic": "野生动物，动物园",
+    "q": "Do you think zoos are important?",
+    "a": "Yes, they're very important because they have programmes that help to save endangered species. And they help visitors gain knowledge about wild animals. Visiting a zoo is also fun and enjoyable, especially for children.",
+    "vocab": [
+      ["endangered species", "濒危物种"],
+      ["gain knowledge about...", "获取关于……的知识"],
+      ["fun and enjoyable", "有趣而且令人愉快的"],
+      ["Zoos make people more interested in nature and animals.", "动物园让人们对自然界和动物更感兴趣。"],
+      ["Zoos are important resources for wild animal researchers.", "动物园是野生动物研究人员的重要资源。"],
+      ["lost their freedom", "失去了它们的自由"],
+      ["forced to change their habits", "被迫改变它们的习性"]
+    ]
+  },
+  {
+    "topic": "宠物，养鱼，鸟类，昆虫",
+    "q": "Why do some people keep pets?",
+    "a": "I suppose pets can help them reduce stress and loneliness. They tend to think of their pets as friends or family members.",
+    "vocab": [
+      ["reduce stress and loneliness", "减少压力和孤独"],
+      ["think of their pets as friends or family members", "把他们的宠物当成朋友或家人"]
+    ]
+  },
+  {
+    "topic": "宠物，养鱼，鸟类，昆虫",
+    "q": "Why do some people keep fish as pets?",
+    "a": "I guess they keep fish as pets because fish are quiet and don't cause distractions.\n\n或者：\nI guess they keep fish as pets because fish are colourful and interesting to watch. They're also easier to take care of than most other pets.",
+    "vocab": [
+      ["colourful", "多彩的"],
+      ["are easier to take care of", "更容易照看"],
+      ["a fish tank", "鱼缸"],
+      ["an aquarium", "鱼缸；水族馆"],
+      ["Taking care of their pets can help children develop a sense of responsibility.", "照料他们的宠物可以帮助儿童们形成责任感。"],
+      ["Pets are adorable.", "宠物很可爱"],
+      ["Playing with pets is fun and relaxing.", "跟宠物玩很有趣而且令人放松。"]
+    ]
+  },
+  {
+    "topic": "宠物，养鱼，鸟类，昆虫",
+    "q": "What kinds of birds can you see in your city?",
+    "a": "I often see sparrows in my city. Sometimes I also see pigeons.",
+    "vocab": [
+      ["sparrow", "麻雀"],
+      ["pigeons", "鸽子"]
+    ]
+  },
+  {
+    "topic": "宠物，养鱼，鸟类，昆虫",
+    "q": "Do you think we should protect birds?",
+    "a": "Definitely. They play an important role in the ecosystem that we live in. For example, birds eat harmful insects, which helps to protect plants.",
+    "vocab": [
+      ["play an important role in...", "在……当中起到重要的作用"],
+      ["the ecosystem that we live in", "我们所生活的生态系统"],
+      ["eat harmful insects", "吃害虫"],
+      ["protect plants", "保护植物"]
+    ]
+  },
+  {
+    "topic": "宠物，养鱼，鸟类，昆虫",
+    "q": "Do any birds have a special meaning in your country?",
+    "a": "Yes, some birds have a special meaning in my country. For example, the magpie represents good luck and success, while the crane is a symbol of long life and good health.",
+    "vocab": [
+      ["magpie", "喜鹊"],
+      ["represent...", "代表着……"],
+      ["crane", "仙鹤"],
+      ["is a symbol of...", "是……的象征"],
+      ["longevity", "长寿"]
+    ]
+  },
+  {
+    "topic": "宠物，养鱼，鸟类，昆虫",
+    "q": "Do you think insects are helpful to us?",
+    "a": "Well, some insects are quite helpful to us. For example, bees make honey, while butterflies pollinate flowers. On the other hand, I would say many insects, such as flies and mosquitoes, are useless or even harmful.",
+    "vocab": [
+      ["make honey", "酿蜜"],
+      ["pollinate flowers", "给花授粉"],
+      ["flies and mosquitoes", "苍蝇和蚊子"]
+    ]
+  }
+]
