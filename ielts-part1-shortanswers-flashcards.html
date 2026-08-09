@@ -213,7 +213,7 @@ body.dark .flip-hint { color: #666; }
 <body>
 
 <h1>Part 1 短兵相接 — 高频真题</h1>
-<div class="subtitle">《高频真题语料集 · 雅口有言》Part 1 · tap a card to flip · ▶ to hear it read aloud · ◀ ▶ to walk through</div>
+<div class="subtitle">《高频真题语料集 · 雅口有言》Part 1 · tap or press Space to flip · ▶ to hear it read aloud · ◀ ▶ to walk through</div>
 
 <details class="tips">
   <summary>Part 1 答题小贴士</summary>
@@ -670,10 +670,26 @@ function speakCurrent(){
     speakRepeated(d.q,document.getElementById('vbtn-'+i));
 }
 
+function flipCurrent(){
+  let el=document.querySelector('.card-container.current');
+  if(!el){
+    const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
+    if(!cards.length) return;
+    current=0;
+    el=cards[0];
+    el.classList.add('current');
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  const card=el.querySelector('.flashcard');
+  const i=parseInt(card.id.replace('card-',''),10);
+  flipCard(i);
+}
+
 document.addEventListener('keydown',e=>{
   if(e.target.tagName==='INPUT') return;
   if(e.key==='ArrowRight'){navigate(1);e.preventDefault();}
   else if(e.key==='ArrowLeft'){navigate(-1);e.preventDefault();}
+  else if(e.code==='Space'){flipCurrent();e.preventDefault();}
 });
 
 window.addEventListener('DOMContentLoaded',()=>{
