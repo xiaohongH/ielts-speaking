@@ -205,7 +205,7 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
   color: #27ae60;
 }
 .ans-tag2 { color: #4a90d9; }
-.ans-head .voice-btn { margin-left: auto; }
+.ans-head .voice-btn:first-of-type { margin-left: auto; }
 body.dark .ans-block { background: #16241a; border-left-color: #2e9e57; }
 body.dark .ans-block2 { background: #142236; border-left-color: #4a90d9; }
 .vocab-list { list-style: none; padding: 0; margin-top: 0.9rem; }
@@ -322,8 +322,8 @@ function render(){
     const vocHtml=(vocab&&vocab.length)?`<ul class="vocab-list">${vocab.map(v=>`<li><span class="vocab-term">${esc(v[0])}</span> — <span class="vocab-cn">${esc(v[1])}</span></li>`).join('')}</ul>`:'';
     const notesHtml=(d.notes&&d.notes.length)?`<div class="note-groups">${d.notes.map(g=>`<div class="note-group"><div class="note-title">${esc(g.t)}</div><table class="note-table">${g.rows.map(r=>`<tr><td class="note-term">${esc(r[0])}</td>${r.slice(1).map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`).join('')}</div>`:'';
     const cueHtml=d.cue?`<div class="card-cue">${esc(d.cue)}</div>`:'';
-    const a1Html=`<div class="ans-block"><div class="ans-head"><span class="ans-tag">Answer 1 · 范文</span><button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer 1">&#9654;</button></div><div class="card-answer">${esc(d.a)}</div></div>`;
-    const a2Html=d.a2?`<div class="ans-block ans-block2"><div class="ans-head"><span class="ans-tag ans-tag2">Answer 2 · 你的版本</span><button class="voice-btn" id="vbtn-back2-${i}" onclick="speakAnswer2(event,${i})" title="Read answer 2">&#9654;</button></div><div class="card-answer">${esc(d.a2)}</div></div>`:'';
+    const a1Html=`<div class="ans-block"><div class="ans-head"><span class="ans-tag">Answer 1 · 范文</span><button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer 1">&#9654;</button><button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button></div><div class="card-answer">${esc(d.a)}</div></div>`;
+    const a2Html=d.a2?`<div class="ans-block ans-block2"><div class="ans-head"><span class="ans-tag ans-tag2">Answer 2 · 你的版本</span><button class="voice-btn" id="vbtn-back2-${i}" onclick="speakAnswer2(event,${i})" title="Read answer 2">&#9654;</button><button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button></div><div class="card-answer">${esc(d.a2)}</div></div>`:'';
     const back=`<div class="back-label">Answer</div>
         <div class="card-title-back">${esc(d.title)}</div>
         ${a1Html}
