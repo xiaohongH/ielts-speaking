@@ -364,6 +364,8 @@ function flipCard(i){
   } else {
     front.style.position='';
     back.style.position='absolute';
+    const cont=card.closest('.card-container')||card;
+    cont.scrollIntoView({behavior:'smooth',block:'start'});
   }
 }
 
