@@ -97,7 +97,6 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
   position: relative;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  cursor: pointer;
 }
 .flashcard.flipped { transform: rotateY(180deg); }
 .card-front, .card-back {
@@ -159,11 +158,8 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
 .voice-btn:hover { background: #357abd; transform: scale(1.1); }
 .voice-btn:active { transform: scale(0.95); }
 .voice-btn.speaking { background: #e74c3c; }
-.flip-hint {
-  font-size: 0.78rem;
-  color: #aaa;
-  margin-left: auto;
-}
+.voice-btn.flip-btn { background: #5cb85c; font-size: 1rem; }
+.voice-btn.flip-btn:hover { background: #4aa54a; }
 .back-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -227,7 +223,6 @@ body.dark .card-title-back { color: #e0e0e0; }
 body.dark .card-answer { color: #ccc; }
 body.dark .vocab-term { color: #e0e0e0; }
 body.dark .vocab-list li { border-bottom-color: #333; }
-body.dark .flip-hint { color: #666; }
 
 @media (max-width: 600px) {
   body { padding: 0.8rem; }
@@ -306,16 +301,16 @@ function render(){
         ${notesHtml}
         <div class="card-actions" style="margin-top:1rem;">
           <button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer">&#9654;</button>
-          <span class="flip-hint">tap to flip back</span>
+          <button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button>
         </div>`;
     html+=`<div class="card-container" data-filter="t${catIdx}">
-      <div class="flashcard" id="card-${i}" onclick="flipCard(${i})">
+      <div class="flashcard" id="card-${i}">
         <div class="card-front">
           <div class="card-question">${num}. ${esc(d.title)}</div>
           ${cueHtml}
           <div class="card-actions">
             <button class="voice-btn" id="vbtn-${i}" onclick="speak(event,${i})" title="Read cue card">&#9654;</button>
-            <span class="flip-hint">tap to flip</span>
+            <button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button>
           </div>
         </div>
         <div class="card-back">${back}</div>
