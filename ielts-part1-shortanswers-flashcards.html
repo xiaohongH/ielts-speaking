@@ -92,6 +92,7 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
 .card-container {
   perspective: 1200px;
   margin-bottom: 1.5rem;
+  scroll-margin-top: 80px;
 }
 .flashcard {
   position: relative;
@@ -150,11 +151,8 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
 .voice-btn:hover { background: #357abd; transform: scale(1.1); }
 .voice-btn:active { transform: scale(0.95); }
 .voice-btn.speaking { background: #e74c3c; }
-.flip-hint {
-  font-size: 0.78rem;
-  color: #aaa;
-  margin-left: auto;
-}
+.voice-btn.flip-btn { background: #5cb85c; font-size: 1rem; }
+.voice-btn.flip-btn:hover { background: #4aa54a; }
 .back-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -199,7 +197,6 @@ body.dark .card-question { color: #e0e0e0; }
 body.dark .card-answer { color: #ccc; }
 body.dark .vocab-term { color: #e0e0e0; }
 body.dark .vocab-list li { border-bottom-color: #333; }
-body.dark .flip-hint { color: #666; }
 
 @media (max-width: 600px) {
   body { padding: 0.8rem; }
@@ -213,7 +210,7 @@ body.dark .flip-hint { color: #666; }
 <body>
 
 <h1>Part 1 短兵相接 — 高频真题</h1>
-<div class="subtitle">《高频真题语料集 · 雅口有言》Part 1 · tap or press Space to flip · ▶ to hear it read aloud · ◀ ▶ to walk through</div>
+<div class="subtitle">《高频真题语料集 · 雅口有言》Part 1 · tap ⇄ or press Space to flip · ▶ to hear it read aloud · ◀ ▶ to walk through</div>
 
 <details class="tips">
   <summary>Part 1 答题小贴士</summary>
@@ -530,15 +527,15 @@ function render(){
         ${vocHtml}
         <div class="card-actions" style="margin-top:1rem;">
           <button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer">&#9654;</button>
-          <span class="flip-hint">tap to flip back</span>
+          <button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button>
         </div>`;
     html+=`<div class="card-container" data-filter="t${topicIdx}">
-      <div class="flashcard" id="card-${i}" onclick="flipCard(${i})">
+      <div class="flashcard" id="card-${i}">
         <div class="card-front">
           <div class="card-question">${num}. ${esc(d.q)}</div>
           <div class="card-actions">
             <button class="voice-btn" id="vbtn-${i}" onclick="speak(event,${i})" title="Read question">&#9654;</button>
-            <span class="flip-hint">tap to flip</span>
+            <button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button>
           </div>
         </div>
         <div class="card-back">${back}</div>
@@ -562,6 +559,11 @@ function flipCard(i){
   } else {
     front.style.position='';
     back.style.position='absolute';
+    const cont=card.closest('.card-container')||card;
+    const controls=document.querySelector('.controls');
+    const offset=(controls?controls.getBoundingClientRect().height:0)+12;
+    const y=cont.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top:y,behavior:'smooth'});
   }
 }
 
