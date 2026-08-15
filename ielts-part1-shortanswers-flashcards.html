@@ -638,16 +638,19 @@ function speakRepeated(text,btn){
 
 function speak(e,i){
   e.stopPropagation();
+  selectCard(i);
   speakRepeated(DATA[i].q,document.getElementById('vbtn-'+i));
 }
 
 function speakAnswer(e,i){
   e.stopPropagation();
+  selectCard(i);
   speakRepeated(DATA[i].a,document.getElementById('vbtn-back-'+i));
 }
 
 function speakB8(e,i){
   e.stopPropagation();
+  selectCard(i);
   speakRepeated(DATA[i].b8||DATA[i].a,document.getElementById('vbtn-b8-'+i));
 }
 
@@ -697,6 +700,19 @@ function navigate(dir){
   el.classList.add('current');
   el.scrollIntoView({behavior:'smooth',block:'center'});
   speakCurrent();
+}
+
+function selectCard(i){
+  const el=document.getElementById('card-'+i);
+  if(!el) return;
+  const cont=el.closest('.card-container');
+  if(!cont||cont.classList.contains('hidden')) return;
+  const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
+  const idx=cards.indexOf(cont);
+  if(idx<0) return;
+  current=idx;
+  document.querySelectorAll('.card-container.current').forEach(c=>c.classList.remove('current'));
+  cont.classList.add('current');
 }
 
 function speakCurrent(){
