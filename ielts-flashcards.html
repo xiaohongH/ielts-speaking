@@ -74,6 +74,7 @@ h2 {
 .card-container {
   perspective: 1200px;
   margin-bottom: 1.5rem;
+  scroll-margin-top: 80px;
 }
 .flashcard {
   position: relative;
@@ -162,11 +163,8 @@ h2 {
 .voice-btn:hover { background: #357abd; transform: scale(1.1); }
 .voice-btn:active { transform: scale(0.95); }
 .voice-btn.speaking { background: #e74c3c; }
-.flip-hint {
-  font-size: 0.78rem;
-  color: #aaa;
-  margin-left: auto;
-}
+.voice-btn.flip-btn { background: #5cb85c; font-size: 1rem; }
+.voice-btn.flip-btn:hover { background: #4aa54a; }
 .back-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -208,7 +206,8 @@ body.dark .card-pattern { color: #f0a050; }
 body.dark .card-bullets li { color: #bbb; }
 body.dark .card-answer { color: #ccc; }
 body.dark .theme-tag { background: #2a2a4a; color: #6ab0f3; }
-body.dark .flip-hint { color: #666; }
+.card-container.current .card-front,
+.card-container.current .card-back { box-shadow: 0 0 0 3px #4a90d9, 0 4px 15px rgba(0,0,0,0.12); }
 
 @media (max-width: 600px) {
   body { padding: 0.8rem; }
@@ -225,6 +224,8 @@ body.dark .flip-hint { color: #666; }
 <div class="controls">
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
   <button class="ctrl-btn" onclick="stopSpeaking()">⏹ Stop</button>
+  <button class="ctrl-btn" onclick="navigate(-1)" title="Previous card (←)">◀ Prev</button>
+  <button class="ctrl-btn" onclick="navigate(1)" title="Next card (→)">Next ▶</button>
   <label class="repeat-ctrl">🔁 Repeat
     <input type="number" id="repeat-count" min="1" max="99" value="5" onchange="saveRepeat()">
     ×
@@ -307,14 +308,14 @@ function render(){
     num++;
     const bullets=d.b.map(b=>`<li>${esc(b)}</li>`).join('');
     html+=`<div class="card-container" data-theme="${d.t}">
-      <div class="flashcard" id="card-${i}" onclick="flipCard(${i})">
+      <div class="flashcard" id="card-${i}">
         <div class="card-front">
           <div class="card-question">${num}. ${esc(d.q)}</div>
           ${d.p?'<div class="card-pattern">'+esc(d.p)+'</div>':''}
           <ul class="card-bullets">${bullets}</ul>
           <div class="card-actions">
             <button class="voice-btn" id="vbtn-${i}" onclick="speak(event,${i})" title="Read aloud">&#9654;</button>
-            <span class="flip-hint">tap to flip</span>
+            <button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button>
           </div>
         </div>
         <div class="card-back">
@@ -322,7 +323,7 @@ function render(){
           <div class="card-answer">${esc(d.a)}</div>
           <div class="card-actions" style="margin-top:1rem;">
             <button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer">&#9654;</button>
-            <span class="flip-hint">tap to flip back</span>
+            <button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button>
           </div>
         </div>
       </div>
@@ -345,6 +346,11 @@ function flipCard(i){
   } else {
     front.style.position='';
     back.style.position='absolute';
+    const cont=card.closest('.card-container')||card;
+    const controls=document.querySelector('.controls');
+    const offset=(controls?controls.getBoundingClientRect().height:0)+12;
+    const y=cont.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top:y,behavior:'smooth'});
   }
 }
 
@@ -383,15 +389,74 @@ function speakRepeated(text,btn){
 
 function speak(e,i){
   e.stopPropagation();
+  selectCard(i);
   speakRepeated(DATA[i].q,document.getElementById('vbtn-'+i));
 }
 
 function speakAnswer(e,i){
   e.stopPropagation();
+  selectCard(i);
   speakRepeated(DATA[i].a,document.getElementById('vbtn-back-'+i));
 }
 
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
+
+let current=-1;
+function selectCard(i){
+  const el=document.getElementById('card-'+i);
+  if(!el) return;
+  const cont=el.closest('.card-container');
+  if(!cont||cont.classList.contains('hidden')) return;
+  const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
+  const idx=cards.indexOf(cont);
+  if(idx<0) return;
+  current=idx;
+  document.querySelectorAll('.card-container.current').forEach(c=>c.classList.remove('current'));
+  cont.classList.add('current');
+}
+function navigate(dir){
+  const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
+  if(!cards.length) return;
+  current+=dir;
+  if(current<0) current=cards.length-1;
+  if(current>=cards.length) current=0;
+  document.querySelectorAll('.card-container.current').forEach(c=>c.classList.remove('current'));
+  const el=cards[current];
+  el.classList.add('current');
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+  speakCurrent();
+}
+function speakCurrent(){
+  const el=document.querySelector('.card-container.current');
+  if(!el) return;
+  const card=el.querySelector('.flashcard');
+  const i=parseInt(card.id.replace('card-',''),10);
+  const d=DATA[i];
+  if(card.classList.contains('flipped'))
+    speakRepeated(d.a,document.getElementById('vbtn-back-'+i));
+  else
+    speakRepeated(d.q,document.getElementById('vbtn-'+i));
+}
+function flipCurrent(){
+  let el=document.querySelector('.card-container.current');
+  if(!el){
+    const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
+    if(!cards.length) return;
+    current=0;
+    el=cards[0];
+    el.classList.add('current');
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  const card=el.querySelector('.flashcard');
+  const i=parseInt(card.id.replace('card-',''),10);
+  flipCard(i);
+}
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT') return;
+  if(e.key==='ArrowRight'){navigate(1);e.preventDefault();}
+  else if(e.key==='ArrowLeft'){navigate(-1);e.preventDefault();}
+  else if(e.code==='Space'){flipCurrent();e.preventDefault();}
+});
 
 function toggleDark(){
   document.body.classList.toggle('dark');
@@ -401,6 +466,8 @@ function toggleDark(){
 function filterCards(theme,btn){
   document.querySelectorAll('.ctrl-btn[data-filter]').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
+  current=-1;
+  document.querySelectorAll('.card-container.current').forEach(c=>c.classList.remove('current'));
   document.querySelectorAll('.card-container').forEach(c=>{
     c.classList.toggle('hidden',theme!=='all'&&c.dataset.theme!==theme);
   });
