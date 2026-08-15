@@ -224,8 +224,8 @@ body.dark .theme-tag { background: #2a2a4a; color: #6ab0f3; }
 <div class="controls">
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
   <button class="ctrl-btn" onclick="stopSpeaking()">⏹ Stop</button>
-  <button class="ctrl-btn" onclick="navigate(-1)" title="Previous card (←)">◀ Prev</button>
-  <button class="ctrl-btn" onclick="navigate(1)" title="Next card (→)">Next ▶</button>
+  <button class="ctrl-btn" onclick="navigate(-1)" title="Previous card (↑)">◀ Prev</button>
+  <button class="ctrl-btn" onclick="navigate(1)" title="Next card (↓)">Next ▶</button>
   <label class="repeat-ctrl">🔁 Repeat
     <input type="number" id="repeat-count" min="1" max="99" value="5" onchange="saveRepeat()">
     ×
@@ -437,7 +437,7 @@ function speakCurrent(){
   else
     speakRepeated(d.q,document.getElementById('vbtn-'+i));
 }
-function flipCurrent(){
+function flipCurrent(toAnswer){
   let el=document.querySelector('.card-container.current');
   if(!el){
     const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
@@ -449,6 +449,9 @@ function flipCurrent(){
   }
   const card=el.querySelector('.flashcard');
   const i=parseInt(card.id.replace('card-',''),10);
+  const flipped=card.classList.contains('flipped');
+  if(toAnswer===true&&flipped) return;
+  if(toAnswer===false&&!flipped) return;
   flipCard(i);
 }
 function readCurrent(){
@@ -465,10 +468,11 @@ function readCurrent(){
 }
 document.addEventListener('keydown',e=>{
   if(e.target.tagName==='INPUT') return;
-  if(e.key==='ArrowRight'){navigate(1);e.preventDefault();}
-  else if(e.key==='ArrowLeft'){navigate(-1);e.preventDefault();}
-  else if(e.code==='Space'){flipCurrent();e.preventDefault();}
-  else if(e.key==='r'||e.key==='R'){readCurrent();e.preventDefault();}
+  if(e.key==='ArrowDown'){navigate(1);e.preventDefault();}
+  else if(e.key==='ArrowUp'){navigate(-1);e.preventDefault();}
+  else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
+  else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
+  else if(e.key==='Enter'){readCurrent();e.preventDefault();}
 });
 
 function toggleDark(){
