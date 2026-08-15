@@ -472,7 +472,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowUp'){navigate(-1);e.preventDefault();}
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
-  else if(e.key==='Control'){readCurrent();e.preventDefault();}
+  else if(e.code==='ShiftRight'){readCurrent();e.preventDefault();}
 });
 
 function toggleDark(){
