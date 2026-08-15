@@ -221,7 +221,7 @@ body.dark .badge-neg { background: #33224a; color: #c98ee6; }
 <body>
 
 <h1>IELTS Speaking Part 1 — Flashcards</h1>
-<div class="subtitle">55 topics across 15 themes · tap ⇄ to flip · ↑ ↓ browse cards · → to answer, ← back to question · Enter to hear it read aloud</div>
+<div class="subtitle">55 topics across 15 themes · tap ⇄ to flip · ↑ ↓ browse cards · → to answer, ← back to question · Ctrl to hear it read aloud</div>
 
 <details class="tips">
   <summary>Quick tips to hit band 8 in Part 1</summary>
@@ -607,7 +607,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowUp'){navigate(-1);e.preventDefault();}
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
-  else if(e.key==='Enter'){readCurrent();e.preventDefault();}
+  else if(e.key==='Control'){readCurrent();e.preventDefault();}
 });
 
 window.addEventListener('DOMContentLoaded',()=>{
