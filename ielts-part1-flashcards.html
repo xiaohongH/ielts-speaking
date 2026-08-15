@@ -442,7 +442,10 @@ function flipCard(i){
     front.style.position='';
     back.style.position='absolute';
     const cont=card.closest('.card-container')||card;
-    cont.scrollIntoView({behavior:'smooth',block:'start'});
+    const controls=document.querySelector('.controls');
+    const offset=(controls?controls.getBoundingClientRect().height:0)+12;
+    const y=cont.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top:y,behavior:'smooth'});
   }
 }
 
