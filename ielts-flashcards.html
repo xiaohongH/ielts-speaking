@@ -451,11 +451,24 @@ function flipCurrent(){
   const i=parseInt(card.id.replace('card-',''),10);
   flipCard(i);
 }
+function readCurrent(){
+  let el=document.querySelector('.card-container.current');
+  if(!el){
+    const cards=[...document.querySelectorAll('.card-container:not(.hidden)')];
+    if(!cards.length) return;
+    current=0;
+    el=cards[0];
+    el.classList.add('current');
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  speakCurrent();
+}
 document.addEventListener('keydown',e=>{
   if(e.target.tagName==='INPUT') return;
   if(e.key==='ArrowRight'){navigate(1);e.preventDefault();}
   else if(e.key==='ArrowLeft'){navigate(-1);e.preventDefault();}
   else if(e.code==='Space'){flipCurrent();e.preventDefault();}
+  else if(e.key==='r'||e.key==='R'){readCurrent();e.preventDefault();}
 });
 
 function toggleDark(){
