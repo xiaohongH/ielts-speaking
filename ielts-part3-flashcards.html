@@ -263,7 +263,7 @@ body.dark .flip-hint { color: #666; }
 <body>
 
 <h1>Part 3 深入讨论的勇气 — 136 高频真题</h1>
-<div class="subtitle">《高频真题语料集 · 雅口有言》Part 3 · 点击卡片翻面 · ↑ ↓ 逐张浏览 · → 看答案，← 回问题 · 右 Shift 朗读 · Enter 停止 · 🌙 夜间模式</div>
+<div class="subtitle">《高频真题语料集 · 雅口有言》Part 3 · 点击卡片翻面 · ↑ ↓ 逐张浏览 · → 看答案，← 回问题 · 右 Shift 朗读 · Enter 暂停/继续 · 🌙 夜间模式</div>
 
 <details class="tips">
   <summary>Part 3 答题小贴士</summary>
@@ -459,6 +459,7 @@ function speakAnswer(e,i){
   speakRepeated(t,document.getElementById('vbtn-back-'+i));
 }
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
+function togglePause(){if(speechSynthesis.paused){speechSynthesis.resume();}else if(speechSynthesis.speaking){speechSynthesis.pause();}}
 
 function toggleDark(){
   document.body.classList.toggle('dark');
@@ -565,7 +566,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
   else if(e.code==='ShiftRight'){readCurrent();e.preventDefault();}
-  else if(e.key==='Enter'){stopSpeaking();e.preventDefault();}
+  else if(e.key==='Enter'){togglePause();e.preventDefault();}
 });
 
 window.addEventListener('DOMContentLoaded',()=>{

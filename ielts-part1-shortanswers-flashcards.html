@@ -228,7 +228,7 @@ body.dark .vocab-list li { border-bottom-color: #333; }
 <body>
 
 <h1>Part 1 短兵相接 — 高频真题</h1>
-<div class="subtitle">《高频真题语料集 · 雅口有言》Part 1 · tap ⇄ to flip · ↑ ↓ browse cards · → to answer, ← back to question · right Shift to hear it read aloud · Enter to stop</div>
+<div class="subtitle">《高频真题语料集 · 雅口有言》Part 1 · tap ⇄ to flip · ↑ ↓ browse cards · → to answer, ← back to question · right Shift to hear it read aloud · Enter to pause/resume</div>
 
 <details class="tips">
   <summary>Part 1 答题小贴士</summary>
@@ -655,6 +655,7 @@ function speakB8(e,i){
 }
 
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
+function togglePause(){if(speechSynthesis.paused){speechSynthesis.resume();}else if(speechSynthesis.speaking){speechSynthesis.pause();}}
 
 function toggleDark(){
   document.body.classList.toggle('dark');
@@ -764,7 +765,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
   else if(e.code==='ShiftRight'){readCurrent();e.preventDefault();}
-  else if(e.key==='Enter'){stopSpeaking();e.preventDefault();}
+  else if(e.key==='Enter'){togglePause();e.preventDefault();}
 });
 
 window.addEventListener('DOMContentLoaded',()=>{

@@ -400,6 +400,7 @@ function speakAnswer(e,i){
 }
 
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
+function togglePause(){if(speechSynthesis.paused){speechSynthesis.resume();}else if(speechSynthesis.speaking){speechSynthesis.pause();}}
 
 let current=-1;
 function selectCard(i){
@@ -473,7 +474,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
   else if(e.code==='ShiftRight'){readCurrent();e.preventDefault();}
-  else if(e.key==='Enter'){stopSpeaking();e.preventDefault();}
+  else if(e.key==='Enter'){togglePause();e.preventDefault();}
 });
 
 function toggleDark(){
