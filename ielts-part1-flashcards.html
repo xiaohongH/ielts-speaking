@@ -234,6 +234,7 @@ body.dark .badge-neg { background: #33224a; color: #c98ee6; }
 </details>
 
 <div class="controls">
+  <button class="ctrl-btn" id="flip-all-btn" onclick="toggleFlipAll(this)" title="Flip every card to answer / question">🔄 Show A</button>
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
   <button class="ctrl-btn" onclick="stopSpeaking()">⏹ Stop</button>
   <button class="ctrl-btn" onclick="navigate(-1)" title="Previous question (↑)">◀ Prev</button>
@@ -498,6 +499,31 @@ function speakAnswer(e,i){
 
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
 function togglePause(){if(speechSynthesis.paused){speechSynthesis.resume();}else if(speechSynthesis.speaking){speechSynthesis.pause();}}
+function setFlip(card,flipped){
+  const front=card.querySelector('.card-front');
+  const back=card.querySelector('.card-back');
+  if(flipped){
+    card.classList.add('flipped');
+    back.style.position='relative';
+    front.style.position='absolute';
+    front.style.top='0';
+    front.style.left='0';
+  } else {
+    card.classList.remove('flipped');
+    front.style.position='';
+    back.style.position='absolute';
+  }
+}
+function flipAll(toAnswer){
+  document.querySelectorAll('.flashcard').forEach(c=>setFlip(c,toAnswer));
+}
+function toggleFlipAll(btn){
+  const cards=[...document.querySelectorAll('.card-container:not(.hidden) .flashcard')];
+  if(!cards.length) return;
+  const anyFront=cards.some(c=>!c.classList.contains('flipped'));
+  flipAll(anyFront);
+  btn.textContent=anyFront?'🔄 Show Q':'🔄 Show A';
+}
 
 function toggleDark(){
   document.body.classList.toggle('dark');
