@@ -39,18 +39,20 @@ details.tips {
 details.tips summary { cursor: pointer; font-weight: 600; color: #4a90d9; }
 details.tips ul { margin: 0.6rem 0 0.2rem 1.1rem; }
 details.tips li { margin-bottom: 0.3rem; color: #555; }
-.controls {
+.topbar {
   position: sticky;
   top: 0;
   z-index: 100;
   background: #f0f2f5;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.controls {
   padding: 0.6rem 0;
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1rem;
 }
 .ctrl-btn {
   padding: 0.4rem 0.8rem;
@@ -87,8 +89,19 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  max-height: 40vh;
+  overflow-y: auto;
+  transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
 }
+.topbar.cats-hidden .filters {
+  max-height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+#cats-toggle.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
 .card-container {
   perspective: 1200px;
   margin-bottom: 1.5rem;
@@ -206,7 +219,7 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
 /* Dark mode */
 body.dark { background: #1a1a2e; color: #e0e0e0; }
 body.dark .subtitle { color: #999; }
-body.dark .controls { background: #1a1a2e; border-bottom-color: #333; }
+body.dark .topbar { background: #1a1a2e; border-bottom-color: #333; }
 body.dark .ctrl-btn { background: #2a2a4a; color: #ccc; border-color: #444; }
 body.dark .ctrl-btn:hover, body.dark .ctrl-btn.active { background: #4a90d9; color: #fff; }
 body.dark .repeat-ctrl { background: #2a2a4a; color: #ccc; border-color: #444; }
@@ -250,6 +263,7 @@ body.dark .vocab-list li { border-bottom-color: #333; }
   </ul>
 </details>
 
+<div class="topbar" id="topbar">
 <div class="controls">
   <button class="ctrl-btn" id="flip-all-btn" onclick="toggleFlipAll(this)" title="Flip every card to answer / question">🔄 Show A</button>
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
@@ -260,10 +274,12 @@ body.dark .vocab-list li { border-bottom-color: #333; }
     <input type="number" id="repeat-count" min="1" max="99" value="5" onchange="saveRepeat()">
     ×
   </label>
+  <button class="ctrl-btn" id="cats-toggle" onclick="toggleCats()" title="Show / hide categories">🏷 Categories</button>
   <span class="count" id="count"></span>
 </div>
 
 <div class="filters" id="filters"></div>
+</div>
 
 <div id="cards-root"></div>
 
@@ -668,6 +684,7 @@ function speakB8(e,i){
 
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
 function togglePause(){if(speechSynthesis.paused){speechSynthesis.resume();}else if(speechSynthesis.speaking){speechSynthesis.pause();}}
+function toggleCats(){const tb=document.getElementById('topbar');const on=tb.classList.toggle('cats-hidden');document.getElementById('cats-toggle').classList.toggle('active',!on);}
 function setFlip(card,flipped){
   const front=card.querySelector('.card-front');
   const back=card.querySelector('.card-back');
@@ -811,6 +828,16 @@ window.addEventListener('DOMContentLoaded',()=>{
   if(savedRepeat) document.getElementById('repeat-count').value=savedRepeat;
   buildFilters();
   render();
+  const tb=document.getElementById('topbar');
+  let lastY=window.scrollY;
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    if(y<80){tb.classList.remove('cats-hidden');}
+    else if(y>lastY+6){tb.classList.add('cats-hidden');}
+    else if(y<lastY-6){tb.classList.remove('cats-hidden');}
+    document.getElementById('cats-toggle').classList.toggle('active',!tb.classList.contains('cats-hidden'));
+    lastY=y;
+  },{passive:true});
 });
 </script>
 </body>
