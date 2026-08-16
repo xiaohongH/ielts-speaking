@@ -263,7 +263,7 @@ body.dark .flip-hint { color: #666; }
 <body>
 
 <h1>Part 3 深入讨论的勇气 — 136 高频真题</h1>
-<div class="subtitle">《高频真题语料集 · 雅口有言》Part 3 · 点击卡片翻面 · ↑ ↓ 逐张浏览 · → 看答案，← 回问题 · 右 Shift 朗读 · 🌙 夜间模式</div>
+<div class="subtitle">《高频真题语料集 · 雅口有言》Part 3 · 点击卡片翻面 · ↑ ↓ 逐张浏览 · → 看答案，← 回问题 · 右 Shift 朗读 · Enter 停止 · 🌙 夜间模式</div>
 
 <details class="tips">
   <summary>Part 3 答题小贴士</summary>
@@ -565,6 +565,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
   else if(e.code==='ShiftRight'){readCurrent();e.preventDefault();}
+  else if(e.key==='Enter'){stopSpeaking();e.preventDefault();}
 });
 
 window.addEventListener('DOMContentLoaded',()=>{

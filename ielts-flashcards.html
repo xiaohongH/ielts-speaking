@@ -473,6 +473,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
   else if(e.code==='ShiftRight'){readCurrent();e.preventDefault();}
+  else if(e.key==='Enter'){stopSpeaking();e.preventDefault();}
 });
 
 function toggleDark(){

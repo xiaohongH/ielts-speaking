@@ -270,7 +270,7 @@ body.dark .vocab-list li { border-bottom-color: #333; }
 <body>
 
 <h1>Part 2 清晰度&gt;难度 — 高频真题</h1>
-<div class="subtitle">《高频真题语料集 · 雅口有言》Part 2 · tap to flip · ↑ ↓ browse cards · → to answer, ← back to question · right Shift to hear it read aloud</div>
+<div class="subtitle">《高频真题语料集 · 雅口有言》Part 2 · tap to flip · ↑ ↓ browse cards · → to answer, ← back to question · right Shift to hear it read aloud · Enter to stop</div>
 
 <details class="tips">
   <summary>Part 2 答题小贴士</summary>
@@ -545,6 +545,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowRight'){flipCurrent(true);e.preventDefault();}
   else if(e.key==='ArrowLeft'){flipCurrent(false);e.preventDefault();}
   else if(e.code==='ShiftRight'){readCurrent();e.preventDefault();}
+  else if(e.key==='Enter'){stopSpeaking();e.preventDefault();}
 });
 
 window.addEventListener('DOMContentLoaded',()=>{
