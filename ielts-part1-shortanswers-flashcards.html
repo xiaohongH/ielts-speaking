@@ -161,6 +161,15 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
+.back-question {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.5;
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid #eee;
+}
 .card-answer {
   font-size: 1rem;
   color: #444;
@@ -208,6 +217,7 @@ body.dark h1 { color: #e0e0e0; }
 body.dark h2 { color: #6ab0f3; }
 body.dark .card-front, body.dark .card-back { background: #16213e; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 body.dark .card-question { color: #e0e0e0; }
+body.dark .back-question { color: #b8c0cc; border-bottom-color: #33384f; }
 body.dark .card-answer { color: #ccc; }
 body.dark .b8-label { color: #6ab0f3; }
 body.dark .b8-answer { background: #17263f; border-left-color: #4a90d9; color: #dfe7f2; }
@@ -539,10 +549,11 @@ function render(){
     }
     num++;
     let back='';
+    const qHtml=`<div class="back-question">${esc(d.q)}</div>`;
     const vocab=d.voc||d.vocab;
     const vocHtml=(vocab&&vocab.length)?`<ul class="vocab-list">${vocab.map(v=>`<li><span class="vocab-term">${esc(v[0])}</span> — <span class="vocab-cn">${esc(v[1])}</span></li>`).join('')}</ul>`:'';
     if(d.b8){
-      back=`<div class="back-label b8-label">Band 8 · 范文</div>
+      back=`${qHtml}<div class="back-label b8-label">Band 8 · 范文</div>
         <div class="card-answer b8-answer">${esc(d.b8)}</div>
         <div class="card-actions" style="margin-top:0.6rem;">
           <button class="voice-btn" id="vbtn-b8-${i}" onclick="speakB8(event,${i})" title="Read band 8 answer">&#9654;</button>
@@ -556,7 +567,7 @@ function render(){
           <button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button>
         </div>`;
     } else {
-      back=`<div class="back-label">Answer</div>
+      back=`${qHtml}<div class="back-label">Answer</div>
         <div class="card-answer">${esc(d.a)}</div>
         ${vocHtml}
         <div class="card-actions" style="margin-top:1rem;">

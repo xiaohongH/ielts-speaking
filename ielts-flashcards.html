@@ -173,6 +173,15 @@ h2 {
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
+.back-question {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.5;
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid #eee;
+}
 .card-answer {
   font-size: 0.95rem;
   color: #444;
@@ -202,6 +211,7 @@ body.dark h1 { color: #e0e0e0; }
 body.dark h2 { color: #6ab0f3; }
 body.dark .card-front, body.dark .card-back { background: #16213e; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 body.dark .card-question { color: #e0e0e0; }
+body.dark .back-question { color: #b8c0cc; border-bottom-color: #33384f; }
 body.dark .card-pattern { color: #f0a050; }
 body.dark .card-bullets li { color: #bbb; }
 body.dark .card-answer { color: #ccc; }
@@ -320,6 +330,7 @@ function render(){
           </div>
         </div>
         <div class="card-back">
+          <div class="back-question">${esc(d.q)}</div>
           <div class="back-label">Full Answer</div>
           <div class="card-answer">${esc(d.a)}</div>
           <div class="card-actions" style="margin-top:1rem;">

@@ -170,6 +170,15 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
+.back-question {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.5;
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid #eee;
+}
 .card-answer {
   font-size: 1rem;
   color: #444;
@@ -203,6 +212,7 @@ body.dark h1 { color: #e0e0e0; }
 body.dark h2 { color: #6ab0f3; }
 body.dark .card-front, body.dark .card-back { background: #16213e; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 body.dark .card-question { color: #e0e0e0; }
+body.dark .back-question { color: #b8c0cc; border-bottom-color: #33384f; }
 body.dark .card-answer { color: #ccc; }
 body.dark .vocab-term { color: #e0e0e0; }
 body.dark .vocab-list li { border-bottom-color: #333; }
@@ -399,11 +409,12 @@ function render(){
     if(d.m) badges+='<span class="badge badge-mine">★ Your answer</span>';
     if(d.neg) badges+='<span class="badge badge-neg">negative OK</span>';
     let back='';
+    const qHtml=`<div class="back-question">${esc(d.q)}</div>`;
     if(d.voc){
       const items=d.voc.map(v=>`<li><span class="vocab-term">${esc(v[0])}</span> — <span class="vocab-cn">${esc(v[1])}</span></li>`).join('');
-      back=`<div class="back-label">Vocabulary</div><ul class="vocab-list">${items}</ul><div class="card-actions" style="margin-top:0.6rem;"><button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button></div>`;
+      back=`${qHtml}<div class="back-label">Vocabulary</div><ul class="vocab-list">${items}</ul><div class="card-actions" style="margin-top:0.6rem;"><button class="voice-btn flip-btn" onclick="flipCard(${i})" title="Flip card">&#8644;</button></div>`;
     } else {
-      back=`<div class="back-label">Model / Your Answer</div>
+      back=`${qHtml}<div class="back-label">Model / Your Answer</div>
           <div class="card-answer">${esc(d.a)}</div>
           <div class="card-actions" style="margin-top:1rem;">
             <button class="voice-btn" id="vbtn-back-${i}" onclick="speakAnswer(event,${i})" title="Read answer">&#9654;</button>
