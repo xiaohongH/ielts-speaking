@@ -93,7 +93,7 @@ Synthesis of an online debate*
 
 ---
 
-**E** **Shenggen Fan**, Director General of the International Food Policy Research Institute, ==held up== ==social safety nets== and ==public welfare programmes== in Ethiopia, Brazil and Mexico as valuable ways to address poverty among farming families and ==reduce their vulnerability to agricultural shocks==. However, some commentators responded that ==cash transfers== to poor families ==do not necessarily translate into== increased food security, as these programmes do not always strengthen food production or raise incomes. Regarding ==state subsidies== for agriculture, **Rokeya Kabir**, Executive Director of Bangladesh Nari Progati Sangha, commented in her essay that these 'have not compensated for the ==stranglehold exercised by private traders==. In fact, studies show that sixty percent of ==beneficiaries of subsidies== are not poor, but rich landowners and non-farmer traders.'
+**E** **Shenggen Fan**, Director General of the International Food Policy Research Institute, ==held up== ==social safety nets== and ==public welfare programmes== in Ethiopia, Brazil and Mexico as valuable ways to address poverty among farming families and ==reduce their vulnerability to agricultural shocks==. However, some commentators responded that ==cash transfers== to poor families ==do not necessarily translate into== increased food security, as these programmes do not always strengthen food production or raise incomes. Regarding ==state subsidies== for agriculture, **Rokeya Kabir**, Executive Director of Bangladesh Nari Progati Sangha, commented in her essay that these 'have not compensated for the ==stranglehold exercised by private traders==. In fact, studies show that sixty percent of ==beneficiaries of subsidies== are not poor, but rich **landowners** and non-farmer traders.'
 
 > 🔑 held up ... as 推崇为 · social safety nets 社会安全网 · public welfare programmes 公共福利项目 · reduce their vulnerability to agricultural shocks 降低对农业冲击的脆弱性 · cash transfers 现金转移支付 · do not necessarily translate into 不一定转化为 · state subsidies 国家补贴 · stranglehold exercised by private traders 私商的钳制 · beneficiaries of subsidies 补贴受益者
 
@@ -141,16 +141,16 @@ Synthesis of an online debate*
 >
 > **👤 Who says what:** **Nwanze/Murphy/Fan** → *pro* private tools (insurance, futures, rural finance). **Kabir** → warns they push costly high-input farming. **Murphy** → warns over-financialised futures markets *worsen* volatility.
 >
-> **Main idea 主旨:** Debate over **private** risk tools: three authors see them as helpful, but Kabir warns they raise costs and Murphy warns financialised futures markets increase volatility — hence calls for market transparency and corporate accountability. 关于**私人**风险工具的争论:三位作者认为有益,但 Kabir 警告会推高成本,Murphy 警告金融化期货市场会加剧波动——故有人呼吁市场透明与企业担责。
+> **Main idea 主旨:** Debate over **private** risk tools: three authors see them as helpful, but Kabir warns they raise costs and Murphy warns financialised futures markets increase volatility — hence calls for market transparency and **corporate accountability.** 关于**私人**风险工具的争论:三位作者认为有益,但 Kabir 警告会推高成本,Murphy 警告金融化期货市场会加剧波动——故有人呼吁市场透明与企业担责。
 
 ---
 
-**G** Many essayists mentioned climate change and its consequences for small-scale agriculture. **Fan** explained that 'in addition to reducing ==crop yields==, climate change increases ==the magnitude and the frequency== of ==extreme weather events==, which increase smallholder vulnerability.' The growing ==unpredictability of weather== increases farmers' difficulty in managing weather-related risks. According to this author, one solution would be to ==develop crop varieties that are more resilient== to new climate trends and extreme weather patterns. Accordingly, **Pat Mooney**, co-founder and executive director of the ETC Group, suggested that 'if we are to survive climate change, we must adopt policies that let ==peasants== ==diversify== the plant and animal species and varieties/breeds that make up our menus.'
+**G** Many essayists mentioned climate change and its consequences for small-scale agriculture. **Fan** explained that 'in addition to reducing ==crop yields==, climate change increases ==the magnitude and the frequency== of ==extreme weather events==, which increase smallholder vulnerability.' The growing ==unpredictability of weather== increases farmers' difficulty in managing weather-related risks. According to this author, one solution would be to ==develop crop varieties that are more resilient== to new climate trends and extreme weather patterns. Accordingly, **Pat Mooney**, co-founder and executive director of the ETC Group, suggested that 'if we are to survive climate change, we must adopt policies that let ==peasants== ==diversify== the plant and animal **species and varieties/breeds** that make up our menus.'
 
 > 🔑 crop yields 作物产量 · the magnitude and the frequency 强度与频率 · extreme weather events 极端天气事件 · unpredictability of weather 天气不可预测性 · develop crop varieties that are more resilient 培育更抗逆的作物品种 · diversify 使多样化
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph G
-> 许多撰文者提到了气候变化及其对小规模农业的影响。Fan 解释说:"气候变化除了会降低作物产量外,还会增大极端天气事件的强度和频率,从而加剧小农的脆弱性。"天气越来越难以预测,增加了农民管理天气相关风险的难度。这位作者认为,一个解决办法是培育对新气候趋势和极端天气模式更具韧性的作物品种。相应地,ETC 集团联合创始人兼执行主任 Pat Mooney 提出:"如果我们要在气候变化中生存下来,就必须采取政策,让农民能够使构成我们餐桌的动植物物种及品种多样化。"
+> 许多撰文者提到了气候变化及其对小规模农业的影响。Fan 解释说:"气候变化除了会降低作物产量外,还会增大极端天气事件的强度和频率,从而加剧小农的脆弱性。"天气越来越难以预测,增加了农民管理天气相关风险的难度。这位作者认为,一个解决办法是培育对新气候趋势和极端天气模式更具韧性的作物品种。相应地,ETC 集团联合创始人兼执行主任 Pat Mooney 提出:"如果我们要在气候变化中生存下来,就必须采取政策,让农民能够使构成我们餐桌的动植物**物种及品种**多样化。"
 
 > [!tip] 📝 Notes — Paragraph G
 > **Vocabulary & phrases**
@@ -168,15 +168,16 @@ Synthesis of an online debate*
 
 ---
 
-**H** Some participating authors and commentators argued in favour of ==community-based and autonomous== risk management strategies through ==collective action== groups, ==co-operatives or producers' groups==. Such groups ==enhance market opportunities== for small-scale producers, reduce marketing costs and ==synchronise buying and selling with seasonal price conditions==. According to **Murphy**, 'collective action offers an important way for farmers to strengthen their political and economic ==bargaining power==, and to reduce their business risks.' One commentator, **Giel Ton**, warned that collective action ==does not come as a free good==. It takes time, effort and money to organise, build trust and to experiment. Others, like **Marcel Vernooij and Marcel Beukeboom**, suggested that in order to 'apply what we already know', all ==stakeholders==, including business, government, scientists and civil society, must work together, starting at the beginning of the ==value chain==.
+**H** Some participating authors and commentators argued ==in favour of== ==community-based and autonomous== risk management strategies through ==collective action== groups, ==co-operatives or producers' groups==. Such groups ==enhance market opportunities== for small-scale producers, reduce marketing costs and ==synchronise buying and selling with seasonal price conditions==. According to **Murphy**, 'collective action offers an important way for farmers to strengthen their political and economic ==bargaining power==, and to reduce their business risks.' One commentator, **Giel Ton**, warned that collective action ==does not come as a free good==. It takes time, effort and money to organise, build trust and to experiment. Others, like **Marcel Vernooij and Marcel Beukeboom**, suggested that in order to 'apply what we already know', all ==stakeholders==, including business, government, scientists and civil society, must work together, starting at the beginning of the ==value chain==.
 
-> 🔑 community-based and autonomous 以社区为基础且自主的 · collective action 集体行动 · co-operatives or producers' groups 合作社/生产者团体 · enhance market opportunities 拓展市场机会 · synchronise buying and selling with seasonal price conditions 使买卖与季节性价格同步 · bargaining power 议价能力 · does not come as a free good 并非免费的好处 · stakeholders 利益相关方 · value chain 价值链
+> 🔑 in favour of 赞成/支持 · community-based and autonomous 以社区为基础且自主的 · collective action 集体行动 · co-operatives or producers' groups 合作社/生产者团体 · enhance market opportunities 拓展市场机会 · synchronise buying and selling with seasonal price conditions 使买卖与季节性价格同步 · bargaining power 议价能力 · does not come as a free good 并非免费的好处 · stakeholders 利益相关方 · value chain 价值链
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph H
 > 一些参与撰文者和评论者赞成通过集体行动团体、合作社或生产者组织来实施以社区为基础的、自主的风险管理策略。这类组织能为小规模生产者拓展市场机会、降低营销成本,并使买卖时机与季节性价格状况相协调。Murphy 认为:"集体行动为农民提供了一条重要途径,以增强其政治和经济上的议价能力,并降低经营风险。"评论者 Giel Ton 提醒说,集体行动并非免费的好处——组织起来、建立信任、进行尝试,都需要时间、精力和金钱。另一些人,如 Marcel Vernooij 和 Marcel Beukeboom,则建议:为了"运用我们已知的知识",所有利益相关方——包括企业、政府、科学家和公民社会——必须从价值链的最前端开始通力合作。
 
 > [!tip] 📝 Notes — Paragraph H
 > **Vocabulary & phrases**
+> - **in favour of** = supporting / on the side of 赞成、支持。→ *argue in favour of sth* 主张/支持某事(opposite 反义:*against* 反对)。⭐ 好用的写作/口语短语,表明立场。
 > - **community-based and autonomous** = 以社区为基础的、自主的。
 > - **collective action** = people acting together as a group 集体行动。⭐ 本段关键词。
 > - **co-operatives / producers' groups** = 合作社 / 生产者团体。
