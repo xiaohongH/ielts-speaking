@@ -10,7 +10,7 @@ Synthesis of an online debate*
 
 ---
 
-**A** Two things ==distinguish== food production from all other productive activities: ==first==, every single person needs food each day and has a right to it; and ==second==, it is hugely dependent on nature. These two unique aspects, ==one political, the other natural==, make food production highly ==vulnerable== and different from any other business. At the same time, ==cultural values are highly entrenched== in food and agricultural systems worldwide.
+**A** Two things ==distinguish== food production from all other productive activities: first, every single person needs food each day and ==has a right to it==; and second, it is hugely ==dependent on nature==. These two unique aspects, one political, the other natural, make food production highly ==vulnerable== and different from any other business. At the same time, ==cultural values are highly entrenched== in food and agricultural systems worldwide.
 
 > 🔑 distinguish 区别 · vulnerable 脆弱的 · entrenched 根深蒂固的
 
@@ -29,7 +29,7 @@ Synthesis of an online debate*
 
 ---
 
-**B** Farmers everywhere face major risks, including extreme weather, long-term climate change, and ==price volatility== in input and product markets. However, ==smallholder farmers== in developing countries must ==in addition== deal with ==adverse environments==, both natural, in terms of soil quality, rainfall, etc., and human, in terms of infrastructure, financial systems, markets, knowledge and technology. ==Counter-intuitively==, hunger is ==prevalent== among many smallholder farmers in the developing world.
+**B** Farmers everywhere face major risks, including extreme weather, long-term climate change, and ==price volatility== in ==input and product markets==. However, ==smallholder farmers== in developing countries must ==in addition== deal with ==adverse environments==, both natural, in terms of soil quality, rainfall, etc., and human, in terms of ==infrastructure==, financial systems, markets, knowledge and technology. ==Counter-intuitively==, hunger is ==prevalent== among many smallholder farmers in the developing world.
 
 > 🔑 price volatility 价格波动 · smallholder farmers 小农 · adverse environments 不利环境 · counter-intuitively 反直觉地 · prevalent 普遍的
 
@@ -53,7 +53,7 @@ Synthesis of an online debate*
 
 ---
 
-**C** Participants in the online debate argued that ==our biggest challenge is to address the underlying causes== of the agricultural system's inability to ensure sufficient food for all. And they identified as ==drivers of this problem== our ==dependency on fossil fuels== and ==unsupportive government policies==.
+**C** Participants in the online debate argued that our biggest challenge is to ==address the underlying causes== of the agricultural system's inability to ensure sufficient food for all. And they identified as ==drivers of this problem== our ==dependency on fossil fuels== and ==unsupportive government policies==.
 
 > 🔑 address the underlying causes 解决根本原因 · drivers of this problem 问题的成因 · dependency on fossil fuels 对化石燃料的依赖 · unsupportive government policies 不予支持的政策
 
@@ -71,7 +71,7 @@ Synthesis of an online debate*
 
 ---
 
-**D** On the question of ==mitigating the risks farmers face==, most essayists called for ==greater state intervention==. In his essay, **Kanayo F. Nwanze**, President of the International Fund for Agricultural Development, argued that governments can significantly reduce risks for farmers by providing ==basic services== like roads to get produce more efficiently to markets, or water and food storage facilities to reduce losses. **Sophia Murphy**, senior advisor to the Institute for Agriculture and Trade Policy, suggested that the ==procurement and holding of stocks== by governments can also help ==mitigate wild swings in food prices== by ==alleviating uncertainties== about market supply.
+**D** On the question of ==mitigating== the risks farmers face, most **essayists** called for greater ==state intervention==. In his essay, **Kanayo F. Nwanze**, President of the International Fund for Agricultural Development, argued that governments can significantly reduce risks for farmers by providing ==basic services== like roads to get produce more efficiently to markets, or water and food storage facilities to reduce losses. **Sophia Murphy**, senior advisor to the Institute for Agriculture and Trade Policy, suggested that the ==procurement and holding of stocks== by governments can also help mitigate ==wild swings in food prices== by ==alleviating uncertainties== about market supply.
 
 > 🔑 mitigate the risks 减轻风险 · state intervention 国家干预 · basic services 基础服务 · procurement and holding of stocks 采购并持有库存 · mitigate wild swings in food prices 抑制粮价剧烈波动 · alleviating uncertainties 缓解不确定性
 
@@ -93,9 +93,9 @@ Synthesis of an online debate*
 
 ---
 
-**E** **Shenggen Fan**, Director General of the International Food Policy Research Institute, ==held up social safety nets and public welfare programmes== in Ethiopia, Brazil and Mexico as valuable ways to address ==poverty among farming families== and ==reduce their vulnerability to agricultural shocks==. However, some commentators responded that ==cash transfers== to poor families ==do not necessarily translate into== increased food security, as these programmes do not always strengthen food production or raise incomes. Regarding ==state subsidies== for agriculture, **Rokeya Kabir**, Executive Director of Bangladesh Nari Progati Sangha, commented in her essay that these 'have not compensated for the ==stranglehold exercised by private traders==. In fact, studies show that sixty percent of ==beneficiaries of subsidies== are not poor, but rich landowners and non-farmer traders.'
+**E** **Shenggen Fan**, Director General of the International Food Policy Research Institute, ==held up== ==social safety nets== and ==public welfare programmes== in Ethiopia, Brazil and Mexico as valuable ways to address poverty among farming families and ==reduce their vulnerability to agricultural shocks==. However, some commentators responded that ==cash transfers== to poor families ==do not necessarily translate into== increased food security, as these programmes do not always strengthen food production or raise incomes. Regarding ==state subsidies== for agriculture, **Rokeya Kabir**, Executive Director of Bangladesh Nari Progati Sangha, commented in her essay that these 'have not compensated for the ==stranglehold exercised by private traders==. In fact, studies show that sixty percent of ==beneficiaries of subsidies== are not poor, but rich landowners and non-farmer traders.'
 
-> 🔑 held up ... as 推崇为 · poverty among farming families 农户贫困 · reduce their vulnerability to agricultural shocks 降低对农业冲击的脆弱性 · cash transfers 现金转移支付 · do not necessarily translate into 不一定转化为 · state subsidies 国家补贴 · stranglehold exercised by private traders 私商的钳制 · beneficiaries of subsidies 补贴受益者
+> 🔑 held up ... as 推崇为 · social safety nets 社会安全网 · public welfare programmes 公共福利项目 · reduce their vulnerability to agricultural shocks 降低对农业冲击的脆弱性 · cash transfers 现金转移支付 · do not necessarily translate into 不一定转化为 · state subsidies 国家补贴 · stranglehold exercised by private traders 私商的钳制 · beneficiaries of subsidies 补贴受益者
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph E
 > 国际食物政策研究所所长樊胜根(Shenggen Fan)推崇埃塞俄比亚、巴西和墨西哥的社会安全网与公共福利项目,认为它们是解决农户贫困、降低其对农业冲击脆弱性的宝贵途径。然而,一些评论者回应说,向贫困家庭发放现金转移支付,并不一定能转化为粮食安全的提升,因为这些项目并不总能增强粮食生产或提高收入。关于农业的国家补贴,孟加拉国 Nari Progati Sangha 执行主任 Rokeya Kabir 在文章中评论道,这些补贴"并未抵消私人贸易商所施加的钳制。事实上,研究表明,六成的补贴受益者并非穷人,而是富有的地主和非农的贸易商。"
@@ -145,9 +145,9 @@ Synthesis of an online debate*
 
 ---
 
-**G** Many essayists mentioned ==climate change== and its consequences for small-scale agriculture. **Fan** explained that 'in addition to reducing crop yields, climate change increases the magnitude and the frequency of ==extreme weather events==, which increase smallholder vulnerability.' The growing ==unpredictability of weather== increases farmers' difficulty in managing weather-related risks. According to this author, one solution would be to ==develop crop varieties that are more resilient== to new climate trends and extreme weather patterns. Accordingly, **Pat Mooney**, co-founder and executive director of the ETC Group, suggested that 'if we are to survive climate change, we must adopt policies that let ==peasants diversify== the plant and animal species and varieties/breeds that make up our menus.'
+**G** Many essayists mentioned climate change and its consequences for small-scale agriculture. **Fan** explained that 'in addition to reducing ==crop yields==, climate change increases ==the magnitude and the frequency== of ==extreme weather events==, which increase smallholder vulnerability.' The growing ==unpredictability of weather== increases farmers' difficulty in managing weather-related risks. According to this author, one solution would be to ==develop crop varieties that are more resilient== to new climate trends and extreme weather patterns. Accordingly, **Pat Mooney**, co-founder and executive director of the ETC Group, suggested that 'if we are to survive climate change, we must adopt policies that let ==peasants== ==diversify== the plant and animal species and varieties/breeds that make up our menus.'
 
-> 🔑 climate change 气候变化 · extreme weather events 极端天气事件 · unpredictability of weather 天气不可预测性 · develop crop varieties that are more resilient 培育更抗逆的作物品种 · peasants diversify 农民使……多样化
+> 🔑 crop yields 作物产量 · the magnitude and the frequency 强度与频率 · extreme weather events 极端天气事件 · unpredictability of weather 天气不可预测性 · develop crop varieties that are more resilient 培育更抗逆的作物品种 · diversify 使多样化
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph G
 > 许多撰文者提到了气候变化及其对小规模农业的影响。Fan 解释说:"气候变化除了会降低作物产量外,还会增大极端天气事件的强度和频率,从而加剧小农的脆弱性。"天气越来越难以预测,增加了农民管理天气相关风险的难度。这位作者认为,一个解决办法是培育对新气候趋势和极端天气模式更具韧性的作物品种。相应地,ETC 集团联合创始人兼执行主任 Pat Mooney 提出:"如果我们要在气候变化中生存下来,就必须采取政策,让农民能够使构成我们餐桌的动植物物种及品种多样化。"
@@ -168,9 +168,9 @@ Synthesis of an online debate*
 
 ---
 
-**H** Some participating authors and commentators argued in favour of ==community-based and autonomous risk management strategies== through ==collective action== groups, co-operatives or producers' groups. Such groups ==enhance market opportunities== for small-scale producers, reduce marketing costs and ==synchronise buying and selling with seasonal price conditions==. According to **Murphy**, 'collective action offers an important way for farmers to strengthen their political and economic ==bargaining power==, and to reduce their business risks.' One commentator, **Giel Ton**, warned that collective action ==does not come as a free good==. It takes time, effort and money to organise, build trust and to experiment. Others, like **Marcel Vernooij and Marcel Beukeboom**, suggested that in order to 'apply what we already know', all ==stakeholders==, including business, government, scientists and civil society, ==must work together==, starting at the beginning of the ==value chain==.
+**H** Some participating authors and commentators argued in favour of ==community-based and autonomous== risk management strategies through ==collective action== groups, ==co-operatives or producers' groups==. Such groups ==enhance market opportunities== for small-scale producers, reduce marketing costs and ==synchronise buying and selling with seasonal price conditions==. According to **Murphy**, 'collective action offers an important way for farmers to strengthen their political and economic ==bargaining power==, and to reduce their business risks.' One commentator, **Giel Ton**, warned that collective action ==does not come as a free good==. It takes time, effort and money to organise, build trust and to experiment. Others, like **Marcel Vernooij and Marcel Beukeboom**, suggested that in order to 'apply what we already know', all ==stakeholders==, including business, government, scientists and civil society, must work together, starting at the beginning of the ==value chain==.
 
-> 🔑 community-based and autonomous 以社区为基础且自主的 · collective action 集体行动 · enhance market opportunities 拓展市场机会 · synchronise buying and selling with seasonal price conditions 使买卖与季节性价格同步 · bargaining power 议价能力 · does not come as a free good 并非免费的好处 · stakeholders 利益相关方 · value chain 价值链
+> 🔑 community-based and autonomous 以社区为基础且自主的 · collective action 集体行动 · co-operatives or producers' groups 合作社/生产者团体 · enhance market opportunities 拓展市场机会 · synchronise buying and selling with seasonal price conditions 使买卖与季节性价格同步 · bargaining power 议价能力 · does not come as a free good 并非免费的好处 · stakeholders 利益相关方 · value chain 价值链
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph H
 > 一些参与撰文者和评论者赞成通过集体行动团体、合作社或生产者组织来实施以社区为基础的、自主的风险管理策略。这类组织能为小规模生产者拓展市场机会、降低营销成本,并使买卖时机与季节性价格状况相协调。Murphy 认为:"集体行动为农民提供了一条重要途径,以增强其政治和经济上的议价能力,并降低经营风险。"评论者 Giel Ton 提醒说,集体行动并非免费的好处——组织起来、建立信任、进行尝试,都需要时间、精力和金钱。另一些人,如 Marcel Vernooij 和 Marcel Beukeboom,则建议:为了"运用我们已知的知识",所有利益相关方——包括企业、政府、科学家和公民社会——必须从价值链的最前端开始通力合作。
@@ -193,7 +193,7 @@ Synthesis of an online debate*
 
 ---
 
-**I** Some participants explained that market price volatility is often worsened by the presence of ==intermediary purchasers== who, ==taking advantage of farmers' vulnerability==, dictate prices. One commentator suggested farmers can ==gain greater control over prices== and minimise price volatility by ==selling directly to consumers==. Similarly, **Sonali Bisht**, founder and advisor to the Institute of Himalayan Environmental Research and Education (INHERE), India, wrote that ==community-supported agriculture==, where consumers invest in local farmers by subscription and ==guarantee producers a fair price==, is a ==risk-sharing model== worth more attention. ==Direct food distribution systems== not only encourage small-scale agriculture but also give consumers more control over the food they consume, she wrote.
+**I** Some participants explained that market price volatility is often worsened by the presence of ==intermediary purchasers== who, ==taking advantage of farmers' vulnerability==, ==dictate prices==. One commentator suggested farmers can ==gain greater control over prices== and minimise price volatility by ==selling directly to consumers==. Similarly, **Sonali Bisht**, founder and advisor to the Institute of Himalayan Environmental Research and Education (INHERE), India, wrote that ==community-supported agriculture==, where consumers invest in local farmers by subscription and ==guarantee producers a fair price==, is a ==risk-sharing model== worth more attention. ==Direct food distribution systems== not only encourage small-scale agriculture but also give consumers more control over the food they consume, she wrote.
 
 > 🔑 intermediary purchasers 中间收购商 · taking advantage of farmers' vulnerability 利用农民的脆弱地位 · dictate prices 操纵价格 · gain greater control over prices 更好掌控价格 · selling directly to consumers 直接卖给消费者 · community-supported agriculture 社区支持型农业 · guarantee producers a fair price 保证生产者公道价格 · risk-sharing model 风险共担模式 · direct food distribution systems 直接食物分销系统
 
