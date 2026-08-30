@@ -1,17 +1,17 @@
-# Test 1 – Passage 3: What's the purpose of gaining knowledge?
+
 
 > [!info] How to read this file
 > - ==Highlighted text== = key vocabulary, collocations, or sentences worth learning.
 > - After each paragraph: a 🇨🇳 **中文翻译** callout (full translation) + a **📝 Notes** callout (word meanings with 中文, useful phrases, and the paragraph's main idea).
 
 ---
-
+********
 **27**
 
 A I would ==found an institution== where any person can find instruction in any subject.' That was the founder's ==motto== for Cornell University, and it seems ==an apt characterization== of the different university, also in the USA, where I currently teach philosophy. A student can prepare for a career in **resort management**, engineering, **interior design**, **accounting**, music, **law enforcement**, ==you name it==. But what would the founders of these two institutions have thought of a course called ==Arson for Profit==? **I kid you not**: we have it ==on the books==. Any ==undergraduates== who have ==met the academic requirements== can sign up for the course in our program in 'fire science'.
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph A
-> "我要创办一所任何人都能学习任何学科的学院。"这是康奈尔大学创始人的箴言,而这句话似乎也很贴切地描述了我目前任教哲学的另一所大学(同样在美国)。学生可以为度假村管理、工程、室内设计、会计、音乐、执法等各种职业做准备——应有尽有。但这两所学院的创始人对一门名为"纵火牟利"的课程会作何感想呢?我可不是开玩笑:我们确实开设了这门课。任何满足了学术要求的本科生,都可以报名我们"火灾科学"专业中的这门课程。
+> "我要创办一所任何人都能学习任何学科的学院。"这是康奈尔大学创始人的箴言,而这句话似乎也很贴切地描述了我目前任教哲学的另一所大学(同样在美国)。学生可以为**度假村管理**、工程、**室内设计**、**会计**、音乐、**执法**等各种职业做准备——应有尽有。但这两所学院的创始人对一门名为"纵火牟利"的课程会作何感想呢?我可不是开玩笑:我们确实开设了这门课。任何满足了学术要求的本科生,都可以报名我们"火灾科学"专业中的这门课程。
 
 > [!tip] 📝 Notes — Paragraph A
 > **Vocabulary & phrases**
@@ -24,7 +24,16 @@ A I would ==found an institution== where any person can find instruction in any 
 > - **met the academic requirements** = satisfied the necessary conditions to enrol 满足了学术(入学)要求。
 > - **arson** (n.) = the crime of deliberately setting fire to property 纵火(罪)。
 >
-> **Main idea 主旨:** The author teaches philosophy at a US university that offers a huge range of vocational courses — including, surprisingly, one nicknamed *"Arson for Profit"* within its "fire science" program, open to any qualified undergraduate. 作者在一所开设大量职业课程的美国大学教哲学,其中竟包括"火灾科学"专业里一门名为"纵火牟利"的课,任何合格本科生都能报名。
+> **Main idea 主旨:** The author teaches philosophy at a US university that offers a huge range of **vocational courses** — including, surprisingly, one nicknamed *"Arson for Profit"* within its "fire science" program, open to any qualified undergraduate. 作者在一所开设大量职业课程的美国大学教哲学,其中竟包括"火灾科学"专业里一门名为"纵火牟利"的课,任何合格本科生都能报名。
+
+> [!question] 🤔 Why is this course *surprising*? 为什么这门课令人意外?
+> The surprise is built deliberately from three clashing elements 作者刻意用三重反差制造意外:
+> 1. **Noble ideal vs. criminal-sounding course 崇高理想 vs. 像犯罪的课程.** The paragraph opens with a lofty motto — *"found an institution where any person can find instruction in any subject"* — painting the university as a place of pure, high-minded learning. Then comes a course called **"Arson for Profit"**. *Arson* is a **crime**, and *"for Profit"* makes it sound like the school teaches people **how to commit that crime for money**. 开篇的崇高箴言把大学塑造成纯粹求知之地,紧接着却是"纵火牟利"——纵火是犯罪,"牟利"更让它听起来像在教人犯罪赚钱。理想与课程之间的落差就是意外的核心。
+> 2. **The ordinary list, then the odd one out 一串正常职业里的异类.** *resort management, engineering, interior design, accounting, music, law enforcement…* are all respectable careers; the reader relaxes — then **"Arson for Profit"** lands as the jarring exception. 前面全是体面职业,读者放松警惕,"纵火牟利"作为异类突然跳出,形成鲜明对比 (juxtaposition)。
+> 3. **The author signals the shock on purpose 作者主动提示这令人震惊.** *"I kid you not"* (我可不是开玩笑) and *"we have it **on the books**"* (确实正式开设了) are things you only say about something hard to believe. 这两句话只会用在难以置信的事情上,等于告诉读者:是的,这听起来很疯狂,但它真实存在。
+>
+> **The trick 手法:** Paragraph A gives you **only the shocking name** and withholds the innocent explanation. Not until **Paragraph B** do we learn the course is really for arson *investigators* (纵火调查员), not arsonists. So the surprise is a deliberate **hook** — set up here, resolved later. 第一段只抛出惊人的课名,隐瞒无害的解释;直到第二段才揭示它其实是为纵火"调查员"而非纵火犯开设的。这个意外是刻意设下的**钩子**——此处埋设,后文解开。
+> This ties into the whole passage: the **same knowledge (means/手段)** can sound criminal or noble depending on its **purpose (end/目的)** — the argument he builds in D–F. 这正呼应全文主旨:同样的知识(手段)因目的不同,可以显得像犯罪或高尚——即 D–F 段的论证。
 
 ---
 
