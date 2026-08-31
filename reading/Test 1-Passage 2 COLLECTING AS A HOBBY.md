@@ -178,7 +178,7 @@ Not all collectors are interested in learning from their hobby, though, so what 
 
 **Paragraph 9 — Reason 6: expressing individualism**
 
-One reason, conscious or not, for what someone chooses to collect is to show the collector`s ==individualism==. Someone who decides to collect something as ==unexpected== as dog collars, for instance, may be ==conveying their belief== that they must be interesting themselves. And believe it or not, there is at [***…OCR gap…***] grew out of a personal collection.
+One reason, conscious or not, for what someone chooses to collect is to show the collectors ==individualism==. Someone who decides to collect something as ==unexpected== as dog collars, for instance, may be ==conveying their belief== that they must be interesting themselves. And believe it or not, there is at [***…OCR gap…***] grew out of a personal collection.
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph 9
 > 一个人选择收藏什么,背后有一个(或有意识或无意识的)理由,就是为了展现收藏者的个性。比如,某个决定收藏像狗项圈这样出人意料之物的人,也许是在传达一种信念:他们自己一定很有趣。而且信不信由你,确实[至少有一座博物馆是]从个人收藏发展而来的。

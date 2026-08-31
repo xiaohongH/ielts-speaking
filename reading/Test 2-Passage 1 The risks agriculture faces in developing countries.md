@@ -173,7 +173,7 @@ Synthesis of an online debate*
 > 🔑 in favour of 赞成/支持 · community-based and autonomous 以社区为基础且自主的 · collective action 集体行动 · co-operatives or producers' groups 合作社/生产者团体 · enhance market opportunities 拓展市场机会 · synchronise buying and selling with seasonal price conditions 使买卖与季节性价格同步 · bargaining power 议价能力 · does not come as a free good 并非免费的好处 · stakeholders 利益相关方 · value chain 价值链
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph H
-> 一些参与撰文者和评论者赞成通过集体行动团体、合作社或生产者组织来实施以社区为基础的、自主的风险管理策略。这类组织能为小规模生产者拓展市场机会、降低营销成本,并使买卖时机与季节性价格状况相协调。Murphy 认为:"集体行动为农民提供了一条重要途径,以增强其政治和经济上的议价能力,并降低经营风险。"评论者 Giel Ton 提醒说,集体行动并非免费的好处——组织起来、建立信任、进行尝试,都需要时间、精力和金钱。另一些人,如 Marcel Vernooij 和 Marcel Beukeboom,则建议:为了"运用我们已知的知识",所有利益相关方——包括企业、政府、科学家和公民社会——必须从价值链的最前端开始通力合作。
+> 一些参与撰文者和评论者赞成通过集体行动团体、合作社或生产者组织来实施以社区为基础的、自主的风险管理策略。这类组织能为小规模生产者拓展市场机会、降低营销成本,并使**买卖时机与季节性价格状况相协调**。Murphy 认为:"集体行动为农民提供了一条重要途径,以增强其政治和经济上的议价能力,并降低经营风险。"评论者 Giel Ton 提醒说,集体行动并非免费的好处——组织起来、建立信任、进行尝试,都需要时间、精力和金钱。另一些人,如 Marcel Vernooij 和 Marcel Beukeboom,则建议:为了"运用我们已知的知识",所有利益相关方——包括企业、政府、科学家和公民社会——必须从价值链的最前端开始通力合作。
 
 > [!tip] 📝 Notes — Paragraph H
 > **Vocabulary & phrases**

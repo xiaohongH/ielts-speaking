@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking — What Questions (Q1-Q7)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.7;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    border-bottom: 3px solid #4a90d9;
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+    color: #4a90d9;
+  }
+  .question-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-left: 4px solid #4a90d9;
+    transition: box-shadow 0.2s;
+  }
+  .question-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  .question-card.answered { border-left-color: #27ae60; }
+  .question-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+  }
+  .question-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    flex: 1;
+  }
+  .voice-btn, .sentence-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #4a90d9;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .voice-btn:hover, .sentence-btn:hover { background: #357abd; transform: scale(1.1); }
+  .voice-btn:active, .sentence-btn:active { transform: scale(0.95); }
+  .voice-btn.speaking { background: #e74c3c; }
+  .sentence-btn { background: #27ae60; font-size: 0.75rem; }
+  .toggle-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background: transparent;
+    color: #999;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .toggle-btn.open { transform: rotate(90deg); }
+  .answer {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  .answer.show { display: block; }
+  .answer-alt {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f7ff;
+    border-radius: 8px;
+    border: 1px solid #d4e6f7;
+  }
+  .answer-alt summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #4a90d9;
+    font-size: 0.9rem;
+  }
+  .answer-alt p { margin-top: 0.8rem; }
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #27ae60;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .controls {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: #f8f9fa;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+  }
+  .controls button, .controls select, .controls input {
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  .controls button:hover { background: #f0f0f0; }
+  .theme-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .theme-tag {
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+  }
+  .theme-tag.active { box-shadow: 0 0 0 2px rgba(0,0,0,0.08) inset; }
+  .theme-work{background:#e8f5e9;color:#2e7d32}
+  .theme-education{background:#e3f2fd;color:#1565c0}
+  .theme-technology{background:#ede7f6;color:#5e35b1}
+  .theme-society{background:#fff3e0;color:#ef6c00}
+  .theme-lifestyle{background:#fce4ec;color:#c2185b}
+  .theme-city{background:#e0f2f1;color:#00695c}
+  .theme-shopping{background:#fff8e1;color:#f9a825}
+  .theme-environment{background:#e8f5e9;color:#1b5e20}
+
+  .highlight {
+    background: #fff3cd;
+    border-bottom: 2px dotted #f0ad4e;
+    cursor: pointer;
+    padding: 0 2px;
+    border-radius: 3px;
+  }
+  .tooltip {
+    display: none;
+    position: fixed;
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    max-width: 420px;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .tooltip.show { display: block; }
+  .tooltip .tip-title { font-weight: 700; color: #f0ad4e; margin-bottom: 0.4rem; }
+  .tooltip .tip-example { color: #aed6f1; font-style: italic; margin-top: 0.4rem; }
+
+  .answer-pattern {
+    background: #eef6ff;
+    border: 1px solid #b8d9f7;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #2c3e50;
+  }
+  .answer-pattern summary { cursor: pointer; font-weight: 700; color: #4a90d9; font-size: 0.9rem; }
+  .answer-pattern .pattern-step {
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #4a90d9;
+    margin-bottom: 0.4rem;
+  }
+  .answer-pattern .pattern-label { font-weight: 600; color: #4a90d9; }
+
+  .playback-panel {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f4f8;
+    border-radius: 8px;
+    border: 1px solid #d4e6f7;
+  }
+  .playback-panel.show { display: block; }
+
+  .vocab-section {
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 1rem;
+  }
+  .vocab-search { margin: 0.8rem 0; width: 100%; }
+  .vocab-list { display: grid; grid-template-columns: 1fr; gap: 0.6rem; }
+  .vocab-item { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.6rem 0.8rem; }
+
+  body.dark { background: #121212; color: #e0e0e0; }
+  body.dark h1 { color: #e0e0e0; border-bottom-color: #6ca8e3; }
+  body.dark h2 { color: #7bb4e8; }
+  body.dark .question-card, body.dark .vocab-section { background: #1e1e1e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  body.dark .question-header h3 { color: #e0e0e0; }
+  body.dark .answer { color: #cfcfcf; border-top-color: #333; }
+  body.dark .controls { background: #121212; border-bottom-color: #333; }
+  body.dark .controls button, body.dark .controls select, body.dark .controls input { background: #2a2a2a; color: #e0e0e0; border-color: #444; }
+  body.dark .answer-alt, body.dark .playback-panel { background: #1f2a36; border-color: #37506b; }
+  body.dark .answer-pattern { background: #1e2a38; border-color: #3c5b7d; color: #d9e4f2; }
+  body.dark .highlight { background: #5f4c17; border-bottom-color: #e3b341; color: #fff2cc; }
+
+  @media (max-width: 760px) {
+    body { padding: 1rem; }
+    .question-header { align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<h1>IELTS Speaking — What Questions (Q1-Q7)</h1>
+
+<div class="controls">
+  <button onclick="expandAll()">Expand All</button>
+  <button onclick="collapseAll()">Collapse All</button>
+  <button onclick="toggleDark()">Toggle Dark Mode</button>
+  <label>Voice:
+    <select id="voiceVersion">
+      <option value="original">Original</option>
+      <option value="easy">Easy</option>
+      <option value="conv">Conversational</option>
+    </select>
+  </label>
+  <label>Repeat:
+    <input id="repeatCount" type="number" min="1" max="5" value="1" style="width:56px">
+  </label>
+</div>
+
+<div class="theme-filters" id="themeFilters"></div>
+
+<h2>Work, Society & Lifestyle</h2>
+
+<div class="question-card answered" data-theme="work">
+  <div class="question-header" onclick="toggleAnswer(this)">
+    <button class="toggle-btn">&#9654;</button>
+    <h3>What kinds of jobs do young people like to do in your country?</h3>
+    <span class="status-badge">Done</span>
+    <button class="voice-btn" onclick="event.stopPropagation(); speak(this)">&#9654;</button>
+    <button class="sentence-btn" onclick="event.stopPropagation(); openSentenceMode(this)" title="Sentence by sentence">S</button>
+  </div>
+  <div class="answer">
+    <details class="answer-pattern" open>
+      <summary>Answer Structure</summary>
+      <div class="pattern-step"><span class="pattern-label">1. Trend:</span> Mention dominant job preferences among young adults.</div>
+      <div class="pattern-step"><span class="pattern-label">2. Reasons:</span> Explain salary, flexibility, and identity factors.</div>
+      <div class="pattern-step"><span class="pattern-label">3. Contrast:</span> Compare with traditional career choices.</div>
+      <div class="pattern-step"><span class="pattern-label">4. Personal stance:</span> Give a balanced final judgment.</div>
+      <p><strong>Why scores high:</strong> It combines clear logic, topic vocabulary, and nuanced comparison.</p>
+    </details>
+    <p data-version="original">From what I can see, a lot of young people are drawn to jobs that offer <span class="highlight" data-tip="fast-track growth|Meaning: rapid career progress in a short period.|Example: Startups can offer fast-track growth for talented graduates.">fast-track growth</span> and personal freedom, such as tech roles, digital marketing, e-commerce, and content creation. One major reason is financial: these sectors often provide <span class="highlight" data-tip="competitive pay package|Meaning: salary plus benefits that are better than average.|Example: She accepted the offer because of the competitive pay package.">competitive pay packages</span> even at entry level. Another reason is lifestyle. Many young adults value <span class="highlight" data-tip="location-independent work|Meaning: work that can be done from anywhere.|Example: Location-independent work is popular among digital nomads.">location-independent work</span>, so they naturally prefer positions with flexible hours or hybrid arrangements. By contrast, traditional paths like civil service are still respected, but they may seem less dynamic. Overall, young people increasingly want careers that combine income, autonomy, and a sense of purpose.</p>
+    <details class="answer-alt" data-version="easy"><summary>Easy Version (Band 8-9)</summary><p>In my country, many young people like jobs in technology, online business, and media. These jobs usually pay well and give faster promotion opportunities. Another big reason is flexibility, because many people want to work from home or choose their own schedule. Traditional jobs like government work are still popular for stability, but they may feel less exciting. So, in general, young people prefer careers with good money, freedom, and growth potential.</p></details>
+    <details class="answer-alt" data-version="conv"><summary>Conversational Version</summary><p>Honestly, a lot of people my age go for tech or online jobs now. It’s not just the money—though that matters a lot—it’s also the flexibility. People don’t really want to be stuck in a rigid nine-to-five if they can avoid it. Government jobs are still seen as safe, sure, but many young people want something more dynamic and, you know, more “them.” So yeah, pay, freedom, and personal interest are probably the biggest drivers.</p></details>
+  </div>
+</div>
+
+<div class="question-card answered" data-theme="society">
+  <div class="question-header" onclick="toggleAnswer(this)">
+    <button class="toggle-btn">&#9654;</button><h3>What qualities make a person admirable?</h3><span class="status-badge">Done</span>
+    <button class="voice-btn" onclick="event.stopPropagation(); speak(this)">&#9654;</button><button class="sentence-btn" onclick="event.stopPropagation(); openSentenceMode(this)">S</button>
+  </div>
+  <div class="answer">
+    <details class="answer-pattern" open><summary>Answer Structure</summary>
+      <div class="pattern-step"><span class="pattern-label">1. Core qualities:</span> Name two or three timeless traits.</div>
+      <div class="pattern-step"><span class="pattern-label">2. Real-life impact:</span> Show how these traits affect others.</div>
+      <div class="pattern-step"><span class="pattern-label">3. Practical example:</span> Mention one concrete scenario.</div>
+      <p><strong>Why scores high:</strong> It moves from abstract values to practical evidence naturally.</p>
+    </details>
+    <p data-version="original">To me, the most admirable people are those with integrity, empathy, and resilience. Integrity matters because it means a person does the right thing even when no one is watching, which builds <span class="highlight" data-tip="long-term trust|Meaning: confidence built gradually through consistent behavior.|Example: Honest communication creates long-term trust between managers and teams.">long-term trust</span>. Empathy is equally important; people who can <span class="highlight" data-tip="put themselves in someone else's shoes|Meaning: imagine another person’s feelings and perspective.|Example: Good teachers can put themselves in students’ shoes.">put themselves in someone else’s shoes</span> tend to treat others with respect. I also admire resilience, especially in people who face setbacks but still <span class="highlight" data-tip="bounce back|Meaning: recover quickly from difficulties.|Example: After losing his job, he bounced back by learning new skills.">bounce back</span> without blaming everyone else. For instance, I once had a supervisor who admitted mistakes openly and protected the team during stressful projects. That combination of honesty and responsibility is, in my view, truly admirable.</p>
+    <details class="answer-alt" data-version="easy"><summary>Easy Version (Band 8-9)</summary><p>I think admirable people usually have three qualities: honesty, kindness, and mental strength. Honest people gain trust because they are reliable. Kind people understand others and make people feel respected. Also, strong people do not give up when life is difficult. For example, some leaders admit their own mistakes and still support their team. That makes others respect them more. So, for me, character is much more important than fame or money.</p></details>
+    <details class="answer-alt" data-version="conv"><summary>Conversational Version</summary><p>If I had to pick, I’d say honesty and empathy are huge. Like, I really respect people who stay fair even when it’s inconvenient. And if someone can understand others instead of judging quickly, that says a lot about them. I also admire people who go through hard times and still keep going. Not in a dramatic way—just quietly staying responsible. That kind of person leaves a real impression on people.</p></details>
+  </div>
+</div>
+
+<div class="question-card answered" data-theme="lifestyle">
+  <div class="question-header" onclick="toggleAnswer(this)"><button class="toggle-btn">&#9654;</button><h3>What are the benefits of playing indoor games for children?</h3><span class="status-badge">Done</span><button class="voice-btn" onclick="event.stopPropagation(); speak(this)">&#9654;</button><button class="sentence-btn" onclick="event.stopPropagation(); openSentenceMode(this)">S</button></div>
+  <div class="answer">
+    <details class="answer-pattern" open><summary>Answer Structure</summary>
+      <div class="pattern-step"><span class="pattern-label">1. Developmental value:</span> Mention cognitive and social benefits.</div>
+      <div class="pattern-step"><span class="pattern-label">2. Practical context:</span> Explain when indoor games are useful.</div>
+      <div class="pattern-step"><span class="pattern-label">3. Balanced view:</span> Clarify indoor and outdoor both matter.</div>
+      <p><strong>Why scores high:</strong> It gives specific child-development effects and a balanced conclusion.</p>
+    </details>
+    <p data-version="original">Indoor games can benefit children in several ways. First, many games, like puzzles, chess, or strategy board games, help with <span class="highlight" data-tip="problem-solving skills|Meaning: ability to analyze challenges and find solutions.|Example: Building blocks improve children’s problem-solving skills.">problem-solving skills</span> and concentration. Second, group games teach <span class="highlight" data-tip="turn-taking|Meaning: waiting for your turn and respecting shared rules.|Example: Card games are great for teaching turn-taking.">turn-taking</span>, patience, and how to follow rules, which are essential social skills. Indoor activities are also practical in bad weather or polluted conditions, so children can still stay engaged rather than spending hours on passive screen time. That said, indoor games should not fully replace outdoor play. I’d say the best approach is a <span class="highlight" data-tip="healthy balance|Meaning: a reasonable mix between two options.|Example: Parents should keep a healthy balance between study and rest.">healthy balance</span>, where indoor games support learning and social development while outdoor activities support physical health.</p>
+    <details class="answer-alt" data-version="easy"><summary>Easy Version (Band 8-9)</summary><p>Indoor games are good for children because they improve thinking and social abilities. Games like puzzles and chess help kids focus and solve problems. Group games also teach children to wait for their turn and follow rules. Another benefit is convenience, especially when the weather is bad. Kids can still have fun and learn at home. Of course, outdoor exercise is also important, so children need both indoor and outdoor activities.</p></details>
+    <details class="answer-alt" data-version="conv"><summary>Conversational Version</summary><p>Indoor games are actually super useful for kids. They’re not just for entertainment—things like puzzles or board games really train concentration and logical thinking. And when kids play together, they learn how to wait, share, and handle losing, which is honestly important in real life. Also, on rainy days, indoor games are a lifesaver. I still think outdoor play is necessary, but indoor games are definitely a great part of a child’s routine.</p></details>
+  </div>
+</div>
+
+<div class="question-card answered" data-theme="society">
+  <div class="question-header" onclick="toggleAnswer(this)"><button class="toggle-btn">&#9654;</button><h3>Where do people get news in your country?</h3><span class="status-badge">Done</span><button class="voice-btn" onclick="event.stopPropagation(); speak(this)">&#9654;</button><button class="sentence-btn" onclick="event.stopPropagation(); openSentenceMode(this)">S</button></div>
+  <div class="answer">
+    <details class="answer-pattern" open><summary>Answer Structure</summary><div class="pattern-step"><span class="pattern-label">1. Main channels:</span> Identify dominant sources by generation.</div><div class="pattern-step"><span class="pattern-label">2. Reliability issue:</span> Contrast speed and credibility.</div><div class="pattern-step"><span class="pattern-label">3. Recommendation:</span> Suggest verification habits.</div><p><strong>Why scores high:</strong> It compares channels critically and offers practical media literacy advice.</p></details>
+    <p data-version="original">Nowadays, people get news from a mix of social media, news apps, television, and online newspapers. Younger people tend to rely on short-form platforms because updates are instant and easy to digest, while older generations still trust TV bulletins and established outlets. The challenge is that fast information is not always accurate. On social media, rumors can spread <span class="highlight" data-tip="at lightning speed|Meaning: extremely fast.|Example: False headlines spread at lightning speed during emergencies.">at lightning speed</span>, so many people now cross-check stories with <span class="highlight" data-tip="credible sources|Meaning: trustworthy information providers.|Example: Always compare health advice with credible sources.">credible sources</span>. Personally, I think a mixed approach works best: use social media for quick alerts, but verify important news through professional journalism. In the long run, media literacy is essential because people need to <span class="highlight" data-tip="separate fact from noise|Meaning: distinguish true information from distractions or misinformation.|Example: Critical thinking helps students separate fact from noise online.">separate fact from noise</span>.</p>
+    <details class="answer-alt" data-version="easy"><summary>Easy Version (Band 8-9)</summary><p>People in my country get news from social media, mobile apps, TV, and online newspapers. Young people usually prefer social platforms because news arrives quickly. Older people often trust traditional TV or official websites more. The problem is that online news can be inaccurate, so it is important to check different sources. I think the best way is to use social media for speed and then confirm key stories from reliable news organizations.</p></details>
+    <details class="answer-alt" data-version="conv"><summary>Conversational Version</summary><p>Honestly, most people now get news on their phones first. Social media is super fast, so people see headlines there before anywhere else. But speed doesn’t always mean quality, right? A lot of posts are exaggerated or just wrong. So for important stuff, people usually double-check with bigger news outlets. I do the same—I use social apps for updates, then verify the details from more reliable platforms.</p></details>
+  </div>
+</div>
+
+<div class="question-card answered" data-theme="work">
+  <div class="question-header" onclick="toggleAnswer(this)"><button class="toggle-btn">&#9654;</button><h3>What kind of people earn the highest salaries in your country?</h3><span class="status-badge">Done</span><button class="voice-btn" onclick="event.stopPropagation(); speak(this)">&#9654;</button><button class="sentence-btn" onclick="event.stopPropagation(); openSentenceMode(this)">S</button></div>
+  <div class="answer">
+    <details class="answer-pattern" open><summary>Answer Structure</summary><div class="pattern-step"><span class="pattern-label">1. Main groups:</span> Name high-income sectors.</div><div class="pattern-step"><span class="pattern-label">2. Value logic:</span> Explain why market rewards them.</div><div class="pattern-step"><span class="pattern-label">3. Caveat:</span> Mention inequality and access barriers.</div><p><strong>Why scores high:</strong> It links salary to scarcity, responsibility, and economic value.</p></details>
+    <p data-version="original">Generally speaking, the highest salaries go to people in high-value sectors such as finance, advanced technology, specialized medicine, and senior management. These roles usually require rare expertise, years of training, and the ability to make <span class="highlight" data-tip="high-stakes decisions|Meaning: choices with serious financial or social consequences.|Example: Surgeons make high-stakes decisions every day.">high-stakes decisions</span>. For example, software architects and quantitative analysts often earn a lot because their work has direct business impact and is hard to replace. Entrepreneurial founders can also earn significantly if their company scales. In many cases, top earners combine technical competence with leadership and communication skills, which creates a <span class="highlight" data-tip="premium in the labor market|Meaning: extra pay offered for highly demanded abilities.|Example: Data security expertise commands a premium in the labor market.">premium in the labor market</span>. That said, salary is not just about effort; access to education, networks, and opportunities also plays a major role.</p>
+    <details class="answer-alt" data-version="easy"><summary>Easy Version (Band 8-9)</summary><p>In my country, people in finance, technology, medicine, and top management usually earn the most. These jobs need advanced knowledge and a lot of responsibility, so companies pay more. Some business owners also earn very high incomes if their companies grow successfully. In my opinion, high salary often comes from a mix of skill, experience, and leadership ability. However, education and personal connections can also influence who gets these top-paying opportunities.</p></details>
+    <details class="answer-alt" data-version="conv"><summary>Conversational Version</summary><p>If we’re talking top salaries, it’s usually people in tech, finance, medicine, and senior leadership. Their jobs are complex, high-pressure, and hard to replace, so the pay is naturally higher. Also, business founders can make a lot when things go well. But it’s not purely merit-based, to be honest. Your education background and who you know can make a big difference in reaching those high-paying positions.</p></details>
+  </div>
+</div>
+
+<div class="question-card answered" data-theme="shopping">
+  <div class="question-header" onclick="toggleAnswer(this)"><button class="toggle-btn">&#9654;</button><h3>What is good customer service?</h3><span class="status-badge">Done</span><button class="voice-btn" onclick="event.stopPropagation(); speak(this)">&#9654;</button><button class="sentence-btn" onclick="event.stopPropagation(); openSentenceMode(this)">S</button></div>
+  <div class="answer">
+    <details class="answer-pattern" open><summary>Answer Structure</summary><div class="pattern-step"><span class="pattern-label">1. Definition:</span> Give clear criteria of good service.</div><div class="pattern-step"><span class="pattern-label">2. Key behaviors:</span> Explain responsiveness and problem solving.</div><div class="pattern-step"><span class="pattern-label">3. Business effect:</span> Link service quality to customer loyalty.</div><p><strong>Why scores high:</strong> It defines, illustrates, and evaluates impact in one coherent flow.</p></details>
+    <p data-version="original">Good customer service means being respectful, responsive, and solution-focused throughout the whole customer journey. It starts with listening carefully and understanding the real issue instead of giving scripted replies. When problems happen, staff should take ownership and provide a <span class="highlight" data-tip="timely resolution|Meaning: solving a problem quickly and appropriately.|Example: The airline offered a timely resolution after the delay.">timely resolution</span>, whether that is a refund, replacement, or clear explanation. Equally important is consistency: customers should receive the same standard online and offline. In my view, excellent service is not about saying “sorry” repeatedly; it is about making people feel valued and treated fairly. Businesses that do this well usually build <span class="highlight" data-tip="customer loyalty|Meaning: repeated preference for a brand because of trust and satisfaction.|Example: Friendly support teams improve customer loyalty.">customer loyalty</span> and positive word of mouth, which is essential in a competitive market.</p>
+    <details class="answer-alt" data-version="easy"><summary>Easy Version (Band 8-9)</summary><p>Good customer service means helping customers politely and effectively. Staff should listen carefully, answer quickly, and solve problems instead of avoiding responsibility. For example, if a product is broken, customers should get a fair replacement or refund without long delays. Also, service quality should be consistent across stores and online platforms. In my opinion, when customers feel respected and supported, they trust the brand more and are more likely to return.</p></details>
+    <details class="answer-alt" data-version="conv"><summary>Conversational Version</summary><p>For me, good customer service is pretty simple: be respectful, respond fast, and actually fix the issue. People get frustrated when staff just repeat company rules without helping. Even if a mistake happens, customers usually calm down if the company handles it quickly and fairly. So yeah, it’s less about perfect words and more about real action. Brands that do that well usually keep customers for the long term.</p></details>
+  </div>
+</div>
+
+<div class="question-card answered" data-theme="work">
+  <div class="question-header" onclick="toggleAnswer(this)"><button class="toggle-btn">&#9654;</button><h3>What are the things to consider when choosing a job?</h3><span class="status-badge">Done</span><button class="voice-btn" onclick="event.stopPropagation(); speak(this)">&#9654;</button><button class="sentence-btn" onclick="event.stopPropagation(); openSentenceMode(this)">S</button></div>
+  <div class="answer">
+    <details class="answer-pattern" open><summary>Answer Structure</summary><div class="pattern-step"><span class="pattern-label">1. Essentials:</span> Mention pay, stability, and growth.</div><div class="pattern-step"><span class="pattern-label">2. Fit factors:</span> Include values, culture, and interest.</div><div class="pattern-step"><span class="pattern-label">3. Long-term view:</span> Evaluate sustainability and balance.</div><p><strong>Why scores high:</strong> It balances practical constraints with personal fulfillment.</p></details>
+    <p data-version="original">When choosing a job, people should consider both short-term needs and long-term development. Salary and stability are important, especially at the beginning of a career, but they are not the whole picture. It is also crucial to evaluate learning opportunities, promotion pathways, and whether the role matches your strengths. Another major factor is workplace culture. Even a well-paid job can become exhausting if the environment is toxic or the workload is unsustainable. I’d also look at work-life balance, because chronic stress can damage both health and productivity. Ideally, the right job offers decent pay, skill growth, and a sense of meaning, so you can stay motivated over time rather than feeling trapped in a role that only pays the bills.</p>
+    <details class="answer-alt" data-version="easy"><summary>Easy Version (Band 8-9)</summary><p>I think people should consider several things when choosing a job. First, salary and job security are basic needs. Second, they should check if the job can help them learn new skills and grow in the future. Company culture is also important, because a stressful environment can make people unhappy. Finally, work-life balance matters a lot. A good job should not only give money, but also support long-term development and personal well-being.</p></details>
+    <details class="answer-alt" data-version="conv"><summary>Conversational Version</summary><p>I’d look at a few things, not just salary. Money matters, obviously, but I’d also check whether I can learn and move up in that role. Team culture is huge too—if the environment is toxic, even a good paycheck isn’t worth it. And honestly, work-life balance is becoming non-negotiable for many people. So the best job is one that pays fairly, helps you grow, and doesn’t burn you out.</p></details>
+  </div>
+</div>
+
+<section class="vocab-section">
+  <h2>Vocabulary Summary</h2>
+  <input id="vocabSearch" class="vocab-search" placeholder="Search vocabulary..." oninput="filterVocab()">
+  <div class="vocab-list" id="vocabList"></div>
+</section>
+
+<div id="tooltip" class="tooltip"></div>
+
+<script>
+let currentUtterance = null;
+let currentButton = null;
+let sentenceState = { sentences: [], index: 0, repeatLeft: 1, timer: null };
+const voiceConfig = { rate: 1.05, pitch: 1.0, lang: 'en-US' };
+
+function toggleAnswer(header){
+  const answer = header.nextElementSibling;
+  const toggle = header.querySelector('.toggle-btn');
+  answer.classList.toggle('show');
+  toggle.classList.toggle('open');
+}
+function expandAll(){ document.querySelectorAll('.answer').forEach(a=>a.classList.add('show')); document.querySelectorAll('.toggle-btn').forEach(t=>t.classList.add('open')); }
+function collapseAll(){ document.querySelectorAll('.answer').forEach(a=>a.classList.remove('show')); document.querySelectorAll('.toggle-btn').forEach(t=>t.classList.remove('open')); }
+
+function getAnswerText(card){
+  const version = document.getElementById('voiceVersion').value;
+  if(version === 'original') return card.querySelector('p[data-version="original"]').innerText;
+  if(version === 'easy') return card.querySelector('details[data-version="easy"] p').innerText;
+  return card.querySelector('details[data-version="conv"] p').innerText;
+}
+function speak(btn){
+  window.speechSynthesis.cancel();
+  if(currentButton) currentButton.classList.remove('speaking');
+  const card = btn.closest('.question-card');
+  const q = card.querySelector('h3').innerText;
+  const a = getAnswerText(card);
+  const text = q + '. ' + a;
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = voiceConfig.rate; utter.pitch = voiceConfig.pitch; utter.lang = voiceConfig.lang;
+  utter.onstart = ()=>{ btn.classList.add('speaking'); currentButton = btn; };
+  utter.onend = ()=> btn.classList.remove('speaking');
+  speechSynthesis.speak(utter);
+}
+
+function splitSentences(text){
+  return text.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s=>s.trim()).filter(Boolean) || [text];
+}
+function openSentenceMode(btn){
+  const card = btn.closest('.question-card');
+  const answer = getAnswerText(card);
+  const panelId = 'panel-' + Math.random().toString(36).slice(2);
+  let panel = document.createElement('div');
+  panel.className = 'playback-panel show';
+  panel.id = panelId;
+  panel.innerHTML = '<button onclick="playSentence(\''+panelId+'\')">Play</button> <button onclick="pauseSpeech()">Pause</button> <button onclick="nextSentence(\''+panelId+'\')">Next</button> <span class="progress"></span>';
+  card.appendChild(panel);
+  sentenceState.sentences = splitSentences(answer); sentenceState.index = 0; sentenceState.repeatLeft = parseInt(document.getElementById('repeatCount').value,10)||1;
+  updateSentenceProgress(panelId);
+}
+function playSentence(panelId){
+  const panel = document.getElementById(panelId); if(!panel) return;
+  const s = sentenceState.sentences[sentenceState.index]; if(!s) return;
+  const utter = new SpeechSynthesisUtterance(s); utter.rate=voiceConfig.rate; utter.pitch=voiceConfig.pitch; utter.lang=voiceConfig.lang;
+  utter.onend = ()=>{
+    sentenceState.repeatLeft--;
+    if(sentenceState.repeatLeft>0){ playSentence(panelId); return; }
+    sentenceState.repeatLeft = parseInt(document.getElementById('repeatCount').value,10)||1;
+    if(sentenceState.index < sentenceState.sentences.length-1){ sentenceState.index++; updateSentenceProgress(panelId); }
+  };
+  speechSynthesis.speak(utter);
+}
+function nextSentence(panelId){ if(sentenceState.index < sentenceState.sentences.length-1){ sentenceState.index++; updateSentenceProgress(panelId); playSentence(panelId);} }
+function pauseSpeech(){ speechSynthesis.cancel(); }
+function updateSentenceProgress(panelId){ const p=document.querySelector('#'+panelId+' .progress'); if(p) p.textContent = `Sentence ${sentenceState.index+1}/${sentenceState.sentences.length}`; }
+
+function toggleDark(){
+  document.body.classList.toggle('dark');
+  localStorage.setItem('ieltsDark', document.body.classList.contains('dark') ? '1' : '0');
+}
+if(localStorage.getItem('ieltsDark')==='1') document.body.classList.add('dark');
+
+function initThemes(){
+  const themes = [...new Set([...document.querySelectorAll('.question-card')].map(c=>c.dataset.theme))].sort();
+  const box = document.getElementById('themeFilters');
+  box.innerHTML = '<span class="theme-tag active" data-theme="all">All</span>' + themes.map(t=>`<span class="theme-tag theme-${t}" data-theme="${t}">${t}</span>`).join('');
+  box.querySelectorAll('.theme-tag').forEach(tag=>tag.onclick=()=>filterByTheme(tag));
+}
+function filterByTheme(tag){
+  document.querySelectorAll('.theme-tag').forEach(t=>t.classList.remove('active'));
+  tag.classList.add('active');
+  const t = tag.dataset.theme;
+  document.querySelectorAll('.question-card').forEach(card=>{
+    card.style.display = (t==='all'||card.dataset.theme===t)?'block':'none';
+  });
+}
+
+const tooltip = document.getElementById('tooltip');
+document.addEventListener('click', (e)=>{
+  const h = e.target.closest('.highlight');
+  if(!h){ tooltip.classList.remove('show'); return; }
+  const [phrase, meaning, example] = (h.dataset.tip||'').split('|');
+  tooltip.innerHTML = `<div class="tip-title">${phrase||''}</div><div>${meaning||''}</div><div class="tip-example">${example||''}</div>`;
+  tooltip.style.left = Math.min(e.clientX + 12, window.innerWidth - 430) + 'px';
+  tooltip.style.top = Math.min(e.clientY + 12, window.innerHeight - 180) + 'px';
+  tooltip.classList.add('show');
+});
+
+function buildVocab(){
+  const tips = [...document.querySelectorAll('.highlight')].map(h=>h.dataset.tip).filter(Boolean);
+  const uniq = [...new Set(tips)].sort((a,b)=>a.localeCompare(b));
+  const list = document.getElementById('vocabList');
+  list.innerHTML = uniq.map(t=>{
+    const [p,m,e]=t.split('|');
+    return `<div class="vocab-item" data-vocab="${(p+' '+m+' '+e).toLowerCase()}"><strong>${p}</strong><div>${m||''}</div><div style="color:#4a5568;font-style:italic;">${e||''}</div></div>`;
+  }).join('');
+}
+function filterVocab(){
+  const q = document.getElementById('vocabSearch').value.toLowerCase().trim();
+  document.querySelectorAll('.vocab-item').forEach(i=> i.style.display = i.dataset.vocab.includes(q)?'block':'none');
+}
+
+initThemes();
+buildVocab();
+</script>
+</body>
+</html>

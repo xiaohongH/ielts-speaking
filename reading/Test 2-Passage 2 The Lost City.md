@@ -1,5 +1,3 @@
-# Test 2 – Passage 2: The Lost City
-
 *An explorer's encounter with the ruined city of Machu Picchu, the most famous icon of the Inca civilisation*
 *一位探险者偶然到达已经毁灭的马丘比丘古城,这是印加文明最著名的代表*
 

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grammar Deep Dive — From Real Conversations</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.7;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.9rem; margin-bottom: 0.5rem; color: #1a1a1a; border-bottom: 3px solid #e91e63; padding-bottom: 0.5rem; }
+  .subtitle { color: #888; font-size: 0.95rem; margin-bottom: 2rem; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 1rem; color: #e91e63; display: flex; align-items: center; gap: 0.5rem; }
+  .section-num { background: #e91e63; color: #fff; border-radius: 50%; width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
+
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-left: 4px solid #e91e63;
+  }
+  .card-title { font-weight: 700; color: #2c3e50; font-size: 1rem; margin-bottom: 0.8rem; }
+  .card-sub { font-size: 0.82rem; color: #999; font-weight: 400; margin-left: 0.4rem; }
+
+  .error-box {
+    background: #fff5f5;
+    border: 1px solid #fcc;
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+  .error-box .label { font-size: 0.72rem; font-weight: 700; color: #c0392b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+  .error-box .wrong { color: #c0392b; }
+  .error-box s { color: #c0392b; opacity: 0.6; }
+
+  .fix-box {
+    background: #f0fff4;
+    border: 1px solid #a8e6b8;
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+  .fix-box .label { font-size: 0.72rem; font-weight: 700; color: #1a7a3c; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+  .fix-box .right { color: #1a7a3c; font-weight: 600; }
+
+  .rule-box {
+    background: #eef6ff;
+    border: 1px solid #b8d9f7;
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.88rem;
+    color: #2c3e50;
+  }
+  .rule-box .label { font-size: 0.72rem; font-weight: 700; color: #4a90d9; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  @media (max-width: 600px) { .pattern-grid { grid-template-columns: 1fr; } }
+
+  .pattern-item {
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.87rem;
+    border: 1px solid #eee;
+  }
+  .pattern-item .phead { font-weight: 700; color: #e91e63; font-size: 0.8rem; margin-bottom: 0.3rem; }
+
+  .example-list { margin-top: 0.6rem; padding-left: 0; list-style: none; }
+  .example-list li { padding: 0.35rem 0; border-bottom: 1px solid #f0f0f0; font-size: 0.88rem; color: #555; }
+  .example-list li:last-child { border-bottom: none; }
+  .example-list li span.en { color: #1a7a3c; font-weight: 500; }
+  .example-list li span.note { color: #999; font-size: 0.8rem; font-style: italic; }
+
+  .quiz-section { margin-top: 1rem; border-top: 1px dashed #ddd; padding-top: 1rem; }
+  .quiz-section .qlabel { font-size: 0.78rem; font-weight: 700; color: #e91e63; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .quiz-item { margin-bottom: 1rem; }
+  .quiz-item .qtext { font-size: 0.9rem; color: #333; margin-bottom: 0.5rem; }
+  .quiz-item .qtext em { color: #c0392b; font-style: normal; text-decoration: underline dotted; }
+  .quiz-item .options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .quiz-item .opt {
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .quiz-item .opt:hover { background: #f0f0f0; }
+  .quiz-item .opt.correct { background: #d4edda; border-color: #28a745; color: #155724; font-weight: 600; }
+  .quiz-item .opt.wrong { background: #f8d7da; border-color: #dc3545; color: #721c24; }
+  .quiz-item .feedback { font-size: 0.82rem; margin-top: 0.5rem; color: #555; display: none; }
+  .quiz-item .feedback.show { display: block; }
+
+  .phrase-table { width: 100%; border-collapse: collapse; margin-top: 0.8rem; font-size: 0.88rem; }
+  .phrase-table th { background: #e91e63; color: #fff; padding: 0.5rem 0.8rem; text-align: left; font-weight: 600; }
+  .phrase-table td { padding: 0.5rem 0.8rem; border-bottom: 1px solid #eee; vertical-align: top; }
+  .phrase-table tr:hover td { background: #fff5f8; }
+  .phrase-table .awkward { color: #c0392b; }
+  .phrase-table .natural { color: #1a7a3c; font-weight: 600; }
+
+  .tense-diagram {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .tense-block {
+    background: #4a90d9;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    text-align: center;
+    min-width: 90px;
+  }
+  .tense-block.past { background: #8e44ad; }
+  .tense-block.present-perfect { background: #e91e63; }
+  .tense-block.past-perfect { background: #c0392b; }
+  .tense-block.future { background: #27ae60; }
+  .tense-arrow { color: #999; font-size: 1.2rem; align-self: center; }
+  .tense-block .tname { font-weight: 700; font-size: 0.82rem; }
+  .tense-block .tuse { font-size: 0.72rem; opacity: 0.9; margin-top: 0.2rem; }
+
+  .controls {
+    display: flex; gap: 0.8rem; margin-bottom: 1.5rem;
+    position: sticky; top: 0; z-index: 900;
+    background: #f8f9fa; padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+  }
+  .controls button {
+    padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid #ddd;
+    background: #fff; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;
+  }
+  .controls button:hover { background: #f0f0f0; }
+  .dark-toggle { background: #333 !important; color: #fff !important; border-color: #333 !important; }
+  .dark-toggle:hover { background: #555 !important; }
+
+  .score-bar { background: #eee; border-radius: 20px; height: 8px; margin-top: 0.5rem; overflow: hidden; }
+  .score-fill { height: 100%; background: linear-gradient(90deg, #e91e63, #4a90d9); border-radius: 20px; transition: width 0.5s; }
+  .score-text { font-size: 0.8rem; color: #888; margin-top: 0.3rem; text-align: right; }
+
+  /* Dark mode */
+  body.dark { background: #1a1a2e; color: #e0e0e0; }
+  body.dark h1 { color: #e0e0e0; border-bottom-color: #e91e63; }
+  body.dark h2 { color: #f06292; }
+  body.dark .card { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left-color: #f06292; }
+  body.dark .card-title { color: #e0e0e0; }
+  body.dark .error-box { background: #2c1a1a; border-color: #7a3333; }
+  body.dark .fix-box { background: #1a2c1e; border-color: #2a7a42; }
+  body.dark .rule-box { background: #1a2744; border-color: #2a4a6e; color: #ccc; }
+  body.dark .pattern-item { background: #1a2030; border-color: #333; }
+  body.dark .example-list li { border-bottom-color: #2a2a3e; color: #bbb; }
+  body.dark .quiz-item .opt { background: #16213e; border-color: #444; color: #ccc; }
+  body.dark .quiz-item .opt:hover { background: #1a2744; }
+  body.dark .phrase-table th { background: #c2185b; }
+  body.dark .phrase-table td { border-bottom-color: #333; }
+  body.dark .phrase-table tr:hover td { background: #1a1a2e; }
+  body.dark .controls { background: #1a1a2e; border-bottom-color: #333; }
+  body.dark .controls button { background: #16213e; border-color: #444; color: #ccc; }
+  body.dark .controls button:hover { background: #1a2744; }
+  body.dark .score-bar { background: #333; }
+  body.dark .subtitle { color: #777; }
+  body.dark .quiz-section { border-top-color: #333; }
+</style>
+</head>
+<body>
+
+<h1>Grammar Deep Dive</h1>
+<p class="subtitle">Built from your real conversation — patterns to master for IELTS Band 8+</p>
+
+<div class="controls">
+  <button onclick="expandAll()">Expand All</button>
+  <button onclick="collapseAll()">Collapse All</button>
+  <button onclick="resetQuiz()">Reset Quiz</button>
+  <button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+</div>
+
+<div id="quiz-score" style="margin-bottom:1.5rem; display:none;">
+  <div style="font-size:0.85rem; color:#555; margin-bottom:0.3rem;">Quiz progress</div>
+  <div class="score-bar"><div class="score-fill" id="score-fill" style="width:0%"></div></div>
+  <div class="score-text" id="score-text">0 / 0 correct</div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<h2><span class="section-num">1</span> Past Tense When Telling Stories</h2>
+
+<div class="card">
+  <div class="card-title">The Rule <span class="card-sub">— use past tense consistently when the story is over</span></div>
+
+  <div class="rule-box">
+    <div class="label">📌 Core Rule</div>
+    When you tell a story about something that already happened, <strong>stay in the past tense</strong> throughout. Switching to present tense mid-story sounds unnatural and confuses the listener.<br><br>
+    The most common tenses in storytelling:<br>
+    <div class="tense-diagram">
+      <div class="tense-block present-perfect"><div class="tname">Present Perfect</div><div class="tuse">I have been leading…</div></div>
+      <div class="tense-arrow">→</div>
+      <div class="tense-block past"><div class="tname">Simple Past</div><div class="tuse">Yesterday was…</div></div>
+      <div class="tense-arrow">→</div>
+      <div class="tense-block past"><div class="tname">Past Continuous</div><div class="tuse">I was preparing…</div></div>
+      <div class="tense-arrow">→</div>
+      <div class="tense-block future"><div class="tname">Future-in-Past</div><div class="tuse">…so we could test it</div></div>
+    </div>
+  </div>
+
+  <div class="error-box">
+    <div class="label">❌ What you said</div>
+    "The engineers had to finish the coding work and demo it to me… so we <span class="wrong">can</span> test it before pushing it live."
+  </div>
+  <div class="fix-box">
+    <div class="label">✅ Band 8 fix</div>
+    "…so we <span class="right">could</span> test it before pushing it live."<br>
+    <small style="color:#555">Because the testing is in the past — "could" is the past form of "can".</small>
+  </div>
+
+  <div class="error-box">
+    <div class="label">❌ What you said</div>
+    "…the problem <span class="wrong">is verse</span> that I got an urgent task…"
+  </div>
+  <div class="fix-box">
+    <div class="label">✅ Band 8 fix</div>
+    "…the problem <span class="right">was</span> that I got an urgent task…"
+  </div>
+
+  <ul class="example-list" style="margin-top:0.8rem;">
+    <li><span class="en">I thought I could handle everything, but then my boss gave me an urgent task.</span> <span class="note">✓ all past</span></li>
+    <li><span class="en">We prepared everything so that we could test before launch.</span> <span class="note">✓ could = past of can</span></li>
+    <li><span class="en">She was nervous, so she passed her anxiety down to the team.</span> <span class="note">✓ was → passed</span></li>
+  </ul>
+
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="0">
+      <div class="qtext">Choose the correct form: "We finished the demo so that we ___ test the product."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">could</button>
+        <button class="opt" onclick="answer(this,1)">can</button>
+        <button class="opt" onclick="answer(this,1)">will</button>
+      </div>
+      <div class="feedback">✅ "Could" — past form of "can", used when the main story is in the past.</div>
+    </div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">Choose the correct form: "The problem ___ that my boss gave me extra work."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">is</button>
+        <button class="opt" onclick="answer(this,1)">was</button>
+        <button class="opt" onclick="answer(this,0)">has been</button>
+      </div>
+      <div class="feedback">✅ "Was" — the whole situation happened yesterday, so stay in past tense.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<h2><span class="section-num">2</span> Adjective vs. Adverb — "To be honest" not "honestly"</h2>
+
+<div class="card">
+  <div class="card-title">Fixed Phrases Using Adjectives <span class="card-sub">— common in spoken English</span></div>
+
+  <div class="rule-box">
+    <div class="label">📌 Core Rule</div>
+    Some common speaking phrases use an <strong>adjective</strong> (not an adverb), because they describe <em>the speaker</em>, not the verb:<br><br>
+    <strong>To be + adjective</strong> → "To be <em>honest</em>…", "To be <em>fair</em>…", "To be <em>frank</em>…"<br><br>
+    Think of it as short for: "If I am being honest with you, I should say that…"
+  </div>
+
+  <div class="error-box">
+    <div class="label">❌ What you said</div>
+    "To be <span class="wrong">honestly</span>, I'm fed up with this management style."
+  </div>
+  <div class="fix-box">
+    <div class="label">✅ Band 8 fix</div>
+    "To be <span class="right">honest</span>, I'm fed up with this management style."
+  </div>
+
+  <table class="phrase-table">
+    <tr><th>❌ Avoid</th><th>✅ Use instead</th><th>Meaning</th></tr>
+    <tr><td class="awkward">To be honestly</td><td class="natural">To be honest</td><td>Signalling you're about to say something direct</td></tr>
+    <tr><td class="awkward">To be frankly</td><td class="natural">To be frank / Frankly</td><td>Saying something bluntly</td></tr>
+    <tr><td class="awkward">To be fairness</td><td class="natural">To be fair</td><td>Giving credit to the other side</td></tr>
+    <tr><td class="awkward">Honestly speaking</td><td class="natural">Honestly / To be honest</td><td>Both work; "Honestly" alone is fine</td></tr>
+  </table>
+
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="2">
+      <div class="qtext">Which is correct? "___, I'm a bit frustrated with how things are managed."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">To be honestly</button>
+        <button class="opt" onclick="answer(this,1)">To be frankness</button>
+        <button class="opt" onclick="answer(this,2)">To be honest</button>
+      </div>
+      <div class="feedback">✅ "To be honest" — it's a fixed adjective phrase, not an adverb.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<h2><span class="section-num">3</span> Choosing the Right Verb Phrase</h2>
+
+<div class="card">
+  <div class="card-title">Natural Verb Collocations <span class="card-sub">— the words that "go together" in English</span></div>
+
+  <div class="rule-box">
+    <div class="label">📌 Core Rule</div>
+    In English, certain verbs naturally pair with certain nouns or situations. Using the wrong verb sounds awkward even if the meaning is clear. This is called <strong>collocation</strong> — learning which words go together is key to sounding natural.
+  </div>
+
+  <table class="phrase-table">
+    <tr><th>❌ What you said</th><th>✅ Natural version</th><th>Why</th></tr>
+    <tr><td class="awkward">didn't know how to <em>do with</em> us</td><td class="natural">didn't know how to handle it</td><td>"Handle" = deal with a difficult situation. "Do with" is not a natural phrase here.</td></tr>
+    <tr><td class="awkward">more <em>choices</em></td><td class="natural">more <em>options</em></td><td>Both mean the same, but "options" sounds more polished in professional/academic contexts.</td></tr>
+    <tr><td class="awkward">get the <em>agreement</em> of</td><td class="natural">get their <em>buy-in</em> / get their <em>sign-off</em></td><td>"Buy-in" is the natural business phrase for getting support from decision-makers.</td></tr>
+    <tr><td class="awkward"><em>concentrate on</em> the demoing thing</td><td class="natural">give the demo my <em>full attention</em> / stay focused on the demo</td><td>"Concentrate on" is correct but "stay focused on" sounds more fluent and natural.</td></tr>
+    <tr><td class="awkward">more <em>high-level</em> than me</td><td class="natural">more <em>senior</em> than me</td><td>"Senior" is the standard professional word for higher rank. "High-level" usually describes tasks, not people.</td></tr>
+    <tr><td class="awkward">out of <em>electricity</em></td><td class="natural"><em>running on empty</em> / completely <em>drained</em></td><td>Native idioms for exhaustion. "Running on empty" is very vivid and natural.</td></tr>
+  </table>
+
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">"If we can't get their ___, the project might be cancelled."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">agreement giving</button>
+        <button class="opt" onclick="answer(this,1)">buy-in</button>
+        <button class="opt" onclick="answer(this,0)">allowance</button>
+      </div>
+      <div class="feedback">✅ "Buy-in" — the natural business phrase for getting decision-makers on board.</div>
+    </div>
+    <div class="quiz-item" data-answer="2">
+      <div class="qtext">"By the end of the day, I was completely ___."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">out of electricity</button>
+        <button class="opt" onclick="answer(this,0)">charged off</button>
+        <button class="opt" onclick="answer(this,2)">drained / running on empty</button>
+      </div>
+      <div class="feedback">✅ "Drained" or "running on empty" — natural idioms for exhaustion.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 4 ==================== -->
+<h2><span class="section-num">4</span> Sentence Connectors — Linking Ideas Smoothly</h2>
+
+<div class="card">
+  <div class="card-title">Adding, Contrasting & Sequencing <span class="card-sub">— the glue of fluent speech</span></div>
+
+  <div class="rule-box">
+    <div class="label">📌 Core Rule</div>
+    Fluent English doesn't just list ideas — it <strong>connects</strong> them. Using the right connector signals the relationship between your ideas (adding, contrasting, consequence, sequence), which is exactly what IELTS examiners look for under <em>Coherence & Cohesion</em>.
+  </div>
+
+  <div class="pattern-grid">
+    <div class="pattern-item">
+      <div class="phead">➕ Adding / Stacking</div>
+      On top of that…<br>
+      What's more…<br>
+      Not only that, but…<br>
+      To make things worse…<br>
+      As if that weren't enough…
+    </div>
+    <div class="pattern-item">
+      <div class="phead">↔️ Contrasting</div>
+      Having said that…<br>
+      That said…<br>
+      Even so…<br>
+      Despite that…<br>
+      On the flip side…
+    </div>
+    <div class="pattern-item">
+      <div class="phead">➡️ Consequence</div>
+      As a result…<br>
+      This meant that…<br>
+      Which left me feeling…<br>
+      So naturally…<br>
+      That's why I…
+    </div>
+    <div class="pattern-item">
+      <div class="phead">🔄 Reframing / Turning point</div>
+      If anything…<br>
+      Ironically…<br>
+      Interestingly enough…<br>
+      What surprised me was…<br>
+      The silver lining was…
+    </div>
+  </div>
+
+  <div style="margin-top:1rem;">
+    <div class="rule-box">
+      <div class="label">🌟 From your story — used well</div>
+      <ul class="example-list">
+        <li><span class="en">"<strong>On top of that</strong>, I had a packed schedule…"</span> <span class="note">✅ perfect stacking connector</span></li>
+        <li><span class="en">"<strong>If anything</strong>, the experience strengthened my conviction…"</span> <span class="note">✅ sophisticated reframe</span></li>
+        <li><span class="en">"…which left me feeling heartbroken and exhausted."</span> <span class="note">✅ natural consequence connector</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="0">
+      <div class="qtext">I was already tired. ___, my boss gave me more work at 5pm.</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">On top of that</button>
+        <button class="opt" onclick="answer(this,1)">Having said that</button>
+        <button class="opt" onclick="answer(this,1)">On the flip side</button>
+      </div>
+      <div class="feedback">✅ "On top of that" — used to add another burden on top of an existing one.</div>
+    </div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">It was a hard day. ___, it made me more motivated to improve.</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">On top of that</button>
+        <button class="opt" onclick="answer(this,1)">If anything</button>
+        <button class="opt" onclick="answer(this,0)">As a result</button>
+      </div>
+      <div class="feedback">✅ "If anything" — used to say something is more true in the opposite direction than expected. A sophisticated reframe.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 5 ==================== -->
+<h2><span class="section-num">5</span> Small but Important — Articles & Prepositions</h2>
+
+<div class="card">
+  <div class="card-title">The Little Words That Matter <span class="card-sub">— easy to fix, big impact on fluency</span></div>
+
+  <div class="rule-box">
+    <div class="label">📌 Core Rule</div>
+    Articles (a / an / the) and prepositions (of / on / at / with) are the most common mistakes for non-native speakers — but also the easiest to fix once you know the patterns. Native speakers notice these instantly.
+  </div>
+
+  <table class="phrase-table">
+    <tr><th>❌ What you said</th><th>✅ Fix</th><th>Rule</th></tr>
+    <tr><td class="awkward">on top <em>off</em> that</td><td class="natural">on top <em>of</em> that</td><td>Fixed phrase: always "on top OF"</td></tr>
+    <tr><td class="awkward">had <em>her</em> plan</td><td class="natural">had <em>a</em> plan</td><td>It's your own plan — use the indefinite article "a"</td></tr>
+    <tr><td class="awkward">a presentation to <em>the big manager</em></td><td class="natural">a presentation to <em>senior management</em></td><td>"Senior management" is the set phrase — no article needed</td></tr>
+    <tr><td class="awkward">responsible for <em>hey</em></td><td class="natural">responsible for <em>the</em> overall…</td><td>Specific role → use "the"</td></tr>
+    <tr><td class="awkward">improve my English <em>and to</em> get</td><td class="natural">improve my English <em>and</em> get</td><td>Parallel structure — don't add "to" again after "and" in an infinitive list</td></tr>
+  </table>
+
+  <div class="rule-box" style="margin-top:0.8rem;">
+    <div class="label">💡 Parallel Structure Rule</div>
+    When you connect two verbs with "and", don't repeat "to":<br><br>
+    ❌ "I need <em>to improve</em> my English and <em>to get</em> a Band 8."<br>
+    ✅ "I need <em>to improve</em> my English and <em>get</em> a Band 8."<br><br>
+    ❌ "She had <em>to finish</em> the code and <em>to demo</em> it."<br>
+    ✅ "She had <em>to finish</em> the code and <em>demo</em> it."
+  </div>
+
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="2">
+      <div class="qtext">"I want to improve my English and ___ a Band 8 on the IELTS."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">to getting</button>
+        <button class="opt" onclick="answer(this,0)">to get</button>
+        <button class="opt" onclick="answer(this,2)">get</button>
+      </div>
+      <div class="feedback">✅ "get" — parallel structure: "to improve… and get…". Don't repeat "to" after "and".</div>
+    </div>
+    <div class="quiz-item" data-answer="1">
+      <div class="qtext">"She was the one responsible ___ the overall project."</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">on</button>
+        <button class="opt" onclick="answer(this,1)">for</button>
+        <button class="opt" onclick="answer(this,0)">of</button>
+      </div>
+      <div class="feedback">✅ "responsible for" — this is a fixed collocation. Always "responsible FOR something".</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 6 ==================== -->
+<h2><span class="section-num">6</span> Bonus — Expressing Emotions Precisely</h2>
+
+<div class="card">
+  <div class="card-title">Going Beyond "Tired" and "Sad" <span class="card-sub">— emotional vocabulary for Band 8+</span></div>
+
+  <div class="rule-box">
+    <div class="label">📌 Why this matters</div>
+    IELTS Band 8 rewards <strong>precise lexical choice</strong>. Instead of simple words like "tired", "sad", or "stressed", use specific emotional vocabulary that shows exactly what you felt — and why.
+  </div>
+
+  <table class="phrase-table">
+    <tr><th>Basic word</th><th>Band 8+ alternatives</th><th>Nuance</th></tr>
+    <tr><td>tired</td><td class="natural">drained / exhausted / burned out / running on empty</td><td>Different degrees — "burned out" = long-term, "drained" = end of a specific day</td></tr>
+    <tr><td>sad / hurt</td><td class="natural">heartbroken / deflated / disheartened / crushed</td><td>"Deflated" = expectations fell; "disheartened" = lost motivation</td></tr>
+    <tr><td>stressed</td><td class="natural">overwhelmed / under pressure / on edge / frazzled</td><td>"On edge" = anxious; "overwhelmed" = too much to handle</td></tr>
+    <tr><td>angry</td><td class="natural">frustrated / fed up / exasperated / resentful</td><td>"Fed up" = long patience worn out; "exasperated" = reached the limit</td></tr>
+    <tr><td>motivated</td><td class="natural">driven / determined / spurred on / galvanised</td><td>"Galvanised" = shocked into action; "spurred on" = encouraged to keep going</td></tr>
+  </table>
+
+  <div style="margin-top:1rem;">
+    <div class="fix-box">
+      <div class="label">🌟 Your sentence — upgraded</div>
+      ❌ "I felt very tired and sad."<br><br>
+      ✅ "<span class="right">The things she said left me feeling heartbroken and completely drained.</span>"<br>
+      <small style="color:#555">Note the structure: "left me feeling + adjective" — this is a very natural and powerful construction.</small>
+    </div>
+  </div>
+
+  <div class="quiz-section">
+    <div class="qlabel">🧠 Quick Quiz</div>
+    <div class="quiz-item" data-answer="2">
+      <div class="qtext">Which best describes: you've been dealing with the same problem for months and can't take it anymore?</div>
+      <div class="options">
+        <button class="opt" onclick="answer(this,0)">a bit tired</button>
+        <button class="opt" onclick="answer(this,0)">kind of sad</button>
+        <button class="opt" onclick="answer(this,2)">completely fed up / burned out</button>
+      </div>
+      <div class="feedback">✅ "Fed up" = patience worn out after a long time. "Burned out" = emotional and physical exhaustion from sustained effort. Both are precise and natural.</div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:3rem; padding:1.5rem; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.06); border-left:4px solid #27ae60;">
+  <div style="font-weight:700; color:#1a7a3c; margin-bottom:0.5rem;">🎯 Your Personal Study Priority</div>
+  <p style="font-size:0.9rem; color:#555; line-height:1.8;">
+    Based on today's conversation, focus in this order:<br>
+    <strong>1.</strong> Tense consistency when storytelling (most frequent issue)<br>
+    <strong>2.</strong> Verb collocations — "handle", "buy-in", "running on empty"<br>
+    <strong>3.</strong> Small fixes — "on top of", "to be honest", parallel structure<br>
+    <strong>4.</strong> Emotional vocabulary — express feelings with precision<br><br>
+    Your strengths: you already use connectors well ("on top of that", "if anything"), your ideas are clear, and you express complex workplace situations confidently. Keep going! 💪
+  </p>
+</div>
+
+<div id="tooltip" class="tooltip" style="display:none;"></div>
+
+<script>
+  // Dark mode
+  function toggleDark() {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+  }
+  if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark');
+
+  // Expand / collapse (cards are all open by default here — quiz sections collapse)
+  function expandAll() {
+    document.querySelectorAll('.quiz-section').forEach(s => s.style.display = 'block');
+  }
+  function collapseAll() {
+    document.querySelectorAll('.quiz-section').forEach(s => s.style.display = 'none');
+  }
+
+  // Quiz logic
+  let correct = 0, total = 0;
+
+  function answer(btn, chosen) {
+    const item = btn.closest('.quiz-item');
+    if (item.dataset.answered) return;
+    item.dataset.answered = 'true';
+    const right = parseInt(item.dataset.answer);
+    total++;
+    const feedback = item.querySelector('.feedback');
+    feedback.classList.add('show');
+    if (chosen === right) {
+      btn.classList.add('correct');
+      correct++;
+    } else {
+      btn.classList.add('wrong');
+      // highlight correct
+      const opts = item.querySelectorAll('.opt');
+      opts[right].classList.add('correct');
+    }
+    updateScore();
+  }
+
+  function updateScore() {
+    const bar = document.getElementById('quiz-score');
+    bar.style.display = 'block';
+    document.getElementById('score-fill').style.width = (correct / total * 100) + '%';
+    document.getElementById('score-text').textContent = correct + ' / ' + total + ' correct';
+  }
+
+  function resetQuiz() {
+    correct = 0; total = 0;
+    document.querySelectorAll('.quiz-item').forEach(item => {
+      delete item.dataset.answered;
+      item.querySelectorAll('.opt').forEach(o => { o.classList.remove('correct','wrong'); });
+      item.querySelectorAll('.feedback').forEach(f => f.classList.remove('show'));
+    });
+    document.getElementById('quiz-score').style.display = 'none';
+    document.getElementById('score-fill').style.width = '0%';
+  }
+</script>
+</body>
+</html>

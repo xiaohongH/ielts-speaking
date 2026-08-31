@@ -1,5 +1,3 @@
-# Test 2 – Part 4: Four Business Values
-
 *Listening Part 4 — a lecture arguing that four values everyone assumes are "good things" can actually backfire in day-to-day business.*
 *听力 Part 4 —— 一场讲座,论证四个大家都以为"绝对是好事"的商业价值观,其实可能事与愿违。*
 
@@ -40,12 +38,20 @@ In public discussion of business, we ==take certain values for granted==. Today 
 
 ## Value 1 — Collaboration 协作
 
-OK. So the first value I'm going to discuss is collaboration. Er, let me give you an example. On a management training course I once attended, we were put into groups and had to construct a bridge across a stream, using building blocks that we were given. The rule was that everyone in the team had to move at least one building block during the construction. This was intended to ==encourage teamwork==. But it was really a job best done by one person. The other teams tried to collaborate on building the structure, and ==descended into confusion==, with everyone ==getting in each other's way==. Our team leader ==solved the challenge brilliantly==. She simply asked everyone in the team to move a piece a few centimetres, to ==comply with the rule==, and then let the person in the team with ==an aptitude for== puzzles like this build it alone. We finished before any other team. My point is that the task wasn't really ==suited to== teamworking, so why make it one? Teamwork can also lead to ==inconsistency== - a common cause of poor sales. In the case of a smartphone that a certain company launched, one director wanted to ==target the business market==, and another demanded it was aimed at consumers. The company wanted both directors to be involved, so gave the product a ==consumer-friendly== name, but marketed it to companies. The result was that it ==met the needs of neither group==. It would have been better to let one director or the other ==have his way==, not both.
+OK. So the first value I'm going to discuss is collaboration. Er, let me give you an example. On a management training course I once attended, we were put into groups and had to construct a bridge across a stream, using building blocks that we were given. The rule was that everyone in the team had to move at least one building block during the construction. This was intended to ==encourage teamwork==. But it was really a job best done by one person.
+
+The other teams tried to collaborate on building the structure, and **==descended into confusion==, with everyone ==getting in each other's way==.** Our team leader ==solved the challenge brilliantly==. She simply asked everyone in the team to move a piece a few centimetres, to ==comply with the rule==, and then let the person in the team with ==an aptitude for== puzzles like this build it alone. We finished before any other team. My point is that the task wasn't really ==suited to== teamworking, so why make it one?
+
+Teamwork can also lead to ==inconsistency== - a common cause of poor sales. In the case of a smartphone that a certain company launched, one director wanted to ==target the business market==, and another demanded it was aimed at consumers. The company wanted both directors to be involved, so gave the product a ==consumer-friendly== name, but marketed it to companies. The result was that it ==met the needs of neither group==. It would have been better to let one director or the other ==have his way==, not both.
 
 > 🔑 encourage teamwork 鼓励团队合作 · descended into confusion 陷入混乱 · getting in each other's way 相互妨碍 · solved the challenge brilliantly 出色地解决了难题 · comply with the rule 遵守规则 · an aptitude for 对……的天赋 · suited to 适合 · inconsistency 不一致 · target the business market 面向商业市场 · consumer-friendly 迎合消费者的 · met the needs of neither group 两边需求都没满足 · have his way 按自己的意思来
 
 > [!quote] 🇨🇳 中文翻译 — Collaboration
-> 好,我要讨论的第一个价值观是协作。呃,我举个例子。在我曾参加的一次管理培训课上,我们被分成小组,要用发给我们的积木在小溪上搭一座桥。规则是:搭建过程中,队里每个人都必须至少移动一块积木。这本意是为了鼓励团队合作。但这其实是一件最好由一个人来做的活儿。其他小组都试图协作搭建,结果陷入混乱,人人都在互相妨碍。而我们的队长出色地解决了这个难题。她只是让队里每个人把一块积木挪动几厘米,以遵守规则,然后让队里一位对这类拼搭有天赋的人独自去搭。我们比其他任何小组都先完成。我想说的是:这个任务本来就不适合团队协作,那又何必硬把它变成协作任务呢?团队合作还会导致不一致——这是销售不佳的常见原因。以某公司推出的一款智能手机为例,一位总监想瞄准商业市场,另一位则坚持要面向普通消费者。公司希望两位总监都参与,于是给产品起了一个迎合消费者的名字,却又把它推销给企业。结果是,它两边的需求都没能满足。当初还不如让其中一位总监说了算,而不是两位都要照顾。
+> 好,我要讨论的第一个价值观是协作。呃,我举个例子。在我曾参加的一次管理培训课上,我们被分成小组,要用发给我们的积木在小溪上搭一座桥。规则是:搭建过程中,队里每个人都必须至少移动一块积木。这本意是为了鼓励团队合作。但这其实是一件最好由一个人来做的活儿。
+> 
+> 其他小组都试图协作搭建,**结果陷入混乱,人人都在互相妨碍**。而我们的队长出色地解决了这个难题。她只是让队里每个人把一块积木挪动几厘米,以遵守规则,然后让队里一位对这类拼搭有天赋的人独自去搭。我们比其他任何小组都先完成。我想说的是:这个任务本来就不适合团队协作,==那又何必硬把它变成协作任务呢?==
+> 
+> 团队合作还会导致不一致——这是销售不佳的常见原因。以某公司推出的一款智能手机为例,一位总监想瞄准商业市场,另一位则坚持要面向普通消费者。公司希望两位总监都参与,于是给产品起了一个迎合消费者的名字,却又把它推销给企业。结果是,它两边的需求都没能满足。当初还不如让其中一位总监说了算,而不是两位都要照顾。
 
 > [!tip] 📝 Notes — Collaboration
 > **Vocabulary & phrases**
@@ -70,12 +76,20 @@ OK. So the first value I'm going to discuss is collaboration. Er, let me give yo
 
 ## Value 2 — Hard work (Industriousness) 勤奋
 
-Now ==industriousness==, or hard work. It's easy to ==mock== people who say they work hard: after all, a hamster running around in a wheel is working hard - and ==getting nowhere==. Of course hard work is valuable, but only when ==properly targeted==. Otherwise it ==wastes the resources== that companies value most - time and energy. And that's bad for the organisation. There's a management model that groups people according to four criteria: clever, hard-working, stupid and lazy. Here 'lazy' means having ==a rational determination not to carry out unnecessary tasks==. It doesn't mean trying to avoid work altogether. Most people display two of these characteristics, and the most valuable people are those who are both ==clever and lazy==: they possess ==intellectual clarity==, and they ==don't rush into making decisions==. They come up with solutions to save the time and energy spent by the stupid and hard-working group. Instead of ==throwing more man-hours at a problem==, the clever and lazy group looks for ==a more effective solution==.
+Now ==industriousness==, or hard work. It's easy to ==mock== people who say they work hard: after all, a ==**hamster**== running around in a wheel is working hard - and ==getting nowhere==. 
+
+Of course hard work is valuable, but only when ==properly targeted==. Otherwise it ==wastes the resources== that companies value most - time and energy. And that's bad for the organisation. 
+
+There's a management model that groups people according to four criteria: clever, hard-working, stupid and lazy. 
+
+Here 'lazy' means having ==a rational determination not to carry out unnecessary tasks==. It doesn't mean trying to avoid work altogether. 
+
+\\\Most people display two of these characteristics, and the most valuable people are those who are both ==clever and lazy==: they possess ==intellectual clarity==, and they ==don't rush into making decisions==. They come up with solutions to save the time and energy spent by the stupid and hard-working group. Instead of ==throwing more man-hours at a problem==, the clever and lazy group looks for ==a more effective solution==.
 
 > 🔑 industriousness 勤奋 · mock 嘲笑 · getting nowhere 毫无进展 · properly targeted 精准定位的 · wastes the resources 浪费资源 · a rational determination not to carry out unnecessary tasks 理性地决定不做无谓的事 · clever and lazy 又聪明又"懒" · intellectual clarity 思路清晰 · don't rush into making decisions 不草率做决定 · throwing more man-hours at a problem 靠堆工时解决问题 · a more effective solution 更有效的解决办法
 
 > [!quote] 🇨🇳 中文翻译 — Hard work
-> 接下来是勤奋,也就是努力工作。嘲笑那些声称自己很努力的人是很容易的:毕竟,一只在转轮里不停奔跑的仓鼠也很"努力"——却哪儿也去不了。努力当然有价值,但前提是方向精准。否则它就会浪费企业最看重的资源——时间和精力。而这对组织是有害的。有一个管理模型按四个标准给人分类:聪明、勤奋、愚笨、懒惰。这里的"懒"指的是理性地决意不去做那些不必要的任务,而不是想彻底逃避工作。大多数人会表现出其中两种特征,而最有价值的人是那些既聪明又"懒"的人:他们思路清晰,并且不会草率地做决定。他们能想出解决办法,省下"愚笨又勤奋"那类人所耗费的时间和精力。与其向一个问题投入更多工时,聪明又"懒"的人会去寻找一个更有效的解决方案。
+> 接下来是勤奋,也就是努力工作。嘲笑那些声称自己很努力的人是很容易的:毕竟,一只在转轮里不停奔跑的==仓鼠==也很"努力"——却哪儿也去不了。努力当然有价值,但前提是方向精准。否则它就会浪费企业最看重的资源——时间和精力。而这对组织是有害的。有一个管理模型按四个标准给人分类:聪明、勤奋、愚笨、懒惰。这里的"懒"指的是理性地决意不去做那些不必要的任务,而不是想彻底逃避工作。大多数人会表现出其中两种特征,而最有价值的人是那些既聪明又"懒"的人:他们思路清晰,并且不会草率地做决定。他们能想出解决办法,省下"愚笨又勤奋"那类人所耗费的时间和精力。与其向一个问题投入更多工时,聪明又"懒"的人会去寻找一个更有效的解决方案。
 
 > [!tip] 📝 Notes — Hard work
 > **Vocabulary & phrases**
@@ -99,7 +113,11 @@ Now ==industriousness==, or hard work. It's easy to ==mock== people who say they
 
 ## Value 3 — Creativity 创造力
 
-Next we come to creativity. This often works well - creating an ==attention-grabbing== TV commercial, for example, might lead to increased sales. But it isn't always a good thing. Some ==advertising campaigns== are remembered for their creativity, without having any effect on sales. This happened a few years ago with the launch of a chocolate bar: ==subsequent research== showed that plenty of consumers ==remembered the adverts, but had no idea what was being advertised==. The trouble is that the creator ==derives pleasure from== coming up with the idea, and ==wrongly assumes== the audience for the campaign will share that feeling. A company that ==brings out== thousands of new products may seem more creative than a company that only has a few, but it may be ==too creative==, and make smaller profits. Creativity ==needs to be targeted==, to solve a problem that the company has identified. Just coming up with more and more ==novel products== isn't necessarily a good thing.
+Next we come to creativity. This often works well - creating an ==attention-grabbing== TV commercial, for example, might lead to increased sales. But it isn't always a good thing. Some ==advertising campaigns== are remembered for their creativity, without having any effect on sales. 
+This happened a few years ago with the launch of a chocolate bar: ==subsequent research== showed that plenty of consumers ==remembered the adverts, but had no idea what was being advertised==.
+The trouble is that the creator ==derives pleasure from== coming up with the idea, and ==wrongly assumes== the audience for the campaign will share that feeling. 
+A company that ==brings out== thousands of new products may seem more creative than a company that only has a few, but it may be ==too creative==, and make smaller profits. 
+Creativity ==needs to be targeted==, to solve a problem that the company has identified. Just coming up with more and more ==novel products== isn't necessarily a good thing.
 
 > 🔑 attention-grabbing 吸引眼球的 · advertising campaigns 广告活动 · subsequent research 后续调查 · remembered the adverts, but had no idea what was being advertised 记得广告,却不知在推销什么 · derives pleasure from 从……中获得乐趣 · wrongly assumes 错误地以为 · brings out 推出 · too creative 过度创新 · needs to be targeted 需有针对性 · novel products 新奇产品
 
@@ -127,7 +145,12 @@ Next we come to creativity. This often works well - creating an ==attention-grab
 
 ## Value 4 — Excellence 卓越
 
-And finally, excellence. We all know companies that claim they '==strive for excellence=='', but it takes a long time to achieve excellence. In business, ==being first with a product is more profitable than having the best product==. A major study of company performance compared ==pioneers== - that is, companies bringing out the first version of a particular product – with ==followers==, the companies that copied and improved on that product. The study found that the pioneers ==commanded an average market share of== 29 percent, while the followers achieved less than half that, only 13 percent - even though their product might have been better. Insisting on excellence in everything we do is ==time-consuming==, wastes energy and leads to ==losing out on opportunities==. Sometimes, ==second-rate work== is more worthwhile than excellence. 'Make sure it's excellent' sounds like a good approach to business, but the =='just-get-started' approach== is likely to be more successful.
+And finally, excellence. We all know companies that claim they '==strive for excellence=='', but it takes a long time to achieve excellence. In business, ==being first with a product is more profitable than having the best product==. 
+A major study of company performance compared ==pioneers== - that is, companies bringing out the first version of a particular product – with ==followers==, the companies that copied and improved on that product. 
+The study found that the pioneers ==commanded an average market share of== 29 percent, while the followers achieved less than half that, only 13 percent - even though their product might have been better. 
+Insisting on excellence in everything we do is ==time-consuming==, wastes energy and leads to ==losing out on opportunities==. 
+Sometimes, ==second-rate work== is more worthwhile than excellence.
+'Make sure it's excellent' sounds like a good approach to business, but the =='just-get-started' approach== is likely to be more successful.
 
 > 🔑 strive for excellence 追求卓越 · being first with a product is more profitable than having the best product 抢先推出比拥有最好产品更赚钱 · pioneers 先行者 · followers 跟随者 · commanded an average market share of 占据平均市场份额 · time-consuming 耗时的 · losing out on opportunities 错失机会 · second-rate work 二流的工作 · 'just-get-started' approach "先干起来"的做法
 

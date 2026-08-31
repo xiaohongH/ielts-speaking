@@ -1,3 +1,10 @@
 # Copyrighted book page scans — do not commit (large binaries)
 .pdf_pages/*.jpg
 .DS_Store
+
+# Copyrighted PDFs — do not commit
+*.pdf
+
+# Local editor / tool config
+.claude/
+.obsidian/
