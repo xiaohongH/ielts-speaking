@@ -723,6 +723,7 @@ function updateCount(){
 }
 
 function filterCards(filter,btn){
+  localStorage.setItem('p1sa-filter',filter);
   document.querySelectorAll('.ctrl-btn[data-filter]').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.card-container').forEach(c=>{
@@ -828,6 +829,11 @@ window.addEventListener('DOMContentLoaded',()=>{
   if(savedRepeat) document.getElementById('repeat-count').value=savedRepeat;
   buildFilters();
   render();
+  const savedFilter=localStorage.getItem('p1sa-filter');
+  if(savedFilter){
+    const fbtn=document.querySelector(`.ctrl-btn[data-filter="${savedFilter}"]`);
+    if(fbtn) filterCards(savedFilter,fbtn);
+  }
   const tb=document.getElementById('topbar');
   if(localStorage.getItem('p1sa-cats')==='1') tb.classList.remove('cats-hidden');
   document.getElementById('cats-toggle').classList.toggle('active',!tb.classList.contains('cats-hidden'));
