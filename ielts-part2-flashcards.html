@@ -39,18 +39,20 @@ details.tips {
 details.tips summary { cursor: pointer; font-weight: 600; color: #4a90d9; }
 details.tips ul { margin: 0.6rem 0 0.2rem 1.1rem; }
 details.tips li { margin-bottom: 0.3rem; color: #555; }
-.controls {
+.topbar {
   position: sticky;
   top: 0;
   z-index: 100;
   background: #f0f2f5;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.controls {
   padding: 0.6rem 0;
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1rem;
 }
 .ctrl-btn {
   padding: 0.4rem 0.8rem;
@@ -87,8 +89,19 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  max-height: 40vh;
+  overflow-y: auto;
+  transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
 }
+.topbar.cats-hidden .filters {
+  max-height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+#cats-toggle.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
 .card-container {
   perspective: 1600px;
   margin-bottom: 1.5rem;
@@ -283,6 +296,7 @@ body.dark .vocab-list li { border-bottom-color: #333; }
   </ul>
 </details>
 
+<div class="topbar cats-hidden" id="topbar">
 <div class="controls">
   <button class="ctrl-btn" id="flip-all-btn" onclick="toggleFlipAll(this)" title="Flip every card to answer / question">🔄 Show A</button>
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
@@ -293,10 +307,12 @@ body.dark .vocab-list li { border-bottom-color: #333; }
     <input type="number" id="repeat-count" min="1" max="99" value="1" onchange="saveRepeat()">
     ×
   </label>
+  <button class="ctrl-btn" id="cats-toggle" onclick="toggleCats()" title="Show / hide categories">🏷 Categories</button>
   <span class="count" id="count"></span>
 </div>
 
 <div class="filters" id="filters"></div>
+</div>
 
 <div id="cards-root"></div>
 
@@ -465,6 +481,8 @@ function toggleFlipAll(btn){
   btn.textContent=anyFront?'🔄 Show Q':'🔄 Show A';
 }
 
+function toggleCats(){const tb=document.getElementById('topbar');const on=tb.classList.toggle('cats-hidden');document.getElementById('cats-toggle').classList.toggle('active',!on);localStorage.setItem('p2fc-cats',on?'0':'1');}
+
 function toggleDark(){
   document.body.classList.toggle('dark');
   localStorage.setItem('p2fc-dark',document.body.classList.contains('dark')?'1':'0');
@@ -477,6 +495,7 @@ function updateCount(){
 }
 
 function filterCards(filter,btn){
+  localStorage.setItem('p2fc-filter',filter);
   document.querySelectorAll('.ctrl-btn[data-filter]').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.card-container').forEach(c=>{
@@ -581,6 +600,14 @@ window.addEventListener('DOMContentLoaded',()=>{
   if(savedRepeat) document.getElementById('repeat-count').value=savedRepeat;
   buildFilters();
   render();
+  const savedFilter=localStorage.getItem('p2fc-filter');
+  if(savedFilter){
+    const fbtn=document.querySelector(`.ctrl-btn[data-filter="${savedFilter}"]`);
+    if(fbtn) filterCards(savedFilter,fbtn);
+  }
+  const tb=document.getElementById('topbar');
+  if(localStorage.getItem('p2fc-cats')==='1') tb.classList.remove('cats-hidden');
+  document.getElementById('cats-toggle').classList.toggle('active',!tb.classList.contains('cats-hidden'));
 });
 </script>
 </body>

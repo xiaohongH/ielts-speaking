@@ -39,19 +39,38 @@ details.tips {
 details.tips summary { cursor: pointer; font-weight: 600; color: #4a90d9; }
 details.tips ul { margin: 0.6rem 0 0.2rem 1.1rem; }
 details.tips li { margin-bottom: 0.3rem; color: #555; }
-.controls {
+.topbar {
   position: sticky;
   top: 0;
   z-index: 100;
   background: #f0f2f5;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.controls {
   padding: 0.6rem 0;
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1rem;
 }
+.filters {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.6rem;
+  max-height: 40vh;
+  overflow-y: auto;
+  transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+}
+.topbar.cats-hidden .filters {
+  max-height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+#cats-toggle.active { background: #4a90d9; color: #fff; border-color: #4a90d9; }
 .ctrl-btn {
   padding: 0.4rem 0.8rem;
   border: 1px solid #ccc;
@@ -200,7 +219,7 @@ details.tips li { margin-bottom: 0.3rem; color: #555; }
 /* Dark mode */
 body.dark { background: #1a1a2e; color: #e0e0e0; }
 body.dark .subtitle { color: #999; }
-body.dark .controls { background: #1a1a2e; border-bottom-color: #333; }
+body.dark .topbar { background: #1a1a2e; border-bottom-color: #333; }
 body.dark .ctrl-btn { background: #2a2a4a; color: #ccc; border-color: #444; }
 body.dark .ctrl-btn:hover, body.dark .ctrl-btn.active { background: #4a90d9; color: #fff; }
 body.dark .ctrl-btn.mine.active { background: #e6a817; color: #1a1a2e; }
@@ -243,6 +262,7 @@ body.dark .badge-neg { background: #33224a; color: #c98ee6; }
   </ul>
 </details>
 
+<div class="topbar cats-hidden" id="topbar">
 <div class="controls">
   <button class="ctrl-btn" id="flip-all-btn" onclick="toggleFlipAll(this)" title="Flip every card to answer / question">🔄 Show A</button>
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
@@ -253,6 +273,11 @@ body.dark .badge-neg { background: #33224a; color: #c98ee6; }
     <input type="number" id="repeat-count" min="1" max="99" value="5" onchange="saveRepeat()">
     ×
   </label>
+  <button class="ctrl-btn" id="cats-toggle" onclick="toggleCats()" title="Show / hide categories">🏷 Categories</button>
+  <span class="count" id="count"></span>
+</div>
+
+<div class="filters" id="filters">
   <button class="ctrl-btn active" data-filter="all" onclick="filterCards('all',this)">All</button>
   <button class="ctrl-btn mine" data-filter="mine" onclick="filterCards('mine',this)">★ Mine</button>
   <button class="ctrl-btn" data-filter="work" onclick="filterCards('work',this)">Work</button>
@@ -270,7 +295,7 @@ body.dark .badge-neg { background: #33224a; color: #c98ee6; }
   <button class="ctrl-btn" data-filter="people" onclick="filterCards('people',this)">People</button>
   <button class="ctrl-btn" data-filter="nature" onclick="filterCards('nature',this)">Nature</button>
   <button class="ctrl-btn" data-filter="learning" onclick="filterCards('learning',this)">Learning</button>
-  <span class="count" id="count"></span>
+</div>
 </div>
 
 <div id="cards-root"></div>
@@ -536,6 +561,8 @@ function toggleFlipAll(btn){
   btn.textContent=anyFront?'🔄 Show Q':'🔄 Show A';
 }
 
+function toggleCats(){const tb=document.getElementById('topbar');const on=tb.classList.toggle('cats-hidden');document.getElementById('cats-toggle').classList.toggle('active',!on);localStorage.setItem('p1-cats',on?'0':'1');}
+
 function toggleDark(){
   document.body.classList.toggle('dark');
   localStorage.setItem('p1-dark',document.body.classList.contains('dark')?'1':'0');
@@ -548,6 +575,7 @@ function updateCount(){
 }
 
 function filterCards(filter,btn){
+  localStorage.setItem('p1-filter',filter);
   document.querySelectorAll('.ctrl-btn[data-filter]').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.card-container').forEach(c=>{
@@ -654,6 +682,14 @@ window.addEventListener('DOMContentLoaded',()=>{
   const savedRepeat=localStorage.getItem('p1-repeat');
   if(savedRepeat) document.getElementById('repeat-count').value=savedRepeat;
   render();
+  const savedFilter=localStorage.getItem('p1-filter');
+  if(savedFilter){
+    const fbtn=document.querySelector(`.ctrl-btn[data-filter="${savedFilter}"]`);
+    if(fbtn) filterCards(savedFilter,fbtn);
+  }
+  const tb=document.getElementById('topbar');
+  if(localStorage.getItem('p1-cats')==='1') tb.classList.remove('cats-hidden');
+  document.getElementById('cats-toggle').classList.toggle('active',!tb.classList.contains('cats-hidden'));
 });
 </script>
 </body>
