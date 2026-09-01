@@ -263,7 +263,7 @@ body.dark .vocab-list li { border-bottom-color: #333; }
   </ul>
 </details>
 
-<div class="topbar" id="topbar">
+<div class="topbar cats-hidden" id="topbar">
 <div class="controls">
   <button class="ctrl-btn" id="flip-all-btn" onclick="toggleFlipAll(this)" title="Flip every card to answer / question">🔄 Show A</button>
   <button class="ctrl-btn" onclick="toggleDark()">🌙 Dark</button>
@@ -684,7 +684,7 @@ function speakB8(e,i){
 
 function stopSpeaking(){speechSynthesis.cancel();document.querySelectorAll('.voice-btn').forEach(b=>b.classList.remove('speaking'));}
 function togglePause(){if(speechSynthesis.paused){speechSynthesis.resume();}else if(speechSynthesis.speaking){speechSynthesis.pause();}}
-function toggleCats(){const tb=document.getElementById('topbar');const on=tb.classList.toggle('cats-hidden');document.getElementById('cats-toggle').classList.toggle('active',!on);}
+function toggleCats(){const tb=document.getElementById('topbar');const on=tb.classList.toggle('cats-hidden');document.getElementById('cats-toggle').classList.toggle('active',!on);localStorage.setItem('p1sa-cats',on?'0':'1');}
 function setFlip(card,flipped){
   const front=card.querySelector('.card-front');
   const back=card.querySelector('.card-back');
@@ -829,15 +829,8 @@ window.addEventListener('DOMContentLoaded',()=>{
   buildFilters();
   render();
   const tb=document.getElementById('topbar');
-  let lastY=window.scrollY;
-  window.addEventListener('scroll',()=>{
-    const y=window.scrollY;
-    if(y<80){tb.classList.remove('cats-hidden');}
-    else if(y>lastY+6){tb.classList.add('cats-hidden');}
-    else if(y<lastY-6){tb.classList.remove('cats-hidden');}
-    document.getElementById('cats-toggle').classList.toggle('active',!tb.classList.contains('cats-hidden'));
-    lastY=y;
-  },{passive:true});
+  if(localStorage.getItem('p1sa-cats')==='1') tb.classList.remove('cats-hidden');
+  document.getElementById('cats-toggle').classList.toggle('active',!tb.classList.contains('cats-hidden'));
 });
 </script>
 </body>
