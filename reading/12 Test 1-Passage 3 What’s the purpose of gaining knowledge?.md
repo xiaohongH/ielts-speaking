@@ -1,5 +1,4 @@
 
-
 > [!info] How to read this file
 > - ==Highlighted text== = key vocabulary, collocations, or sentences worth learning.
 > - After each paragraph: a 🇨🇳 **中文翻译** callout (full translation) + a **📝 Notes** callout (word meanings with 中文, useful phrases, and the paragraph's main idea).

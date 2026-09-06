@@ -1,4 +1,3 @@
-# Test 1 – Passage 2: Collecting as a Hobby
 
 > [!info] How to read this file
 > - ==Highlighted text== = key vocabulary, collocations, or sentences worth learning.
@@ -9,7 +8,7 @@
 
 **Paragraph 1 — Why do people collect?**
 
-Collecting must be one of the most ==varied== of human activities, and it's one that many of us psychologists find fascinating. Many forms of collecting have been ==dignified with a technical name==: an **archtophilist** collects teddy bears, a **philatelist** collects postage stamps, and a **deltiologist** collects postcards. ==Amassing== hundreds or even thousands of postcards, chocolate wrappers or whatever, takes time, energy and money that could surely be ==put to much more productive use==. And yet there are millions of collectors around the world. Why do they do it?
+Collecting must be one of the most ==varied== of human activities, and it's one that many of us psychologists find fascinating. Many forms of collecting have been ==dignified with a technical name==: an **archtophilist** collects teddy bears, a **philatelist** collects **postage stamps**, and a **deltiologist** collects postcards. ==Amassing== hundreds or even thousands of postcards, chocolate wrappers or whatever, takes time, energy and money that could surely be ==put to much more productive use==. And yet there are millions of collectors around the world. Why do they do it?
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph 1
 > 收藏必定是人类最多样化的活动之一,也是我们许多心理学家觉得着迷的一种活动。许多收藏形式都被赋予了一个专业的名称:archtophilist 收藏泰迪熊,philatelist 收藏邮票,deltiologist 收藏明信片。积攒成百上千,甚至上万张明信片、巧克力包装纸或其他什么东西,要花费本可用于更有成效之处的时间、精力和金钱。然而,全世界仍有数百万的收藏者。他们为什么要这么做呢?
@@ -136,7 +135,7 @@ In the past - and nowadays, too, though ==to a lesser extent== - a popular form 
 
 **Paragraph 7 — Example: dolls and the study of materials**
 
-Similarly, people who collect dolls may ==go beyond== simply ==enlarging their collection==, and develop an interest in the way that dolls are made, or the materials that are used. These have changed over the centuries from the ==wood== that was standard in 16th century Europe, through the ==wax and porcelain== of later centuries, to the plastics of today`s [***…OCR gap…***] to study how dolls reflect ==notions of what children like==, or ought to like.
+Similarly, people who collect dolls may ==go beyond== simply ==enlarging their collection==, and develop an interest in the way that dolls are made, or the materials that are used. These have changed over the centuries from the ==wood== that was standard in 16th century Europe, through the ==wax and porcelain== of later centuries, to the plastics of todays [***…OCR gap…***] to study how dolls reflect ==notions of what children like==, or ought to like.
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph 7
 > 同样地,收藏娃娃的人可能不只是单纯地扩充藏品,还会对娃娃的制作方式或所用材料产生兴趣。这些材料几个世纪以来不断变化:从16世纪欧洲标准使用的木头,到后来几个世纪的蜡和瓷,再到如今娃娃所用的塑料。[或者,收藏者可能会受到启发去]研究娃娃如何反映出人们关于"孩子喜欢什么、或应该喜欢什么"的观念。
@@ -178,7 +177,7 @@ Not all collectors are interested in learning from their hobby, though, so what 
 
 **Paragraph 9 — Reason 6: expressing individualism**
 
-One reason, conscious or not, for what someone chooses to collect is to show the collectors ==individualism==. Someone who decides to collect something as ==unexpected== as dog collars, for instance, may be ==conveying their belief== that they must be interesting themselves. And believe it or not, there is at [***…OCR gap…***] grew out of a personal collection.
+One reason, conscious or not, for what someone chooses to collect is to show the collectors ==individualism==. Someone who decides to collect something as ==unexpected== as **dog collars**, for instance, may be ==conveying their belief== that they must be interesting themselves. And believe it or not, there is at [***…OCR gap…***] grew out of a personal collection.
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph 9
 > 一个人选择收藏什么,背后有一个(或有意识或无意识的)理由,就是为了展现收藏者的个性。比如,某个决定收藏像狗项圈这样出人意料之物的人,也许是在传达一种信念:他们自己一定很有趣。而且信不信由你,确实[至少有一座博物馆是]从个人收藏发展而来的。
@@ -198,9 +197,9 @@ One reason, conscious or not, for what someone chooses to collect is to show the
 
 ---
 
-**Paragraph 10 — Conclusion: passion and fulfilment**
+**Paragraph 10 — Conclusion: passion and fulfillment**
 
-Of course, all hobbies give pleasure, but the common factor in collecting is usually ==passion==: pleasure is putting [it] far too mildly. More than most other hobbies, collecting can be totally ==engrossing==, and can give a strong sense of ==personal fulfilment==. To non-collectors it may appear an ==eccentric==, if ==harmless==, way of spending time, but potentially, ==collecting has a lot going for it==.
+Of course, all hobbies give pleasure, but the common factor in collecting is usually ==passion==: pleasure is putting it far too mildly. More than most other hobbies, collecting can be totally ==engrossing==, and can give a strong sense of ==personal fulfillment==. To non-collectors it may appear an ==eccentric==, if ==harmless==, way of spending time, but potentially, ==collecting has a lot going for it==.
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph 10
 > 当然,所有爱好都能带来乐趣,但收藏共有的因素通常是"激情":用"乐趣"来形容实在太轻描淡写了。比起大多数其他爱好,收藏能让人完全沉浸其中,并带来强烈的个人成就感。在不收藏的人看来,这或许是一种古怪(尽管无害)的消磨时间的方式,但从潜力上说,收藏有很多可取之处。
@@ -221,7 +220,7 @@ Of course, all hobbies give pleasure, but the common factor in collecting is usu
 
 ## 🧠 Whole-passage summary 全文总结
 
-**EN:** A psychologist explores **why millions of people collect**, laying out a series of motives: (1) **money** — collecting as *a means to an end*, plus the *triumph* of buying cheap and selling dear; (2) a **social life** with *like-minded people*; (3) the **thrill of the hunt** for something special, which gives an aimless life purpose (but success can leave you feeling empty); (4) **educational value** (stamps, fossils, and — as examples of expertise gained *as a by-product* — trainspotting and doll-making); (5) a psychological sense of **control** that helps with insecurity; and (6) the expression of **individualism**. The unifying thread is **passion**, and collecting can bring deep **personal fulfilment** — so, though it may look eccentric, it "has a lot going for it."
+**EN:** A psychologist explores **why millions of people collect**, laying out a series of motives: (1) **money** — collecting as *a means to an end*, plus the *triumph* of buying cheap and selling dear; (2) a **social life** with *like-minded people*; (3) the **thrill of the hunt** for something special, which gives an aimless life purpose (but success can leave you feeling empty); (4) **educational value** (stamps, fossils, and — as examples of expertise gained *as a by-product* — trainspotting and doll-making); (5) a psychological sense of **control** that helps with insecurity; and (6) the expression of **individualism**. The unifying thread is **passion**, and collecting can bring deep **personal fulfillment** — so, though it may look eccentric, it "has a lot going for it."
 
 **中文:** 一位心理学家探讨**数百万人为何收藏**,并列出一系列动机:(1)**赚钱**——把收藏当作"手段",外加低买高卖的"胜利感";(2)与**志同道合者**的**社交生活**;(3)追寻特别之物的**寻猎快感**,它为漫无目的的人生赋予目标(但一旦成功反而可能空虚);(4)**教育价值**(邮票、化石,以及作为"副产品"习得专长的例子——火车观察记录与娃娃制作);(5)有助于应对不安全感的**掌控感**;(6)彰显**个性**。贯穿始终的核心是**激情**,收藏能带来深切的**个人成就感**——因此,尽管它看似古怪,却"大有可取之处"。
 

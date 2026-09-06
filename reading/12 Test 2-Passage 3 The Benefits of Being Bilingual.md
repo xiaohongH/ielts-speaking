@@ -1,5 +1,3 @@
-# Test 2 – Passage 3: The Benefits of Being Bilingual
-
 *How growing up with two or more languages reshapes the brain — for the better.*
 *从小掌握两种或多种语言如何重塑大脑——而且是往好的方向。*
 

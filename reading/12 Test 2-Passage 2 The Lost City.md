@@ -11,12 +11,12 @@
 
 **14**
 
-**A** When the US explorer and ==academic== Hiram Bingham arrived in South America in 1911, he was ready for what was to be ==the greatest achievement of his life==: the exploration of the ==remote hinterland== to the west of Cusco, the old capital of the Inca empire in the Andes mountains of Peru. His goal was to ==locate the remains== of a city called Vitcos, the last capital of the Inca civilisation. Cusco lies on a ==high plateau== at an ==elevation== of more than 3,000 metres, and Bingham's plan was to ==descend== from this plateau along the valley of the Urubamba river, which takes a ==circuitous route== down to the Amazon and passes through an area of dramatic ==canyons== and mountain ranges.
+**A** When the US explorer and ==academic== Hiram Bingham arrived in South America in 1911, he was ready for what was to be ==the greatest achievement of his life==: the exploration of the ==remote hinterland== **to the west of Cusco**, the old capital of the Inca empire in the Andes mountains of Peru. His goal was to ==locate the remains== of a city called Vitcos, the last capital of the Inca civilisation. Cusco lies on a ==high plateau== at an ==elevation== of more than 3,000 metres, and Bingham's plan was to ==descend== from this plateau **along** the **valley** of the Urubamba river, which **takes** a ==circuitous route== **down to** the Amazon and **passes through** an area of **dramatic** ==canyons== and mountain ranges.
 
 > 🔑 academic 学者 · remote hinterland 偏远腹地 · locate the remains 找到遗迹 · high plateau 高原 · elevation 海拔 · descend 下降 · circuitous route 迂回路线 · canyons 峡谷
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph A
-> 1911年,美国探险家兼学者海勒姆·宾厄姆抵达南美洲时,他已为这次将成为其人生最大成就的行动做好了准备:探索库斯科以西的偏远腹地——库斯科是位于秘鲁安第斯山脉中的印加帝国旧都。他的目标是找到一座名为维特科斯(Vitcos)的城市遗迹,那是印加文明的最后一座都城。库斯科坐落在海拔3000多米的高原上,宾厄姆的计划是沿乌鲁班巴河谷从这片高原下行——这条河迂回曲折地一路流向亚马逊,途经一片有着壮观峡谷与山脉的地区。
+> 1911年,美国探险家兼学者海勒姆·宾厄姆抵达南美洲时,他已为这次将成为其人生最大成就的行动做好了准备:探索库斯科以西的偏远腹地——库斯科是位于秘鲁安第斯山脉中的印加帝国旧都。他的目标是找到一座名为维特科斯(Vitcos)的城市遗迹,那是印加文明的最后一座都城。库斯科坐落在海拔3000多米的高原上,宾厄姆的计划是沿乌鲁班巴**河谷**从这片高原下行——这条河迂回曲折地一路流向亚马逊,途经一片有着壮观峡谷与山脉的地区。
 
 > [!tip] 📝 Notes — Paragraph A
 > **Vocabulary & phrases**

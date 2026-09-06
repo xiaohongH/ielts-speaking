@@ -1,4 +1,3 @@
-
 Synthesis of an online debate*
 
 > [!info] How to read this file
@@ -93,7 +92,7 @@ Synthesis of an online debate*
 
 ---
 
-**E** **Shenggen Fan**, Director General of the International Food Policy Research Institute, ==held up== ==social safety nets== and ==public welfare programmes== in Ethiopia, Brazil and Mexico as valuable ways to address poverty among farming families and ==reduce their vulnerability to agricultural shocks==. However, some commentators responded that ==cash transfers== to poor families ==do not necessarily translate into== increased food security, as these programmes do not always strengthen food production or raise incomes. Regarding ==state subsidies== for agriculture, **Rokeya Kabir**, Executive Director of Bangladesh Nari Progati Sangha, commented in her essay that these 'have not compensated for the ==stranglehold exercised by private traders==. In fact, studies show that sixty percent of ==beneficiaries of subsidies== are not poor, but rich **landowners** and non-farmer traders.'
+**E** **Shenggen Fan**, Director General of the International Food Policy Research Institute, ==held up== ==social safety nets== and ==public welfare programmes== in Ethiopia, Brazil and Mexico **as** valuable ways to address poverty among farming families and ==reduce their vulnerability to agricultural shocks==. However, some commentators responded that ==cash transfers== to poor families ==do not necessarily translate into== increased food security, as these programmes do not always strengthen food production or raise incomes. Regarding ==state subsidies== for agriculture, **Rokeya Kabir**, Executive Director of Bangladesh Nari Progati Sangha, commented in her essay that these 'have not ==**compensated for**== the ==stranglehold exercised by private traders==. In fact, studies show that sixty percent of ==beneficiaries of subsidies== are not poor, but rich **landowners** and non-farmer traders.'
 
 > 🔑 held up ... as 推崇为 · social safety nets 社会安全网 · public welfare programmes 公共福利项目 · reduce their vulnerability to agricultural shocks 降低对农业冲击的脆弱性 · cash transfers 现金转移支付 · do not necessarily translate into 不一定转化为 · state subsidies 国家补贴 · stranglehold exercised by private traders 私商的钳制 · beneficiaries of subsidies 补贴受益者
 
@@ -145,12 +144,12 @@ Synthesis of an online debate*
 
 ---
 
-**G** Many essayists mentioned climate change and its consequences for small-scale agriculture. **Fan** explained that 'in addition to reducing ==crop yields==, climate change increases ==the magnitude and the frequency== of ==extreme weather events==, which increase smallholder vulnerability.' The growing ==unpredictability of weather== increases farmers' difficulty in managing weather-related risks. According to this author, one solution would be to ==develop crop varieties that are more resilient== to new climate trends and extreme weather patterns. Accordingly, **Pat Mooney**, co-founder and executive director of the ETC Group, suggested that 'if we are to survive climate change, we must adopt policies that let ==peasants== ==diversify== the plant and animal **species and varieties/breeds** that make up our menus.'
+**G** Many essayists mentioned climate change and its consequences for small-scale agriculture. **Fan** explained that 'in addition to reducing ==crop yields==, climate change increases ==the magnitude and the frequency== of ==extreme weather events==, which increase smallholder vulnerability.' The growing ==unpredictability of weather== increases farmers' difficulty in managing weather-related risks. According to this author, one solution would be to ==develop **crop varieties** that are more **resilient**== to new climate trends and extreme weather patterns. Accordingly, **Pat Mooney**, co-founder and executive director of the ETC Group, suggested that 'if we are to survive climate change, we must **adopt policies** that let ==peasants== ==diversify== the plant and animal **species and varieties/breeds** that make up our menus.'
 
 > 🔑 crop yields 作物产量 · the magnitude and the frequency 强度与频率 · extreme weather events 极端天气事件 · unpredictability of weather 天气不可预测性 · develop crop varieties that are more resilient 培育更抗逆的作物品种 · diversify 使多样化
 
 > [!quote] 🇨🇳 中文翻译 — Paragraph G
-> 许多撰文者提到了气候变化及其对小规模农业的影响。Fan 解释说:"气候变化除了会降低作物产量外,还会增大极端天气事件的强度和频率,从而加剧小农的脆弱性。"天气越来越难以预测,增加了农民管理天气相关风险的难度。这位作者认为,一个解决办法是培育对新气候趋势和极端天气模式更具韧性的作物品种。相应地,ETC 集团联合创始人兼执行主任 Pat Mooney 提出:"如果我们要在气候变化中生存下来,就必须采取政策,让农民能够使构成我们餐桌的动植物**物种及品种**多样化。"
+> 许多撰文者提到了气候变化及其对小规模农业的影响。Fan 解释说:"气候变化除了会降低作物产量外,还会增大极端天气事件的强度和频率,从而加剧小农的脆弱性。"天气越来越难以预测,增加了农民管理天气相关风险的难度。这位作者认为,一个解决办法是培育对新气候趋势和极端天气模式更具韧性的**作物品种**。相应地,ETC 集团联合创始人兼执行主任 Pat Mooney 提出:"如果我们要在气候变化中生存下来,就必须采取政策,让农民能够使构成我们餐桌的动植物**物种及品种**多样化。"
 
 > [!tip] 📝 Notes — Paragraph G
 > **Vocabulary & phrases**
